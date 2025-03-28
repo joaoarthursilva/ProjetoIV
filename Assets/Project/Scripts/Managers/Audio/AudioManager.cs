@@ -2,42 +2,47 @@ using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
 
-public enum Audio
+namespace ProjetoIV.Audio
 {
-    NONE,
-    MSC_MAIN_THEME,
-    SFX_JUMP,
-}
-
-public struct AudioData
-{
-    public Audio AudioID;
-    public StudioEventEmitter Emitter;
-}
-
-public class AudioManager : MonoBehaviour
-{
-    [Header("SFX"), SerializeField] private List<AudioData> m_sfx;
-
-    public void PlayAudio(Audio p_audioID)
+    public enum Audio
     {
-        for (int i = 0; i < m_sfx.Count; i++)
-        {
-            AudioData audioData = m_sfx[i];
-            if (audioData.AudioID != p_audioID) continue;
-            audioData.Emitter.Play();
-            return;
-        }
+        NONE,
+        MSC_MAIN_THEME,
+        SFX_JUMP,
     }
 
-    public void StopAudio(Audio p_audioID)
+    public struct AudioData
     {
-        for (int i = 0; i < m_sfx.Count; i++)
+        public Audio AudioID;
+        public StudioEventEmitter Emitter;
+    }
+
+    public class AudioManager : MonoBehaviour
+    {
+        [Header("SFX"), SerializeField] private List<AudioData> m_sfx;
+
+        public void PlayAudio(Audio p_audioID)
         {
-            AudioData audioData = m_sfx[i];
-            if (audioData.AudioID != p_audioID) continue;
-            audioData.Emitter.Stop();
-            return;
+            for (int i = 0; i < m_sfx.Count; i++)
+            {
+                AudioData audioData = m_sfx[i];
+                if (audioData.AudioID != p_audioID) continue;
+                audioData.Emitter.Play();
+                return;
+            }
         }
+
+        public void StopAudio(Audio p_audioID)
+        {
+            for (int i = 0; i < m_sfx.Count; i++)
+            {
+                AudioData audioData = m_sfx[i];
+                if (audioData.AudioID != p_audioID) continue;
+                audioData.Emitter.Stop();
+                return;
+            }
+        }
+
+        [Header("Debug"), SerializeField] private bool m_debug;
     }
 }

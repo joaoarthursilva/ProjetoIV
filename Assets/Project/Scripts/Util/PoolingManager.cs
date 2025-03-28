@@ -1,5 +1,9 @@
+using ProjetoIV.Util;
 using UnityEngine;
 
-public class PoolingManager : Singleton<PoolingManager>
+namespace ProjetoIV.Util
 {
+    public class PoolingManager : Singleton<PoolingManager>
+    {
+    }
 }
