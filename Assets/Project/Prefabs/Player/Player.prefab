@@ -49,12 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 5
-  m_horizontalLookSensitivity: 50
-  m_verticalLookSensitivity: 50
+  m_horizontalLookSensitivity: 25
+  m_verticalLookSensitivity: 25
   m_rb: {fileID: 574469941099063686}
   m_firstPersonCamera: {fileID: 8381005277494202328}
-  m_angleLimitUp: 90
-  m_angleLimitDown: -90
+  m_angleLimitUp: 40
+  m_angleLimitDown: -40
 --- !u!136 &2046238470406250232
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -87,8 +87,8 @@ Rigidbody:
   m_GameObject: {fileID: 1097560335857274889}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -102,8 +102,8 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
+  m_Interpolate: 1
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!1 &7693432370808080458
 GameObject:
@@ -258,7 +258,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

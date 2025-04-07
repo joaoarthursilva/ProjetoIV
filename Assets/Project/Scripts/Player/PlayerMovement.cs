@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         l_tempMovement.Set(RatInput.Instance.Movement.x, 0, RatInput.Instance.Movement.y);
         l_tempMovement.Normalize();
         l_tempMovement *= m_moveSpeed * 50 * Time.fixedDeltaTime;
+        l_tempMovement = transform.TransformDirection(l_tempMovement);
         m_rb.linearVelocity = l_tempMovement;
     }
 
@@ -80,44 +81,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleLook()
     {
-        // transform.Rotate(0, RatInput.Instance.LookInput.x * m_lookSensitivity, 0);
         transform.Rotate(0, RatInput.Instance.LookInput.x * m_horizontalLookSensitivity * Time.deltaTime, 0);
         l_verticalRotation -= RatInput.Instance.LookInput.y * m_verticalLookSensitivity * Time.deltaTime;
         l_verticalRotation = Mathf.Clamp(l_verticalRotation, m_angleLimitDown, m_angleLimitUp);
         m_firstPersonCamera.transform.localRotation = Quaternion.Euler(l_verticalRotation, 0f, 0f);
-        // l_look.Set(RatInput.Instance.LookInput.y, , 0);
-        // l_look.Normalize();
-        // l_look *= m_lookSensitivity * 50 * Time.fixedDeltaTime;
-        // transform.eulerAngles += l_look;
     }
-
-    // private Vector2 m_moveInputValue => RatInput.Instance.Movement;
-    // private Input m_moveInput;
-
-    // private void SubscribeToActions(bool p_subscribe)
-    // {
-    //     if (p_subscribe)
-    //     {
-    //         m_moveInput.OnInputPerformed += OnMove;
-    //         m_moveInput.OnInputCanceled += OnStopMove;
-    //     }
-    //     else
-    //     {
-    //         m_moveInput.OnInputPerformed -= OnMove;
-    //         m_moveInput.OnInputCanceled -= OnStopMove;
-    //     }
-    // }
-
-    // private void OnMove(InputAction.CallbackContext p_context)
-    // {
-    //     Vector2 l_input = p_context.ReadValue<Vector2>();
-    //     m_moveInputValue = l_input;
-    //     Debug.Log($"movement {l_input}");
-    // }
-    //
-    // private void OnStopMove(InputAction.CallbackContext p_context)
-    // {
-    //     Debug.Log("movement stopped");
-    //     m_moveInputValue = Vector2.zero;
-    // }
 }
