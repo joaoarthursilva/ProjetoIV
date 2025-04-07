@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Fungus;
 using NaughtyAttributes;
 using ProjetoIV.Util;
 using UnityEngine;
@@ -8,33 +9,33 @@ namespace RatSpeak
     public class DialogManager : Singleton<DialogManager>
     {
         [Header("Dialog")]
-        public UIPanelDialog uiPanelDialog;
+        public Flowchart flowchart;
 
-        public void Show(Dialog p_dialog)
+        [SerializeField] private SayDialog m_sayDialog;
+        [SerializeField] private Fungus.Character m_testCharacter;
+
+        protected override void OnAwake()
         {
-            uiPanelDialog.Show(p_dialog);
+            base.OnAwake();
         }
 
-        public void ShowOptions(List<Dialog> p_dialog)
-        {
-            uiPanelDialog.ShowOptions(p_dialog);
-        }
-
-        [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
-        public void Hide()
-        {
-            uiPanelDialog.Hide();
-        }
+        #region Debug
 
         [Header("Debug"), SerializeField] private bool m_debug;
 
-        [SerializeField, ShowIf("m_debug")] private List<Dialog> m_debugDialogOptions;
-        [SerializeField, ShowIf("m_debug")] private Dialog m_debugShowDialog;
+        [SerializeField, ShowIf("m_debug")] private string m_debugShowDialogText;
 
         [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
-        private void DebugShowDialog() => Show(m_debugShowDialog);
+        private void DebugShowDialog()
+        {
+            m_sayDialog.SetActive(true);
+            m_sayDialog.SetCharacter(m_testCharacter);
+            m_sayDialog.Say(m_debugShowDialogText, true, true, false, false, false, null, null);
+        }
 
-        [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
-        private void DebugShowOptions() => ShowOptions(m_debugDialogOptions);
+        // [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
+        // private void DebugShowOptions() => ShowOptions(m_debugDialogOptions);
+
+        #endregion
     }
 }

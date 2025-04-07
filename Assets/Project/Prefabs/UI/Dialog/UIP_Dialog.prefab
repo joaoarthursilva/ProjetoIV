@@ -693,10 +693,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
-  uiPanelDialog: {fileID: 6649265611085978071}
+  flowchart: {fileID: 0}
+  m_sayDialog: {fileID: 0}
+  m_testCharacter: {fileID: 0}
   m_debug: 0
-  m_debugDialogOptions: []
-  m_debugShowDialog: {fileID: 0}
+  m_debugShowDialogText: 
 --- !u!223 &6605818095740012816
 Canvas:
   m_ObjectHideFlags: 0
@@ -714,8 +715,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
