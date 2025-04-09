@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 l_look;
     float l_verticalRotation = 0f;
-    [SerializeField] private Camera m_firstPersonCamera;
+    [SerializeField] private Transform m_firstPersonCamera;
     [SerializeField] private float m_angleLimitUp = 90f;
     [SerializeField] private float m_angleLimitDown = -90f;
 
@@ -84,6 +84,6 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(0, RatInput.Instance.LookInput.x * m_horizontalLookSensitivity * Time.deltaTime, 0);
         l_verticalRotation -= RatInput.Instance.LookInput.y * m_verticalLookSensitivity * Time.deltaTime;
         l_verticalRotation = Mathf.Clamp(l_verticalRotation, m_angleLimitDown, m_angleLimitUp);
-        m_firstPersonCamera.transform.localRotation = Quaternion.Euler(l_verticalRotation, 0f, 0f);
+        m_firstPersonCamera.localRotation = Quaternion.Euler(l_verticalRotation, 0f, 0f);
     }
 }
