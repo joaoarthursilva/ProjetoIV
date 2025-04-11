@@ -12,6 +12,14 @@ namespace Assets.Plugins.RatLocalization.Scripts
     {
         public List<LocalizedDropdownText> LocalizationKeys = new();
 
+        public void Awake()
+        {
+            foreach (var item in LocalizationKeys)
+            {
+                item.LocalizationKey = item.LocalizationKeys[item.listIndex].Replace("/", ".");
+            }
+        }
+
         public void Start()
         {
             Localize();
