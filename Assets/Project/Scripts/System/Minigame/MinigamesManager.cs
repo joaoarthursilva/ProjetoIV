@@ -1,30 +1,67 @@
 using UnityEngine;
+using ProjetoIV.RatInput;
+using System.Collections.Generic;
 
 public class MinigamesManager : MonoBehaviour, IMinigameInputs
 {
+    public ProjetoIV.RatInput.Input cut;
 
+    public List<IMinigameInteraction> minigamesInteraction;
+    private IMinigameInteraction m_currentMinigame;
+
+    private void Start()
+    {
+        cut = RatInput.Instance.GetInput(InputID.MINIGAME_CUT);
+        cut.OnInputStarted += IOnCut;
+        cut.OnInputCanceled += IOnEndedCut;
+    }
+
+    private void OnDestroy()
+    {
+        cut.OnInputStarted -= IOnCut;
+        cut.OnInputCanceled -= IOnEndedCut;
+    }
     public void IOnLook(Vector2 p_vector)
     {
+        if (m_currentMinigame == null) return;
 
     }
 
     public void IOnMouseClick()
     {
+        if (m_currentMinigame == null) return;
 
     }
 
     public void IOnMouseDown()
     {
+        if (m_currentMinigame == null) return;
 
     }
 
     public void IOnMouseUp()
     {
+        if (m_currentMinigame == null) return;
 
     }
 
     public void IOnMove(Vector2 p_vector)
     {
+        if (m_currentMinigame == null) return;
 
+    }
+
+    public void IOnCut()
+    {
+        if (m_currentMinigame == null) return;
+
+        m_currentMinigame.IOnCut();
+    }
+
+    public void IOnEndedCut()
+    {
+        if (m_currentMinigame == null) return;
+        
+        m_currentMinigame.IOnEndedCut();
     }
 }

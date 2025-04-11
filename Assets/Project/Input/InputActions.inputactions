@@ -228,7 +228,7 @@
             "id": "070e7a78-a628-4d26-a0c0-a13226f9db27",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Cut",
                     "type": "Button",
                     "id": "a4fd1601-a669-436d-9f45-73ba3588e755",
                     "expectedControlType": "",
@@ -241,11 +241,22 @@
                 {
                     "name": "",
                     "id": "3efa5e39-220f-4a87-8a45-18b50fcf3023",
-                    "path": "",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "New action",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Cut",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00165e61-ec98-49cd-aaa4-291bb385ccfd",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Cut",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

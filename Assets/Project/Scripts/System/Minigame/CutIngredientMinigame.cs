@@ -31,13 +31,7 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
     {
 
     }
-    public void IOnMove(Vector2 p_vector)
-    {
-        if (Mathf.Approximately(p_vector.y, -1f))
-        {
-            Debug.Log("cut");
-        }
-    }
+    public void IOnMove(Vector2 p_vector) { }
 
     public void IOnLook(Vector2 p_vector) { }
 
@@ -46,4 +40,14 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
     public void IOnMouseDown() { }
 
     public void IOnMouseUp() { }
+
+    public void IOnCut()
+    {
+        Debug.Log("cut");
+    }
+
+    public void IOnEndedCut()
+    {
+        Debug.Log("ended cut");
+    }
 }

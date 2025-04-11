@@ -7,4 +7,6 @@ public interface IMinigameInputs
     public void IOnMouseDown();
     public void IOnMouseUp();
     public void IOnMouseClick();
+    public void IOnCut();
+    public void IOnEndedCut();
 }
