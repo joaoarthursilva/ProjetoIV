@@ -1,9 +1,11 @@
 using UnityEngine;
 using ProjetoIV.RatInput;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 
 public class MinigamesManager : MonoBehaviour, IMinigameInputs
 {
+    public static System.Action<CinemachineCamera> OnSetMinigamecamera;
     public ProjetoIV.RatInput.Input cut;
 
     public List<IMinigameInteraction> minigamesInteraction;
