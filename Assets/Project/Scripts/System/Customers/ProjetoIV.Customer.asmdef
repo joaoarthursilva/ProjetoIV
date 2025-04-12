@@ -1,0 +1,18 @@
+{
+    "name": "ProjetoIV.Customer",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3a939cfda834dd246abfc5bb0b6de403",
+        "GUID:821eb8aeeac7f7c4d9d69feaed59b697",
+        "GUID:7dff99401c2be9645b79964a82f71a77"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
