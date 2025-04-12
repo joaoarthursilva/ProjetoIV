@@ -1,12 +1,17 @@
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 
 public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 {
-    [SerializeField, SerializeReference] private Minigame[] m_minigames;
+    [SerializeField] private Minigame[] m_minigames;
+    public Minigame CurrentMinigame;
 
     [SerializeField] private CinemachineCamera m_camera;
     public CinemachineCamera MinigameCamera => m_camera;
+
+    [SerializeField] private List<RaycastableMinigame> m_raycastable;
+    public List<RaycastableMinigame> RaycastableMinigame => m_raycastable;
 
     public bool EmbraceMinigame(Minigame p_minigame)
     {
@@ -43,11 +48,11 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 
     public void IOnCut()
     {
-        Debug.Log("cut");
+
     }
 
     public void IOnEndedCut()
     {
-        Debug.Log("ended cut");
+        Debug.Log("interage");
     }
 }
