@@ -1,0 +1,17 @@
+{
+    "name": "ProjetoIV.Time",
+    "rootNamespace": "",
+    "references": [
+        "GUID:821eb8aeeac7f7c4d9d69feaed59b697",
+        "GUID:a8d18890e11146745b882fc6bdef9be9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

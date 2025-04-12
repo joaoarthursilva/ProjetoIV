@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -47,6 +47,7 @@ namespace Assets.Plugins.RatLocalization.Scripts
         }
     }
 
+    [System.Serializable]
     public class LocalizedDropdownText
     {
         public string LocalizationKey;

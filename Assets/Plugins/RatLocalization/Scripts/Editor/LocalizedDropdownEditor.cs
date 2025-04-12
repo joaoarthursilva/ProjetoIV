@@ -21,7 +21,15 @@ namespace Assets.Plugins.RatLocalization.Scripts.Editor
             {
                 int option = i + 1;
                 GUIContent arrayLabel = new GUIContent("Localization Key #" + option);
-                component.LocalizationKeys.Add(new LocalizedDropdownText());
+
+                if (component.GetComponent<TMP_Dropdown>().options.Count < component.LocalizationKeys.Count)
+                {
+                    component.LocalizationKeys.RemoveAt(component.LocalizationKeys.Count - 1);
+                }
+                else if (component.GetComponent<TMP_Dropdown>().options.Count > component.LocalizationKeys.Count)
+                {
+                    component.LocalizationKeys.Add(new LocalizedDropdownText());
+                }
                 component.LocalizationKeys[i].listIndex = EditorGUILayout.Popup(arrayLabel, component.LocalizationKeys[i].listIndex, component.LocalizationKeys[i].LocalizationKeys.ToArray());
             }
 
