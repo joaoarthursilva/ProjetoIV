@@ -6,5 +6,4 @@ public class Customer : ScriptableObject
 {
     public Character character;
     public Ingredient ingredient;
-
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using ProjetoIV.Util;
 using UnityEngine;
@@ -11,6 +10,11 @@ namespace ProjetoIV.RatInput
         [SerializeField] private PlayerInput m_playerInput;
         [SerializeField] private InputActionAsset m_actionAsset;
         [SerializeField] private List<RatInputAction> m_inputs;
+
+        private void Start()
+        {
+            SetMap("Minigame");
+        }
 
         private void OnEnable()
         {
@@ -46,6 +50,11 @@ namespace ProjetoIV.RatInput
         public void OnKitchenMovement(InputAction.CallbackContext p_context)
         {
             Movement = p_context.ReadValue<Vector2>();
+        }
+
+        public void SetMap(string p_map)
+        {
+            m_playerInput.SwitchCurrentActionMap(p_map);
         }
     }
 

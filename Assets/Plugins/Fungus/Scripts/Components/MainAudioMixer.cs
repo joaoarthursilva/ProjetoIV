@@ -19,10 +19,10 @@ namespace Fungus
 
         public virtual void Init()
         {
-            Mixer = Resources.Load(FungusConstants.FungusAudioMixer) as AudioMixer;
-            MusicGroup = Mixer.FindMatchingGroups("Music")[0];
-            SFXGroup = Mixer.FindMatchingGroups("SFX")[0];
-            VoiceGroup = Mixer.FindMatchingGroups("Voice")[0];
+            // Mixer = Resources.Load(FungusConstants.FungusAudioMixer) as AudioMixer;
+            // MusicGroup = Mixer.FindMatchingGroups("Music")[0];
+            // SFXGroup = Mixer.FindMatchingGroups("SFX")[0];
+            // VoiceGroup = Mixer.FindMatchingGroups("Voice")[0];
         }
     }
 }

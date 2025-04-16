@@ -51,8 +51,8 @@ namespace Fungus
 
         protected virtual void Start()
         {
-            audioSourceMusic.playOnAwake = false;
-            audioSourceMusic.loop = true;
+            // audioSourceMusic.playOnAwake = false;
+            // audioSourceMusic.loop = true;
         }
 
         #region Public members
@@ -63,35 +63,35 @@ namespace Fungus
         /// </summary>
         public void PlayMusic(AudioClip musicClip, bool loop, float fadeDuration, float atTime)
         {
-            if (audioSourceMusic == null || audioSourceMusic.clip == musicClip)
-            {
-                return;
-            }
-
-            if (Mathf.Approximately(fadeDuration, 0f))
-            {
-                audioSourceMusic.clip = musicClip;
-                audioSourceMusic.loop = loop;
-                audioSourceMusic.time = atTime;  // May be inaccurate if the audio source is compressed http://docs.unity3d.com/ScriptReference/AudioSource-time.html BK
-                audioSourceMusic.Play();
-            }
-            else
-            {
-                float startVolume = audioSourceMusic.volume;
-
-                LeanTween.value(gameObject, startVolume, 0f, fadeDuration)
-                    .setOnUpdate((v) => {
-                        // Fade out current music
-                        audioSourceMusic.volume = v;
-                    }).setOnComplete(() => {
-                        // Play new music
-                        audioSourceMusic.volume = startVolume;
-                        audioSourceMusic.clip = musicClip;
-                        audioSourceMusic.loop = loop;
-                        audioSourceMusic.time = atTime;  // May be inaccurate if the audio source is compressed http://docs.unity3d.com/ScriptReference/AudioSource-time.html BK
-                        audioSourceMusic.Play();
-                    });
-            }
+            // if (audioSourceMusic == null || audioSourceMusic.clip == musicClip)
+            // {
+            //     return;
+            // }
+            //
+            // if (Mathf.Approximately(fadeDuration, 0f))
+            // {
+            //     audioSourceMusic.clip = musicClip;
+            //     audioSourceMusic.loop = loop;
+            //     audioSourceMusic.time = atTime;  // May be inaccurate if the audio source is compressed http://docs.unity3d.com/ScriptReference/AudioSource-time.html BK
+            //     audioSourceMusic.Play();
+            // }
+            // else
+            // {
+            //     float startVolume = audioSourceMusic.volume;
+            //
+            //     LeanTween.value(gameObject, startVolume, 0f, fadeDuration)
+            //         .setOnUpdate((v) => {
+            //             // Fade out current music
+            //             audioSourceMusic.volume = v;
+            //         }).setOnComplete(() => {
+            //             // Play new music
+            //             audioSourceMusic.volume = startVolume;
+            //             audioSourceMusic.clip = musicClip;
+            //             audioSourceMusic.loop = loop;
+            //             audioSourceMusic.time = atTime;  // May be inaccurate if the audio source is compressed http://docs.unity3d.com/ScriptReference/AudioSource-time.html BK
+            //             audioSourceMusic.Play();
+            //         });
+            // }
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Fungus
         /// <param name="volume">The volume level of the sound effect.</param>
         public virtual void PlaySound(AudioClip soundClip, float volume)
         {
-            audioSourceSoundEffect.PlayOneShot(soundClip, volume);
+            // audioSourceSoundEffect.PlayOneShot(soundClip, volume);
         }
 
         /// <summary>
@@ -112,10 +112,10 @@ namespace Fungus
         /// <param name="volume">The volume level of the sound effect.</param>
         public virtual void PlayAmbianceSound(AudioClip soundClip, bool loop, float volume)
         {
-            audioSourceAmbiance.loop = loop;
-            audioSourceAmbiance.clip = soundClip;
-            audioSourceAmbiance.volume = volume;
-            audioSourceAmbiance.Play();
+            // audioSourceAmbiance.loop = loop;
+            // audioSourceAmbiance.clip = soundClip;
+            // audioSourceAmbiance.volume = volume;
+            // audioSourceAmbiance.Play();
         }
 
         /// <summary>
