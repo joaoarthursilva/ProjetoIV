@@ -13,6 +13,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
     //public Dictionary<RaycastableObject, >
     [SerializeField] private PlayerInventory m_playerInventory;
+
     private void Start()
     {
         cut = RatInput.Instance.GetInput(InputID.MINIGAME_CUT);
