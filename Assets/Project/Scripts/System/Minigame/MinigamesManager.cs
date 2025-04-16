@@ -12,7 +12,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
     private IMinigameInteraction m_currentMinigame;
 
     //public Dictionary<RaycastableObject, >
-
+    [SerializeField] private PlayerInventory m_playerInventory;
     private void Start()
     {
         cut = RatInput.Instance.GetInput(InputID.MINIGAME_CUT);
@@ -36,13 +36,21 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
     {
         for (int i = 0; i < minigamesInteraction.Count; i++)
         {
-            if (minigamesInteraction[i].RaycastableMinigame.Contains(p_object))
+            if (minigamesInteraction[i].RaycastableMinigame.Contains(p_object)
+                && minigamesInteraction[i].EmbraceMinigame(m_playerInventory.currentIngredient, out Minigame l_minigame))
             {
                 m_currentMinigame = minigamesInteraction[i];
+                m_currentMinigame.IOnStartInteraction(l_minigame, () => OnEndMinigame(l_minigame.FinalIngredient()));
                 OnSetMinigamecamera?.Invoke(m_currentMinigame.MinigameCamera);
                 break;
             }
         }
+    }
+
+    private void OnEndMinigame(Ingredient p_finalIngredient)
+    {
+        m_playerInventory.currentIngredient = p_finalIngredient;
+        OnSetMinigamecamera?.Invoke(null);
     }
 
     public void IOnLook(Vector2 p_vector)
@@ -85,7 +93,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
     public void IOnEndedCut()
     {
         if (m_currentMinigame == null) return;
-        
+
         m_currentMinigame.IOnEndedCut();
     }
 }

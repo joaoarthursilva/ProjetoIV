@@ -8,7 +8,7 @@ public class CameraManager : MonoBehaviour
     const int PRIORITY_DEFAULT = 0;
 
     public List<CinemachineCamera> cameras = new List<CinemachineCamera>();
-
+    public CinemachineCamera playerCamera;
     private void Start()
     {
         var cams = FindObjectsByType<CinemachineCamera>(FindObjectsSortMode.None);
@@ -19,6 +19,8 @@ public class CameraManager : MonoBehaviour
 
     public void SetCameraToCurrent(CinemachineCamera p_camera)
     {
+        if (p_camera == null) p_camera = playerCamera;
+
         if (!cameras.Contains(p_camera)) cameras.Add(p_camera);
 
         for (int i = 0; i < cameras.Count; i++)

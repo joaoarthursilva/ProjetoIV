@@ -1,8 +1,11 @@
 {
-    "name": "ProjetoIV.PlayerRaycast",
+    "name": "ProjetoIV.Player",
     "rootNamespace": "",
     "references": [
-        "GUID:821eb8aeeac7f7c4d9d69feaed59b697"
+        "GUID:821eb8aeeac7f7c4d9d69feaed59b697",
+        "GUID:92e47152d73e7714dbf237ccf766b24b",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:71b1a36acbe712f4e974ab852d5f042c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
