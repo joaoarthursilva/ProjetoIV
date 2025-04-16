@@ -5,7 +5,7 @@ using ProjetoIV.Util;
 
 public class TimeManager : Singleton<TimeManager>
 {
-    public Action<int> OnStartDay;
+    public Action<Day> OnStartDay;
     public Action<int> OnEndDay;
     public Action<float> OnPassTime;
 
@@ -21,7 +21,7 @@ public class TimeManager : Singleton<TimeManager>
     public void StartNextDay()
     {
         m_now = m_days[m_today].start;
-        OnStartDay?.Invoke(m_today);
+        OnStartDay?.Invoke(m_days[m_today]);
         OnPassTime?.Invoke(m_now);
     }
 

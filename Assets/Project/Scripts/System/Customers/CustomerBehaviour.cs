@@ -4,11 +4,11 @@ using UnityEngine;
 public class CustomerBehaviour : MonoBehaviour
 {
     public Action<bool> OnOrderDelivered;
-    [SerializeField] private Customer m_customer;
+    public Customer Customer;
 
     public void CheckOrder(Ingredient p_ingredient)
     {
-        if (p_ingredient == m_customer.ingredient)
+        if (p_ingredient == Customer.ingredient)
         {
             OnOrderDelivered?.Invoke(true);
         }
