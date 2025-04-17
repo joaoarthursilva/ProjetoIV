@@ -1,9 +1,13 @@
+using ProjetoIV.RatInput;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 
 public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 {
+    [SerializeField] private InputID[] m_inputsToShow;
+    public InputID[] InputsToShow => m_inputsToShow;
+
     [SerializeField] private Minigame[] m_minigames;
     public Minigame CurrentMinigame;
 
@@ -40,6 +44,8 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
         m_currentMinigame = p_minigame as ProccessMinigame;
         m_initialIngredient = p_minigame.InitialIngredient();
         m_onEndAction = p_actionOnEnd;
+        RatInput.Instance.ShowUIElement(InputID.MINIGAME_CUT);
+
         SpawnIngredient();
     }
 
@@ -51,6 +57,8 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 
     public void IOnEndInteraction()
     {
+        RatInput.Instance.ShowUIElement(InputID.NONE);
+
         Invoke(nameof(DestroyIngredient), 1f);
         m_onEndAction?.Invoke();
     }

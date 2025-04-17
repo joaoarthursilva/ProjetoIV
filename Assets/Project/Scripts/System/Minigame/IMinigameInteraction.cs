@@ -1,8 +1,10 @@
+using ProjetoIV.RatInput;
 using System.Collections.Generic;
 using UnityEngine;
 
 public interface IMinigameInteraction : IMinigameInputs, ICameraStation
 {
+    public InputID[] InputsToShow { get; }
     public List<RaycastableMinigame> RaycastableMinigame { get; }
 
     public bool EmbraceMinigame(Ingredient p_minigame, out Minigame o_minigame);

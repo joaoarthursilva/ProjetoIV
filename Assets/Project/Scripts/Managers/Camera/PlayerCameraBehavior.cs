@@ -1,3 +1,4 @@
+using ProjetoIV.RatInput;
 using System;
 using UnityEngine;
 
@@ -24,6 +25,8 @@ public class PlayerCameraBehavior : MonoBehaviour
     RaycastHit[] l_hits;
     public void Update()
     {
+        if (RatInput.Instance.CurrentMap is not Map.KITCHEN) return;
+
         l_hits = Physics.RaycastAll(transform.position, transform.forward, maxDistance);
 
         for (int i = 0; i < l_hits.Length; i++)

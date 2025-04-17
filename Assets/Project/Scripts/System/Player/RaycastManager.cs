@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ProjetoIV.RatInput;
 using ProjetoIV.Util;
 using UnityEngine;
 
@@ -36,5 +37,8 @@ public class RaycastManager : Singleton<RaycastManager>
         {
             m_raycastableObjects[i].SetHoverBehavior(p_raycastObj == m_raycastableObjects[i]);
         }
+
+        if (p_raycastObj == null) RatInput.Instance.ShowUIElement(InputID.NONE);
+        else RatInput.Instance.ShowUIElement(InputID.KITCHEN_INTERACT);
     }
 }

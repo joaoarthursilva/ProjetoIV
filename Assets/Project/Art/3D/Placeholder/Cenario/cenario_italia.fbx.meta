@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: decoracoes
+    second: {fileID: 2100000, guid: 33248405be247d0439858e2efaed5b48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: ferro
     second: {fileID: 2100000, guid: 289cab2a5d3e54c4698591366cdc1580, type: 2}
   - first:
@@ -29,6 +34,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: vidro
     second: {fileID: 2100000, guid: 34dbb83a9b5f1f74ca7155ab10632f8c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "jun\xE7\xE3o"
+    second: {fileID: 2800000, guid: 1afa0576527b8004e823bfd9bc47a949, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -113,7 +123,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.001
+    globalScale: 0.1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
