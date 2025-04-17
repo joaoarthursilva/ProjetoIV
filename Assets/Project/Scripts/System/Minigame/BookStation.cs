@@ -9,7 +9,8 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
     [SerializeField] private CinemachineCamera m_camera;
     public CinemachineCamera Camera => m_camera;
 
-    public List<RaycastableMinigame> RaycastableMinigame => throw new NotImplementedException();
+    [SerializeField] private List<RaycastableMinigame> m_raycastable;
+    public List<RaycastableMinigame> RaycastableMinigame => m_raycastable;
 
     System.Action m_onEndAction;
     public bool EmbraceMinigame(Ingredient p_ingredient, out Minigame o_minigame)

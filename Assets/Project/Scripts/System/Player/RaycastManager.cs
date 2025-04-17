@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using ProjetoIV.Util;
 using UnityEngine;
@@ -8,8 +9,9 @@ public class RaycastManager : Singleton<RaycastManager>
     RaycastableObject[] m_raycastableObjects;
     Dictionary<int, RaycastableObject> m_raycastableObjectsDictionary;
 
-    public void Start()
+    public IEnumerator Start()
     {
+        yield return null;
         m_raycastableObjects = FindObjectsByType<RaycastableObject>(FindObjectsSortMode.None);
 
         m_raycastableObjectsDictionary = new();
@@ -20,6 +22,7 @@ public class RaycastManager : Singleton<RaycastManager>
 
     public RaycastableObject GetRaycastableObject(int p_instanceID)
     {
+        if (m_raycastableObjectsDictionary == null) return null;
         if (!m_raycastableObjectsDictionary.ContainsKey(p_instanceID)) return null;
 
         return m_raycastableObjectsDictionary[p_instanceID];
@@ -27,6 +30,8 @@ public class RaycastManager : Singleton<RaycastManager>
 
     public void SetCurrentRaycastableObjectHover(RaycastableObject p_raycastObj)
     {
+        if (m_raycastableObjects == null) return;
+
         for (int i = 0; i < m_raycastableObjects.Length; i++)
         {
             m_raycastableObjects[i].SetHoverBehavior(p_raycastObj == m_raycastableObjects[i]);
