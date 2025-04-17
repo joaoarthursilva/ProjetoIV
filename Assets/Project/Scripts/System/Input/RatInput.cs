@@ -54,7 +54,11 @@ namespace ProjetoIV.RatInput
 
         public void SetMap(string p_map)
         {
-            m_playerInput.SwitchCurrentActionMap(p_map);
+            for (int i = 0; i < m_actionAsset.actionMaps.Count; i++)
+            {
+                if (m_actionAsset.actionMaps[i].name.Equals(p_map)) m_actionAsset.actionMaps[i].Enable();
+                else m_actionAsset.actionMaps[i].Disable();
+            }
         }
     }
 
