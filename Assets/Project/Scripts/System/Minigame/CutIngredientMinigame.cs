@@ -8,7 +8,7 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
     public Minigame CurrentMinigame;
 
     [SerializeField] private CinemachineCamera m_camera;
-    public CinemachineCamera MinigameCamera => m_camera;
+    public CinemachineCamera Camera => m_camera;
 
     [SerializeField] private List<RaycastableMinigame> m_raycastable;
     public List<RaycastableMinigame> RaycastableMinigame => m_raycastable;
@@ -88,5 +88,10 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
         m_currentIngredient.AnimCut(m_interactionsCounter);
         m_interactionsCounter++;
         ICheckEndInteraction();
+    }
+
+    public void IOnPressExit()
+    {
+        
     }
 }

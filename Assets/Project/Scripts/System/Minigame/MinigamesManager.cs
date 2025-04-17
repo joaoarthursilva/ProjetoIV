@@ -7,6 +7,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 {
     public static System.Action<CinemachineCamera> OnSetMinigamecamera;
     public ProjetoIV.RatInput.Input cut;
+    public ProjetoIV.RatInput.Input exitInteraction;
 
     public List<IMinigameInteraction> minigamesInteraction;
     private IMinigameInteraction m_currentMinigame;
@@ -16,9 +17,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
     private void Start()
     {
-        cut = RatInput.Instance.GetInput(InputID.MINIGAME_CUT);
-        cut.OnInputStarted += IOnCut;
-        cut.OnInputCanceled += IOnEndedCut;
+        SubscribeToInput();
 
         var components = GetComponentsInChildren<IMinigameInteraction>();
         minigamesInteraction = new List<IMinigameInteraction>();
@@ -27,10 +26,31 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
             if (components[i] is IMinigameInteraction minigame) minigamesInteraction.Add(minigame);
     }
 
+    void SubscribeToInput()
+    {
+        cut = RatInput.Instance.GetInput(InputID.MINIGAME_CUT);
+        cut.OnInputStarted += IOnCut;
+        cut.OnInputCanceled += IOnEndedCut;
+
+        exitInteraction = RatInput.Instance.GetInput(InputID.MINIGAME_ENDINTERACTION);
+        exitInteraction.OnInputCanceled += IOnPressExit;
+    }
+
+    void UnsubscribeToInput()
+    {
+        if (cut != null)
+        {
+            cut.OnInputStarted -= IOnCut;
+            cut.OnInputCanceled -= IOnEndedCut;
+        }
+
+        if (exitInteraction != null) exitInteraction.OnInputCanceled -= IOnPressExit;
+        
+    }
+
     private void OnDestroy()
     {
-        cut.OnInputStarted -= IOnCut;
-        cut.OnInputCanceled -= IOnEndedCut;
+        UnsubscribeToInput();
     }
 
     public void OnInteractWithRaycastableObject(RaycastableMinigame p_object)
@@ -41,8 +61,10 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
                 && minigamesInteraction[i].EmbraceMinigame(m_playerInventory.currentIngredient, out Minigame l_minigame))
             {
                 m_currentMinigame = minigamesInteraction[i];
+
                 m_currentMinigame.IOnStartInteraction(l_minigame, () => OnEndMinigame(l_minigame.FinalIngredient()));
-                OnSetMinigamecamera?.Invoke(m_currentMinigame.MinigameCamera);
+
+                OnSetMinigamecamera?.Invoke(m_currentMinigame.Camera);
                 break;
             }
         }
@@ -96,5 +118,10 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
         if (m_currentMinigame == null) return;
 
         m_currentMinigame.IOnEndedCut();
+    }
+
+    public void IOnPressExit()
+    {
+        throw new System.NotImplementedException();
     }
 }

@@ -9,4 +9,5 @@ public interface IMinigameInputs
     public void IOnMouseClick();
     public void IOnCut();
     public void IOnEndedCut();
+    public void IOnPressExit();
 }
