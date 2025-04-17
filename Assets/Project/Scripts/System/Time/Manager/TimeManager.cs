@@ -20,6 +20,7 @@ public class TimeManager : Singleton<TimeManager>
 
     public void StartNextDay()
     {
+        Debug.Log("StartNextDay");
         m_now = m_days[m_today].start;
         OnStartDay?.Invoke(m_days[m_today]);
         OnPassTime?.Invoke(m_now);

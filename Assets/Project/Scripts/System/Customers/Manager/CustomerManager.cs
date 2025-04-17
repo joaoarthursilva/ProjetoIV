@@ -12,6 +12,7 @@ public class CustomerManager : Singleton<CustomerManager>
 
     public void SpawnCustomer(Customer p_customer)
     {
+        Debug.Log("SpawnCustomer");
         m_currentCustomer = p_customer;
         m_currentCustomerGameObject = Instantiate(m_customerGameObject);
 

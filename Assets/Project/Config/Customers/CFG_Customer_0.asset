@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CFG_Customer_0
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  ingredient: {fileID: 0}
+  ingredient: {fileID: 11400000, guid: 38bc9278815a9c6499ac301ca67cf715, type: 2}
