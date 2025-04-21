@@ -63,6 +63,9 @@ namespace ProjetoIV.RatInput
                 case "Minigame":
                     CurrentMap = Map.MINIGAME;
                     break;
+                case "Dialog":
+                    CurrentMap = Map.DIALOG;
+                    break;
                 default:
                     CurrentMap = Map.KITCHEN;
                     break;
@@ -76,6 +79,7 @@ namespace ProjetoIV.RatInput
         }
 
         public static System.Action<InputID> ShowInputUIElement;
+
         public void ShowUIElement(InputID p_inputID)
         {
             ShowInputUIElement?.Invoke(p_inputID);

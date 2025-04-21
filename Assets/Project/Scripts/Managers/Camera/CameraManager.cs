@@ -1,14 +1,16 @@
 using System.Collections.Generic;
+using ProjetoIV.Util;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+public class CameraManager : Singleton<CameraManager>
 {
     const int PRIORITY_CURRENT = 10;
     const int PRIORITY_DEFAULT = 0;
 
     public List<CinemachineCamera> cameras = new List<CinemachineCamera>();
     public CinemachineCamera playerCamera;
+
     private void Start()
     {
         var cams = FindObjectsByType<CinemachineCamera>(FindObjectsSortMode.None);
@@ -32,5 +34,4 @@ public class CameraManager : MonoBehaviour
 
         p_camera.Priority = PRIORITY_CURRENT;
     }
-
 }

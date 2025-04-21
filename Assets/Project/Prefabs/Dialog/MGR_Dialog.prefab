@@ -22,6 +22,15 @@ GameObject:
   - component: {fileID: 4704459728548304465}
   - component: {fileID: 4021718042761718973}
   - component: {fileID: 8114055189075859560}
+  - component: {fileID: 7735615109546164472}
+  - component: {fileID: 3090499992904081402}
+  - component: {fileID: 3096438579672345165}
+  - component: {fileID: 4409458409297729948}
+  - component: {fileID: 8541986796996090402}
+  - component: {fileID: 3954090371631492928}
+  - component: {fileID: 7571339668008577825}
+  - component: {fileID: 3399778547603270542}
+  - component: {fileID: 8927768400406598385}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -57,10 +66,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -336.47336, y: 72.74182}
+  scrollPos: {x: -222.47333, y: 67.74182}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 270
+  blockViewHeight: 435
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -69,9 +78,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 7063789689419693196}
+  - {fileID: 1706913984631436002}
   selectedCommands:
-  - {fileID: 8114055189075859560}
+  - {fileID: 8927768400406598385}
   variables: []
   description: 
   stepPause: 0
@@ -97,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 478.37683
+    x: 357.37683
     y: 117.58745
     width: 89.45
     height: 40
@@ -110,6 +119,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 6813070626748957267}
   - {fileID: 964605545783978299}
+  - {fileID: 7735615109546164472}
+  - {fileID: 3399778547603270542}
   suppressAllAutoSelections: 0
 --- !u!114 &6813070626748957267
 MonoBehaviour:
@@ -152,8 +163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 599.0288
-    y: 117.91736
+    x: 597.0288
+    y: 116.91736
     width: 93.9
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -165,6 +176,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 2381380702565198440}
   - {fileID: 8210402770842678065}
+  - {fileID: 8927768400406598385}
   suppressAllAutoSelections: 0
 --- !u!114 &6849858845578673433
 MonoBehaviour:
@@ -180,8 +192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 716.0288
-    y: 80.91736
+    x: 718.0288
+    y: 290.91736
     width: 134.34
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -193,6 +205,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 4704459728548304465}
   - {fileID: 708008639409847395}
+  - {fileID: 3090499992904081402}
   suppressAllAutoSelections: 0
 --- !u!114 &7063789689419693196
 MonoBehaviour:
@@ -208,8 +221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 715.0288
-    y: 146.91736
+    x: 718.0288
+    y: 80.91736
     width: 131.82
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -221,6 +234,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 4021718042761718973}
   - {fileID: 8114055189075859560}
+  - {fileID: 3096438579672345165}
   suppressAllAutoSelections: 0
 --- !u!114 &964605545783978299
 MonoBehaviour:
@@ -263,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: bo mdiaaaaaaaaa estou todo cagado e mijado
+  storyText: bo mdiaaaaaaaaa continuo cagado e mijado
   description: 
   character: {fileID: 8913406901308074210}
   portrait: {fileID: 0}
@@ -411,6 +425,267 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &7735615109546164472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 4571896646267302410}
+  targetComponentAssemblyName: RatSpeak.DialogManager, RatSpeak, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: 'UnityEngine.Component[]'
+  targetComponentText: DialogManager
+  targetMethod: SetCurrentDialog
+  targetMethodText: 'SetCurrentDialog (DialogID): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: RatSpeak.DialogID, RatSpeak, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      typeFullname: RatSpeak.DialogID
+      intValue: 3
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &3090499992904081402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 4571896646267302410}
+  targetComponentAssemblyName: RatSpeak.DialogManager, RatSpeak, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: 'UnityEngine.Component[]'
+  targetComponentText: DialogManager
+  targetMethod: ExitDialog
+  targetMethodText: 'ExitDialog (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &3096438579672345165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 4571896646267302410}
+  targetComponentAssemblyName: RatSpeak.DialogManager, RatSpeak, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: 'UnityEngine.Component[]'
+  targetComponentText: DialogManager
+  targetMethod: ExitDialog
+  targetMethodText: 'ExitDialog (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &4409458409297729948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 477.47333
+    y: 116.25818
+    width: 110.619995
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 18
+  blockName: Esperando
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 8541986796996090402}
+  - {fileID: 3954090371631492928}
+  - {fileID: 7571339668008577825}
+  suppressAllAutoSelections: 0
+--- !u!114 &8541986796996090402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  storyText: estou esperando
+  description: 
+  character: {fileID: 8913406901308074210}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &3954090371631492928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  storyText: "\xE9 pra j\xE1!"
+  description: 
+  character: {fileID: 9070910033105511767}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &7571339668008577825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 4571896646267302410}
+  targetComponentAssemblyName: RatSpeak.DialogManager, RatSpeak, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: 'UnityEngine.Component[]'
+  targetComponentText: DialogManager
+  targetMethod: ExitDialog
+  targetMethodText: 'ExitDialog (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &3399778547603270542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 4571896646267302410}
+  targetComponentAssemblyName: RatSpeak.DialogManager, RatSpeak, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: 'UnityEngine.Component[]'
+  targetComponentText: DialogManager
+  targetMethod: ExitDialog
+  targetMethodText: 'ExitDialog (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &8927768400406598385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 7063789689419693196}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!1 &4571896646267302410
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,10 +740,13 @@ MonoBehaviour:
     blockName: Pedido
   - dialogID: 2
     blockName: Entrega
-  - dialogID: 3
-    blockName: ResultadoRuim
   - dialogID: 4
+    blockName: ResultadoRuim
+  - dialogID: 5
     blockName: ResultadoBom
+  - dialogID: 3
+    blockName: Esperando
+  m_currentDialogID: 1
   m_debug: 0
   m_debugShowDialogText: DemoPlaceholder
 --- !u!1 &5098669665308164628

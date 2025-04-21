@@ -1,3 +1,4 @@
+using System;
 using ProjetoIV.RatInput;
 using System.Collections.Generic;
 using Unity.Cinemachine;
@@ -55,11 +56,13 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
         m_currentIngredient.SetProcessed(false);
     }
 
+    public Action OnEndCutMinigame;
     public void IOnEndInteraction()
     {
         RatInput.Instance.ShowUIElement(InputID.NONE);
-
-        Invoke(nameof(DestroyIngredient), 1f);
+        
+        Invoke(nameof(DestroyIngredient), .25f);
+        OnEndCutMinigame.Invoke();
         m_onEndAction?.Invoke();
     }
     void DestroyIngredient()

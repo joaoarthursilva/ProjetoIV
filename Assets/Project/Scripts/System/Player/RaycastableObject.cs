@@ -2,12 +2,19 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RaycastObjectEvent : UnityEvent<RaycastableObject> { }
+public class RaycastObjectEvent : UnityEvent<RaycastableObject>
+{
+}
 
 public class RaycastableObject : MonoBehaviour
 {
     private Collider m_collider;
-    public Collider Collider { get => m_collider; }
+    [SerializeField] private bool m_canInteract = true;
+    public Collider Collider
+    {
+        get => m_collider;
+    }
+
     public UnityEvent<RaycastableObject> OnInteract;
 
     private void Start()
@@ -17,12 +24,12 @@ public class RaycastableObject : MonoBehaviour
 
     public void SetHoverBehavior(bool p_hoverOn)
     {
-
     }
 
     public virtual void Interact()
     {
+        if (!m_canInteract) return;
+        Debug.Log("OnInteract");
         OnInteract?.Invoke(this);
-
     }
 }

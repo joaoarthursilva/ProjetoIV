@@ -1033,6 +1033,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MGR_Dialog
       objectReference: {fileID: 0}
+    - target: {fileID: 9035497260707535957, guid: f1558d776b724734b8e26d25dee0b45d, type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035497260707535957, guid: f1558d776b724734b8e26d25dee0b45d, type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1255,6 +1263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64004cb3a9e3c74abb2d581851986e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_inputsToShow: 
   m_minigames:
   - {fileID: 11400000, guid: f2ea99b4cb7ea3043b4570701d41f35e, type: 2}
   CurrentMinigame: {fileID: 0}
@@ -1750,6 +1759,10 @@ MonoBehaviour:
     Pressed: 0
     PressedThisFrame: 0
     ReleasedThisFrame: 0
+  exitInteraction:
+    Pressed: 0
+    PressedThisFrame: 0
+    ReleasedThisFrame: 0
   m_playerInventory: {fileID: 3096956979805779985}
 --- !u!1001 &3096956979805779980
 PrefabInstance:
@@ -1883,6 +1896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece652db36297be4da17bf813ec46b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _persistent: 0
   currentIngredient: {fileID: 11400000, guid: 5e8d7f2cfbbb64449aa49b45b7cb8b58, type: 2}
 --- !u!1001 &4153508485848043021
 PrefabInstance:
