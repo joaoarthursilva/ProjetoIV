@@ -45,7 +45,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
         }
 
         if (exitInteraction != null) exitInteraction.OnInputCanceled -= IOnPressExit;
-        
+
     }
 
     private void OnDestroy()
@@ -65,6 +65,8 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
                 m_currentMinigame.IOnStartInteraction(l_minigame, () => OnEndMinigame(l_minigame.FinalIngredient()));
 
                 OnSetMinigamecamera?.Invoke(m_currentMinigame.Camera);
+
+                RatInput.Instance.SetMap("Minigame");
                 break;
             }
         }
@@ -73,7 +75,11 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
     private void OnEndMinigame(Ingredient p_finalIngredient)
     {
         m_playerInventory.currentIngredient = p_finalIngredient;
+
+        m_currentMinigame = null;
         OnSetMinigamecamera?.Invoke(null);
+        RatInput.Instance.SetMap("Kitchen");
+
     }
 
     public void IOnLook(Vector2 p_vector)
@@ -122,6 +128,8 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
     public void IOnPressExit()
     {
-        throw new System.NotImplementedException();
+        if (m_currentMinigame == null) return;
+
+        m_currentMinigame.IOnPressExit();
     }
 }

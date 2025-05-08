@@ -116,6 +116,56 @@ Transform:
   - {fileID: 8099673500282608120}
   m_Father: {fileID: 6202906271110701514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3452011212803596218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3092520082324895161}
+  - component: {fileID: 2896971140014423636}
+  m_Layer: 0
+  m_Name: ACT_StopInteract
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3092520082324895161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452011212803596218}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2196612290355252655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2896971140014423636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452011212803596218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ee3358a4f478e46aec7731f7149813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_actionRef: {fileID: -81691873448840697, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  <InputID>k__BackingField: 5
+  <Input>k__BackingField:
+    Pressed: 0
+    PressedThisFrame: 0
+    ReleasedThisFrame: 0
 --- !u!1 &3492672536764739034
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +474,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 88eaf6c5-b351-4e04-9c28-e8998fbe96f7
     m_ActionName: 'Dialog/Skip[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2896971140014423636}
+        m_TargetAssemblyTypeName: ProjetoIV.RatInput.RatInputAction, ProjetoIV.RatInput
+        m_MethodName: OnInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0393c581-c25c-4ab2-809c-382e8fae376c
+    m_ActionName: 'Minigame/StopInteraction[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Kitchen
@@ -448,6 +514,7 @@ MonoBehaviour:
   - {fileID: 8114376595734886884}
   - {fileID: 1687391262869439989}
   - {fileID: 795240208480733232}
+  - {fileID: 2896971140014423636}
   <Movement>k__BackingField: {x: 0, y: 0}
   <LookInput>k__BackingField: {x: 0, y: 0}
 --- !u!1 &6763374186154627072
@@ -531,6 +598,7 @@ Transform:
   m_Children:
   - {fileID: 6374008640507106682}
   - {fileID: 634411167382316941}
+  - {fileID: 3092520082324895161}
   m_Father: {fileID: 6202906271110701514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8141822166570338890

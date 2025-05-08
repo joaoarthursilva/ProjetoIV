@@ -7,13 +7,14 @@ namespace ProjetoIV.RatInput
 {
     public class RatInput : Singleton<RatInput>
     {
+        public Map CurrentMap;
         [SerializeField] private PlayerInput m_playerInput;
         [SerializeField] private InputActionAsset m_actionAsset;
         [SerializeField] private List<RatInputAction> m_inputs;
 
         private void Start()
         {
-            SetMap("Minigame");
+            SetMap("Kitchen");
         }
 
         private void OnEnable()
@@ -54,7 +55,30 @@ namespace ProjetoIV.RatInput
 
         public void SetMap(string p_map)
         {
-            m_playerInput.SwitchCurrentActionMap(p_map);
+            switch (p_map)
+            {
+                case "Kitchen":
+                    CurrentMap = Map.KITCHEN;
+                    break;
+                case "Minigame":
+                    CurrentMap = Map.MINIGAME;
+                    break;
+                default:
+                    CurrentMap = Map.KITCHEN;
+                    break;
+            }
+
+            for (int i = 0; i < m_actionAsset.actionMaps.Count; i++)
+            {
+                if (m_actionAsset.actionMaps[i].name.Equals(p_map)) m_actionAsset.actionMaps[i].Enable();
+                else m_actionAsset.actionMaps[i].Disable();
+            }
+        }
+
+        public static System.Action<InputID> ShowInputUIElement;
+        public void ShowUIElement(InputID p_inputID)
+        {
+            ShowInputUIElement?.Invoke(p_inputID);
         }
     }
 

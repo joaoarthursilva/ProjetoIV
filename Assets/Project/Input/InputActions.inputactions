@@ -235,6 +235,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "StopInteraction",
+                    "type": "Button",
+                    "id": "0393c581-c25c-4ab2-809c-382e8fae376c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -257,6 +266,28 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Cut",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b7c3406c-2927-4fba-8ee2-6b307fc761c5",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "StopInteraction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "04876571-d419-4c9d-bfa3-eebdef00630c",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "StopInteraction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

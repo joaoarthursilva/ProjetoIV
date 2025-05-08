@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class BookStation : MonoBehaviour, IMinigameInteraction
 {
+    [SerializeField] private ProjetoIV.RatInput.InputID[] m_inputsToShow;
+    public ProjetoIV.RatInput.InputID[] InputsToShow => m_inputsToShow;
+
     [SerializeField] private Minigame m_minigame;
     [SerializeField] private CinemachineCamera m_camera;
     public CinemachineCamera Camera => m_camera;
 
-    public List<RaycastableMinigame> RaycastableMinigame => throw new NotImplementedException();
+    [SerializeField] private List<RaycastableMinigame> m_raycastable;
+    public List<RaycastableMinigame> RaycastableMinigame => m_raycastable;
 
     System.Action m_onEndAction;
     public bool EmbraceMinigame(Ingredient p_ingredient, out Minigame o_minigame)
@@ -71,11 +75,14 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
 
     public void IOnPressExit()
     {
+        ProjetoIV.RatInput.RatInput.ShowInputUIElement(ProjetoIV.RatInput.InputID.MINIGAME_ENDINTERACTION);
         m_onEndAction?.Invoke();
     }
 
     public void IOnStartInteraction(Minigame p_minigame, Action p_actionOnEnd)
     {
+        ProjetoIV.RatInput.RatInput.ShowInputUIElement(ProjetoIV.RatInput.InputID.NONE);
+
         m_onEndAction = p_actionOnEnd;
     }
 }
