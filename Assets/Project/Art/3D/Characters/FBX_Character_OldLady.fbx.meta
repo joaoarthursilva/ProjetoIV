@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd4ae548b2cd7f542966e64522eb6c6c
+guid: 1cfb9f5dd87884d4aad5b4c878080979
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,28 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Cabelos
+    second: {fileID: 2100000, guid: 2357386218e08c34d9fecf937f303a6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Rostos
-    second: {fileID: 2100000, guid: fdfd36499452a6d4d908fd17b8200453, type: 2}
+    second: {fileID: 2100000, guid: 035055ac67be4904ea48473e5ad63ee4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Roupas
-    second: {fileID: 2100000, guid: 2f91e3f078c57c045811a7ec6d357ef3, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Textura_Cabelo
-    second: {fileID: 2800000, guid: a3238b5d4c2af544fa4575607c1bce75, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Textura_Rosto
-    second: {fileID: 2800000, guid: 3a42cdfe2d9826146bce469f78ece4ad, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Textura_roupas
-    second: {fileID: 2800000, guid: 63bd02cac7dd2cd43b9ce32e9eb17f94, type: 3}
+    second: {fileID: 2100000, guid: cb805a232835f3f4fbbecd63c81ad5fd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

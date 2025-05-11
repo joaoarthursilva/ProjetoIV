@@ -10,7 +10,7 @@ public class GameMenuManager : MonoBehaviour
 
     [SerializeField] private TMP_Dropdown m_languageDropdown;
     [SerializeField] private List<string> m_availableLanguages = new();
-    
+
     private float m_volume;
     private float m_soundEffects;
 
@@ -20,7 +20,7 @@ public class GameMenuManager : MonoBehaviour
         m_gamePause.SetActive(true);
         m_languageDropdown.value = IdentifyLenguage();
     }
-    
+
     public void ButtonBack()
     {
         Time.timeScale = 1f;
@@ -31,10 +31,10 @@ public class GameMenuManager : MonoBehaviour
     {
         SceneLoader.Instance.Load(SceneLoader.Scene.SCN_Menu);
     }
-    
+
     public void SetVolume(System.Single p_volume)
     {
-        m_volume =  p_volume;
+        m_volume = p_volume;
     }
 
     public void SetSoundEffects(System.Single p_soundEffects)
@@ -46,7 +46,7 @@ public class GameMenuManager : MonoBehaviour
     {
         GameLocalization.Instance.SetLocalization(m_availableLanguages[p_value]);
     }
-    
+
     int IdentifyLenguage()
     {
         string l_atualLanguage = LocalizationManager.Language;
