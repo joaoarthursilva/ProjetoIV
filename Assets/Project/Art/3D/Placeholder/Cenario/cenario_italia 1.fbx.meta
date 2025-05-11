@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56b9fe13460ce9348aed85d96a2a180e
+guid: 84c2cce2207b2eb47add45c3e756776b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,37 +8,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Chao
-    second: {fileID: 2100000, guid: c3305509ffb0c924cbcf51642ecc4441, type: 2}
+    second: {fileID: 2100000, guid: 7ecb18d0e7a0a404d8d06fa5ef267e67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Decora\xE7oes2"
+    second: {fileID: 2100000, guid: aff09abdac25f354d933cce5f8503e95, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: decoracoes
-    second: {fileID: 2100000, guid: 33248405be247d0439858e2efaed5b48, type: 2}
+    second: {fileID: 2100000, guid: 4a296a2b93233634a9a26bee6154d37c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ferro
-    second: {fileID: 2100000, guid: 289cab2a5d3e54c4698591366cdc1580, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: granito
-    second: {fileID: 2100000, guid: 0e0f9859b2032d248b25908da4b9e11b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: paredes
-    second: {fileID: 2100000, guid: 24d1c36cec68a0b41a6c80407cfd93f6, type: 2}
+    second: {fileID: 2100000, guid: ef4634dba32678b4e96b62d172aeafea, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: vidro
-    second: {fileID: 2100000, guid: 34dbb83a9b5f1f74ca7155ab10632f8c, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: "jun\xE7\xE3o"
-    second: {fileID: 2800000, guid: 1afa0576527b8004e823bfd9bc47a949, type: 3}
+    second: {fileID: 2100000, guid: b28d427c347b126429b124b2362ba714, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -68,7 +58,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -123,7 +113,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.1
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
