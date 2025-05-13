@@ -1,7 +1,9 @@
 {
     "name": "ProjetoIV.Recipe",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:821eb8aeeac7f7c4d9d69feaed59b697"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
