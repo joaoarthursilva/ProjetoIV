@@ -10,8 +10,12 @@ public class CustomerBehaviour : MonoBehaviour
     [SerializeField] private Vector3 m_spawnPosition;
     private Customer m_customer;
 
+    private bool m_isNewCustomer;
+
     public void SpawnCustomer(Customer p_customer)
     {
+        m_isNewCustomer = true;
+
         m_customer = p_customer;
 
         transform.position = m_spawnPosition;
@@ -23,6 +27,20 @@ public class CustomerBehaviour : MonoBehaviour
     public void OnInteractWithRaycastableObject()
     {
         Debug.Log("interact with customer");
+
+        if (m_isNewCustomer)
+        {
+            Debug.Log("trigger first dialogues, receive order");
+            m_isNewCustomer = false;
+        }
+        //else if (ingredient != null)
+        // {
+        //     CheckOrder(ingredient);
+        // }
+        else
+        {
+            Debug.Log("trigger generic 'im waitng my order' dialogue");
+        }
     }
 
     public void CheckOrder(Ingredient p_ingredient)
