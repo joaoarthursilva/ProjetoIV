@@ -7,6 +7,7 @@ namespace RatSpeak
     {
         public string characterName;
         public CharacterType characterType;
+        public CharacterId characterId;
         public Color dialogColor = Color.black;
         public float textSpeed = 10f;
     }
@@ -18,5 +19,15 @@ namespace RatSpeak
         SECONDARY,
         TERTIARY,
         GENERIC,
+    }
+
+    public enum CharacterId
+    {
+        NONE,
+        INA,
+        CRAZY,
+        LEO,
+        CARLO,
+        DOROTEA
     }
 }
