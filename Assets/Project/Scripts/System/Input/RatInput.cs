@@ -40,8 +40,8 @@ namespace ProjetoIV.RatInput
             return null;
         }
 
-        [field: SerializeField] public Vector2 Movement { get; private set; }
-        [field: SerializeField] public Vector2 LookInput { get; private set; }
+        [HideInInspector] public Vector2 Movement;
+        [HideInInspector] public Vector2 LookInput;
 
         public void OnKitchenLook(InputAction.CallbackContext p_context)
         {
@@ -63,6 +63,12 @@ namespace ProjetoIV.RatInput
                 case "Minigame":
                     CurrentMap = Map.MINIGAME;
                     break;
+                case "Book":
+                    CurrentMap = Map.BOOK;
+                    break;
+                case "Menu":
+                    CurrentMap = Map.MENU;
+                    break;
                 default:
                     CurrentMap = Map.KITCHEN;
                     break;
@@ -74,6 +80,19 @@ namespace ProjetoIV.RatInput
                 else m_actionAsset.actionMaps[i].Disable();
             }
         }
+        public void SetMap(Map p_map)
+        {
+            CurrentMap = p_map;
+
+            for (int i = 0; i < m_actionAsset.actionMaps.Count; i++)
+            {
+                if (m_actionAsset.actionMaps[i].name.ToLower().Equals(p_map.ToString().ToLower()))
+                    m_actionAsset.actionMaps[i].Enable();
+                else m_actionAsset.actionMaps[i].Disable();
+            }
+        }
+
+
 
         public static System.Action<InputID> ShowInputUIElement;
         public void ShowUIElement(InputID p_inputID)

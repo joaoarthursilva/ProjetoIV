@@ -2,11 +2,15 @@ using System;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
+using ProjetoIV.RatInput;
 
 public class BookStation : MonoBehaviour, IMinigameInteraction
 {
-    [SerializeField] private ProjetoIV.RatInput.InputID[] m_inputsToShow;
-    public ProjetoIV.RatInput.InputID[] InputsToShow => m_inputsToShow;
+    [SerializeField] private Map m_inputMap;
+    public Map Map => m_inputMap;
+
+    [SerializeField] private InputID[] m_inputsToShow;
+    public InputID[] InputsToShow => m_inputsToShow;
 
     [SerializeField] private Minigame m_minigame;
     [SerializeField] private CinemachineCamera m_camera;

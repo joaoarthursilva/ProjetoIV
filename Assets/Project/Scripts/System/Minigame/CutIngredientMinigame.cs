@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 {
+    [SerializeField] private Map m_inputMap;
+    public Map Map => m_inputMap;
+
     [SerializeField] private InputID[] m_inputsToShow;
     public InputID[] InputsToShow => m_inputsToShow;
 

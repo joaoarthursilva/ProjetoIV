@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -17,8 +19,15 @@ public class UIHoldButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField, NaughtyAttributes.ReadOnly] private bool m_holding;
     [SerializeField, NaughtyAttributes.ReadOnly] private float m_holdFloat;
     [SerializeField] private float m_holdTime;
-
+    [SerializeField] private UnityEvent<UIHoldButton> m_onComplete;
     Coroutine m_holdingCorutine;
+
+    private void OnEnable()
+    {
+        m_holdFloat = 0f;
+        UpdateInnerCircle();
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         m_holding = true;
@@ -50,6 +59,7 @@ public class UIHoldButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         if (m_holding && m_holdFloat >= m_holdTime)
         {
             Debug.Log("foi!");
+            m_onComplete?.Invoke(this);
         }
 
         m_holdingCorutine = null;
@@ -71,11 +81,11 @@ public class UIHoldButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     }
 
     RectTransform m_canvasRect;
-    [SerializeField] Camera m_camera;
+    Vector3 l_tempPos;
     public void SetPosition(Transform p_transform, RectTransform p_canvasRect)
     {
         m_canvasRect = p_canvasRect;
-        Vector3 l_tempPos = m_camera.WorldToViewportPoint(p_transform.position);
+        l_tempPos = Camera.main.WorldToViewportPoint(p_transform.position);
         l_tempPos.x *= m_canvasRect.sizeDelta.x * m_canvasRect.localScale.x;
         l_tempPos.y *= m_canvasRect.sizeDelta.y * m_canvasRect.localScale.y;
         l_tempPos.z = 0;

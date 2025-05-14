@@ -34,8 +34,8 @@ RectTransform:
   - {fileID: 98871472729653941}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 156.5615, y: 156.5615}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_holding: 0
   m_holdFloat: 0
   m_holdTime: 1
+  m_camera: {fileID: 0}
 --- !u!1 &5134832211439066731
 GameObject:
   m_ObjectHideFlags: 0

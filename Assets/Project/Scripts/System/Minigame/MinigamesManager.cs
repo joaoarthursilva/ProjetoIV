@@ -66,7 +66,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
                 OnSetMinigamecamera?.Invoke(m_currentMinigame.Camera);
 
-                RatInput.Instance.SetMap("Minigame");
+                RatInput.Instance.SetMap(m_currentMinigame.Map);
                 break;
             }
         }
