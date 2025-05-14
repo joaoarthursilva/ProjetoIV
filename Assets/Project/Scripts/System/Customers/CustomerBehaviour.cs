@@ -33,10 +33,10 @@ public class CustomerBehaviour : MonoBehaviour
             Debug.Log("trigger first dialogues, receive order");
             m_isNewCustomer = false;
         }
-        //else if (ingredient != null)
-        // {
-        //     CheckOrder(ingredient);
-        // }
+        else if (PlayerInventory.Instance.currentIngredient != null)
+        {
+            CheckOrder(PlayerInventory.Instance.currentIngredient);
+        }
         else
         {
             Debug.Log("trigger generic 'im waitng my order' dialogue");

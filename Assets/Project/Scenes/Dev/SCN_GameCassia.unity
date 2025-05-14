@@ -4813,6 +4813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cenario_italia
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 56b9fe13460ce9348aed85d96a2a180e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3735102090226358198, guid: 56b9fe13460ce9348aed85d96a2a180e, type: 3}
@@ -5765,6 +5769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '- Cameras'
       objectReference: {fileID: 0}
+    - target: {fileID: 7093883076022705984, guid: 6694b233c75a9864f8ce8a25d314ed2c, type: 3}
+      propertyPath: Priority.m_Value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6168,7 +6176,8 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5200549308183008797, guid: 010bd1d5a80ee68499b88d8dd608b2e3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6383,31 +6392,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 159083474127061473, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.208
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 159083474127061473, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.991
+      value: 1.9300001
       objectReference: {fileID: 0}
     - target: {fileID: 159083474127061473, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.819
+      value: -9.73
       objectReference: {fileID: 0}
     - target: {fileID: 159083474127061473, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.66014767
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 159083474127061473, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.25338712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 159083474127061473, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.66014767
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 159083474127061473, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.25338712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 159083474127061473, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6423,7 +6432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1349368538799052214, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: field of view
-      value: 32.4
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1349368538799052214, guid: c6059a141812c6c489a381a81c64b813, type: 3}
       propertyPath: near clip plane
