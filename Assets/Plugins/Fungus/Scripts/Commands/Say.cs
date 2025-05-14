@@ -8,53 +8,54 @@ namespace Fungus
     /// <summary>
     /// Writes text in a dialog box.
     /// </summary>
-    [CommandInfo("Narrative", 
-                 "Say", 
-                 "Writes text in a dialog box.")]
+    [CommandInfo("Narrative",
+        "Say",
+        "Writes text in a dialog box.")]
     [AddComponentMenu("")]
     public class Say : Command, ILocalizable
     {
         // Removed this tooltip as users's reported it obscures the text box
-        [TextArea(5,10)]
-        [SerializeField] protected string storyText = "";
+        [TextArea(5, 10)] [SerializeField] protected string storyText = "";
 
-        [Tooltip("Notes about this story text for other authors, localization, etc.")]
-        [SerializeField] protected string description = "";
+        [Tooltip("Notes about this story text for other authors, localization, etc.")] [SerializeField]
+        protected string description = "";
 
-        [Tooltip("Character that is speaking")]
-        [SerializeField] protected Character character;
+        [Tooltip("Character that is speaking")] [SerializeField]
+        protected Character character;
 
-        [Tooltip("Portrait that represents speaking character")]
-        [SerializeField] protected Sprite portrait;
+        [Tooltip("Portrait that represents speaking character")] [SerializeField]
+        protected Sprite portrait;
 
-        [Tooltip("Voiceover audio to play when writing the text")]
-        [SerializeField] protected AudioClip voiceOverClip;
+        [Tooltip("Voiceover audio to play when writing the text")] [SerializeField]
+        protected AudioClip voiceOverClip;
 
-        [Tooltip("Always show this Say text when the command is executed multiple times")]
-        [SerializeField] protected bool showAlways = true;
+        [Tooltip("Always show this Say text when the command is executed multiple times")] [SerializeField]
+        protected bool showAlways = true;
 
-        [Tooltip("Number of times to show this Say text when the command is executed multiple times")]
-        [SerializeField] protected int showCount = 1;
+        [Tooltip("Number of times to show this Say text when the command is executed multiple times")] [SerializeField]
+        protected int showCount = 1;
 
-        [Tooltip("Type this text in the previous dialog box.")]
-        [SerializeField] protected bool extendPrevious = false;
+        [Tooltip("Type this text in the previous dialog box.")] [SerializeField]
+        protected bool extendPrevious = false;
 
-        [Tooltip("Fade out the dialog box when writing has finished and not waiting for input.")]
-        [SerializeField] protected bool fadeWhenDone = true;
+        [Tooltip("Fade out the dialog box when writing has finished and not waiting for input.")] [SerializeField]
+        protected bool fadeWhenDone = true;
 
-        [Tooltip("Wait for player to click before continuing.")]
-        [SerializeField] protected bool waitForClick = true;
+        [Tooltip("Wait for player to click before continuing.")] [SerializeField]
+        protected bool waitForClick = true;
 
-        [Tooltip("Stop playing voiceover when text finishes writing.")]
-        [SerializeField] protected bool stopVoiceover = true;
+        [Tooltip("Stop playing voiceover when text finishes writing.")] [SerializeField]
+        protected bool stopVoiceover = true;
 
-        [Tooltip("Wait for the Voice Over to complete before continuing")]
-        [SerializeField] protected bool waitForVO = false;
+        [Tooltip("Wait for the Voice Over to complete before continuing")] [SerializeField]
+        protected bool waitForVO = false;
 
         //add wait for vo that overrides stopvo
 
-        [Tooltip("Sets the active Say dialog with a reference to a Say Dialog object in the scene. All story text will now display using this Say Dialog.")]
-        [SerializeField] protected SayDialog setSayDialog;
+        [Tooltip(
+            "Sets the active Say dialog with a reference to a Say Dialog object in the scene. All story text will now display using this Say Dialog.")]
+        [SerializeField]
+        protected SayDialog setSayDialog;
 
         protected int executionCount;
 
@@ -63,17 +64,27 @@ namespace Fungus
         /// <summary>
         /// Character that is speaking.
         /// </summary>
-        public virtual Character _Character { get { return character; } }
+        public virtual Character _Character
+        {
+            get { return character; }
+        }
 
         /// <summary>
         /// Portrait that represents speaking character.
         /// </summary>
-        public virtual Sprite Portrait { get { return portrait; } set { portrait = value; } }
+        public virtual Sprite Portrait
+        {
+            get { return portrait; }
+            set { portrait = value; }
+        }
 
         /// <summary>
         /// Type this text in the previous dialog box.
         /// </summary>
-        public virtual bool ExtendPrevious { get { return extendPrevious; } }
+        public virtual bool ExtendPrevious
+        {
+            get { return extendPrevious; }
+        }
 
         public override void OnEnter()
         {
@@ -102,7 +113,7 @@ namespace Fungus
                 Continue();
                 return;
             }
-    
+
             var flowchart = GetFlowchart();
 
             sayDialog.SetActive(true);
@@ -125,22 +136,23 @@ namespace Fungus
 
             string subbedText = flowchart.SubstituteVariables(displayText);
 
-            sayDialog.Say(subbedText, !extendPrevious, waitForClick, fadeWhenDone, stopVoiceover, waitForVO, voiceOverClip, delegate {
-                Continue();
-            });
+            sayDialog.Say(subbedText, !extendPrevious, waitForClick, fadeWhenDone, stopVoiceover, waitForVO,
+                voiceOverClip, delegate { Continue(); });
         }
 
         public override string GetSummary()
         {
             string namePrefix = "";
-            if (character != null) 
+            if (character != null)
             {
                 namePrefix = character.NameText + ": ";
             }
+
             if (extendPrevious)
             {
                 namePrefix = "EXTEND" + ": ";
             }
+
             return namePrefix + "\"" + storyText + "\"";
         }
 
@@ -183,7 +195,7 @@ namespace Fungus
         {
             return description;
         }
-        
+
         public virtual string GetStringId()
         {
             // String id for Say commands is SAY.<Localization Id>.<Command id>.[Character Name]

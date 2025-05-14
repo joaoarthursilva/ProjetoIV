@@ -34,9 +34,7 @@ namespace Fungus
                 textUI = go.GetComponent<Text>();
                 inputField = go.GetComponent<InputField>();
                 textMesh = go.GetComponent<TextMesh>();
-#if UNITY_2018_1_OR_NEWER
                 tmpro = go.GetComponent<TMPro.TMP_Text>();
-#endif
                 writerTextDestination = go.GetComponent<IWriterTextDestination>();
             }
             else
@@ -44,12 +42,10 @@ namespace Fungus
                 textUI = go.GetComponentInChildren<Text>();
                 inputField = go.GetComponentInChildren<InputField>();
                 textMesh = go.GetComponentInChildren<TextMesh>();
-#if UNITY_2018_1_OR_NEWER
                 tmpro = go.GetComponentInChildren<TMPro.TMP_Text>();
-#endif
                 writerTextDestination = go.GetComponentInChildren<IWriterTextDestination>();
             }
-            
+
             // Try to find any component with a text property
             if (textUI == null && inputField == null && textMesh == null && writerTextDestination == null)
             {
@@ -86,12 +82,10 @@ namespace Fungus
                 textMesh.richText = true;
             }
 
-#if UNITY_2018_1_OR_NEWER
             if (tmpro != null)
             {
                 tmpro.richText = true;
             }
-#endif
 
             if (writerTextDestination != null)
             {
@@ -116,12 +110,10 @@ namespace Fungus
             {
                 textMesh.color = textColor;
             }
-#if UNITY_2018_1_OR_NEWER
             else if (tmpro != null)
             {
                 tmpro.color = textColor;
             }
-#endif
             else if (writerTextDestination != null)
             {
                 writerTextDestination.SetTextColor(textColor);
@@ -151,12 +143,10 @@ namespace Fungus
                 tempColor.a = textAlpha;
                 textMesh.color = tempColor;
             }
-#if UNITY_2018_1_OR_NEWER
             else if (tmpro != null)
             {
                 tmpro.alpha = textAlpha;
             }
-#endif
             else if (writerTextDestination != null)
             {
                 writerTextDestination.SetTextAlpha(textAlpha);
@@ -166,10 +156,7 @@ namespace Fungus
         public bool HasTextObject()
         {
             return (textUI != null || inputField != null || textMesh != null || textComponent != null ||
-#if UNITY_2018_1_OR_NEWER
-                tmpro != null ||
-#endif
-                 writerTextDestination != null);
+                    tmpro != null || writerTextDestination != null);
         }
 
         public bool SupportsRichText()
@@ -178,24 +165,27 @@ namespace Fungus
             {
                 return textUI.supportRichText;
             }
+
             if (inputField != null)
             {
                 return false;
             }
+
             if (textMesh != null)
             {
                 return textMesh.richText;
             }
-#if UNITY_2018_1_OR_NEWER
+
             if (tmpro != null)
             {
                 return true;
             }
-#endif
+
             if (writerTextDestination != null)
             {
                 return writerTextDestination.SupportsRichText();
             }
+
             return false;
         }
 
@@ -240,7 +230,8 @@ namespace Fungus
 #if UNITY_2018_1_OR_NEWER
                 if (tmpro != null && tmpro.textInfo != null && tmpro.textInfo.characterInfo != null)
                 {
-                    if (tmpro.maxVisibleCharacters < tmpro.textInfo.characterInfo.Length && tmpro.maxVisibleCharacters > 0)
+                    if (tmpro.maxVisibleCharacters < tmpro.textInfo.characterInfo.Length &&
+                        tmpro.maxVisibleCharacters > 0)
                     {
                         return tmpro.textInfo.characterInfo[tmpro.maxVisibleCharacters - 1].character;
                     }
