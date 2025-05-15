@@ -11,36 +11,44 @@ namespace RatSpeak
     {
         [Header("Dialog")] public Flowchart flowchart;
 
-        [SerializeField] private SayDialog m_sayDialog;
-        [SerializeField] private List<DialogReference> m_dialogReferences;
-        [SerializeField] private Fungus.Character m_testCharacter;
+        // [SerializeField] private SayDialog m_sayDialog;
+
+        // [SerializeField] private List<CharacterReference> m_charReferences;
+        [SerializeField] private Fungus.Character m_fungusCharacter;
+        private Block m_block;
+        private const string BLOCK_NAME = "Fala";
 
         protected override void OnAwake()
         {
             base.OnAwake();
+            m_block = flowchart.FindBlock(BLOCK_NAME);
         }
 
-        public void ShowDialog(DialogID p_dialogID)
+        private Say l_tempSay;
+
+        // private Fungus.Character GetFungusCharacter(Character p_character)
+        // {
+        //     for (int i = 0; i < m_charReferences.Count; i++)
+        //     {
+        //         if (m_charReferences[i].characterConfig == p_character)
+        //         {
+        //             return m_charReferences[i].character;
+        //         }
+        //     }
+        //
+        //     return null;
+        // }
+
+        public void ShowDialog(Dialog p_dialog)
         {
-            for (int i = 0; i < m_dialogReferences.Count; i++)
-            {
-                if (m_dialogReferences[i].dialogID == p_dialogID)
-                {
-                    Block block = flowchart.FindBlock(m_dialogReferences[i].blockName);
-                    for (int j = 0; j < block.CommandList.Count; j++)
-                    {
-                        if (block.CommandList[j].GetType() == typeof(Say))
-                        {
-                            ((Say)block.CommandList[j]).SetStandardText(m_debugShowDialogText);
-                        }
-                    }
+            l_tempSay = (Say)m_block.CommandList[0];
+            // Fungus.Character character = GetFungusCharacter(p_dialog.character);
 
-                    flowchart.ExecuteIfHasBlock(m_dialogReferences[i].blockName);
-                    return;
-                }
-            }
+            m_fungusCharacter.NameText = p_dialog.character.characterName;
+            l_tempSay.Character = m_fungusCharacter;
+            l_tempSay.SetStandardText(p_dialog.dialogText);
 
-            Debug.LogError($"Dialog ID {p_dialogID} not found.");
+            l_tempSay.Execute();
         }
 
         #region Debug
@@ -48,40 +56,37 @@ namespace RatSpeak
         [Header("Debug"), SerializeField] private bool m_debug;
 
         [SerializeField, ShowIf("m_debug")] private string m_debugShowDialogText;
-        [SerializeField, ShowIf("m_debug")] private DialogID m_debugShowDialogID;
+        [SerializeField, ShowIf("m_debug")] private Dialog m_debugShowDialog;
 
         [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
         private void DebugShowDialog()
         {
-            ShowDialog(m_debugShowDialogID);
-            // m_sayDialog.SetCharacter(m_testCharacter);
-            // m_sayDialog.Say(m_debugShowDialogText, true, true,
-            //     false, false, false,
-            //     null, null);
+            ShowDialog(m_debugShowDialog);
         }
 
-        [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
-        private void DebugHideDialog()
-        {
-            m_sayDialog.SetActive(false);
-        }
+        // [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
+        // private void DebugHideDialog()
+        // {
+        // m_sayDialog.SetActive(false);
+        // }
 
         #endregion
     }
 
-    public enum DialogID
+    [Serializable]
+    public struct CharacterReference
     {
-        NONE,
-        PEDIDO,
-        ENTREGA,
-        RESULTADO_RUIM,
-        RESULTADO_BOM,
+        public CharacterID characterID;
+        public Character characterConfig;
+        public Fungus.Character character;
     }
 
-    [Serializable]
-    public struct DialogReference
+    public enum CharacterID
     {
-        public DialogID dialogID;
-        public string blockName;
+        NONE,
+        PLAYER,
+        INA,
+        LEO,
+        ETC
     }
 }

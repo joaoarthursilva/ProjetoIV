@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471ffbb63fbc29f4381048ab0ac78d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveSpeed: 5
+  m_moveSpeed: 25
   m_horizontalLookSensitivity: 25
   m_verticalLookSensitivity: 25
   m_rb: {fileID: 574469941099063686}

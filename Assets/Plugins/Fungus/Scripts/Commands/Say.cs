@@ -64,9 +64,10 @@ namespace Fungus
         /// <summary>
         /// Character that is speaking.
         /// </summary>
-        public virtual Character _Character
+        public virtual Character Character
         {
             get { return character; }
+            set { character = value; }
         }
 
         /// <summary>

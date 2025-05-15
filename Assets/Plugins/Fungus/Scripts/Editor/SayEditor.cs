@@ -130,9 +130,9 @@ namespace Fungus.EditorUtils
             Say t = target as Say;
 
             // Only show portrait selection if...
-            if (t._Character != null &&              // Character is selected
-                t._Character.Portraits != null &&    // Character has a portraits field
-                t._Character.Portraits.Count > 0 )   // Selected Character has at least 1 portrait
+            if (t.Character != null &&              // Character is selected
+                t.Character.Portraits != null &&    // Character has a portraits field
+                t.Character.Portraits.Count > 0 )   // Selected Character has at least 1 portrait
             {
                 showPortraits = true;    
             }
@@ -142,7 +142,7 @@ namespace Fungus.EditorUtils
                 CommandEditor.ObjectField<Sprite>(portraitProp, 
                                                   new GUIContent("Portrait", "Portrait representing speaking character"), 
                                                   new GUIContent("<None>"),
-                                                  t._Character.Portraits);
+                                                  t.Character.Portraits);
             }
             else
             {
