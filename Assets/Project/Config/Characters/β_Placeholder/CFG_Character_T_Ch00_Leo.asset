@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a0a9229a30d134792caa42e4ce3a54, type: 3}
-  m_Name: CFG_Day_0
+  m_Script: {fileID: 11500000, guid: 402265a85778d2d43bf534d0c32b8c47, type: 3}
+  m_Name: CFG_Character_T_Ch00_Leo
   m_EditorClassIdentifier: 
-  day: 0
-  start: 0
-  end: 5
-  customers:
-  - {fileID: 11400000, guid: 4153832fca9a23d4e8f6bb7ab4e685f6, type: 2}
-  - {fileID: 11400000, guid: ba1075ef571f1c24d9eb23eea0674e8c, type: 2}
+  characterName: Leo
+  characterType: 0
+  characterId: 3
+  dialogColor: {r: 0, g: 0, b: 0, a: 1}
+  textSpeed: 10

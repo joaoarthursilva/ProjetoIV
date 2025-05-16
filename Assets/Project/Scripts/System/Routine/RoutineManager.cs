@@ -12,12 +12,21 @@ public class RoutineManager : Singleton<RoutineManager>
     public void Awake()
     {
         TimeManager.Instance.OnStartDay += OnStartDay;
+        TimeManager.Instance.OnNextCustomer += OnNextCustomer;
+    }
+
+    private void OnNextCustomer()
+    {
+        Debug.Log("OnNextCustomer");
+        m_currentCustomer++;
+        CustomerManager.Instance.SpawnCustomer(m_customers[m_currentCustomer]);
     }
 
     public void OnStartDay(Day p_day)
     {
         Debug.Log("OnStartDay");
         m_today = p_day;
+        m_currentCustomer = 0;
         m_customers = m_today.customers;
         CustomerManager.Instance.SpawnCustomer(m_customers[m_currentCustomer]);
     }

@@ -8,10 +8,11 @@ public class TimeManager : Singleton<TimeManager>
     public Action<Day> OnStartDay;
     public Action<int> OnEndDay;
     public Action<float> OnPassTime;
+    public Action OnNextCustomer;
 
     [SerializeField] private List<Day> m_days;
-    private int m_today = 0;
-    private float m_now = 0f;
+    [SerializeField] private int m_today = 0;
+    [SerializeField] private float m_now = 0f;
 
     public void Start()
     {
@@ -26,16 +27,18 @@ public class TimeManager : Singleton<TimeManager>
         OnPassTime?.Invoke(m_now);
     }
 
-    public void PassTime(float p_timePassed)
+    public void PassTime(float p_timePassed, bool p_orderDelivered)
     {
         m_now += p_timePassed;
         OnPassTime?.Invoke(m_now);
-        CheckEndDay();
+        CheckEndDay(p_orderDelivered);
+
+        if (p_orderDelivered) OnNextCustomer?.Invoke();
     }
 
-    public void CheckEndDay()
+    public void CheckEndDay(bool p_orderDelivered)
     {
-        if (m_now >= m_days[m_today].end /* && receita entregue */)
+        if (m_now >= m_days[m_today].end && p_orderDelivered)
         {
             OnEndDay?.Invoke(m_today);
             m_today++;

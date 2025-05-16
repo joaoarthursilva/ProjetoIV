@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using RatSpeak;
 using UnityEngine;
 
 public class CustomerBehaviour : MonoBehaviour
@@ -8,7 +9,7 @@ public class CustomerBehaviour : MonoBehaviour
 
     [SerializeField] private List<GameObject> m_models;
     [SerializeField] private Vector3 m_spawnPosition;
-    private Customer m_customer;
+    [SerializeField] private Customer m_customer;
 
     private bool m_isNewCustomer;
 
@@ -21,25 +22,28 @@ public class CustomerBehaviour : MonoBehaviour
         transform.position = m_spawnPosition;
 
         if (m_customer.character != null && m_customer.character.characterId != RatSpeak.CharacterId.NONE)
+        {
+            foreach (var model in m_models) model.SetActive(false);
             m_models[(int)m_customer.character.characterId - 1].SetActive(true);
+        }
     }
 
     public void OnInteractWithRaycastableObject()
     {
-        Debug.Log("interact with customer");
-
         if (m_isNewCustomer)
         {
-            Debug.Log("trigger first dialogues, receive order");
+            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.PEDIDO));
+            TimeManager.Instance.PassTime(1f, false);
             m_isNewCustomer = false;
         }
         else if (PlayerInventory.Instance.currentIngredient != null)
         {
+            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.ENTREGA));
             CheckOrder(PlayerInventory.Instance.currentIngredient);
         }
         else
         {
-            Debug.Log("trigger generic 'im waitng my order' dialogue");
+            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.ESPERA));
         }
     }
 
@@ -47,11 +51,14 @@ public class CustomerBehaviour : MonoBehaviour
     {
         if (p_ingredient == m_customer.ingredient)
         {
-            OnOrderDelivered?.Invoke(true);
+            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.RESULTADO_BOM));
+            TimeManager.Instance.PassTime(1f, true);
+            // OnOrderDelivered(true);
         }
         else
         {
-            OnOrderDelivered?.Invoke(false);
+            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.RESULTADO_RUIM));
+            // OnOrderDelivered(false);
         }
     }
 }
