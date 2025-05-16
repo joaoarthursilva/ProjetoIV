@@ -1,9 +1,8 @@
 {
-    "name": "ProjetoIV.Recipe",
+    "name": "ProjetoIV.SO",
     "rootNamespace": "",
     "references": [
-        "GUID:821eb8aeeac7f7c4d9d69feaed59b697",
-        "GUID:b4aa7697ee620dc4aa4c920bb107a837"
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
