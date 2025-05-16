@@ -74,27 +74,46 @@ namespace ProjetoIV.RatInput
                     break;
             }
 
-            for (int i = 0; i < m_actionAsset.actionMaps.Count; i++)
-            {
-                if (m_actionAsset.actionMaps[i].name.Equals(p_map)) m_actionAsset.actionMaps[i].Enable();
-                else m_actionAsset.actionMaps[i].Disable();
-            }
+            m_playerInput.SwitchCurrentActionMap(p_map);
+
+            // for (int i = 0; i < m_actionAsset.actionMaps.Count; i++)
+            // {
+            //     if (m_actionAsset.actionMaps[i].name.Equals(p_map)) m_actionAsset.actionMaps[i].Enable();
+            //     else m_actionAsset.actionMaps[i].Disable();
+            // }
         }
+
         public void SetMap(Map p_map)
         {
             CurrentMap = p_map;
-
-            for (int i = 0; i < m_actionAsset.actionMaps.Count; i++)
-            {
-                if (m_actionAsset.actionMaps[i].name.ToLower().Equals(p_map.ToString().ToLower()))
-                    m_actionAsset.actionMaps[i].Enable();
-                else m_actionAsset.actionMaps[i].Disable();
-            }
+            SetMap(GetMap(p_map));
+            // for (int i = 0; i < m_actionAsset.actionMaps.Count; i++)
+            // {
+            //     if (m_actionAsset.actionMaps[i].name.ToLower().Equals(p_map.ToString().ToLower()))
+            //         m_actionAsset.actionMaps[i].Enable();
+            //     else m_actionAsset.actionMaps[i].Disable();
+            // }
         }
 
+        private string GetMap(Map p_map)
+        {
+            switch (p_map)
+            {
+                case Map.KITCHEN:
+                    return "Kitchen";
+                case Map.MINIGAME:
+                    return "Minigame";
+                case Map.BOOK:
+                    return "Book";
+                case Map.MENU:
+                    return "Menu";
+            }
 
+            return "";
+        }
 
         public static System.Action<InputID> ShowInputUIElement;
+
         public void ShowUIElement(InputID p_inputID)
         {
             ShowInputUIElement?.Invoke(p_inputID);
