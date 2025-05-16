@@ -5,7 +5,8 @@ using Unity.Cinemachine;
 
 public class MinigamesManager : MonoBehaviour, IMinigameInputs
 {
-    public static System.Action<CinemachineCamera> OnSetMinigamecamera;
+    public static System.Action<CinemachineCamera, System.Action> OnSetMinigamecamera;
+    public static System.Action<CinemachineCamera, System.Action> OnSetMinigamecameraOverride;
     public ProjetoIV.RatInput.Input cut;
     public ProjetoIV.RatInput.Input exitInteraction;
 
@@ -62,9 +63,10 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
             {
                 m_currentMinigame = minigamesInteraction[i];
 
-                m_currentMinigame.IOnStartInteraction(l_minigame, () => OnEndMinigame(l_minigame.FinalIngredient()));
-
-                OnSetMinigamecamera?.Invoke(m_currentMinigame.Camera);
+                OnSetMinigamecamera?.Invoke(m_currentMinigame.Camera,
+                                            () => m_currentMinigame.IOnStartInteraction(l_minigame, 
+                                                                                        () => OnEndMinigame(l_minigame.FinalIngredient())));
+                m_currentMinigame.OnFocusCamera = OnFocusCamera;
 
                 RatInput.Instance.SetMap(m_currentMinigame.Map);
                 break;
@@ -77,9 +79,14 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
         m_playerInventory.currentIngredient = p_finalIngredient;
 
         m_currentMinigame = null;
-        OnSetMinigamecamera?.Invoke(null);
-        RatInput.Instance.SetMap("Kitchen");
+        OnSetMinigamecamera?.Invoke(null, null);
+        RatInput.Instance.SetMap(Map.KITCHEN);
 
+    }
+
+    private void OnFocusCamera(CinemachineCamera p_camera, System.Action p_action)
+    {
+        OnSetMinigamecameraOverride?.Invoke(p_camera, p_action);
     }
 
     public void IOnLook(Vector2 p_vector)

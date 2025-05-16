@@ -1,16 +1,18 @@
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
+
+[Serializable]
+public class InteractionPointClass
+{
+    public Ingredient Recipe;
+    public Transform[] CutPoints;
+    public CinemachineCamera FocuseCamera;
+}
 
 public class UIPastaCut : MonoBehaviour
 {
-    [System.Serializable]
-    private class CutClass
-    {
-        public Ingredient Recipe;
-        public Transform[] CutPoints;
-    }
-
-    [SerializeField] private CutClass[] cutObjects;
+    [SerializeField] private InteractionPointClass[] cutObjects;
     [Space]
     [SerializeField] private UIHoldButtonGroup m_holdButtonGroup;
     public void StartPastaCut(Ingredient p_recipe)
@@ -26,8 +28,8 @@ public class UIPastaCut : MonoBehaviour
     }
 
     [SerializeField, NaughtyAttributes.ReadOnly]
-    private CutClass m_currentCutClass;
-    private void SetCurrentCutClass(CutClass p_cutClass)
+    private InteractionPointClass m_currentCutClass;
+    private void SetCurrentCutClass(InteractionPointClass p_cutClass)
     {
         m_currentCutClass = p_cutClass;
 

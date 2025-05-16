@@ -19,6 +19,9 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
     [SerializeField] private List<RaycastableMinigame> m_raycastable;
     public List<RaycastableMinigame> RaycastableMinigame => m_raycastable;
 
+    private Action<CinemachineCamera, Action> m_onFocusCamera;
+    public Action<CinemachineCamera, Action> OnFocusCamera { get => m_onFocusCamera; set => m_onFocusCamera = value; }
+
     System.Action m_onEndAction;
     public bool EmbraceMinigame(Ingredient p_ingredient, out Minigame o_minigame)
     {

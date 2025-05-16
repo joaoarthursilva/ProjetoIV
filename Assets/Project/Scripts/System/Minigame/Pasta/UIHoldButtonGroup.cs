@@ -18,7 +18,6 @@ public class UIHoldButtonGroup : MonoBehaviour
     List<bool> checks;
     public void StartGroup(Transform[] p_cutPoints)
     {
-        Debug.Log("asdkjlhbdfkljhgjkldfgj");
         if (checks == null) checks = new();
         else checks.Clear();
 

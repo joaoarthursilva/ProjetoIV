@@ -16,10 +16,17 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     public List<RaycastableMinigame> RaycastableMinigame => m_raycastableMinigames;
 
     [SerializeField] private CinemachineCamera m_camera;
+    private Action<CinemachineCamera, Action> m_onFocusCamera;
+    public Action<CinemachineCamera, Action> OnFocusCamera { get { return m_onFocusCamera; } set { m_onFocusCamera = value; } }
     public CinemachineCamera Camera => m_camera;
     [SerializeField] Minigame[] m_minigames;
 
     [SerializeField] private UIPastaCut m_uiPastaCut;
+    [SerializeField] private UIPastaFold m_uiPastaFold;
+
+    [SerializeField] private GameObject cutPlane;
+    [SerializeField] private GameObject foldPlane;
+
     public bool EmbraceMinigame(Ingredient p_ingredient, out Minigame o_minigame)
     {
         for (int i = 0; i < m_minigames.Length; i++)
@@ -90,23 +97,48 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
 
     public void IOnStartInteraction(Minigame p_minigame, Action p_actionOnEnd)
     {
+        m_foldCount = 0;
+        cutPlane.SetActive(true);
+        foldPlane.SetActive(false);
         RatInput.Instance.ShowUIElement(InputID.NONE);
         m_onEndAction = p_actionOnEnd;
-        StartCoroutine(WaitCameraToStart());
-    }
-
-    IEnumerator WaitCameraToStart()
-    {
-        yield return new WaitForSeconds(1f);
         SetCursor(true);
         m_uiPastaCut.StartPastaCut(RecipeManager.Instance.currentRecipe);
         m_uiPastaCut.OnCallNextStep = EndCut;
     }
-
     private void EndCut()
     {
-        IOnEndInteraction();
+        //chamar animação das massas sumindo
+
+        StartCoroutine(CutToFoldTransition());
     }
+
+    IEnumerator CutToFoldTransition()
+    {
+        cutPlane.SetActive(false);
+        yield return new WaitForSeconds(0.25f);
+        foldPlane.SetActive(true);
+
+        m_uiPastaFold.OnFocusOnCamera += OnFocusCamera;
+        m_uiPastaFold.OnCallNextStep += NextFold;
+        m_uiPastaFold.StartPastaFold(RecipeManager.Instance.currentRecipe);
+    }
+
+    int m_foldCount = 0;
+    int m_maxFold = 5;
+    void NextFold()
+    {
+        m_foldCount++;
+        if(m_foldCount == m_maxFold)
+        {
+            m_uiPastaFold.OnFocusOnCamera?.Invoke(null, null);
+            IOnEndInteraction();
+            return;
+        }
+
+        m_uiPastaFold.StartPastaFold(RecipeManager.Instance.currentRecipe);
+    }
+
 
     private void SetCursor(bool p_state)
     {

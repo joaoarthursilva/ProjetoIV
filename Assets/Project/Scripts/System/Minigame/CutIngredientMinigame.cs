@@ -1,4 +1,5 @@
 using ProjetoIV.RatInput;
+using System;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -20,6 +21,9 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
     [SerializeField] private List<RaycastableMinigame> m_raycastable;
     public List<RaycastableMinigame> RaycastableMinigame => m_raycastable;
 
+    private Action<CinemachineCamera, Action> m_onFocusCamera;
+    public Action<CinemachineCamera, Action> OnFocusCamera { get { return m_onFocusCamera; } set { m_onFocusCamera = value; } }
+
     [Space]
     private Ingredient m_initialIngredient;
     [SerializeField] private Transform m_ingredientParent;
@@ -27,6 +31,7 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
     [SerializeField] private ProccessMinigame m_currentMinigame;
     [SerializeField] private int m_interactionsCounter;
     private System.Action m_onEndAction;
+
     public bool EmbraceMinigame(Ingredient p_minigame, out Minigame o_minigame)
     {
         for (int i = 0; i < m_minigames.Length; i++)
