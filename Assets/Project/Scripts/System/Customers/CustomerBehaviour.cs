@@ -32,14 +32,12 @@ public class CustomerBehaviour : MonoBehaviour
     {
         if (m_isNewCustomer)
         {
-            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.PEDIDO));
-            TimeManager.Instance.PassTime(1f, false);
+            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.PEDIDO), () => TimeManager.Instance.PassTime(1f, false));
             m_isNewCustomer = false;
         }
         else if (PlayerInventory.Instance.currentIngredient != null)
         {
-            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.ENTREGA));
-            CheckOrder(PlayerInventory.Instance.currentIngredient);
+            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.ENTREGA), () => CheckOrder(PlayerInventory.Instance.currentIngredient));
         }
         else
         {
@@ -51,12 +49,13 @@ public class CustomerBehaviour : MonoBehaviour
     {
         if (p_ingredient == m_customer.ingredient)
         {
-            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.RESULTADO_BOM));
-            TimeManager.Instance.PassTime(1f, true);
+            PlayerInventory.Instance.currentIngredient = null;
+            DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.RESULTADO_BOM), () => TimeManager.Instance.PassTime(1f, true));
             // OnOrderDelivered(true);
         }
         else
         {
+            PlayerInventory.Instance.currentIngredient = null;
             DialogManager.Instance.ShowDialog(m_customer.dialogGroup.dialogs.Find((x) => x.dialogID == DialogID.RESULTADO_RUIM));
             // OnOrderDelivered(false);
         }

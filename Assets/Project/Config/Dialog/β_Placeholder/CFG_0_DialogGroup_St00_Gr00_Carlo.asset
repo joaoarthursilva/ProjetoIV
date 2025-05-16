@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c74b90bf07998f4d8168875e7344ad6, type: 3}
+  m_Name: CFG_0_DialogGroup_St00_Gr00_Carlo
+  m_EditorClassIdentifier: 
+  dialogs:
+  - {fileID: 11400000, guid: b69c3ab58251118478a805f4a76ec2d7, type: 2}
+  - {fileID: 11400000, guid: 9830e978a9d17b44b9b01c5e71735d54, type: 2}
+  - {fileID: 11400000, guid: 3df81d8bfaf2b7f48a0468e957a02f45, type: 2}
+  - {fileID: 11400000, guid: b71a8a0935fbb5848a9bbe1152bc5917, type: 2}
+  - {fileID: 11400000, guid: 52e6a30a622ebf846826a003fb05bef3, type: 2}
