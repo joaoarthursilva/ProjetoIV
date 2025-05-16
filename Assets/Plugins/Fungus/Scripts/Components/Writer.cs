@@ -19,12 +19,16 @@ namespace Fungus
     {
         /// <summary> Invalid state. </summary>
         Invalid,
+
         /// <summary> Writer has started writing. </summary>
         Start,
+
         /// <summary> Writing has been paused. </summary>
         Pause,
+
         /// <summary> Writing has resumed after a pause. </summary>
         Resume,
+
         /// <summary> Writing has ended. </summary>
         End,
     }
@@ -34,29 +38,32 @@ namespace Fungus
     /// </summary>
     public class Writer : MonoBehaviour, IDialogInputListener
     {
-        [Tooltip("Gameobject containing a Text, Inout Field or Text Mesh object to write to")]
-        [SerializeField] protected GameObject targetTextObject;
+        [Tooltip("Gameobject containing a Text, Inout Field or Text Mesh object to write to")] [SerializeField]
+        protected GameObject targetTextObject;
 
-        [Tooltip("Gameobject to punch when the punch tags are displayed. If none is set, the main camera will shake instead.")]
-        [SerializeField] protected GameObject punchObject;
+        [Tooltip(
+            "Gameobject to punch when the punch tags are displayed. If none is set, the main camera will shake instead.")]
+        [SerializeField]
+        protected GameObject punchObject;
 
-        [Tooltip("Writing characters per second")]
-        [SerializeField] protected float writingSpeed = 60;
+        [Tooltip("Writing characters per second")] [SerializeField]
+        protected float writingSpeed = 60;
 
-        [Tooltip("Pause duration for punctuation characters")]
-        [SerializeField] protected float punctuationPause = 0.25f;
+        [Tooltip("Pause duration for punctuation characters")] [SerializeField]
+        protected float punctuationPause = 0.25f;
 
-        [Tooltip("Color of text that has not been revealed yet")]
-        [SerializeField] protected Color hiddenTextColor = new Color(1,1,1,0);
+        [Tooltip("Color of text that has not been revealed yet")] [SerializeField]
+        protected Color hiddenTextColor = new Color(1, 1, 1, 0);
 
-        [Tooltip("Write one word at a time rather one character at a time")]
-        [SerializeField] protected bool writeWholeWords = false;
+        [Tooltip("Write one word at a time rather one character at a time")] [SerializeField]
+        protected bool writeWholeWords = false;
 
         [Tooltip("Force the target text object to use Rich Text mode so text color and alpha appears correctly")]
-        [SerializeField] protected bool forceRichText = true;
+        [SerializeField]
+        protected bool forceRichText = true;
 
-        [Tooltip("Click while text is writing to finish writing immediately")]
-        [SerializeField] protected bool instantComplete = true;
+        [Tooltip("Click while text is writing to finish writing immediately")] [SerializeField]
+        protected bool instantComplete = true;
 
         [SerializeField] protected bool doReadAheadText = true;
 
@@ -92,20 +99,25 @@ namespace Fungus
             get { return wordTokensProcessed; }
             protected set
             {
-                if(wordTokensProcessed < WordTokensFound && value >= WordTokensFound)
+                if (wordTokensProcessed < WordTokensFound && value >= WordTokensFound)
                 {
                     NotifyAllWordsWritten();
                 }
+
                 wordTokensProcessed = value;
             }
         }
+
         //holds count of number of Word tokens completed
         protected int wordTokensProcessed;
 
         /// <summary>
         /// Does the currently processing list of Tokens have Word Tokens that are not yet processed
         /// </summary>
-        public bool HasWordsRemaining { get { return WordTokensProcessed < WordTokensFound; } }
+        public bool HasWordsRemaining
+        {
+            get { return WordTokensProcessed < WordTokensFound; }
+        }
 
         protected List<IWriterListener> writerListeners = new List<IWriterListener>();
 
@@ -163,87 +175,97 @@ namespace Fungus
                 textAdapter.ForceRichText();
             }
         }
-        
+
         protected virtual void UpdateOpenMarkup()
         {
             openString.Length = 0;
-            
+
             if (textAdapter.SupportsRichText())
             {
                 if (sizeActive)
                 {
                     openString.Append("<size=");
                     openString.Append(sizeValue);
-                    openString.Append(">"); 
+                    openString.Append(">");
                 }
+
                 if (colorActive)
                 {
                     openString.Append("<color=");
                     openString.Append(colorText);
                     openString.Append(">");
                 }
+
                 if (linkActive)
                 {
                     openString.Append("<link=");
                     openString.Append(linkText);
                     openString.Append(">");
                 }
+
                 if (boldActive)
                 {
-                    openString.Append("<b>"); 
+                    openString.Append("<b>");
                 }
+
                 if (italicActive)
                 {
-                    openString.Append("<i>"); 
-                }           
-            }
-        }
-        
-        protected virtual void UpdateCloseMarkup()
-        {
-            closeString.Length = 0;
-            
-            if (textAdapter.SupportsRichText())
-            {
-                if (italicActive)
-                {
-                    closeString.Append("</i>"); 
-                }           
-                if (boldActive)
-                {
-                    closeString.Append("</b>"); 
-                }
-                if (colorActive)
-                {
-                    closeString.Append("</color>");
-                }
-                if (linkActive)
-                {
-                    closeString.Append("</link>");
-                }
-                if (sizeActive)
-                {
-                    closeString.Append("</size>"); 
+                    openString.Append("<i>");
                 }
             }
         }
 
-        protected virtual bool CheckParamCount(List<string> paramList, int count) 
+        protected virtual void UpdateCloseMarkup()
+        {
+            closeString.Length = 0;
+
+            if (textAdapter.SupportsRichText())
+            {
+                if (italicActive)
+                {
+                    closeString.Append("</i>");
+                }
+
+                if (boldActive)
+                {
+                    closeString.Append("</b>");
+                }
+
+                if (colorActive)
+                {
+                    closeString.Append("</color>");
+                }
+
+                if (linkActive)
+                {
+                    closeString.Append("</link>");
+                }
+
+                if (sizeActive)
+                {
+                    closeString.Append("</size>");
+                }
+            }
+        }
+
+        protected virtual bool CheckParamCount(List<string> paramList, int count)
         {
             if (paramList == null)
             {
                 Debug.LogError("paramList is null");
                 return false;
             }
+
             if (paramList.Count != count)
             {
                 Debug.LogError("There must be exactly " + paramList.Count + " parameters.");
                 return false;
             }
+
             return true;
         }
 
-        protected virtual bool TryGetSingleParam(List<string> paramList, int index, float defaultValue, out float value) 
+        protected virtual bool TryGetSingleParam(List<string> paramList, int index, float defaultValue, out float value)
         {
             value = defaultValue;
             if (paramList.Count > index)
@@ -251,6 +273,7 @@ namespace Fungus
                 float.TryParse(paramList[index], NumberStyles.Any, CultureInfo.InvariantCulture, out value);
                 return true;
             }
+
             return false;
         }
 
@@ -285,7 +308,7 @@ namespace Fungus
 
                 // Notify listeners about new token
                 WriterSignals.DoTextTagToken(this, token, i, tokens.Count);
-                
+
                 // Update the read ahead string buffer. This contains the text for any 
                 // Word tags which are further ahead in the list. 
                 if (doReadAheadText && !textAdapter.SupportsHiddenCharacters())
@@ -309,110 +332,114 @@ namespace Fungus
 
                 switch (token.type)
                 {
-                case TokenType.Words:
-                    yield return StartCoroutine(DoWords(token.paramList, previousTokenType));
-                    WordTokensProcessed++;
-                    break;
-                    
-                case TokenType.BoldStart:
-                    boldActive = true;
-                    break;
-                    
-                case TokenType.BoldEnd:
-                    boldActive = false;
-                    break;
-                    
-                case TokenType.ItalicStart:
-                    italicActive = true;
-                    break;
-                    
-                case TokenType.ItalicEnd:
-                    italicActive = false;
-                    break;
-                    
-                case TokenType.ColorStart:
-                    if (CheckParamCount(token.paramList, 1)) 
-                    {
-                        colorActive = true;
-                        colorText = token.paramList[0];
-                    }
-                    break;
-                    
-                case TokenType.ColorEnd:
-                    colorActive = false;
-                    break;
+                    case TokenType.Words:
+                        yield return StartCoroutine(DoWords(token.paramList, previousTokenType));
+                        WordTokensProcessed++;
+                        break;
 
-                case TokenType.LinkStart:
-                    if (CheckParamCount(token.paramList, 1))
-                    {
-                        linkActive = true;
-                        linkText = token.paramList[0];
-                    }
-                    break;
+                    case TokenType.BoldStart:
+                        boldActive = true;
+                        break;
 
-                case TokenType.LinkEnd:
-                    linkActive = false;
-                    break;
+                    case TokenType.BoldEnd:
+                        boldActive = false;
+                        break;
 
-                case TokenType.SizeStart:
-                    if (TryGetSingleParam(token.paramList, 0, 16f, out sizeValue))
-                    {
-                        sizeActive = true;
-                    }
-                    break;
+                    case TokenType.ItalicStart:
+                        italicActive = true;
+                        break;
 
-                case TokenType.SizeEnd:
-                    sizeActive = false;
-                    break;
+                    case TokenType.ItalicEnd:
+                        italicActive = false;
+                        break;
 
-                case TokenType.Wait:
-                    yield return StartCoroutine(DoWait(token.paramList));
-                    break;
-                    
-                case TokenType.WaitForInputNoClear:
-                    yield return StartCoroutine(DoWaitForInput(false));
-                    break;
-                    
-                case TokenType.WaitForInputAndClear:
-                    yield return StartCoroutine(DoWaitForInput(true));
-                    break;
+                    case TokenType.ColorStart:
+                        if (CheckParamCount(token.paramList, 1))
+                        {
+                            colorActive = true;
+                            colorText = token.paramList[0];
+                        }
 
-                case TokenType.WaitForVoiceOver:
-                    yield return StartCoroutine(DoWaitVO());
-                    break;
+                        break;
+
+                    case TokenType.ColorEnd:
+                        colorActive = false;
+                        break;
+
+                    case TokenType.LinkStart:
+                        if (CheckParamCount(token.paramList, 1))
+                        {
+                            linkActive = true;
+                            linkText = token.paramList[0];
+                        }
+
+                        break;
+
+                    case TokenType.LinkEnd:
+                        linkActive = false;
+                        break;
+
+                    case TokenType.SizeStart:
+                        if (TryGetSingleParam(token.paramList, 0, 16f, out sizeValue))
+                        {
+                            sizeActive = true;
+                        }
+
+                        break;
+
+                    case TokenType.SizeEnd:
+                        sizeActive = false;
+                        break;
+
+                    case TokenType.Wait:
+                        yield return StartCoroutine(DoWait(token.paramList));
+                        break;
+
+                    case TokenType.WaitForInputNoClear:
+                        yield return StartCoroutine(DoWaitForInput(false));
+                        break;
+
+                    case TokenType.WaitForInputAndClear:
+                        yield return StartCoroutine(DoWaitForInput(true));
+                        break;
+
+                    case TokenType.WaitForVoiceOver:
+                        yield return StartCoroutine(DoWaitVO());
+                        break;
 
                     case TokenType.WaitOnPunctuationStart:
-                    TryGetSingleParam(token.paramList, 0, punctuationPause, out currentPunctuationPause);
-                    break;
-                    
-                case TokenType.WaitOnPunctuationEnd:
-                    currentPunctuationPause = punctuationPause;
-                    break;
-                    
-                case TokenType.Clear:
-                        textAdapter.Text = "";
-                    break;
-                    
-                case TokenType.SpeedStart:
-                    TryGetSingleParam(token.paramList, 0, writingSpeed, out currentWritingSpeed);
-                    break;
-                    
-                case TokenType.SpeedEnd:
-                    currentWritingSpeed = writingSpeed;
-                    break;
-                    
-                case TokenType.Exit:
-                    exitFlag = true;
-                    break;
+                        TryGetSingleParam(token.paramList, 0, punctuationPause, out currentPunctuationPause);
+                        break;
 
-                case TokenType.Message:
-                    if (CheckParamCount(token.paramList, 1)) 
-                    {
-                        Flowchart.BroadcastFungusMessage(token.paramList[0]);
-                    }
-                    break;
-                    
-                case TokenType.VerticalPunch: 
+                    case TokenType.WaitOnPunctuationEnd:
+                        currentPunctuationPause = punctuationPause;
+                        break;
+
+                    case TokenType.Clear:
+                        textAdapter.Text = "";
+                        break;
+
+                    case TokenType.SpeedStart:
+                        TryGetSingleParam(token.paramList, 0, writingSpeed, out currentWritingSpeed);
+                        break;
+
+                    case TokenType.SpeedEnd:
+                        currentWritingSpeed = writingSpeed;
+                        break;
+
+                    case TokenType.Exit:
+                        exitFlag = true;
+                        break;
+
+                    case TokenType.Message:
+                        if (CheckParamCount(token.paramList, 1))
+                        {
+                            Flowchart.BroadcastFungusMessage(token.paramList[0]);
+                        }
+
+                        break;
+
+                    case TokenType.VerticalPunch:
                     {
                         float vintensity;
                         float time;
@@ -420,9 +447,9 @@ namespace Fungus
                         TryGetSingleParam(token.paramList, 1, 0.5f, out time);
                         Punch(new Vector3(0, vintensity, 0), time);
                     }
-                    break;
-                    
-                case TokenType.HorizontalPunch: 
+                        break;
+
+                    case TokenType.HorizontalPunch:
                     {
                         float hintensity;
                         float time;
@@ -430,9 +457,9 @@ namespace Fungus
                         TryGetSingleParam(token.paramList, 1, 0.5f, out time);
                         Punch(new Vector3(hintensity, 0, 0), time);
                     }
-                    break;
-                    
-                case TokenType.Punch: 
+                        break;
+
+                    case TokenType.Punch:
                     {
                         float intensity;
                         float time;
@@ -440,70 +467,74 @@ namespace Fungus
                         TryGetSingleParam(token.paramList, 1, 0.5f, out time);
                         Punch(new Vector3(intensity, intensity, 0), time);
                     }
-                    break;
-                    
-                case TokenType.Flash:
-                    float flashDuration;
-                    TryGetSingleParam(token.paramList, 0, 0.2f, out flashDuration);
-                    Flash(flashDuration);
-                    break;
+                        break;
 
-                case TokenType.Audio: 
+                    case TokenType.Flash:
+                        float flashDuration;
+                        TryGetSingleParam(token.paramList, 0, 0.2f, out flashDuration);
+                        Flash(flashDuration);
+                        break;
+
+                    case TokenType.Audio:
                     {
                         AudioSource audioSource = null;
                         if (CheckParamCount(token.paramList, 1))
                         {
                             audioSource = FindAudio(token.paramList[0]);
                         }
+
                         if (audioSource != null)
                         {
                             audioSource.PlayOneShot(audioSource.clip);
                         }
                     }
-                    break;
-                    
-                case TokenType.AudioLoop:
+                        break;
+
+                    case TokenType.AudioLoop:
                     {
                         AudioSource audioSource = null;
-                        if (CheckParamCount(token.paramList, 1)) 
+                        if (CheckParamCount(token.paramList, 1))
                         {
                             audioSource = FindAudio(token.paramList[0]);
                         }
+
                         if (audioSource != null)
                         {
                             audioSource.Play();
                             audioSource.loop = true;
                         }
                     }
-                    break;
-                    
-                case TokenType.AudioPause:
+                        break;
+
+                    case TokenType.AudioPause:
                     {
                         AudioSource audioSource = null;
-                        if (CheckParamCount(token.paramList, 1)) 
+                        if (CheckParamCount(token.paramList, 1))
                         {
                             audioSource = FindAudio(token.paramList[0]);
                         }
+
                         if (audioSource != null)
                         {
                             audioSource.Pause();
                         }
                     }
-                    break;
-                    
-                case TokenType.AudioStop:
+                        break;
+
+                    case TokenType.AudioStop:
                     {
                         AudioSource audioSource = null;
-                        if (CheckParamCount(token.paramList, 1)) 
+                        if (CheckParamCount(token.paramList, 1))
                         {
                             audioSource = FindAudio(token.paramList[0]);
                         }
+
                         if (audioSource != null)
                         {
                             audioSource.Stop();
                         }
                     }
-                    break;
+                        break;
                 }
 
                 previousTokenType = token.type;
@@ -550,7 +581,7 @@ namespace Fungus
             {
                 startText = textAdapter.Text.Substring(0, visibleCharacterCount);
             }
-                
+
             UpdateOpenMarkup();
             UpdateCloseMarkup();
 
@@ -559,7 +590,7 @@ namespace Fungus
 
             //refactor this, its mostly the same 30 lines of code
             if (textAdapter.SupportsHiddenCharacters())
-            { 
+            {
                 //pausing for 1 frame means we can get better first data, but is conflicting with animation ?
                 //  or is it something else inserting the color alpha invis 
                 yield return null;
@@ -608,7 +639,7 @@ namespace Fungus
             else
             {
                 for (int i = 0; i < param.Length + 1; ++i)
-                {   
+                {
                     if (exitFlag)
                     {
                         break;
@@ -738,7 +769,7 @@ namespace Fungus
                 duration = 1f;
             }
 
-            yield return StartCoroutine( DoWait(duration) );
+            yield return StartCoroutine(DoWait(duration));
         }
 
         protected virtual IEnumerator DoWaitVO()
@@ -783,8 +814,8 @@ namespace Fungus
             {
                 yield return null;
             }
-        
-            isWaitingForInput = false;          
+
+            isWaitingForInput = false;
             inputFlag = false;
 
             if (clear)
@@ -795,18 +826,18 @@ namespace Fungus
 
             NotifyResume();
         }
-        
+
         protected virtual bool IsPunctuation(char character)
         {
-            return character == '.' || 
-                character == '?' ||  
-                    character == '!' || 
-                    character == ',' ||
-                    character == ':' ||
-                    character == ';' ||
-                    character == ')';
+            return character == '.' ||
+                   character == '?' ||
+                   character == '!' ||
+                   character == ',' ||
+                   character == ':' ||
+                   character == ';' ||
+                   character == ')';
         }
-        
+
         protected virtual void Punch(Vector3 axis, float time)
         {
             GameObject go = punchObject;
@@ -817,21 +848,22 @@ namespace Fungus
 
             if (go != null)
             {
-                LeanTweenHelpers.ShakePosition(go.transform, axis, new Vector2(30,60), time);
+                LeanTweenHelpers.ShakePosition(go.transform, axis, new Vector2(30, 60), time);
             }
         }
-        
+
         protected virtual void Flash(float duration)
         {
             var cameraManager = FungusManager.Instance.CameraManager;
 
-            cameraManager.ScreenFadeTexture = CameraManager.CreateColorTexture(new Color(1f,1f,1f,1f), 32, 32);
-            cameraManager.Fade(1f, duration, delegate {
-                cameraManager.ScreenFadeTexture = CameraManager.CreateColorTexture(new Color(1f,1f,1f,1f), 32, 32);
+            cameraManager.ScreenFadeTexture = CameraManager.CreateColorTexture(new Color(1f, 1f, 1f, 1f), 32, 32);
+            cameraManager.Fade(1f, duration, delegate
+            {
+                cameraManager.ScreenFadeTexture = CameraManager.CreateColorTexture(new Color(1f, 1f, 1f, 1f), 32, 32);
                 cameraManager.Fade(0f, duration, null);
             });
         }
-        
+
         protected virtual AudioSource FindAudio(string audioObjectName)
         {
             GameObject go = GameObject.Find(audioObjectName);
@@ -839,7 +871,7 @@ namespace Fungus
             {
                 return null;
             }
-            
+
             return go.GetComponent<AudioSource>();
         }
 
@@ -909,7 +941,7 @@ namespace Fungus
 
         protected virtual void NotifyGlyph()
         {
-            WriterSignals.DoWriterGlyph(this); 
+            WriterSignals.DoWriterGlyph(this);
 
             for (int i = 0; i < writerListeners.Count; i++)
             {
@@ -923,12 +955,18 @@ namespace Fungus
         /// <summary>
         /// This property is true when the writer is writing text or waiting (i.e. still processing tokens).
         /// </summary>
-        public virtual bool IsWriting { get { return isWriting; } }
+        public virtual bool IsWriting
+        {
+            get { return isWriting; }
+        }
 
         /// <summary>
         /// This property is true when the writer is waiting for user input to continue.
         /// </summary>
-        public virtual bool IsWaitingForInput { get { return isWaitingForInput; } }
+        public virtual bool IsWaitingForInput
+        {
+            get { return isWaitingForInput; }
+        }
 
         /// <summary>
         /// Pauses the writer.
@@ -956,7 +994,8 @@ namespace Fungus
         /// <param name="waitForVO">Wait for the Voice over to complete before proceeding</param>
         /// <param name="audioClip">Audio clip to play when text starts writing.</param>
         /// <param name="onComplete">Callback to call when writing is finished.</param>
-        public virtual IEnumerator Write(string content, bool clear, bool waitForInput, bool stopAudio, bool waitForVO, AudioClip audioClip, System.Action onComplete)
+        public virtual IEnumerator Write(string content, bool clear, bool waitForInput, bool stopAudio, bool waitForVO,
+            AudioClip audioClip, System.Action onComplete)
         {
             if (clear)
             {
@@ -973,13 +1012,13 @@ namespace Fungus
             NotifyStart(audioClip);
 
             string tokenText = TextVariationHandler.SelectVariations(content);
-            
+
             if (waitForInput)
             {
                 tokenText += "{wi}";
             }
 
-            if(waitForVO)
+            if (waitForVO)
             {
                 tokenText += "{wvo}";
             }
@@ -1002,16 +1041,12 @@ namespace Fungus
             textAdapter.SetTextAlpha(textAlpha);
         }
 
-
-
         #endregion
 
         #region IDialogInputListener implementation
 
         public virtual void OnNextLineEvent()
         {
-            
-
             if (isWriting || isWaitingForInput)
             {
                 inputFlag = true;

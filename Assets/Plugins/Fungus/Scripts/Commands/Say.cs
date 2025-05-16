@@ -1,6 +1,7 @@
 // This code is part of the Fungus library (https://github.com/snozbot/fungus)
 // It is released for free under the MIT open source license (https://github.com/snozbot/fungus/blob/master/LICENSE)
 
+using System;
 using UnityEngine;
 
 namespace Fungus
@@ -87,6 +88,8 @@ namespace Fungus
             get { return extendPrevious; }
         }
 
+        public Action OnComplete;
+
         public override void OnEnter()
         {
             if (!showAlways && executionCount >= showCount)
@@ -138,7 +141,11 @@ namespace Fungus
             string subbedText = flowchart.SubstituteVariables(displayText);
 
             sayDialog.Say(subbedText, !extendPrevious, waitForClick, fadeWhenDone, stopVoiceover, waitForVO,
-                voiceOverClip, delegate { Continue(); });
+                voiceOverClip, delegate
+                {
+                    OnComplete?.Invoke();
+                    Continue();
+                });
         }
 
         public override string GetSummary()

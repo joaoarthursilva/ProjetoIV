@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402265a85778d2d43bf534d0c32b8c47, type: 3}
   m_Name: CFG_Character_T_Ch00_
   m_EditorClassIdentifier: 
-  characterName: thiago
+  characterName: cassia
   characterType: 2
   characterId: 1
   dialogColor: {r: 0, g: 0, b: 0, a: 1}

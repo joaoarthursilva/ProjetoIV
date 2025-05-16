@@ -102,6 +102,19 @@ namespace Fungus
             storyTextAdapter.InitFromGameObject(storyTextGO);
         }
 
+        public Action OnDisableAction;
+
+        public void AddAction(Action p_action)
+        {
+            if (OnDisableAction == null) OnDisableAction = p_action;
+        }
+
+        private void OnDisable()
+        {
+            OnDisableAction?.Invoke();
+            OnDisableAction = null;
+        }
+
         protected virtual void OnDestroy()
         {
             activeSayDialogs.Remove(this);

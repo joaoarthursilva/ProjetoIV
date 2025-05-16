@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10404bf83d2c4d84f9eefaabd9d5db35, type: 3}
   m_Name: CFG_Dialog_
   m_EditorClassIdentifier: 
-  dialogType: 2
+  dialogID: 0
   character: {fileID: 11400000, guid: 2c504ca8c1f998b498ffd72c43163edc, type: 2}
   dialogChoicePreviewText: 
-  dialogText: outro
-  dialogEvents: []
+  dialogText: outro{punch=10,0.5}mais outro

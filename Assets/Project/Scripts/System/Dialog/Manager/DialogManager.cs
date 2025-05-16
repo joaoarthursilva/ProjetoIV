@@ -26,29 +26,24 @@ namespace RatSpeak
 
         private Say l_tempSay;
 
-        // private Fungus.Character GetFungusCharacter(Character p_character)
-        // {
-        //     for (int i = 0; i < m_charReferences.Count; i++)
-        //     {
-        //         if (m_charReferences[i].characterConfig == p_character)
-        //         {
-        //             return m_charReferences[i].character;
-        //         }
-        //     }
-        //
-        //     return null;
-        // }
+        SayDialog m_currentSayDialog;
 
-        public void ShowDialog(Dialog p_dialog)
+        public void ShowDialog(Dialog p_dialog, Action p_onComplete = null)
         {
             l_tempSay = (Say)m_block.CommandList[0];
-            // Fungus.Character character = GetFungusCharacter(p_dialog.character);
 
             m_fungusCharacter.NameText = p_dialog.character.characterName;
             l_tempSay.Character = m_fungusCharacter;
             l_tempSay.SetStandardText(p_dialog.dialogText);
 
             l_tempSay.Execute();
+
+            m_currentSayDialog = SayDialog.ActiveSayDialog;
+
+            if (p_onComplete != null)
+            {
+                m_currentSayDialog.AddAction(p_onComplete);
+            }
         }
 
         #region Debug
@@ -61,14 +56,8 @@ namespace RatSpeak
         [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
         private void DebugShowDialog()
         {
-            ShowDialog(m_debugShowDialog);
+            ShowDialog(m_debugShowDialog, () => Debug.Log("BUMDA"));
         }
-
-        // [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
-        // private void DebugHideDialog()
-        // {
-        // m_sayDialog.SetActive(false);
-        // }
 
         #endregion
     }

@@ -648,14 +648,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6020732537142902450}
-  - component: {fileID: 1839485946006030958}
   m_Layer: 5
   m_Name: UIP_Dialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6020732537142902450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -677,26 +676,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1839485946006030958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005066548780455970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37c10c41b112d5041bd84bdad108150a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _persistent: 0
-  flowchart: {fileID: 0}
-  m_sayDialog: {fileID: 0}
-  m_dialogReferences: []
-  m_testCharacter: {fileID: 0}
-  m_debug: 0
-  m_debugShowDialogText: 
-  m_debugShowDialogID: 0
 --- !u!1 &9141525904295227284
 GameObject:
   m_ObjectHideFlags: 0
