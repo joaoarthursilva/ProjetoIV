@@ -2,6 +2,7 @@
 // It is released for free under the MIT open source license (https://github.com/snozbot/fungus/blob/master/LICENSE)
 
 using System;
+using Assets.Plugins.RatLocalization.Scripts;
 using UnityEngine;
 
 namespace Fungus
@@ -16,7 +17,7 @@ namespace Fungus
     public class Say : Command, ILocalizable
     {
         // Removed this tooltip as users's reported it obscures the text box
-        [TextArea(5, 10)] [SerializeField] protected string storyText = "";
+        [SerializeField] protected string localizationKey = "";
 
         [Tooltip("Notes about this story text for other authors, localization, etc.")] [SerializeField]
         protected string description = "";
@@ -125,7 +126,7 @@ namespace Fungus
             sayDialog.SetCharacter(character);
             sayDialog.SetCharacterImage(portrait);
 
-            string displayText = storyText;
+            string displayText = LocalizationManager.Localize(localizationKey);
 
             var activeCustomTags = CustomTag.activeCustomTags;
             for (int i = 0; i < activeCustomTags.Count; i++)
@@ -161,7 +162,7 @@ namespace Fungus
                 namePrefix = "EXTEND" + ": ";
             }
 
-            return namePrefix + "\"" + storyText + "\"";
+            return namePrefix + "\"" + localizationKey + "\"";
         }
 
         public override Color GetButtonColor()
@@ -191,12 +192,12 @@ namespace Fungus
 
         public virtual string GetStandardText()
         {
-            return storyText;
+            return localizationKey;
         }
 
         public virtual void SetStandardText(string standardText)
         {
-            storyText = standardText;
+            localizationKey = standardText;
         }
 
         public virtual string GetDescription()

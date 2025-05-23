@@ -102,7 +102,7 @@ namespace Fungus
             storyTextAdapter.InitFromGameObject(storyTextGO);
         }
 
-        public Action OnDisableAction;
+        private Action OnDisableAction;
 
         public void AddAction(Action p_action)
         {
