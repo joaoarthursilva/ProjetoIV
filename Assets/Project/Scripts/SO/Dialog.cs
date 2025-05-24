@@ -12,9 +12,6 @@ namespace RatSpeak
         public DialogID dialogID;
         public Character character;
 
-        [ShowIf("dialogType", DialogType.PLAYER)]
-        public string dialogChoicePreviewText;
-
         public string dialogText;
         // public List<UnityEvent> dialogEvents;
     }

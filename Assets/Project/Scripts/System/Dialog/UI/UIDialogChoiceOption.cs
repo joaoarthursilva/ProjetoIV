@@ -13,7 +13,7 @@ namespace RatSpeak
 
         public void Set(Dialog p_dialog)
         {
-            m_choicePreviewText.text = p_dialog.dialogChoicePreviewText;
+            // m_choicePreviewText.text = p_dialog.dialogChoicePreviewText;
         }
 
         [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]

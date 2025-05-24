@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: bo mdiaaaaaaaaa estou todo cagado e mijado
+  localizationKey: INA.Hello
   description: 
   character: {fileID: 9070910033105511767}
   portrait: {fileID: 0}

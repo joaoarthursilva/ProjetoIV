@@ -34,16 +34,16 @@ namespace RatSpeak
 
             m_fungusCharacter.NameText = p_dialog.character.characterName;
             l_tempSay.Character = m_fungusCharacter;
-            l_tempSay.SetStandardText(p_dialog.dialogText);
+            // l_tempSay.SetStandardText(p_dialog.dialogText);
 
             l_tempSay.Execute();
 
             m_currentSayDialog = SayDialog.ActiveSayDialog;
 
-            if (p_onComplete != null)
-            {
-                m_currentSayDialog.AddAction(p_onComplete);
-            }
+            // if (p_onComplete != null)
+            // {
+                // m_currentSayDialog.AddAction(p_onComplete);
+            // }
         }
 
         #region Debug
