@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Fungus;
 using NaughtyAttributes;
 using ProjetoIV.Util;
@@ -9,11 +8,8 @@ namespace RatSpeak
 {
     public class DialogManager : Singleton<DialogManager>
     {
+        public bool InDialog { get; private set; }
         [Header("Dialog")] public Flowchart flowchart;
-
-        // [SerializeField] private SayDialog m_sayDialog;
-
-        // [SerializeField] private List<CharacterReference> m_charReferences;
         [SerializeField] private Fungus.Character m_fungusCharacter;
         private Block m_block;
         private const string BLOCK_NAME = "Fala";
@@ -26,8 +22,6 @@ namespace RatSpeak
 
         private Say l_tempSay;
 
-        SayDialog m_currentSayDialog;
-
         public void ShowDialog(Dialog p_dialog, Action p_onComplete = null)
         {
             l_tempSay = (Say)m_block.CommandList[0];
@@ -38,13 +32,29 @@ namespace RatSpeak
 
             l_tempSay.Execute();
 
-            m_currentSayDialog = SayDialog.ActiveSayDialog;
-
             // if (p_onComplete != null)
             // {
-                // m_currentSayDialog.AddAction(p_onComplete);
+            // m_currentSayDialog.AddAction(p_onComplete);
             // }
         }
+
+        public void ShowDialog(string p_blockName, Action p_onComplete = null)
+        {
+            flowchart.ExecuteIfHasBlock(p_blockName);
+        }
+        
+        public void EnterDialog()
+        {
+            InDialog = true;
+            CursorBehavior.Set(true, CursorLockMode.None);
+        }
+
+        public void ExitDialog()
+        {
+            InDialog = false;
+            CursorBehavior.Set(false, CursorLockMode.Locked);
+        }
+
 
         #region Debug
 
@@ -56,7 +66,7 @@ namespace RatSpeak
         [Button(enabledMode: EButtonEnableMode.Playmode), ShowIf("m_debug")]
         private void DebugShowDialog()
         {
-            ShowDialog(m_debugShowDialog, () => Debug.Log("BUMDA"));
+            ShowDialog(m_debugShowDialogText);
         }
 
         #endregion

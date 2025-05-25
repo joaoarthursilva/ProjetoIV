@@ -1,12 +1,10 @@
 using System.Collections;
 using ProjetoIV.RatInput;
+using ProjetoIV.Util;
+using RatSpeak;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-// using UnityEngine.InputSystem;
-// using Input = ProjetoIV.RatInput.Input;
-
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : Singleton<PlayerMovement>
 {
     [SerializeField] private float m_moveSpeed = 5f;
     [SerializeField] private float m_horizontalLookSensitivity = .5f;
@@ -19,27 +17,13 @@ public class PlayerMovement : MonoBehaviour
         // SubscribeToActions(true);
         StartCoroutine(UpdateCoroutine());
         StartCoroutine(FixedUpdateCoroutine());
-        SetCursor(false);
+        CursorBehavior.Set(false, CursorLockMode.Locked);
     }
 
     private void OnDisable()
     {
         StopAllCoroutines();
-        SetCursor(true);
-    }
-
-    private void SetCursor(bool p_state)
-    {
-        if (p_state)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        CursorBehavior.Set(true, CursorLockMode.None);
     }
 
     private WaitForFixedUpdate m_waitForFixedUpdate = new();
@@ -66,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovement()
     {
+        if (DialogManager.Instance.InDialog) return;
         l_tempMovement.Set(RatInput.Instance.Movement.x, 0, RatInput.Instance.Movement.y);
         l_tempMovement.Normalize();
         l_tempMovement *= m_moveSpeed * 50 * Time.fixedDeltaTime;
@@ -81,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleLook()
     {
+        if (DialogManager.Instance.InDialog) return;
         transform.Rotate(0, RatInput.Instance.LookInput.x * m_horizontalLookSensitivity * Time.deltaTime, 0);
         l_verticalRotation -= RatInput.Instance.LookInput.y * m_verticalLookSensitivity * Time.deltaTime;
         l_verticalRotation = Mathf.Clamp(l_verticalRotation, m_angleLimitDown, m_angleLimitUp);

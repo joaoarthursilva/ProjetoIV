@@ -1,2 +1,3 @@
 Key,English,Portuguese,Italian
-INA.Hello,Hello,Olá,Ciao
+Ina.Hello,"Hello{punch=10,0.5} ABCDEF","Olá{punch=10,0.5} ABCDEF","Ciao{punch=10,0.5} ABCDEF"
+Ina.Opt1,ABCD,abcd,AbCd
