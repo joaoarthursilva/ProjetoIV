@@ -17,8 +17,8 @@ namespace Fungus
     [AddComponentMenu("")]
     public class Menu : Command, ILocalizable, IBlockCaller
     {
-        [Tooltip("Text to display on the menu button")] [TextArea()] [SerializeField]
-        protected string text = "Option Text";
+        [Tooltip("Text to display on the menu button")] [SerializeField]
+        protected string localizationKey = "";
 
         [Tooltip("Notes about the option text for other authors, localization, etc.")] [SerializeField]
         protected string description = "";
@@ -69,7 +69,7 @@ namespace Fungus
                 menuDialog.SetActive(true);
 
                 var flowchart = GetFlowchart();
-                string displayText = flowchart.SubstituteVariables(text);
+                string displayText = flowchart.SubstituteVariables(localizationKey);
 
                 menuDialog.AddOption(displayText, interactable, hideOption, targetBlock);
             }
@@ -92,12 +92,12 @@ namespace Fungus
                 return "Error: No target block selected";
             }
 
-            if (text == "")
+            if (localizationKey == "")
             {
                 return "Error: No button text selected";
             }
 
-            return text + " : " + targetBlock.BlockName;
+            return localizationKey + " : " + targetBlock.BlockName;
         }
 
         public override Color GetButtonColor()
@@ -122,12 +122,12 @@ namespace Fungus
 
         public virtual string GetStandardText()
         {
-            return text;
+            return localizationKey;
         }
 
         public virtual void SetStandardText(string standardText)
         {
-            text = standardText;
+            localizationKey = standardText;
         }
 
         public virtual string GetDescription()
@@ -152,7 +152,7 @@ namespace Fungus
 
             var f = GetFlowchart();
 
-            f.DetermineSubstituteVariables(text, referencedVariables);
+            f.DetermineSubstituteVariables(localizationKey, referencedVariables);
         }
 #endif
 

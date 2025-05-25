@@ -249,7 +249,7 @@ MonoBehaviour:
   scrollPos: {x: -182.47336, y: -3.2581787}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 270
+  blockViewHeight: 407
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -258,9 +258,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 4749402345894793497}
-  selectedCommands:
-  - {fileID: 3335324256397562272}
+  - {fileID: 4916081580012095543}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -286,8 +285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 470.37683
-    y: 145.58745
+    x: 471.37683
+    y: 144.58745
     width: 73.42
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -344,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  text: Ina.Opt1
+  localizationKey: Ina.Opt1
   description: 
   targetBlock: {fileID: 4608726557183140217}
   hideIfVisited: 0
@@ -453,7 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  text: Ina.Opt1
+  localizationKey: Ina.Opt1
   description: 
   targetBlock: {fileID: 7800410389128161198}
   hideIfVisited: 0
@@ -478,7 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  text: Ina.Opt1
+  localizationKey: Ina.Opt1
   description: 
   targetBlock: {fileID: 4522257141377409760}
   hideIfVisited: 0

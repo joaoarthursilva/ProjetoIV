@@ -9,7 +9,7 @@ namespace Fungus.EditorUtils
     [CustomEditor (typeof(Menu))]
     public class MenuEditor : CommandEditor 
     {
-        protected SerializedProperty textProp;
+        protected SerializedProperty localizationKey;
         protected SerializedProperty descriptionProp;
         protected SerializedProperty targetBlockProp;
         protected SerializedProperty hideIfVisitedProp;
@@ -21,7 +21,7 @@ namespace Fungus.EditorUtils
         {
             base.OnEnable();
 
-            textProp = serializedObject.FindProperty("text");
+            localizationKey = serializedObject.FindProperty("localizationKey");
             descriptionProp = serializedObject.FindProperty("description");
             targetBlockProp = serializedObject.FindProperty("targetBlock");
             hideIfVisitedProp = serializedObject.FindProperty("hideIfVisited");
@@ -40,7 +40,7 @@ namespace Fungus.EditorUtils
             
             serializedObject.Update();
             
-            EditorGUILayout.PropertyField(textProp);
+            EditorGUILayout.PropertyField(localizationKey);
 
             EditorGUILayout.PropertyField(descriptionProp);
 
