@@ -249,7 +249,7 @@ MonoBehaviour:
   scrollPos: {x: -182.47336, y: -3.2581787}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 407
+  blockViewHeight: 406
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -258,8 +258,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 4916081580012095543}
-  selectedCommands: []
+  - {fileID: 7800410389128161198}
+  selectedCommands:
+  - {fileID: 8504939460347254700}
   variables: []
   description: 
   stepPause: 0
@@ -285,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 471.37683
+    x: 472.37683
     y: 144.58745
     width: 73.42
     height: 40
@@ -316,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  localizationKey: Ina.Hello
+  localizationKey: Tutorial.Caterina.Intro.GoodMorning
   description: 
   character: {fileID: 9070910033105511767}
   portrait: {fileID: 0}
@@ -343,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  localizationKey: Ina.Opt1
+  localizationKey: Tutorial.Caterina.Player.Intro.GoodMorning.Opt1
   description: 
   targetBlock: {fileID: 4608726557183140217}
   hideIfVisited: 0
@@ -452,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  localizationKey: Ina.Opt1
+  localizationKey: Tutorial.Caterina.Player.Intro.GoodMorning.Opt2
   description: 
   targetBlock: {fileID: 7800410389128161198}
   hideIfVisited: 0
@@ -477,7 +478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  localizationKey: Ina.Opt1
+  localizationKey: Tutorial.Caterina.Intro.GoodMorning.Opt1.Answer
   description: 
   targetBlock: {fileID: 4522257141377409760}
   hideIfVisited: 0
@@ -502,9 +503,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  localizationKey: Ina.Hello
+  localizationKey: Tutorial.Caterina.Intro.GoodMorning.Opt1.Answer
   description: 
-  character: {fileID: 9070910033105511767}
+  character: {fileID: 1107515354781174226}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -619,9 +620,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  localizationKey: Ina.Hello
+  localizationKey: Tutorial.Caterina.Intro.GoodMorning.Opt2.Answer
   description: 
-  character: {fileID: 9070910033105511767}
+  character: {fileID: 1107515354781174226}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -667,9 +668,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  localizationKey: Ina.Hello
+  localizationKey: Tutorial.Caterina.Intro.GoodMorning.Opt3.Answer
   description: 
-  character: {fileID: 9070910033105511767}
+  character: {fileID: 1107515354781174226}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -733,7 +734,7 @@ Transform:
   m_Children:
   - {fileID: 3967772427514872372}
   - {fileID: 1505425154721738658}
-  - {fileID: 5361735693710009008}
+  - {fileID: 5957606264229837627}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8405830319920984351
@@ -765,7 +766,7 @@ GameObject:
   - component: {fileID: 5361735693710009008}
   - component: {fileID: 9070910033105511767}
   m_Layer: 0
-  m_Name: Character
+  m_Name: CHAR_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -784,7 +785,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3934230810401531578}
+  m_Father: {fileID: 5957606264229837627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9070910033105511767
 MonoBehaviour:
@@ -798,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Thiago
+  nameText: Player
   nameColor: {r: 0, g: 0, b: 0, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
@@ -807,3 +808,143 @@ MonoBehaviour:
   description: 
   effectAudioSource: {fileID: 0}
   voiceAudioSource: {fileID: 0}
+--- !u!1 &5202798673815933483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4135683968805393628}
+  - component: {fileID: 1107515354781174226}
+  m_Layer: 0
+  m_Name: CHAR_Caterina
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4135683968805393628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5202798673815933483}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5957606264229837627}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107515354781174226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5202798673815933483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Caterina
+  nameColor: {r: 0, g: 0, b: 0, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+  effectAudioSource: {fileID: 0}
+  voiceAudioSource: {fileID: 0}
+--- !u!1 &5268235252043055730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852621763613506772}
+  - component: {fileID: 3315362147327650798}
+  m_Layer: 0
+  m_Name: CHAR_Carlito
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852621763613506772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268235252043055730}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5957606264229837627}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3315362147327650798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268235252043055730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Carlito
+  nameColor: {r: 0, g: 0, b: 0, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+  effectAudioSource: {fileID: 0}
+  voiceAudioSource: {fileID: 0}
+--- !u!1 &8593855918458210361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5957606264229837627}
+  m_Layer: 0
+  m_Name: Characters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5957606264229837627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593855918458210361}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5361735693710009008}
+  - {fileID: 4135683968805393628}
+  - {fileID: 852621763613506772}
+  m_Father: {fileID: 3934230810401531578}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

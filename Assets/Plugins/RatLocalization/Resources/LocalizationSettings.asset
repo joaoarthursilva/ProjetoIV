@@ -15,8 +15,11 @@ MonoBehaviour:
   TableId: 1tEkfwG2Le2ILYCHI-IqJ1AGexgTAYBI7Fj4gHmdrJAQ
   Sheets:
   - Name: General
-    Id: 0
+    Id: 494436659
     TextAsset: {fileID: 4900000, guid: fa30e16f06de6254fb9b379f870dbbd0, type: 3}
+  - Name: UI
+    Id: 1253848014
+    TextAsset: {fileID: 4900000, guid: 61f6bc5174f6245489bacb6e2ef23fbd, type: 3}
   - Name: Dialog
     Id: 1093145918
     TextAsset: {fileID: 4900000, guid: 693188634d01d1347b78a6a39b10ee4d, type: 3}

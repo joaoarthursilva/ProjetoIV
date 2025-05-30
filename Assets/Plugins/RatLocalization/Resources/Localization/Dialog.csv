@@ -1,3 +1,25 @@
 Key,English,Portuguese,Italian
-Ina.Hello,"Hello{punch=10,0.5} ABCDEF","Olá{punch=10,0.5} ABCDEF","Ciao{punch=10,0.5} ABCDEF"
-Ina.Opt1,ABCD,abcd,AbCd
+Tutorial.Caterina.Intro.GoodMorning,"Good morning, my dear. I truly never thought I’d live to see this place open its doors again.",,
+Tutorial.Caterina.Player.Intro.GoodMorning.Opt1,"Sorry, do I know you?",,
+Tutorial.Caterina.Intro.GoodMorning.Opt1.Answer,Pardon my excitement - I was so delighted that I forgot to introduce myself. My name is Caterina De Luca. I was your grandmother’s dearest friend. May she rest in peace.,,
+Tutorial.Caterina.Player.Intro.GoodMorning.Opt2,What do you mean? You don’t look old at all.,,
+Tutorial.Caterina.Intro.GoodMorning.Opt2.Answer,"You really think so? Well, thank you — you've managed to make this old lady’s heart beat a little faster. But let me tell you something: this pot doesn’t cook for inexperienced chefs.",,
+Tutorial.Caterina.Player.Intro.GoodMorning.Opt3,Not in a good mood.. Can we talk later?,,
+Tutorial.Caterina.Intro.GoodMorning.Opt3.Answer,"Let me see if I got this straight — you expect me, a woman this beautiful and busy, to wait until the little boy feels ready to talk? Boy, if I still needed permission to speak, I’d be betraying everything I’ve fought for. Get yourself together.",,
+Tutorial.Caterina.Intro.WhatsYourName,"Now tell me, young one — what is your name?",,
+Tutorial.Caterina.Player.Intro.WhatsYourName.Opt1,Max Malvezzi.,,
+Tutorial.Caterina.Player.Intro.WhatsYourName.Opt2,Alessandro Malvezzi.,,
+Tutorial.Caterina.Player.Intro.WhatsYourName.Opt3,Livia Malvezzi.,,
+Tutorial.Caterina.Intro.WhatsYourName,"What a beautiful name you own, my dear.",,
+Tutorial.Caterina.Intro.Order,"Let's see if you got your grandmother's blood. Prepare me a passion meal, i'm feeling <color=#69F580>romantic</color>.",,
+Carlito.Player.HowAre,"Hey, sir. How are you doing today?",,
+Carlito.HowAre.YoungPeople,Hmph. That’s the kind of question young people ask when they don’t really care about the answer. You wouldn’t understand anyway.,,
+Carlito.Player.HowAre.Opt1,Try me. I’ve seen my share of tough days.,,
+Carlito.HowAre.Opt1.Answer1,"…Heh. You’ve got guts, I’ll give you that.
+Name’s Carlito.
+Fifty-three years old and already yesterday’s news. 
+Wife left last month. Took the dog, too. Turns out even that mutt couldn’t stand me anymore.
+Funny, isn’t it? They say time heals. Guess mine just ran out.",,
+Carlito.Player.HowAre.Opt1.Answer1,I'm sorry to hear that. Do you want to talk about it?,,
+Carlito.Player.HowAre.Opt2,"Fine. If you don’t wanna talk, that’s your problem.",,
+Carlito.Player.HowAre.Opt3,I was just trying to be polite…,,
