@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: granito
   m_Shader: {fileID: -6465566751694194690, guid: e4e9bde7f1d9f494e805afda2ea3b89d, type: 3}
-  m_Parent: {fileID: 2100000, guid: 289cab2a5d3e54c4698591366cdc1580, type: 2}
+  m_Parent: {fileID: 2100000, guid: 33248405be247d0439858e2efaed5b48, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -63,6 +63,6 @@ Material:
     - _Shades: 0.49
     - _Smoothness: 0.5
     m_Colors:
-    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

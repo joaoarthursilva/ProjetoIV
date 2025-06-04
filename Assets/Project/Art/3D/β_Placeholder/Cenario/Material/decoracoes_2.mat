@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: decoracoes
+  m_Name: decoracoes_2
   m_Shader: {fileID: -6465566751694194690, guid: e4e9bde7f1d9f494e805afda2ea3b89d, type: 3}
   m_Parent: {fileID: 2100000, guid: c3305509ffb0c924cbcf51642ecc4441, type: 2}
   m_ModifiedSerializedProperties: 0
@@ -50,7 +50,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: bd5ec3eabaf88e741a3d340077ce1dfa, type: 3}
+        m_Texture: {fileID: 2800000, guid: d8d079b75c73fb64a888627b3833beff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []

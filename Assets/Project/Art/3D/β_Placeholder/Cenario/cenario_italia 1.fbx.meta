@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: 84c2cce2207b2eb47add45c3e756776b
+guid: fa71a08411355e54d836f6d4812972d2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Chao
-    second: {fileID: 2100000, guid: 7ecb18d0e7a0a404d8d06fa5ef267e67, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Decora\xE7oes2"
-    second: {fileID: 2100000, guid: aff09abdac25f354d933cce5f8503e95, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: decoracoes
-    second: {fileID: 2100000, guid: 4a296a2b93233634a9a26bee6154d37c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ferro
-    second: {fileID: 2100000, guid: ef4634dba32678b4e96b62d172aeafea, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: vidro
-    second: {fileID: 2100000, guid: b28d427c347b126429b124b2362ba714, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
