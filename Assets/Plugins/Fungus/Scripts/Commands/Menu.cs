@@ -69,7 +69,8 @@ namespace Fungus
                 menuDialog.SetActive(true);
 
                 var flowchart = GetFlowchart();
-                string displayText = flowchart.SubstituteVariables(localizationKey);
+                string displayText = LocalizationManager.Localize(localizationKey);
+                displayText = flowchart.SubstituteVariables(displayText);
 
                 menuDialog.AddOption(displayText, interactable, hideOption, targetBlock);
             }

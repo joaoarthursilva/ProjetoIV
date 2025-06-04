@@ -1,25 +1,56 @@
 Key,English,Portuguese,Italian
-Tutorial.Caterina.Intro.GoodMorning,"Good morning, my dear. I truly never thought I’d live to see this place open its doors again.",,
-Tutorial.Caterina.Player.Intro.GoodMorning.Opt1,"Sorry, do I know you?",,
-Tutorial.Caterina.Intro.GoodMorning.Opt1.Answer,Pardon my excitement - I was so delighted that I forgot to introduce myself. My name is Caterina De Luca. I was your grandmother’s dearest friend. May she rest in peace.,,
-Tutorial.Caterina.Player.Intro.GoodMorning.Opt2,What do you mean? You don’t look old at all.,,
-Tutorial.Caterina.Intro.GoodMorning.Opt2.Answer,"You really think so? Well, thank you — you've managed to make this old lady’s heart beat a little faster. But let me tell you something: this pot doesn’t cook for inexperienced chefs.",,
-Tutorial.Caterina.Player.Intro.GoodMorning.Opt3,Not in a good mood.. Can we talk later?,,
-Tutorial.Caterina.Intro.GoodMorning.Opt3.Answer,"Let me see if I got this straight — you expect me, a woman this beautiful and busy, to wait until the little boy feels ready to talk? Boy, if I still needed permission to speak, I’d be betraying everything I’ve fought for. Get yourself together.",,
-Tutorial.Caterina.Intro.WhatsYourName,"Now tell me, young one — what is your name?",,
-Tutorial.Caterina.Player.Intro.WhatsYourName.Opt1,Max Malvezzi.,,
-Tutorial.Caterina.Player.Intro.WhatsYourName.Opt2,Alessandro Malvezzi.,,
-Tutorial.Caterina.Player.Intro.WhatsYourName.Opt3,Livia Malvezzi.,,
-Tutorial.Caterina.Intro.WhatsYourName,"What a beautiful name you own, my dear.",,
-Tutorial.Caterina.Intro.Order,"Let's see if you got your grandmother's blood. Prepare me a passion meal, i'm feeling <color=#69F580>romantic</color>.",,
-Carlito.Player.HowAre,"Hey, sir. How are you doing today?",,
-Carlito.HowAre.YoungPeople,Hmph. That’s the kind of question young people ask when they don’t really care about the answer. You wouldn’t understand anyway.,,
-Carlito.Player.HowAre.Opt1,Try me. I’ve seen my share of tough days.,,
-Carlito.HowAre.Opt1.Answer1,"…Heh. You’ve got guts, I’ll give you that.
-Name’s Carlito.
-Fifty-three years old and already yesterday’s news. 
-Wife left last month. Took the dog, too. Turns out even that mutt couldn’t stand me anymore.
-Funny, isn’t it? They say time heals. Guess mine just ran out.",,
-Carlito.Player.HowAre.Opt1.Answer1,I'm sorry to hear that. Do you want to talk about it?,,
-Carlito.Player.HowAre.Opt2,"Fine. If you don’t wanna talk, that’s your problem.",,
-Carlito.Player.HowAre.Opt3,I was just trying to be polite…,,
+DialogUtils.No,No,,
+DialogUtils.Yes,Yes,,
+DialogUtils.Ellipsis,...,,
+D1.Char1.Dialog1.NPC.Line1,"Good morning, my dear. I truly never thought I’d live to see this place open its doors again.",,
+D1.Char1.Dialog1.Player.Line1.Choice1.Preview,"Sorry, do I know you?",,
+D1.Char1.Dialog1.Player.Line1.Choice1.Line1,"Sorry, do I know you?",,
+D1.Char1.Dialog1.NPC.Line1.Choice1.Line2,Pardon my excitement - I was so delighted that I forgot to introduce myself.,,
+D1.Char1.Dialog1.NPC.Line1.Choice1.Line3,My name is Caterina De Luca. I was your grandmother’s dearest friend. May she rest in peace.,,
+D1.Char1.Dialog1.Player.Line1.Choice2.Preview,What do you mean? You don’t look old at all.,,
+D1.Char1.Dialog1.Player.Line1.Choice2.Line1,What do you mean? You don’t look old at all.,,
+D1.Char1.Dialog1.NPC.Line1.Choice2.Line2,"You really think so? Well, thank you — you've managed to make this old lady’s heart beat a little faster.",,
+D1.Char1.Dialog1.NPC.Line1.Choice2.Line3,But let me tell you something: this pot doesn’t cook for inexperienced chefs.,,
+D1.Char1.Dialog1.Player.Line1.Choice3.Preview,Not in a good mood.. Can we talk later?,,
+D1.Char1.Dialog1.Player.Line1.Choice3.Line1,Not in a good mood.. Can we talk later?,,
+D1.Char1.Dialog1.NPC.Line1.Choice3.Line2,"Let me see if I got this straight — you expect me, a woman this beautiful and busy, to wait until the little boy feels ready to talk?",,
+D1.Char1.Dialog1.NPC.Line1.Choice3.Line3,"Boy, if I still needed permission to speak, I’d be betraying everything I’ve fought for. Get yourself together.",,
+D1.Char1.Dialog1.NPC.Line2,"Now tell me, young one — what is your name?",,
+D1.Char1.Dialog1.Player.Line2.Choice1.Preview,Max Malvezzi.,,
+D1.Char1.Dialog1.Player.Line2.Choice1.Line1,My name is Max Malvezzi.,,
+D1.Char1.Dialog1.Player.Line2.Choice2.Preview,Alessandro Malvezzi.,,
+D1.Char1.Dialog1.Player.Line2.Choice2.Line1,My name is Alessandro Malvezzi.,,
+D1.Char1.Dialog1.Player.Line2.Choice3.Preview,Livia Malvezzi.,,
+D1.Char1.Dialog1.Player.Line2.Choice3.Line1,My name is Livia Malvezzi.,,
+D1.Char1.Dialog1.NPC.Line3,"Ah, {$PlayerName}! What a beautiful name you own, my dear.",,
+D1.Char1.Dialog1.NPC.Line4,"Let's see if you got your grandmother's blood. Prepare me a passion meal, i'm feeling <color=#{$RomanticColor}>romantic</color>.",,
+D1.Char2.Dialog1.Player.Line1,"Hey, sir. How are you doing today?",,
+D1.Char2.Dialog1.NPC.Line2,Hmph. That’s the kind of question young people ask when they don’t really care about the answer.{wi} You wouldn’t understand anyway.,,
+D1.Char2.Dialog1.Player.Line2.Choice1.Preview,Try me. I’ve seen my share of tough days.,,
+D1.Char2.Dialog1.Player.Line2.Choice1.Line1,Try me. I’ve seen my share of tough days.,,
+D1.Char2.Dialog1.NPC.Line2.Choice1.Line2,"…Heh. You’ve got guts, I’ll give you that. Name’s Carlito.",,
+D1.Char2.Dialog1.NPC.Line2.Choice1.Line3,Fifty-three years old and already yesterday’s news. Wife left last month.,,
+D1.Char2.Dialog1.NPC.Line2.Choice1.Line4,"Took the dog, too. Turns out even that mutt couldn’t stand me anymore. Funny, isn’t it? They say time heals. Guess mine just ran out.",,
+D1.Char2.Dialog1.Player.Line2.Choice1.Line5,I'm sorry to hear that. Do you want to talk about it?,,
+D1.Char2.Dialog1.NPC.Line2.Choice1.Line6,…Tch. You know what’s funny? We were married for 28 years. ,,
+D1.Char2.Dialog1.NPC.Line2.Choice1.Line7,"That’s more than half my damn life. Then one day she says, ""I need space."" Space? What does that even mean at our age?",,
+D1.Char2.Dialog1.NPC.Line2.Choice1.Line8,We used to share everything — now I don’t even know where she lives. I feel <color=#{$AngryColor}>betrayed</color>.,,
+D1.Char2.Dialog1.Player.Line2.Choice2.Preview,"Fine. If you don’t wanna talk, that’s your problem.",,
+D1.Char2.Dialog1.Player.Line2.Choice2.Line1,"Fine. If you don’t wanna talk, that’s your problem.",,
+D1.Char2.Dialog1.NPC.Line2.Choice2.Line2,"Polite, huh? That’s rich. You kids think saying ""hi"" means you're saints.",,
+D1.Char2.Dialog1.NPC.Line2.Choice2.Line3,"Back in my day, we earned respect, we didn’t throw it around like confetti.",,
+D1.Char2.Dialog1.NPC.Line2.Choice2.Line4,"Carlito. That’s my name. Used to mean something. 
+Now I’m just the guy whose wife walked out on him.",,
+D1.Char2.Dialog1.Player.Line2.Choice2.Line5,"So… what happened, if you don’t mind me asking?",,
+D1.Char2.Dialog1.NPC.Line2.Choice2.Line6,"What happened?  Well, apparently I’m “emotionally unavailable” and “stuck in the past.” Imagine that.",,
+D1.Char2.Dialog1.NPC.Line2.Choice2.Line7,"A man who paid bills, fixed everything, stayed faithful — and somehow I’m the problem. She wanted to grow, she said. I didn’t know that meant growing away. I feel <color=#{$AngryColor}>betrayed</color>.",,
+D1.Char2.Dialog1.Player.Line2.Choice3.Preview,I was just trying to be polite…,,
+D1.Char2.Dialog1.Player.Line2.Choice3.Line1,I was just trying to be polite…,,
+D1.Char2.Dialog1.NPC.Line2.Choice3.Line2,"Typical. No patience, no spine. This generation runs from discomfort like it's fire.",,
+D1.Char2.Dialog1.NPC.Line2.Choice3.Line3,"Don’t worry, I’ll talk to the wall instead. At least it doesn’t pretend to care.",,
+D1.Char2.Dialog1.NPC.Line2.Choice3.Line5,"Carlito’s the name. Fifty-three. Alone. But hey, enjoy your walk through the ruins.",,
+D1.Char2.Dialog1.Player.Line2.Choice3.Line6,Sounds like you’re still hurting.,,
+D1.Char2.Dialog1.NPC.Line2.Choice3.Line7,"…Yeah, I am.  And I hate it.  I keep walking past the chair she used to sit in, like she’s still gonna be there.",,
+D1.Char2.Dialog1.NPC.Line2.Choice3.Line8,"Sometimes I even talk to it. Pathetic, right? Turns out, the silence is the loudest part of losing someone. I don't know... I feel <color=#{$AngryColor}>betrayed</color>.",,
+D1.Char2.Dialog1.Player.Line3,"I’ll cook something for you, Carlito. We can’t solve anything on an empty stomach.",,
+D1.Char2.Dialog1.Player.Line4,I’m sure everything will seem clearer once you’ve eaten.,,

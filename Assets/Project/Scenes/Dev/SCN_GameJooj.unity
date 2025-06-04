@@ -1770,13 +1770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e12387e40d530543aa06119df762df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reference:
-    Guid:
-      Data1: 1525956667
-      Data2: 1306310313
-      Data3: -1151024485
-      Data4: 822131122
-    Path: event:/TestEvent
   m_debug: 0
 --- !u!1 &1975456376
 GameObject:
