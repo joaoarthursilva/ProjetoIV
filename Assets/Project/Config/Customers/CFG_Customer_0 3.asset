@@ -17,5 +17,11 @@ MonoBehaviour:
   dialogs:
   - key: D1.Char1.Dialog1.NPC.Line1
     id: 1
-  - key: D1.Char1.Dialog1.NPC.Line1
+  - key: D1.Char1.Dialog2.NPC.Line1
     id: 2
+  - key: D1.Char1.Dialog3.Player.Line1
+    id: 3
+  - key: D1.Char1.Dialog4.NPC.Line1
+    id: 4
+  - key: D1.Char1.Dialog5.NPC.Line1
+    id: 5
