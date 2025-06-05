@@ -242,6 +242,10 @@ GameObject:
   - component: {fileID: 7082666723896860535}
   - component: {fileID: 4200088217290276862}
   - component: {fileID: 4566796744461751373}
+  - component: {fileID: 159352885213703116}
+  - component: {fileID: 429726750256633681}
+  - component: {fileID: 7500283700052024396}
+  - component: {fileID: 5194794820413797649}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -277,11 +281,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -904.6386, y: 10.999384}
+  scrollPos: {x: -726.73773, y: -40.08149}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 412
-  zoom: 0.94000006
+  blockViewHeight: 362
+  zoom: 0.88
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -712,8 +716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 384.68347
-    y: 304.71973
+    x: 387.80847
+    y: 412.53217
     width: 185.26
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1085,7 +1089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1588.6299
+    x: 1589.6608
     y: 157.48445
     width: 167.98999
     height: 40
@@ -1943,6 +1947,104 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &159352885213703116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 344.29315
+    y: 312.71747
+    width: 206.41
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 61
+  blockName: D1.Char1.Dialog2.NPC.Line1
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 429726750256633681}
+  - {fileID: 7500283700052024396}
+  - {fileID: 5194794820413797649}
+  suppressAllAutoSelections: 0
+--- !u!114 &429726750256633681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 58
+  indentLevel: 0
+  targetFlowchart: {fileID: 7691234841731327400}
+  targetBlock: {fileID: 545804629656609860}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 1
+--- !u!114 &7500283700052024396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 59
+  indentLevel: 0
+  localizationKey: D1.Char1.Dialog1.NPC.Line1
+  description: 
+  character: {fileID: 1107515354781174226}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &5194794820413797649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057812229210406724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 60
+  indentLevel: 0
+  targetFlowchart: {fileID: 7691234841731327400}
+  targetBlock: {fileID: 2192290837215757163}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 1
 --- !u!1 &4571896646267302410
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using RatSpeak;
 
@@ -6,5 +8,12 @@ public class Customer : ScriptableObject
 {
     public Character character;
     public Ingredient ingredient;
-    public DialogGroup dialogGroup;
+    public List<DialogKey> dialogs;
+}
+
+[Serializable]
+public class DialogKey
+{
+    public string key;
+    public DialogID id;
 }

@@ -42,17 +42,22 @@ namespace RatSpeak
         {
             flowchart.ExecuteIfHasBlock(p_blockName);
         }
-        
+
+        public Action onStartDialog;
+        public Action onEndDialog;
+
         public void EnterDialog()
         {
             InDialog = true;
             CursorBehavior.Set(true, CursorLockMode.None);
+            onStartDialog?.Invoke();
         }
 
         public void ExitDialog()
         {
             InDialog = false;
             CursorBehavior.Set(false, CursorLockMode.Locked);
+            onEndDialog?.Invoke();
         }
 
 
