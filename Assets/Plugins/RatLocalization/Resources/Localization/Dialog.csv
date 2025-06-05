@@ -24,6 +24,11 @@ D1.Char1.Dialog1.Player.Line2.Choice3.Preview,Livia Malvezzi.,,
 D1.Char1.Dialog1.Player.Line2.Choice3.Line1,My name is Livia Malvezzi.,,
 D1.Char1.Dialog1.NPC.Line3,"Ah, {$PlayerName}! What a beautiful name you own, my dear.",,
 D1.Char1.Dialog1.NPC.Line4,"Let's see if you got your grandmother's blood. Prepare me a passion meal, i'm feeling <color=#{$RomanticColor}>romantic</color>.",,
+D1.Char1.Dialog2.NPC.Line1,ESPERANDO,,
+D1.Char1.Dialog3.Player.Line1,Toma tua comida,,
+D1.Char1.Dialog3.NPC.Line2,vamo ver se isso presta...,,
+D1.Char1.Dialog4.NPC.Line1,MUITO RUIM PQP,,
+D1.Char1.Dialog5.NPC.Line1,MUITO BOM AI Q DELICIA,,
 D1.Char2.Dialog1.Player.Line1,"Hey, sir. How are you doing today?",,
 D1.Char2.Dialog1.NPC.Line2,Hmph. That’s the kind of question young people ask when they don’t really care about the answer.{wi} You wouldn’t understand anyway.,,
 D1.Char2.Dialog1.Player.Line2.Choice1.Preview,Try me. I’ve seen my share of tough days.,,
@@ -54,3 +59,8 @@ D1.Char2.Dialog1.NPC.Line2.Choice3.Line7,"…Yeah, I am.  And I hate it.  I 
 D1.Char2.Dialog1.NPC.Line2.Choice3.Line8,"Sometimes I even talk to it. Pathetic, right? Turns out, the silence is the loudest part of losing someone. I don't know... I feel <color=#{$AngryColor}>betrayed</color>.",,
 D1.Char2.Dialog1.Player.Line3,"I’ll cook something for you, Carlito. We can’t solve anything on an empty stomach.",,
 D1.Char2.Dialog1.Player.Line4,I’m sure everything will seem clearer once you’ve eaten.,,
+D1.Char2.Dialog2.NPC.Line1,TO ESPERANDO MINHA CUMIDA NESSA POHA,,
+D1.Char2.Dialog3.Player.Line1,Toma aqui essa poha seu veio fudido,,
+D1.Char2.Dialog3.NPC.Line2,vamo qualequieras...,,
+D1.Char2.Dialog4.NPC.Line1,MUITO RUIM PQP seu bosta,,
+D1.Char2.Dialog5.NPC.Line1,aham bahhh é os guri néam,,

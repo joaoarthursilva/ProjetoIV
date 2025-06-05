@@ -14,4 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: e677be33cb8b11b4d8b418fe25a6ef52, type: 2}
   ingredient: {fileID: 11400000, guid: 38bc9278815a9c6499ac301ca67cf715, type: 2}
-  dialogGroup: {fileID: 11400000, guid: 73fc5f43cd773744697da8751df0b1ab, type: 2}
+  dialogs:
+  - key: D1.Char2.Dialog1.Player.Line1
+    id: 1
+  - key: D1.Char2.Dialog2.NPC.Line1
+    id: 2
+  - key: D1.Char2.Dialog3.Player.Line1
+    id: 3
+  - key: D1.Char2.Dialog4.NPC.Line1
+    id: 4
+  - key: D1.Char2.Dialog5.NPC.Line1
+    id: 5
