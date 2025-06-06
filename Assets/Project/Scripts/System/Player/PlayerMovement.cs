@@ -50,7 +50,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     private void HandleMovement()
     {
-        if (DialogManager.Instance.InDialog) return;
+        if (DialogManager.Instance != null &&  DialogManager.Instance.InDialog) return;
         l_tempMovement.Set(RatInput.Instance.Movement.x, 0, RatInput.Instance.Movement.y);
         l_tempMovement.Normalize();
         l_tempMovement *= m_moveSpeed * 50 * Time.fixedDeltaTime;
@@ -66,7 +66,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     private void HandleLook()
     {
-        if (DialogManager.Instance.InDialog) return;
+        if (DialogManager.Instance != null && DialogManager.Instance.InDialog) return;
         transform.Rotate(0, RatInput.Instance.LookInput.x * m_horizontalLookSensitivity * Time.deltaTime, 0);
         l_verticalRotation -= RatInput.Instance.LookInput.y * m_verticalLookSensitivity * Time.deltaTime;
         l_verticalRotation = Mathf.Clamp(l_verticalRotation, m_angleLimitDown, m_angleLimitUp);
