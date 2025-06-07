@@ -4075,11 +4075,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4787150865628293398, guid: 6694b233c75a9864f8ce8a25d314ed2c, type: 3}
+      propertyPath: Priority.m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5152327710720013838, guid: 6694b233c75a9864f8ce8a25d314ed2c, type: 3}
       propertyPath: m_Name
       value: '- Cameras'
       objectReference: {fileID: 0}
     - target: {fileID: 7093883076022705984, guid: 6694b233c75a9864f8ce8a25d314ed2c, type: 3}
+      propertyPath: Priority.m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680237849445156335, guid: 6694b233c75a9864f8ce8a25d314ed2c, type: 3}
       propertyPath: Priority.m_Value
       value: 1
       objectReference: {fileID: 0}

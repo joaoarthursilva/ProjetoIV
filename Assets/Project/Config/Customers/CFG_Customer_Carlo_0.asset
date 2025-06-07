@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3bbeb1ed6e418e44abd297201d70f36, type: 3}
-  m_Name: CFG_Customer_0 3
+  m_Name: CFG_Customer_Carlo_0
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: fdfa60c69cb6c604c9fb760615c1786e, type: 2}
+  character: {fileID: 11400000, guid: e677be33cb8b11b4d8b418fe25a6ef52, type: 2}
   ingredient: {fileID: 11400000, guid: 38bc9278815a9c6499ac301ca67cf715, type: 2}
   dialogs:
-  - key: D1.Char1.Dialog1.NPC.Line1
+  - key: D1.Char2.Dialog1.Player.Line1
     id: 1
-  - key: D1.Char1.Dialog2.NPC.Line1
+  - key: D1.Char2.Dialog2.NPC.Line1
     id: 2
-  - key: D1.Char1.Dialog3.Player.Line1
+  - key: D1.Char2.Dialog3.Player.Line1
     id: 3
-  - key: D1.Char1.Dialog4.NPC.Line1
+  - key: D1.Char2.Dialog4.NPC.Line1
     id: 4
-  - key: D1.Char1.Dialog5.NPC.Line1
+  - key: D1.Char2.Dialog5.NPC.Line1
     id: 5

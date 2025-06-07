@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Carlo
   characterType: 0
-  characterId: 4
+  characterId: 1
   dialogColor: {r: 0, g: 0, b: 0, a: 1}
   textSpeed: 10

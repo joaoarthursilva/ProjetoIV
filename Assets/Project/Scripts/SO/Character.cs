@@ -24,10 +24,10 @@ namespace RatSpeak
     public enum CharacterId
     {
         NONE,
-        INA,
-        CRAZY,
-        LEO,
         CARLO,
-        DOROTEA
+        CRAZY,
+        DOROTEA,
+        INA,
+        LEO
     }
 }
