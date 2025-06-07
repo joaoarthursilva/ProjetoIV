@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Dorotea
   characterType: 0
-  characterId: 5
+  characterId: 3
   dialogColor: {r: 0, g: 0, b: 0, a: 1}
   textSpeed: 10

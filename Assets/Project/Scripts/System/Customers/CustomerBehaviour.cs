@@ -10,11 +10,21 @@ public class CustomerBehaviour : MonoBehaviour
     [SerializeField] private List<GameObject> m_models;
     [SerializeField] private Vector3 m_spawnPosition;
     [SerializeField] private Customer m_customer;
+    [SerializeField] private Animator m_currentAnimator;
+    private DialogID m_currentDialogId;
 
     private bool m_isNewCustomer;
 
+    void Start()
+    {
+        DialogManager.Instance.onEndDialog += OnDialogEnd;
+    }
+
     public void SpawnCustomer(Customer p_customer)
     {
+        
+        Debug.Log("start SpawnCustomer");
+        Debug.Log(p_customer.name);
         m_isNewCustomer = true;
 
         m_customer = p_customer;
@@ -25,23 +35,31 @@ public class CustomerBehaviour : MonoBehaviour
         {
             foreach (var model in m_models) model.SetActive(false);
             m_models[(int)m_customer.character.characterId - 1].SetActive(true);
+            m_currentAnimator = m_models[(int)m_customer.character.characterId - 1].GetComponent<Animator>();
+        
+        Debug.Log("end SpawnCustomer");
         }
     }
 
     public void OnInteractWithRaycastableObject()
     {
+        Debug.Log("aaa");
+        Debug.Log(m_isNewCustomer);
         if (m_isNewCustomer)
         {
             DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.PEDIDO).key);
+            m_currentDialogId = DialogID.PEDIDO;
             m_isNewCustomer = false;
         }
         else if (PlayerInventory.Instance.currentIngredient != null)
         {
             DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.ENTREGA).key);
+            m_currentDialogId = DialogID.ENTREGA;
         }
         else
         {
             DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.ESPERA).key);
+            m_currentDialogId = DialogID.ESPERA;
         }
     }
 
@@ -51,13 +69,30 @@ public class CustomerBehaviour : MonoBehaviour
         {
             PlayerInventory.Instance.currentIngredient = null;
             DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.RESULTADO_BOM).key);
+            m_currentDialogId = DialogID.RESULTADO_BOM;
             // OnOrderDelivered(true);
         }
         else
         {
             PlayerInventory.Instance.currentIngredient = null;
             DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.RESULTADO_RUIM).key);
+            m_currentDialogId = DialogID.RESULTADO_RUIM;
             // OnOrderDelivered(false);
         }
+    }
+    
+    private void OnDialogEnd()
+    {
+        if (m_currentDialogId == DialogID.ENTREGA) CheckOrder(PlayerInventory.Instance.currentIngredient);
+        else if (m_currentDialogId == DialogID.RESULTADO_BOM)
+        {
+            Debug.Log("fim cabo vai embora");
+            m_currentAnimator.Play("Anim_Exit");
+        }
+    }
+
+    public void OnEndAnim()
+    {
+        TimeManager.Instance.PassTime(1f, true);
     }
 }

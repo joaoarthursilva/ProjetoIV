@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10404bf83d2c4d84f9eefaabd9d5db35, type: 3}
-  m_Name: CFG_Dialog_Ina_0 8
+  m_Script: {fileID: 11500000, guid: f3bbeb1ed6e418e44abd297201d70f36, type: 3}
+  m_Name: CFG_Customer_Ina_0
   m_EditorClassIdentifier: 
-  dialogID: 3
   character: {fileID: 11400000, guid: 73acd559ac9a0024d8009f48be525935, type: 2}
-  dialogChoicePreviewText: 
-  dialogText: gracas a deus to cagado de fome
+  ingredient: {fileID: 11400000, guid: 38bc9278815a9c6499ac301ca67cf715, type: 2}
+  dialogGroup: {fileID: 11400000, guid: 73fc5f43cd773744697da8751df0b1ab, type: 2}
