@@ -14,7 +14,7 @@ namespace ProjetoIV.RatInput
 
         private void Start()
         {
-            SetMap("Kitchen");
+            SetMap(m_playerInput.defaultActionMap);
         }
 
         private void OnEnable()
