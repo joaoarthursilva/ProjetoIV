@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4058580023082471441}
   - component: {fileID: 1930964302828137667}
+  - component: {fileID: 2764479188968138847}
   m_Layer: 0
   m_Name: PFB_PutIngredientTable
   m_TagString: Untagged
@@ -271,7 +272,184 @@ MonoBehaviour:
   knife0Position: {x: -0.18, y: 1.243091, z: -1.375}
   knife1Position: {x: -0.304, y: 1.243091, z: -1.197}
   knifeTransform: {fileID: 490145854148055970}
+  followLerpValue: 0.1
   ingredientsParent: {fileID: 1917245576614384718}
+  targetPosition: {x: -0.18, y: 1.243091, z: -1.375}
+--- !u!114 &2764479188968138847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5677186993172630721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f5db6a7b901e241bed2b4d13ba6df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableAnimationsOnStart: 1
+  entryAnimationsOnEnable: 0
+  entryUiAnimationsList:
+  - element: {fileID: 5677186993172630721}
+    useUnscaledTime: 0
+    shouldFade: 0
+    setInitialFade: 0
+    startAlpha: 0
+    endAlpha: 0
+    fadeAnimationTime: 0
+    fadeAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    fadeDelayTime: 0
+    shouldMove: 1
+    useLocalPosition: 1
+    setInitialPosition: 0
+    startLocalPosition: {x: 0.145, y: 0, z: -0.216}
+    finalLocalPosition: {x: 0, y: 0, z: 0}
+    startPosition: {x: 0, y: 0, z: 0}
+    finalPosition: {x: 0, y: 0, z: 0}
+    moveAnimationTime: 0.5
+    moveAnimationCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    moveDelayTime: 0
+    shouldScale: 0
+    setInitialScale: 0
+    startScale: {x: 0, y: 0, z: 0}
+    finalScale: {x: 0, y: 0, z: 0}
+    scaleAnimationTime: 0
+    scaleAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    scaleDelayTime: 0
+    shouldRotate: 0
+    useLocalRotate: 0
+    startLocalRotate: {x: 0, y: 0, z: 0}
+    finalLocalRotate: {x: 0, y: 0, z: 0}
+    startRotate: {x: 0, y: 0, z: 0}
+    finalRotate: {x: 0, y: 0, z: 0}
+    rotateAnimationTime: 0
+    rotateAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    rotateDelayTime: 0
+  leaveUiAnimationsList:
+  - element: {fileID: 5677186993172630721}
+    useUnscaledTime: 0
+    shouldFade: 0
+    setInitialFade: 0
+    startAlpha: 0
+    endAlpha: 0
+    fadeAnimationTime: 0
+    fadeAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    fadeDelayTime: 0
+    shouldMove: 1
+    useLocalPosition: 1
+    setInitialPosition: 0
+    startLocalPosition: {x: 0, y: 0, z: 0}
+    finalLocalPosition: {x: 0.145, y: 0, z: -0.216}
+    startPosition: {x: 0, y: 0, z: 0}
+    finalPosition: {x: 0, y: 0, z: 0}
+    moveAnimationTime: 0.5
+    moveAnimationCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    moveDelayTime: 0
+    shouldScale: 0
+    setInitialScale: 0
+    startScale: {x: 0, y: 0, z: 0}
+    finalScale: {x: 0, y: 0, z: 0}
+    scaleAnimationTime: 0
+    scaleAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    scaleDelayTime: 0
+    shouldRotate: 0
+    useLocalRotate: 0
+    startLocalRotate: {x: 0, y: 0, z: 0}
+    finalLocalRotate: {x: 0, y: 0, z: 0}
+    startRotate: {x: 0, y: 0, z: 0}
+    finalRotate: {x: 0, y: 0, z: 0}
+    rotateAnimationTime: 0
+    rotateAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    rotateDelayTime: 0
+  OnEntryAnimationsStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEntryAnimationsFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeaveAnimationsStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeaveAnimationsFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  m_debugRectTransform: {fileID: 0}
 --- !u!1 &8292058880806730681
 GameObject:
   m_ObjectHideFlags: 0
