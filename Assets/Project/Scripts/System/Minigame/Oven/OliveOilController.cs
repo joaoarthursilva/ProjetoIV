@@ -1,9 +1,10 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class OliveOilController : MonoBehaviour
+using ProjetoIV.Util;
+public class OliveOilController : MinigameStep
 {
     [Serializable]
     private struct PourData
@@ -26,6 +27,7 @@ public class OliveOilController : MonoBehaviour
     public Transform parent;
     public Transform dispenserTransform;
     public PourStream streamController;
+    public ObjectAnimationBehaviour objectAnimationBehaviour;
 
     [SerializeField] PourData[] pourData;
     [SerializeField] private PourData currentPourData;
@@ -40,10 +42,9 @@ public class OliveOilController : MonoBehaviour
     {
         StartInteraction(debugIngredient, null);
     }
-    Action onEnd;
-    public void StartInteraction(Ingredient p_ingredient, Action p_onEndInteraction)
+
+    public override void StartInteraction(Ingredient p_ingredient, Action p_onEndInteraction)
     {
-        uiParent.SetActive(true);
         for (int i = 0; i < pourData.Length; i++)
         {
             if (pourData[i].ingredient == p_ingredient)
@@ -57,14 +58,23 @@ public class OliveOilController : MonoBehaviour
                                         Quaternion.Euler(currentPourData.initialOliveOilRotation), parent).GetComponent<Transform>();
         dispenserTransform.localPosition = currentPourData.initialOliveOilPosition;
         streamController = dispenserTransform.GetComponentInChildren<PourStream>();
+        objectAnimationBehaviour = dispenserTransform.GetComponent<ObjectAnimationBehaviour>();
+        OnEnd = p_onEndInteraction;
+        Invoke(nameof(SetSlider), 0.5f);
+    }
 
+    void SetSlider()
+    {
+        uiParent.SetActive(true);
         StartCoroutine(SliderCounter());
-        onEnd = p_onEndInteraction;
     }
 
     float m_sliderValue = 0;
     public void OnChangeSliderValue(float p_float)
     {
+        if (pourCount >= currentPourData.maxOil) return;
+        if (Mathf.Approximately(p_float, 1f)) uiParent.SetActive(false);
+
         dispenserTransform.localPosition = Vector3.Lerp(currentPourData.initialOliveOilPosition, currentPourData.finalOliveOilPosition, currentPourData.postionCurve.Evaluate(p_float));
         float xRot = Mathf.LerpAngle(currentPourData.initialOliveOilRotation.x, currentPourData.finalOliveOilRotation.x, currentPourData.rotationCurve.Evaluate(p_float));
         Vector3 rot = new(xRot, 0f, 0f);
@@ -97,6 +107,27 @@ public class OliveOilController : MonoBehaviour
 
         if (l_isPouring && streamController != null) streamController.EndPour();
 
-        Debug.Log("bahh");
+        float l_tValue = 1f;
+        float l_timeToEnd = 0.5f;
+        float l_time = 0;
+        while (l_time < l_timeToEnd)
+        {
+            l_time += Time.deltaTime;
+            l_tValue = Mathf.Lerp(1, 0, l_time / l_timeToEnd);
+
+            dispenserTransform.localPosition = Vector3.Lerp(currentPourData.initialOliveOilPosition, currentPourData.finalOliveOilPosition, currentPourData.postionCurve.Evaluate(l_tValue));
+            float xRot = Mathf.LerpAngle(currentPourData.initialOliveOilRotation.x, currentPourData.finalOliveOilRotation.x, currentPourData.rotationCurve.Evaluate(l_tValue));
+            Vector3 rot = new(xRot, 0f, 0f);
+            dispenserTransform.rotation = Quaternion.Euler(xRot, 0, 0);
+            yield return null;
+        }
+
+        yield return objectAnimationBehaviour.PlayAnimations(UIAnimationType.LEAVE);
+        Destroy(dispenserTransform.gameObject);
+        dispenserTransform = null;
+        objectAnimationBehaviour = null;
+        streamController = null;
+
+        OnEnd?.Invoke();
     }
 }

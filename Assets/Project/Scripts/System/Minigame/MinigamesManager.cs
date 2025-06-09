@@ -139,4 +139,19 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
         m_currentMinigame.IOnPressExit();
     }
+
+    public static void SetCursorVisible(bool p_state)
+    {
+        if (p_state)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
 }

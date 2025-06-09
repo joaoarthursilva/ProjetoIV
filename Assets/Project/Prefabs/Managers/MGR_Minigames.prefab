@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b71fde5a1266294e8aecd2d49879d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_inputMap: 0
   m_inputsToShow: 
   m_raycastableMinigames:
   - {fileID: 0}
@@ -51,6 +52,10 @@ MonoBehaviour:
   m_minigames:
   - {fileID: 11400000, guid: c0b968cf8c08b9840bf55a05c65660f5, type: 2}
   - {fileID: 11400000, guid: e05b62a1b9861d6438ed456989689705, type: 2}
+  m_uiPastaCut: {fileID: 0}
+  m_uiPastaFold: {fileID: 0}
+  cutPlane: {fileID: 0}
+  foldPlane: {fileID: 0}
 --- !u!1 &4345416634618774855
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64004cb3a9e3c74abb2d581851986e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_inputMap: 0
   m_inputsToShow: 
   m_minigames:
   - {fileID: 11400000, guid: f2ea99b4cb7ea3043b4570701d41f35e, type: 2}
@@ -150,11 +156,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf057f559396db46ab00cc307ec0153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_inputMap: 0
   m_inputsToShow: 
   m_minigame: {fileID: 11400000, guid: 94a3b2692084e8f4286af6811f908567, type: 2}
   m_camera: {fileID: 0}
   m_raycastable:
   - {fileID: 0}
+--- !u!1 &8645841831659779244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6232946161544273002}
+  - component: {fileID: 3462121739182690713}
+  m_Layer: 0
+  m_Name: MG_Sauce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6232946161544273002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645841831659779244}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 12606850319683761}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3462121739182690713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645841831659779244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb03e41db460f940b6988d0e2968a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_map: 0
+  m_inputsToShow: 
+  m_raycastableMinigame: []
+  m_camera: {fileID: 0}
+  m_minigames:
+  - {fileID: 11400000, guid: 21af7c2a2af19a44f9c999a137d44595, type: 2}
 --- !u!1 &8988548752193389434
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +245,7 @@ Transform:
   - {fileID: 1705328535763607726}
   - {fileID: 6452816356344375691}
   - {fileID: 570185171417828538}
+  - {fileID: 6232946161544273002}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &202030463492709842

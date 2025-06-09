@@ -60,7 +60,7 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     public void IOnEndInteraction()
     {
         m_onEndAction?.Invoke();
-        SetCursor(false);
+        MinigamesManager.SetCursorVisible(false);
     }
 
     public void IOnLook(Vector2 p_vector)
@@ -102,7 +102,7 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
         foldPlane.SetActive(false);
         RatInput.Instance.ShowUIElement(InputID.NONE);
         m_onEndAction = p_actionOnEnd;
-        SetCursor(true);
+        MinigamesManager.SetCursorVisible(true);
         m_uiPastaCut.StartPastaCut(RecipeManager.Instance.currentRecipe);
         m_uiPastaCut.OnCallNextStep = EndCut;
     }
@@ -129,7 +129,7 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     void NextFold()
     {
         m_foldCount++;
-        if(m_foldCount == m_maxFold)
+        if (m_foldCount == m_maxFold)
         {
             m_uiPastaFold.OnFocusOnCamera?.Invoke(null, null);
             IOnEndInteraction();
@@ -138,20 +138,4 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
 
         m_uiPastaFold.StartPastaFold(RecipeManager.Instance.currentRecipe);
     }
-
-
-    private void SetCursor(bool p_state)
-    {
-        if (p_state)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-    }
-
 }

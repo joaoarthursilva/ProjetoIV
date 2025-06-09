@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbc1f86f7104ce44ebb04095a4ab0f35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4921
+      value: -0.394
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbc1f86f7104ce44ebb04095a4ab0f35, type: 3}
       propertyPath: m_LocalPosition.y
@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbc1f86f7104ce44ebb04095a4ab0f35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.0320001
+      value: -0.937
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbc1f86f7104ce44ebb04095a4ab0f35, type: 3}
       propertyPath: m_LocalRotation.w
@@ -253,7 +253,7 @@ MonoBehaviour:
   enableAnimationsOnStart: 1
   entryAnimationsOnEnable: 0
   entryUiAnimationsList:
-  - element: {fileID: 0}
+  - element: {fileID: 4984370155979276891}
     useUnscaledTime: 0
     shouldFade: 0
     setInitialFade: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
     shouldMove: 1
     useLocalPosition: 1
     setInitialPosition: 0
-    startLocalPosition: {x: -0.433, y: 1.2476, z: -0.964}
+    startLocalPosition: {x: -0.394, y: 1.2476, z: -0.937}
     finalLocalPosition: {x: -0.4921, y: 1.2476, z: -1.0320001}
     startPosition: {x: 0, y: 0, z: 0}
     finalPosition: {x: 0, y: 0, z: 0}
@@ -326,7 +326,80 @@ MonoBehaviour:
       m_PostInfinity: 0
       m_RotationOrder: 0
     rotateDelayTime: 0
-  leaveUiAnimationsList: []
+  leaveUiAnimationsList:
+  - element: {fileID: 4984370155979276891}
+    useUnscaledTime: 0
+    shouldFade: 0
+    setInitialFade: 0
+    startAlpha: 0
+    endAlpha: 0
+    fadeAnimationTime: 0
+    fadeAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    fadeDelayTime: 0
+    shouldMove: 1
+    useLocalPosition: 1
+    setInitialPosition: 0
+    startLocalPosition: {x: -0.4921, y: 1.2476, z: -1.0320001}
+    finalLocalPosition: {x: -0.394, y: 1.2476, z: -0.937}
+    startPosition: {x: 0, y: 0, z: 0}
+    finalPosition: {x: 0, y: 0, z: 0}
+    moveAnimationTime: 0.5
+    moveAnimationCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    moveDelayTime: 0
+    shouldScale: 0
+    setInitialScale: 0
+    startScale: {x: 0, y: 0, z: 0}
+    finalScale: {x: 0, y: 0, z: 0}
+    scaleAnimationTime: 0
+    scaleAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    scaleDelayTime: 0
+    shouldRotate: 0
+    useLocalRotate: 0
+    startLocalRotate: {x: 0, y: 0, z: 0}
+    finalLocalRotate: {x: 0, y: 0, z: 0}
+    startRotate: {x: 0, y: 0, z: 0}
+    finalRotate: {x: 0, y: 0, z: 0}
+    rotateAnimationTime: 0
+    rotateAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    rotateDelayTime: 0
   OnEntryAnimationsStarted:
     m_PersistentCalls:
       m_Calls: []
