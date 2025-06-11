@@ -37,7 +37,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7517623758492349821}
-    m_Position: {x: 431.0252, y: 251.33997, z: 0}
+    m_Position: {x: 440, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3153058678996846453}
     m_Position: {x: 441.0252, y: 261.33997, z: 0}
@@ -80,7 +80,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Anim_Exit_Ina
+  m_Name: Anim_Exit
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

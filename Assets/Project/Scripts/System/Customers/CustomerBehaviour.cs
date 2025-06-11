@@ -6,6 +6,7 @@ using UnityEngine;
 public class CustomerBehaviour : MonoBehaviour
 {
     public Action<bool> OnOrderDelivered;
+    public Collider Collider;
 
     [SerializeField] private List<GameObject> m_models;
     [SerializeField] private Vector3 m_spawnPosition;
@@ -22,7 +23,7 @@ public class CustomerBehaviour : MonoBehaviour
 
     public void SpawnCustomer(Customer p_customer)
     {
-        
+
         Debug.Log("start SpawnCustomer");
         Debug.Log(p_customer.name);
         m_isNewCustomer = true;
@@ -36,8 +37,8 @@ public class CustomerBehaviour : MonoBehaviour
             foreach (var model in m_models) model.SetActive(false);
             m_models[(int)m_customer.character.characterId - 1].SetActive(true);
             m_currentAnimator = m_models[(int)m_customer.character.characterId - 1].GetComponent<Animator>();
-        
-        Debug.Log("end SpawnCustomer");
+
+            Debug.Log("end SpawnCustomer");
         }
     }
 
@@ -67,20 +68,20 @@ public class CustomerBehaviour : MonoBehaviour
     {
         if (p_ingredient == m_customer.ingredient)
         {
-            PlayerInventory.Instance.currentIngredient = null;
+            PlayerInventory.Instance.SetCurrentInventory(null);
             DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.RESULTADO_BOM).key);
             m_currentDialogId = DialogID.RESULTADO_BOM;
             // OnOrderDelivered(true);
         }
         else
         {
-            PlayerInventory.Instance.currentIngredient = null;
+            PlayerInventory.Instance.SetCurrentInventory(null);
             DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.RESULTADO_RUIM).key);
             m_currentDialogId = DialogID.RESULTADO_RUIM;
             // OnOrderDelivered(false);
         }
     }
-    
+
     private void OnDialogEnd()
     {
         if (m_currentDialogId == DialogID.ENTREGA) CheckOrder(PlayerInventory.Instance.currentIngredient);
@@ -89,10 +90,5 @@ public class CustomerBehaviour : MonoBehaviour
             Debug.Log("fim cabo vai embora");
             m_currentAnimator.Play("Anim_Exit");
         }
-    }
-
-    public void OnEndAnim()
-    {
-        TimeManager.Instance.PassTime(1f, true);
     }
 }

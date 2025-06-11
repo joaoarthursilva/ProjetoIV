@@ -32,8 +32,6 @@ public class TimeManager : Singleton<TimeManager>
         m_now += p_timePassed;
         OnPassTime?.Invoke(m_now);
         CheckEndDay(p_orderDelivered);
-
-        if (p_orderDelivered) OnNextCustomer?.Invoke();
     }
 
     public void CheckEndDay(bool p_orderDelivered)
@@ -42,6 +40,11 @@ public class TimeManager : Singleton<TimeManager>
         {
             OnEndDay?.Invoke(m_today);
             m_today++;
+            StartNextDay();
+        }
+        else
+        {
+            if (p_orderDelivered) OnNextCustomer?.Invoke();
         }
     }
 
