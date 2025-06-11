@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197acf0562b5467458faa341198149ca, type: 3}
   m_Name: CFG_Ingredient_Onion
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8800388773751913816, guid: 6e106c278a829aa40a6ed6f9619d84b0, type: 3}
+  prefab: {fileID: 5515744742321589213, guid: 9951facea88feb54aa658c31b2359563, type: 3}
   title: Onion

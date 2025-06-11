@@ -15,7 +15,6 @@ MonoBehaviour:
   Ingredients:
   - {fileID: 11400000, guid: cd5f8de3672e4d4488cea3e94c6af621, type: 2}
   - {fileID: 11400000, guid: 683166b60c137c44dacc6eda9db17e60, type: 2}
-  - {fileID: 11400000, guid: 8e64030a7a335bf4e9a1ea7e31182006, type: 2}
   - {fileID: 11400000, guid: 42cba14bd2beb3d4cb17c3cd3c173606, type: 2}
   - {fileID: 11400000, guid: 36958828ebc4d1b4597dbc2a69594109, type: 2}
   firstIngredient: {fileID: 11400000, guid: 683166b60c137c44dacc6eda9db17e60, type: 2}

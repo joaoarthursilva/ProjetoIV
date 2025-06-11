@@ -59,8 +59,10 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 
     void SpawnIngredient()
     {
-        m_currentIngredient = Instantiate(m_initialIngredient.prefab, m_ingredientParent).GetComponent<IngredientBehavior>();
-        m_currentIngredient.SetProcessed(false);
+        if (Instantiate(m_initialIngredient.prefab, m_ingredientParent).TryGetComponent(out m_currentIngredient))
+        {
+            m_currentIngredient.SetProcessed(false);
+        }
     }
 
     public void IOnEndInteraction()
@@ -108,6 +110,6 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 
     public void IOnPressExit()
     {
-        
+
     }
 }

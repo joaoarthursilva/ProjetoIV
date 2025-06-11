@@ -53,6 +53,7 @@ public class OliveOilController : MinigameStep
             }
         }
 
+        slider.value = 0;
         dispenserTransform = Instantiate(currentPourData.ingredient.prefab,
                                         currentPourData.initialOliveOilPosition,
                                         Quaternion.Euler(currentPourData.initialOliveOilRotation), parent).GetComponent<Transform>();

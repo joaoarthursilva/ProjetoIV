@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197acf0562b5467458faa341198149ca, type: 3}
   m_Name: CFG_Ingredient_TomatoPassata
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8800388773751913816, guid: 6e106c278a829aa40a6ed6f9619d84b0, type: 3}
+  prefab: {fileID: 4984370155979276891, guid: 297762b78da6b0c4eaaeb3b7e181da89, type: 3}
   title: Onion

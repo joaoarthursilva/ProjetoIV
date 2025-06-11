@@ -166,7 +166,7 @@ Transform:
   m_GameObject: {fileID: 3797361384756871493}
   serializedVersion: 2
   m_LocalRotation: {x: -0.8869473, y: -0.0000070089104, z: 0.46187076, w: -0.0000019531517}
-  m_LocalPosition: {x: -0.18, y: 1.243091, z: -1.375}
+  m_LocalPosition: {x: -0.18, y: 1.2409, z: -1.375}
   m_LocalScale: {x: 8.269142, y: 8.269141, z: 8.269138}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -269,8 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6752e742ef1954c80e1207395ee402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knife0Position: {x: -0.18, y: 1.243091, z: -1.375}
-  knife1Position: {x: -0.291, y: 1.243, z: -1.216}
+  knife0Position: {x: -0.18, y: 1.2409, z: -1.375}
+  knife1Position: {x: -0.3039, y: 1.2409, z: -1.1976}
   knifeTransform: {fileID: 490145854148055970}
   followLerpValue: 0.1
   ingredientsParent: {fileID: 1917245576614384718}

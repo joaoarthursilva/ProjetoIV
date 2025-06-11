@@ -8,7 +8,7 @@ public class RaycastableMinigame : RaycastableObject
     public override void Interact()
     {
         base.Interact();
-        Debug.Log("aaaaaaaa");
+
         OnInteractMinigame?.Invoke(this);
     }
 }

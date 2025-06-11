@@ -1,3 +1,4 @@
+using ProjetoIV.Util;
 using UnityEngine;
 
 public class IngredientBehavior : MonoBehaviour
@@ -6,13 +7,13 @@ public class IngredientBehavior : MonoBehaviour
     [SerializeField] private Material m_material;
     [SerializeField] private GameObject m_processedIngredient;
     [SerializeField] private Material m_processedMaterial;
-
+    [SerializeField] private ObjectAnimationBehaviour m_objectAnim;
+    [Space]
     [SerializeField] private Transform[] cuts;
 
     public void SetProcessed(bool p_set)
     {
-        //    m_ingredient.SetActive(!p_set);
-        //    m_processedIngredient.SetActive(p_set);
+        m_objectAnim.PlayEnteryAnimations();
         if (!p_set) return;
 
         for (int i = 0; i < cuts.Length; i++)
@@ -28,9 +29,9 @@ public class IngredientBehavior : MonoBehaviour
 
     void SetCutPosition(int p_index)
     {
-        Vector3 pos = new(Random.Range(-0.035f, 0.035f), 0f, Random.Range(0.0006f, 0.014f));
+        //Vector3 pos = cuts[p_index].localPosition * 2;
 
-        cuts[p_index].localPosition = pos;
+        cuts[p_index].localPosition *= 2;
     }
     void ResetCutPosition(int p_index)
     {
