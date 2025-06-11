@@ -5,4 +5,5 @@ public class Ingredient : ScriptableObject
 {
     public GameObject prefab;
     public string title;
+    public Sprite sprite;
 }

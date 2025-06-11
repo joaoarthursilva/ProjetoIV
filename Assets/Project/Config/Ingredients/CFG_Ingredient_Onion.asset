@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 5515744742321589213, guid: 9951facea88feb54aa658c31b2359563, type: 3}
   title: Onion
+  sprite: {fileID: 21300000, guid: eda0a66071e4b004ca896a74f1abaf5b, type: 3}

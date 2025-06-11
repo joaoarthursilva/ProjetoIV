@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 2222847610567997064, guid: f496ba2b8a8bd22438be34f6dfc42a96, type: 3}
   title: Salt
+  sprite: {fileID: 21300000, guid: 307203243ef03694b993e2b76f26672a, type: 3}
