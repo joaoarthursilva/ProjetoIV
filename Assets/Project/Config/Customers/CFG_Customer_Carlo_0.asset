@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CFG_Customer_Carlo_0
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: e677be33cb8b11b4d8b418fe25a6ef52, type: 2}
+  timeToAppear: 5
   ingredient: {fileID: 11400000, guid: 38bc9278815a9c6499ac301ca67cf715, type: 2}
   dialogs:
   - key: D1.Char2.Dialog1.Player.Line1

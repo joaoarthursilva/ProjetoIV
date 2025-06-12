@@ -7,6 +7,7 @@ using RatSpeak;
 public class Customer : ScriptableObject
 {
     public Character character;
+    public float timeToAppear;
     public Ingredient ingredient;
     public List<DialogKey> dialogs;
 }

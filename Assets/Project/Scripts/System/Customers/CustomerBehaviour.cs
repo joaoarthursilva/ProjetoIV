@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using RatSpeak;
 using UnityEngine;
@@ -29,6 +30,13 @@ public class CustomerBehaviour : MonoBehaviour
         m_isNewCustomer = true;
 
         m_customer = p_customer;
+
+        StartCoroutine(OnSpawnCustomer());
+    }
+
+    private IEnumerator OnSpawnCustomer()
+    {
+        yield return new WaitForSeconds(m_customer.timeToAppear);
 
         transform.position = m_spawnPosition;
 
