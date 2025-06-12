@@ -83,7 +83,7 @@ public class CustomerBehaviour : MonoBehaviour
 
     public void CheckOrder(Ingredient p_ingredient)
     {
-        if (p_ingredient == m_customer.ingredient)
+        if (p_ingredient == m_customer.ingredient || m_customer.ingredient == null)
         {
             PlayerInventory.Instance.SetCurrentInventory(null);
             DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.RESULTADO_BOM).key);
