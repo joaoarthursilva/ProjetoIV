@@ -48,9 +48,18 @@ public class CustomerBehaviour : MonoBehaviour
         Debug.Log(m_isNewCustomer);
         if (m_isNewCustomer)
         {
-            DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.PEDIDO).key);
-            m_currentDialogId = DialogID.PEDIDO;
-            m_isNewCustomer = false;
+            if (m_customer.dialogs.Count > 1)
+            {
+                DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.PEDIDO).key);
+                m_currentDialogId = DialogID.PEDIDO;
+                m_isNewCustomer = false;
+            }
+            else
+            {
+                DialogManager.Instance.ShowDialog(m_customer.dialogs.Find((x) => x.id == DialogID.UNICO).key);
+                m_currentDialogId = DialogID.UNICO;
+                m_isNewCustomer = false;
+            }
         }
         else if (PlayerInventory.Instance.currentIngredient != null)
         {
@@ -85,7 +94,7 @@ public class CustomerBehaviour : MonoBehaviour
     private void OnDialogEnd()
     {
         if (m_currentDialogId == DialogID.ENTREGA) CheckOrder(PlayerInventory.Instance.currentIngredient);
-        else if (m_currentDialogId == DialogID.RESULTADO_BOM)
+        else if (m_currentDialogId == DialogID.RESULTADO_BOM || m_currentDialogId == DialogID.UNICO)
         {
             Debug.Log("fim cabo vai embora");
             m_currentAnimator.Play("Anim_Exit");

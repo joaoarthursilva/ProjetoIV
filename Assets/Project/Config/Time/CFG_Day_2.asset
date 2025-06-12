@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52a0a9229a30d134792caa42e4ce3a54, type: 3}
-  m_Name: CFG_Day_0
+  m_Name: CFG_Day_2
   m_EditorClassIdentifier: 
-  day: 16
+  day: 31
   start: 0
   end: 1
   customers:
-  - {fileID: 11400000, guid: eb1a5f9731600724bb70d543ee888c31, type: 2}
+  - {fileID: 11400000, guid: c881683877aa0ad44bbd5e2e7d3e7ff5, type: 2}

@@ -31,5 +31,6 @@ namespace RatSpeak
         ENTREGA,
         RESULTADO_RUIM,
         RESULTADO_BOM,
+        UNICO,
     }
 }

@@ -3972,12 +3972,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3769807447788102729, guid: 6faeaa7d556d2aa4d97a02f810317fd4, type: 3}
       propertyPath: m_days.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3769807447788102729, guid: 6faeaa7d556d2aa4d97a02f810317fd4, type: 3}
       propertyPath: 'm_days.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 8ca5735f3c2d81845bb315226e6dc075, type: 2}
+    - target: {fileID: 3769807447788102729, guid: 6faeaa7d556d2aa4d97a02f810317fd4, type: 3}
+      propertyPath: 'm_days.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5628d8aa4713e6e40986dab7e2d49736, type: 2}
     - target: {fileID: 3964689492856293750, guid: 6faeaa7d556d2aa4d97a02f810317fd4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
