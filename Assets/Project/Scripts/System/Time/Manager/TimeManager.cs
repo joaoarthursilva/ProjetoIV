@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using ProjetoIV.Util;
+using System.Collections;
 
 public class TimeManager : Singleton<TimeManager>
 {
@@ -22,9 +23,7 @@ public class TimeManager : Singleton<TimeManager>
     public void StartNextDay()
     {
         Debug.Log("StartNextDay");
-        m_now = m_days[m_today].start;
-        OnStartDay?.Invoke(m_days[m_today]);
-        OnPassTime?.Invoke(m_now);
+        StartCoroutine(OnStartNextDay());
     }
 
     public void PassTime(float p_timePassed, bool p_orderDelivered)
@@ -48,11 +47,19 @@ public class TimeManager : Singleton<TimeManager>
         }
     }
 
+    IEnumerator OnStartNextDay()
+    {
+        yield return new WaitForSeconds(m_days[m_today - 1].delayBeforeNextDay);
+        m_now = m_days[m_today].start;
+        OnStartDay?.Invoke(m_days[m_today]);
+        OnPassTime?.Invoke(m_now);
+    }
+
     //action receita entregue
-        //if (m_now >= m_days[m_today].end)
-        //{
-            //OnEndDay?.Invoke(m_today);
-            //m_today++;
-        //}
-    
+    //if (m_now >= m_days[m_today].end)
+    //{
+    //OnEndDay?.Invoke(m_today);
+    //m_today++;
+    //}
+
 }
