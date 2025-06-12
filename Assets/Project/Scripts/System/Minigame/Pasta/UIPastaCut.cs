@@ -1,13 +1,25 @@
+using ProjetoIV.Util;
 using System;
 using Unity.Cinemachine;
 using UnityEngine;
 
 [Serializable]
-public class InteractionPointClass
+public struct InteractionPointClass
 {
     public Ingredient Recipe;
+    public GameObject pastaPrefab;
+    public Transform parent;
     public Transform[] CutPoints;
     public CinemachineCamera FocuseCamera;
+
+    public InteractionPointClass(InteractionPointClass p_base)
+    {
+        Recipe = p_base.Recipe;
+        pastaPrefab = p_base.pastaPrefab;
+        parent = p_base.parent;
+        CutPoints = p_base.CutPoints;
+        FocuseCamera = p_base.FocuseCamera;
+    }
 }
 
 public class UIPastaCut : MonoBehaviour
