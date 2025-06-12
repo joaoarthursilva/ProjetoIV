@@ -19,7 +19,8 @@ public class RoutineManager : Singleton<RoutineManager>
     {
         Debug.Log("OnNextCustomer");
         m_currentCustomer++;
-        CustomerManager.Instance.SpawnCustomer(m_customers[m_currentCustomer]);
+        if (m_currentCustomer >= m_customers.Count) TimeManager.Instance.StartNextDay();
+        else CustomerManager.Instance.SpawnCustomer(m_customers[m_currentCustomer]);
     }
 
     public void OnStartDay(Day p_day)
