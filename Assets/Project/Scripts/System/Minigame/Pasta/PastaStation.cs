@@ -31,7 +31,7 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     {
         for (int i = 0; i < m_minigames.Length; i++)
         {
-            if (m_minigames[i].IsPartOfTheRecipe(RecipeManager.Instance.currentRecipe))
+            if (RecipeManager.Instance.currentSequence.sequence.Contains(m_minigames[i]))
             {
                 o_minigame = m_minigames[i];
                 return true;
@@ -94,16 +94,17 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     }
 
     private Action m_onEndAction;
-
+    Minigame m_currentMinigame;
     public void IOnStartInteraction(Minigame p_minigame, Action p_actionOnEnd)
     {
+        m_currentMinigame = p_minigame;
         m_foldCount = 0;
         cutPlane.SetActive(true);
         foldPlane.SetActive(false);
         RatInput.Instance.ShowUIElement(InputID.NONE);
         m_onEndAction = p_actionOnEnd;
         MinigamesManager.SetCursorVisible(true);
-        m_uiPastaCut.StartPastaCut(RecipeManager.Instance.currentRecipe);
+        m_uiPastaCut.StartPastaCut(p_minigame.FinalIngredient());
         m_uiPastaCut.OnCallNextStep = EndCut;
     }
     private void EndCut()
@@ -121,7 +122,7 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
 
         m_uiPastaFold.OnFocusOnCamera += OnFocusCamera;
         m_uiPastaFold.OnCallNextStep += NextFold;
-        m_uiPastaFold.StartPastaFold(RecipeManager.Instance.currentRecipe);
+        m_uiPastaFold.StartPastaFold(m_currentMinigame.FinalIngredient());
     }
 
     int m_foldCount = 0;
@@ -136,6 +137,6 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
             return;
         }
 
-        m_uiPastaFold.StartPastaFold(RecipeManager.Instance.currentRecipe);
+        m_uiPastaFold.StartPastaFold(m_currentMinigame.FinalIngredient());
     }
 }

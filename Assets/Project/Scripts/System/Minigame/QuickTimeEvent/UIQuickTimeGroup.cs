@@ -29,12 +29,12 @@ public class UIQuickTimeGroup : MonoBehaviour
         Debug.Log("a");
         while (m_currentQuickTimeEvent < m_numerOfQuickTimeEvents)
         {
-        Debug.Log("b");
+            Debug.Log("b");
             m_buttons[m_currentQuickTimeEvent].StartClick();
 
             while (!m_buttons[m_currentQuickTimeEvent].Done) yield return null;
 
-        Debug.Log("c");
+            Debug.Log("c");
             m_currentQuickTimeEvent++;
         }
 

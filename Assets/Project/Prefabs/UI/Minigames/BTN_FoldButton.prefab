@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0}
-  m_SizeDelta: {x: 8.8472, y: 8.8472}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 8, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2529444039966009719
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5fe6b089d6f227947bfce7dff0b27b98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0962cb3844e2a5740a69cca8a4ec18e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_variantCircleMaxSize: {x: 300, y: 300}
   m_variantCircleMinSize: {x: 8, y: 8}
   m_variantCircleTimeCycle: 1
-  m_timeRangeToSuccess: {x: 0.5, y: 0.7}
+  m_timeRangeToSuccess: {x: 0.433, y: 0.54666}
   m_variantCircleImage: {fileID: 8047223706710282391}
   Done: 0
   m_time: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5fe6b089d6f227947bfce7dff0b27b98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71e5ac580eca78a4cb858dbcdda4c28b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

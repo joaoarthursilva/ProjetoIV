@@ -52,6 +52,7 @@ MonoBehaviour:
   m_minigames:
   - {fileID: 11400000, guid: c0b968cf8c08b9840bf55a05c65660f5, type: 2}
   - {fileID: 11400000, guid: e05b62a1b9861d6438ed456989689705, type: 2}
+  - {fileID: 11400000, guid: d2e277b34a5a67f41bb9cc19f7d8ee9f, type: 2}
   m_uiPastaCut: {fileID: 0}
   m_uiPastaFold: {fileID: 0}
   cutPlane: {fileID: 0}
@@ -112,6 +113,72 @@ MonoBehaviour:
   m_currentIngredient: {fileID: 0}
   m_currentMinigame: {fileID: 0}
   m_interactionsCounter: 0
+--- !u!1 &5531510928802264666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2210009258200703999}
+  - component: {fileID: 4867910597665649960}
+  m_Layer: 0
+  m_Name: MG_PastaBoil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2210009258200703999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531510928802264666}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 12606850319683761}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4867910597665649960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531510928802264666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77270165a82bf224f967189665fa8618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_map: 1
+  m_inputsToShow: 
+  m_raycastableMinigame:
+  - {fileID: 0}
+  m_minigames:
+  - {fileID: 11400000, guid: 643a517af71743847adae865d0f84473, type: 2}
+  - {fileID: 11400000, guid: e564ec4acae09a74892ce1849892f130, type: 2}
+  - {fileID: 11400000, guid: b1bac24494b27e149bc267237cbdbd80, type: 2}
+  pastaPrefabs:
+  - pasta: {fileID: 11400000, guid: ded3b67cbda31534498a156e422a6874, type: 2}
+    prefab: {fileID: 0}
+    camera: {fileID: 0}
+    instantiateParent: {fileID: 0}
+  - pasta: {fileID: 11400000, guid: 8e64030a7a335bf4e9a1ea7e31182006, type: 2}
+    prefab: {fileID: 0}
+    camera: {fileID: 0}
+    instantiateParent: {fileID: 0}
+  - pasta: {fileID: 11400000, guid: a38ca9e854510764b955af9001e40b4a, type: 2}
+    prefab: {fileID: 0}
+    camera: {fileID: 0}
+    instantiateParent: {fileID: 0}
+  instantiatePos: {x: 0, y: 0, z: 0}
 --- !u!1 &6917521320185229372
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +279,7 @@ MonoBehaviour:
   m_camera: {fileID: 0}
   m_minigames:
   - {fileID: 11400000, guid: 21af7c2a2af19a44f9c999a137d44595, type: 2}
+  m_minigameInteractions: []
 --- !u!1 &8988548752193389434
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +314,7 @@ Transform:
   - {fileID: 6452816356344375691}
   - {fileID: 570185171417828538}
   - {fileID: 6232946161544273002}
+  - {fileID: 2210009258200703999}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &202030463492709842

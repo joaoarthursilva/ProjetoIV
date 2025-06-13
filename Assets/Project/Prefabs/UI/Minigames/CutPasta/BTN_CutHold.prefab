@@ -98,8 +98,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -119,8 +119,10 @@ MonoBehaviour:
   m_innerCircleRect: {fileID: 98871472729653941}
   m_holding: 0
   m_holdFloat: 0
-  m_holdTime: 1
-  m_camera: {fileID: 0}
+  m_holdTime: 0.75
+  m_onComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5134832211439066731
 GameObject:
   m_ObjectHideFlags: 0

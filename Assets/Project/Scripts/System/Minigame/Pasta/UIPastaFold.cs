@@ -41,10 +41,16 @@ public class UIPastaFold : MonoBehaviour, IFocusedMinigameStep
 
         OnFocusOnCamera?.Invoke(Camera, () =>
         {
+            l_instantiatedPasta.SetFoldAnimationEvents(() =>
+            {
+                m_holdButtonGroup.StartGroup(m_currentCutClass.CutPoints2);
+                m_holdButtonGroup.OnEndSequence = CallNextStep;
+            });
+
             l_instantiatedPasta.PlayEntryAnimation(() =>
             {
                 m_holdButtonGroup.StartGroup(m_currentCutClass.CutPoints);
-                m_holdButtonGroup.OnEndSequence = CallNextStep;
+                m_holdButtonGroup.OnEndSequence = l_instantiatedPasta.EndFoldInteractionFirst;
             });
         });
     }

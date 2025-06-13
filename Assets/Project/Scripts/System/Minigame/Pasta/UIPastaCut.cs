@@ -10,6 +10,7 @@ public struct InteractionPointClass
     public GameObject pastaPrefab;
     public Transform parent;
     public Transform[] CutPoints;
+    public Transform[] CutPoints2;
     public CinemachineCamera FocuseCamera;
 
     public InteractionPointClass(InteractionPointClass p_base)
@@ -18,6 +19,7 @@ public struct InteractionPointClass
         pastaPrefab = p_base.pastaPrefab;
         parent = p_base.parent;
         CutPoints = p_base.CutPoints;
+        CutPoints2 = p_base.CutPoints2;
         FocuseCamera = p_base.FocuseCamera;
     }
 }

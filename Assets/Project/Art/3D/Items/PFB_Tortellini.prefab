@@ -1,5 +1,139 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8574616425293266014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2544487317169644941}
+  - component: {fileID: 6688691332185809372}
+  m_Layer: 0
+  m_Name: ANM_Rotate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2544487317169644941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574616425293266014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5749664885427497970}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6688691332185809372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574616425293266014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f5db6a7b901e241bed2b4d13ba6df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableAnimationsOnStart: 0
+  entryAnimationsOnEnable: 0
+  entryUiAnimationsList:
+  - element: {fileID: 4936289804938719560}
+    useUnscaledTime: 0
+    shouldFade: 0
+    setInitialFade: 0
+    startAlpha: 0
+    endAlpha: 0
+    fadeAnimationTime: 0
+    fadeAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    fadeDelayTime: 0
+    shouldMove: 0
+    useLocalPosition: 0
+    setInitialPosition: 0
+    startLocalPosition: {x: 0, y: 0, z: 0}
+    finalLocalPosition: {x: 0, y: 0, z: 0}
+    startPosition: {x: 0, y: 0, z: 0}
+    finalPosition: {x: 0, y: 0, z: 0}
+    moveAnimationTime: 0
+    moveAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    moveDelayTime: 0
+    shouldScale: 0
+    setInitialScale: 0
+    startScale: {x: 0, y: 0, z: 0}
+    finalScale: {x: 0, y: 0, z: 0}
+    scaleAnimationTime: 0
+    scaleAnimationCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 0
+      m_PostInfinity: 0
+      m_RotationOrder: 0
+    scaleDelayTime: 0
+    shouldRotate: 1
+    useLocalRotate: 1
+    startLocalRotate: {x: 0, y: 45, z: 0}
+    finalLocalRotate: {x: 0, y: 0, z: 0}
+    startRotate: {x: 0, y: 0, z: 0}
+    finalRotate: {x: 0, y: 0, z: 0}
+    rotateAnimationTime: 0.4
+    rotateAnimationCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    rotateDelayTime: 0
+  leaveUiAnimationsList: []
+  OnEntryAnimationsStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEntryAnimationsFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeaveAnimationsStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeaveAnimationsFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  m_debugRectTransform: {fileID: 0}
 --- !u!1001 &5206249943794977817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: deee53c195ae7bd4bbe0ab8aa6cec579, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0015
+      value: -0.143
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: deee53c195ae7bd4bbe0ab8aa6cec579, type: 3}
       propertyPath: m_LocalRotation.w
@@ -70,7 +204,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: deee53c195ae7bd4bbe0ab8aa6cec579, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2544487317169644941}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: deee53c195ae7bd4bbe0ab8aa6cec579, type: 3}
       insertIndex: -1
@@ -123,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_instancedAnimator: {fileID: 8512684715439277619}
   m_instancedAnimationBehaviour: {fileID: 5507205805356863770}
+  m_rotateAnimationBehaviour: {fileID: 6688691332185809372}
 --- !u!114 &5507205805356863770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +396,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-    moveDelayTime: 5
+    moveDelayTime: 2.25
     shouldScale: 0
     setInitialScale: 0
     startScale: {x: 0, y: 0, z: 0}
@@ -271,8 +409,8 @@ MonoBehaviour:
       m_PostInfinity: 0
       m_RotationOrder: 0
     scaleDelayTime: 0
-    shouldRotate: 1
-    useLocalRotate: 1
+    shouldRotate: 0
+    useLocalRotate: 0
     startLocalRotate: {x: 0, y: 45, z: 0}
     finalLocalRotate: {x: 0, y: 0, z: 0}
     startRotate: {x: 0, y: 45, z: 0}
@@ -316,3 +454,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_debugRectTransform: {fileID: 0}
+--- !u!4 &5749664885427497970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: deee53c195ae7bd4bbe0ab8aa6cec579, type: 3}
+  m_PrefabInstance: {fileID: 5206249943794977817}
+  m_PrefabAsset: {fileID: 0}

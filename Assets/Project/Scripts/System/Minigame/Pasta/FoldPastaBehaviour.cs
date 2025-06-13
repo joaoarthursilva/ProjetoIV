@@ -5,13 +5,12 @@ public class FoldPastaBehaviour : MonoBehaviour
 {
     [SerializeField] private Animator m_instancedAnimator;
     [SerializeField] private ObjectAnimationBehaviour m_instancedAnimationBehaviour;
+    [SerializeField] private ObjectAnimationBehaviour m_rotateAnimationBehaviour;
 
-    System.Action m_onEndStep0;
-    System.Action m_onEndFold;
-    public void StartFoldAnimation(System.Action p_onEnd, System.Action p_onEndStep0)
+    System.Action m_onEndRotate;
+    public void SetFoldAnimationEvents(System.Action p_onEndRotate)
     {
-        m_onEndFold = p_onEnd;
-        m_onEndStep0 = p_onEndStep0;
+        m_onEndRotate = p_onEndRotate;
     }
 
     public void StartStep1()
@@ -19,15 +18,20 @@ public class FoldPastaBehaviour : MonoBehaviour
         m_instancedAnimator.SetInteger("Fold", 1);
     }
 
-    public void EndFoldStep0()
+    public void EndFoldInteractionFirst()
     {
-        m_onEndStep0?.Invoke();
+        m_instancedAnimator.SetInteger("Fold", 0);
     }
 
-    public void EndFoldAnimation()
+    public void OnEndFold0()
     {
-        m_onEndFold?.Invoke();
+        m_rotateAnimationBehaviour.PlayAnimations(UIAnimationType.ENTRY, () =>
+        {
+            m_onEndRotate?.Invoke();
+        });
     }
+
+    public void OnEndFold1() { }
 
     public void PlayEntryAnimation(System.Action p_delegate)
     {

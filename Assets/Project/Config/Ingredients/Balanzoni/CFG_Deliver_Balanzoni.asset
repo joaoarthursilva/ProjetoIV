@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4c22e680c0fad4e831af80982ced77, type: 3}
-  m_Name: CFG_Minigame_Pasta_Tortellini
+  m_Script: {fileID: 11500000, guid: 197acf0562b5467458faa341198149ca, type: 3}
+  m_Name: CFG_Deliver_Balanzoni
   m_EditorClassIdentifier: 
-  m_recipes:
-  - {fileID: 11400000, guid: a38ca9e854510764b955af9001e40b4a, type: 2}
+  prefab: {fileID: 0}
+  title: 
+  sprite: {fileID: 0}

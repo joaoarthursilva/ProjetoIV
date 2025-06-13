@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3145197df98b47f4c8bfd7301913df47, type: 3}
+  m_Name: CFG_Sequence_Tortellini
+  m_EditorClassIdentifier: 
+  sequence:
+  - {fileID: 11400000, guid: c0b968cf8c08b9840bf55a05c65660f5, type: 2}
+  - {fileID: 11400000, guid: e564ec4acae09a74892ce1849892f130, type: 2}
+  FinalIngredient: {fileID: 11400000, guid: a073aaad4c457cf408656ad1e60b0f07, type: 2}

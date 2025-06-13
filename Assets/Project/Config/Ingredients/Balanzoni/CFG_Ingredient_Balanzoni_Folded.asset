@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 197acf0562b5467458faa341198149ca, type: 3}
-  m_Name: CFG_Ingredient_ChickenTorteliloni
+  m_Name: CFG_Ingredient_Balanzoni_Folded
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  title: Tortelloni
+  title: Balanzoni
+  sprite: {fileID: 0}

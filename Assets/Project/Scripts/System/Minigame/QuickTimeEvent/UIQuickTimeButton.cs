@@ -19,7 +19,7 @@ public class UIQuickTimeButton : MonoBehaviour, IPointerClickHandler
     Coroutine m_coroutine;
     public void OnPointerClick(PointerEventData eventData)
     {
-        l_waitingClick = false;
+        l_waitingClick = false; 
     }
 
     public void ResetClick()
