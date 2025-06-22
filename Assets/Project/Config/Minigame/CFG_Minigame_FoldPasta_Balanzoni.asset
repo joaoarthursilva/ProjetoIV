@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4c22e680c0fad4e831af80982ced77, type: 3}
   m_Name: CFG_Minigame_FoldPasta_Balanzoni
   m_EditorClassIdentifier: 
+  Instruction: Prepare o Balanzoni no Cilindro
+  callServePlate: 0
   m_recipes:
   - {fileID: 11400000, guid: b909458e6e529dc4f964147daab2c2f0, type: 2}
   m_finalIngredient: {fileID: 11400000, guid: ded3b67cbda31534498a156e422a6874, type: 2}

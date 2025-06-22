@@ -2,24 +2,28 @@ using ProjetoIV.Util;
 using System.Collections;
 using UnityEngine;
 
-public class GrateCheeseBehavior : MonoBehaviour
+public class GrateCheeseBehavior : SeasoningBehavior
 {
     public ObjectAnimationBehaviour entryLeaveAnim;
     public ObjectAnimationBehaviour grateAnim;
-    public ParticleSystem particles;
 
     [NaughtyAttributes.Button("Grate")]
-    public Coroutine PlayGrate()
+    public override Coroutine PlayAnim()
     {
+        gameObject.SetActive(true);
         return StartCoroutine(Grate());
     }
 
     IEnumerator Grate()
     {
+        yield return entryLeaveAnim.PlayAnimations(UIAnimationType.ENTRY);
+
         for (int i = 0; i < 3; i++)
         {
             yield return GrateCheese();
         }
+
+        yield return entryLeaveAnim.PlayAnimations(UIAnimationType.LEAVE);
     }
 
     IEnumerator GrateCheese()
@@ -27,6 +31,7 @@ public class GrateCheeseBehavior : MonoBehaviour
         bool l_grating = true;
         grateAnim.PlayAnimations(UIAnimationType.ENTRY, () => { l_grating = false; });
 
+        particles.Clear();
         if (!particles.isPlaying) particles.Play();
         while (l_grating) yield return null;
         if (particles.isPlaying) particles.Stop();

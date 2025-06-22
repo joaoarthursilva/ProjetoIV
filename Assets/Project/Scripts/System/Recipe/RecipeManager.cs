@@ -8,7 +8,7 @@ public class RecipeManager : Singleton<RecipeManager>
     public List<MinigameSequence> possibleSequences;
     public List<bool> currentSteps;
     public MinigameSequence currentSequence;
-
+    public System.Action<Minigame> SetNextMinigame;
 #if UNITY_EDITOR
     private void Start()
     {
@@ -45,7 +45,12 @@ public class RecipeManager : Singleton<RecipeManager>
         return false;
     }
 
-    public void EndMinigame(Minigame p_minigame)
+    public void EnteredMinigame(Minigame p_minigame)
+    {
+        SetNextMinigame?.Invoke(null);
+    }
+
+    public void EndMinigame(Minigame p_minigame, ref bool p_forceCall)
     {
         for (int i = 0; i < currentSteps.Count; i++)
         {
@@ -55,7 +60,10 @@ public class RecipeManager : Singleton<RecipeManager>
             {
                 currentSteps[i] = true;
 
+                if (p_minigame.callServePlate) p_forceCall = true;
                 if (i + 1 == currentSteps.Count) EndedSequence();
+                else SetNextMinigame?.Invoke(currentSequence.sequence[i]);
+
                 return;
             }
         }
@@ -63,6 +71,7 @@ public class RecipeManager : Singleton<RecipeManager>
 
     public void EndedSequence()
     {
+        SetNextMinigame?.Invoke(null);
         Debug.Log("baita jogador");
     }
 }

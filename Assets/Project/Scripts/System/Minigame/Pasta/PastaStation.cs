@@ -126,7 +126,7 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     }
 
     int m_foldCount = 0;
-    int m_maxFold = 5;
+    int m_maxFold = 1;
     void NextFold()
     {
         m_foldCount++;

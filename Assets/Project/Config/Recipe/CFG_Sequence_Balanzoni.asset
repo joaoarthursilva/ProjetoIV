@@ -15,4 +15,5 @@ MonoBehaviour:
   sequence:
   - {fileID: 11400000, guid: d2e277b34a5a67f41bb9cc19f7d8ee9f, type: 2}
   - {fileID: 11400000, guid: 643a517af71743847adae865d0f84473, type: 2}
+  - {fileID: 11400000, guid: bdca0b15ce56bf1409a5ff51f5b00daa, type: 2}
   FinalIngredient: {fileID: 11400000, guid: b909458e6e529dc4f964147daab2c2f0, type: 2}

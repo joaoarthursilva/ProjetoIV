@@ -12,6 +12,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
     public List<IMinigameInteraction> minigamesInteraction;
     private IMinigameInteraction m_currentMinigameInteraction;
+    [SerializeField] private ServingStation m_servingStation;
     private Minigame m_currentMinigame;
     //public Dictionary<RaycastableObject, >
     [SerializeField] private PlayerInventory m_playerInventory;
@@ -59,14 +60,15 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
         for (int i = 0; i < minigamesInteraction.Count; i++)
         {
             if (minigamesInteraction[i].RaycastableMinigame.Contains(p_object)
-                && minigamesInteraction[i].EmbraceMinigame(m_playerInventory.currentIngredient, out Minigame l_minigame)
-                && RecipeManager.Instance.CanOpenMinigame(l_minigame))
+                && minigamesInteraction[i].EmbraceMinigame(m_playerInventory.CurrentIngredient, out Minigame l_minigame)
+                && (RecipeManager.Instance.CanOpenMinigame(l_minigame)
+                || minigamesInteraction[i] is BookStation && m_playerInventory.CurrentIngredient == null))
             {
                 m_currentMinigameInteraction = minigamesInteraction[i];
                 m_currentMinigame = l_minigame;
 
                 OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
-                                            () => m_currentMinigameInteraction.IOnStartInteraction(l_minigame, 
+                                            () => m_currentMinigameInteraction.IOnStartInteraction(l_minigame,
                                                                                         () => OnEndMinigame(l_minigame.FinalIngredient())));
                 m_currentMinigameInteraction.OnFocusCamera = OnFocusCamera;
 
@@ -78,13 +80,38 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
     private void OnEndMinigame(Ingredient p_finalIngredient)
     {
-        m_playerInventory.currentIngredient = p_finalIngredient;
+        m_playerInventory.SetCurrentInventory(p_finalIngredient);
 
-        RecipeManager.Instance.EndMinigame(m_currentMinigame);
+        bool l_forceCallPlate = false;
+        RecipeManager.Instance.EndMinigame(m_currentMinigame, ref l_forceCallPlate);
+
+        if (l_forceCallPlate)
+        {
+            CallServePlate(m_currentMinigame.FinalIngredient());
+            return;
+        }
+
         m_currentMinigameInteraction = null;
         OnSetMinigamecamera?.Invoke(null, null);
         RatInput.Instance.SetMap(Map.KITCHEN);
 
+    }
+
+    public void CallServePlate(Ingredient p_initialIngredient)
+    {
+        if (m_servingStation.EmbraceMinigame(p_initialIngredient, out Minigame l_minigame)
+               && RecipeManager.Instance.CanOpenMinigame(l_minigame))
+        {
+            m_currentMinigameInteraction = m_servingStation;
+            m_currentMinigame = l_minigame;
+
+            OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
+                                        () => m_currentMinigameInteraction.IOnStartInteraction(l_minigame,
+                                                                                    () => OnEndMinigame(l_minigame.FinalIngredient())));
+            m_currentMinigameInteraction.OnFocusCamera = OnFocusCamera;
+
+            RatInput.Instance.SetMap(m_currentMinigameInteraction.Map);
+        }
     }
 
     private void OnFocusCamera(CinemachineCamera p_camera, System.Action p_action)

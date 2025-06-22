@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352da275ba4c9bd46a4d90a72e165749, type: 3}
   m_Name: CFG_Minigame_Boil_Balanzoni
   m_EditorClassIdentifier: 
+  Instruction: "Ferva a massa no fog\xE3o"
+  callServePlate: 1
   m_initialIngredient: {fileID: 11400000, guid: ded3b67cbda31534498a156e422a6874, type: 2}
   m_finalIngredient: {fileID: 11400000, guid: 250daaacf4dc3de47b9612cd7b7584fa, type: 2}
   quantityOfInteractions: 5

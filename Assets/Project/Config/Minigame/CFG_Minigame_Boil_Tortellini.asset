@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352da275ba4c9bd46a4d90a72e165749, type: 3}
   m_Name: CFG_Minigame_Boil_Tortellini
   m_EditorClassIdentifier: 
+  Instruction: "Ferva a massa no fog\xE3o"
+  callServePlate: 1
   m_initialIngredient: {fileID: 11400000, guid: a38ca9e854510764b955af9001e40b4a, type: 2}
   m_finalIngredient: {fileID: 11400000, guid: 6dd33fd1585642c49a168f27f0fca276, type: 2}
   quantityOfInteractions: 1

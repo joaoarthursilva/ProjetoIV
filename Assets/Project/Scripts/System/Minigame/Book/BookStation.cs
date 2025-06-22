@@ -22,6 +22,8 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
     private Action<CinemachineCamera, Action> m_onFocusCamera;
     public Action<CinemachineCamera, Action> OnFocusCamera { get => m_onFocusCamera; set => m_onFocusCamera = value; }
 
+    public BookBehavior bookBehavior;
+
     System.Action m_onEndAction;
     public bool EmbraceMinigame(Ingredient p_ingredient, out Minigame o_minigame)
     {
@@ -91,5 +93,14 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
         ProjetoIV.RatInput.RatInput.ShowInputUIElement(ProjetoIV.RatInput.InputID.NONE);
 
         m_onEndAction = p_actionOnEnd;
+
+        bookBehavior.OpenBook();
+        bookBehavior.OnSelectRecipe = SelectRecipe;
+    }
+
+    public void SelectRecipe(Ingredient p_ingredient)
+    {
+        RecipeManager.Instance.SetRecipe(p_ingredient);
+        m_onEndAction?.Invoke();
     }
 }

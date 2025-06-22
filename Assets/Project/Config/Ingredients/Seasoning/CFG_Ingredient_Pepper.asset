@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197acf0562b5467458faa341198149ca, type: 3}
+  m_Name: CFG_Ingredient_Pepper
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2222847610567997064, guid: f496ba2b8a8bd22438be34f6dfc42a96, type: 3}
+  title: Pepper
+  sprite: {fileID: 21300000, guid: 307203243ef03694b993e2b76f26672a, type: 3}

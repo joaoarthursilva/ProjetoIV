@@ -17,7 +17,7 @@ public class UIResizeOtherRect : MonoBehaviour
     [SerializeField] UnityAction<bool> OnExecuteAfterOneFrame;
     [SerializeField] UnityAction<bool> OnEndResizeAnim;
 
-    private void OnEnable() 
+    private void OnEnable()
     {
         SetIntialPosition();
     }
@@ -52,7 +52,6 @@ public class UIResizeOtherRect : MonoBehaviour
 
                 if (m_rectList[i].cantBeNegativeY
                     && l_sizeDelta.y < 0) l_sizeDelta.y = 0;
-
             }
             else l_sizeDelta.y = m_rectList[i].rect.sizeDelta.y;
 
@@ -98,6 +97,10 @@ public class UIResizeOtherRect : MonoBehaviour
     IEnumerator AnimResize(int p_resizeIndex, Vector2 p_newSize)
     {
         Vector2 l_initialSize = m_rectList[p_resizeIndex].rect.sizeDelta;
+
+        if (m_rectList[p_resizeIndex].setObjectOffIfHeightIs0 && l_initialSize.y - m_rectList[p_resizeIndex].offset.y == 0)
+            m_rectList[p_resizeIndex].rect.gameObject.SetActive(p_newSize.y - m_rectList[p_resizeIndex].offset.y > 0);
+
         for (float l_time = 0; l_time < m_rectList[p_resizeIndex].animDuration; l_time += Time.unscaledDeltaTime)
         {
             m_rectList[p_resizeIndex].rect.sizeDelta = Vector2.Lerp(l_initialSize, p_newSize, m_rectList[p_resizeIndex].animCurve.Evaluate(l_time / m_rectList[p_resizeIndex].animDuration));
@@ -107,6 +110,10 @@ public class UIResizeOtherRect : MonoBehaviour
 
         m_rectList[p_resizeIndex].rect.sizeDelta = p_newSize;
         m_rectList[p_resizeIndex].animCoroutine = null;
+
+        if (m_rectList[p_resizeIndex].setObjectOffIfHeightIs0)
+            m_rectList[p_resizeIndex].rect.gameObject.SetActive(p_newSize.y - m_rectList[p_resizeIndex].offset.y > 0);
+
         OnEndResizeAnim?.Invoke(true);
     }
 
@@ -125,7 +132,7 @@ public class UIResizeOtherRect : MonoBehaviour
 
         public Image image;
         public SetImage[] imagesToChange;
-
+        public bool setObjectOffIfHeightIs0;
         [Header("Anim")]
         public bool useAnim = false;
         public float animDuration = 0.3f;

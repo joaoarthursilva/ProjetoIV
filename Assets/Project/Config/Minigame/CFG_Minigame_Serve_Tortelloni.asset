@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9aad1decd651543a8e336b0735f37c, type: 3}
+  m_Name: CFG_Minigame_Serve_Tortelloni
+  m_EditorClassIdentifier: 
+  Instruction: Entregue o prato para o cliente
+  callServePlate: 0
+  initialPlatePrefab: {fileID: 6907159158969413968, guid: e47be282433841248b7becb7960906dd, type: 3}
+  initialIngredient: {fileID: 11400000, guid: 1b29d58d26df72b4bb8323e202ee9e61, type: 2}
+  finalIngredient: {fileID: 11400000, guid: 9789551328247534ea4b65f0a49b0267, type: 2}
+  ingredientsToServe:
+  - {fileID: 11400000, guid: 11ebad9ba6668724a87fea498ec1a491, type: 2}
+  - {fileID: 11400000, guid: a19643ad76e159843b8734ccf3ab53bc, type: 2}
+  - {fileID: 11400000, guid: fc31e9fa3bd21074db52f7d95e7d2665, type: 2}
