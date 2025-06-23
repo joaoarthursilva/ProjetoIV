@@ -67,6 +67,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
                 m_currentMinigameInteraction = minigamesInteraction[i];
                 m_currentMinigame = l_minigame;
 
+                RecipeManager.Instance.EnteredMinigame(m_currentMinigame);
                 OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
                                             () => m_currentMinigameInteraction.IOnStartInteraction(l_minigame,
                                                                                         () => OnEndMinigame(l_minigame.FinalIngredient())));
@@ -105,6 +106,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
             m_currentMinigameInteraction = m_servingStation;
             m_currentMinigame = l_minigame;
 
+            RecipeManager.Instance.EnteredMinigame(m_currentMinigame);
             OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
                                         () => m_currentMinigameInteraction.IOnStartInteraction(l_minigame,
                                                                                     () => OnEndMinigame(l_minigame.FinalIngredient())));

@@ -882,6 +882,11 @@ MonoBehaviour:
   BrainUpdatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!20 &457167040 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1349368538799052214, guid: c6059a141812c6c489a381a81c64b813, type: 3}
+  m_PrefabInstance: {fileID: 7777739929115559417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &457452361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7546274579744404031, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
@@ -4732,6 +4737,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4735786721779586147, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 457167040}
     - target: {fileID: 5047112212422521380, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -27,7 +27,6 @@ public class PlayerInventory : Singleton<PlayerInventory>
 
     public void SetCurrentInventory(Ingredient p_ingredient)
     {
-        Debug.Log("set " + p_ingredient);
         m_currentIngredient = p_ingredient;
 
         for (int i = 0; i < m_onHandIngredients.Length; i++)

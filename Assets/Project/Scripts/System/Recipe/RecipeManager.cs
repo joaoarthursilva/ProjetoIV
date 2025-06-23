@@ -23,11 +23,12 @@ public class RecipeManager : Singleton<RecipeManager>
         {
             if (p_finalIngredient == possibleSequences[i].FinalIngredient)
             {
-            Debug.Log("final ingre " + possibleSequences[i].FinalIngredient);
+                Debug.Log("final ingre " + possibleSequences[i].FinalIngredient);
                 currentSteps = new();
                 for (int j = 0; j < possibleSequences.Count; j++) currentSteps.Add(false);
 
                 currentSequence = possibleSequences[i];
+                SetNextMinigame?.Invoke(currentSequence.sequence[0]);
                 return;
             }
         }
@@ -62,7 +63,7 @@ public class RecipeManager : Singleton<RecipeManager>
 
                 if (p_minigame.callServePlate) p_forceCall = true;
                 if (i + 1 == currentSteps.Count) EndedSequence();
-                else SetNextMinigame?.Invoke(currentSequence.sequence[i]);
+                else SetNextMinigame?.Invoke(currentSequence.sequence[i + 1]);
 
                 return;
             }
