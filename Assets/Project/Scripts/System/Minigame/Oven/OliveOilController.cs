@@ -128,6 +128,7 @@ public class OliveOilController : MinigameStep
         dispenserTransform = null;
         objectAnimationBehaviour = null;
         streamController = null;
+        uiParent.SetActive(false);
 
         OnEnd?.Invoke();
     }

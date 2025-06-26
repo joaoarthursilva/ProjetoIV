@@ -272,7 +272,7 @@ MonoBehaviour:
   knife0Position: {x: -0.18, y: 1.2409, z: -1.375}
   knife1Position: {x: -0.3039, y: 1.2409, z: -1.1976}
   knifeTransform: {fileID: 490145854148055970}
-  followLerpValue: 0.1
+  followLerpValue: 0.04
   ingredientsParent: {fileID: 1917245576614384718}
   targetPosition: {x: -0.18, y: 1.243091, z: -1.375}
 --- !u!114 &2764479188968138847

@@ -151,7 +151,7 @@ MonoBehaviour:
     useLocalPosition: 1
     setInitialPosition: 0
     startLocalPosition: {x: 0, y: 0, z: 0}
-    finalLocalPosition: {x: -0.0199, y: -0.0608, z: 0.06}
+    finalLocalPosition: {x: 0.0362, y: -0.060056802, z: 0.0723}
     startPosition: {x: 0, y: 0, z: 0}
     finalPosition: {x: 0, y: 0, z: 0}
     moveAnimationTime: 0.5
@@ -195,7 +195,7 @@ MonoBehaviour:
     shouldRotate: 1
     useLocalRotate: 1
     startLocalRotate: {x: 0, y: 0, z: 0}
-    finalLocalRotate: {x: -89.2543, y: 22.900694, z: -41.3196}
+    finalLocalRotate: {x: -82.737, y: 77.86, z: -77.2}
     startRotate: {x: 0, y: 0, z: 0}
     finalRotate: {x: 0, y: 0, z: 0}
     rotateAnimationTime: 0.5
@@ -242,7 +242,7 @@ MonoBehaviour:
     useLocalPosition: 1
     setInitialPosition: 0
     startLocalPosition: {x: 0, y: 0, z: 0}
-    finalLocalPosition: {x: 0.0303, y: -0.057700064, z: -0.09089986}
+    finalLocalPosition: {x: 0.0351, y: -0.057700034, z: -0.09342289}
     startPosition: {x: 0, y: 0, z: 0}
     finalPosition: {x: 0, y: 0, z: 0}
     moveAnimationTime: 0.5
@@ -286,189 +286,7 @@ MonoBehaviour:
     shouldRotate: 1
     useLocalRotate: 1
     startLocalRotate: {x: 0, y: 0, z: 0}
-    finalLocalRotate: {x: 88.74758, y: 138.42503, z: 156.85132}
-    startRotate: {x: 0, y: 0, z: 0}
-    finalRotate: {x: 0, y: 0, z: 0}
-    rotateAnimationTime: 0.5
-    rotateAnimationCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    rotateDelayTime: 0
-  - element: {fileID: 6839157699173740710}
-    useUnscaledTime: 0
-    shouldFade: 0
-    setInitialFade: 0
-    startAlpha: 0
-    endAlpha: 0
-    fadeAnimationTime: 0
-    fadeAnimationCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
-    fadeDelayTime: 0
-    shouldMove: 1
-    useLocalPosition: 1
-    setInitialPosition: 0
-    startLocalPosition: {x: -0.0199, y: -0.0608, z: 0.06}
-    finalLocalPosition: {x: -0.02, y: -0.06, z: -0.036}
-    startPosition: {x: 0, y: 0, z: 0}
-    finalPosition: {x: 0, y: 0, z: 0}
-    moveAnimationTime: 0.5
-    moveAnimationCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    moveDelayTime: 0.5
-    shouldScale: 0
-    setInitialScale: 0
-    startScale: {x: 0, y: 0, z: 0}
-    finalScale: {x: 0, y: 0, z: 0}
-    scaleAnimationTime: 0
-    scaleAnimationCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
-    scaleDelayTime: 0
-    shouldRotate: 1
-    useLocalRotate: 1
-    startLocalRotate: {x: -89.2543, y: 22.900694, z: -41.3196}
-    finalLocalRotate: {x: -89.254, y: 41.7, z: -41.32}
-    startRotate: {x: 0, y: 0, z: 0}
-    finalRotate: {x: 0, y: 0, z: 0}
-    rotateAnimationTime: 0.5
-    rotateAnimationCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    rotateDelayTime: 0.5
-  - element: {fileID: 3082987280769686480}
-    useUnscaledTime: 0
-    shouldFade: 0
-    setInitialFade: 0
-    startAlpha: 0
-    endAlpha: 0
-    fadeAnimationTime: 0
-    fadeAnimationCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
-    fadeDelayTime: 0
-    shouldMove: 1
-    useLocalPosition: 1
-    setInitialPosition: 0
-    startLocalPosition: {x: 0.0303, y: -0.057700064, z: -0.09089986}
-    finalLocalPosition: {x: 0.123, y: -0.058, z: -0.042}
-    startPosition: {x: 0, y: 0, z: 0}
-    finalPosition: {x: 0, y: 0, z: 0}
-    moveAnimationTime: 0.5
-    moveAnimationCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 0
-    moveDelayTime: 0
-    shouldScale: 0
-    setInitialScale: 0
-    startScale: {x: 0, y: 0, z: 0}
-    finalScale: {x: 0, y: 0, z: 0}
-    scaleAnimationTime: 0
-    scaleAnimationCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-      m_RotationOrder: 0
-    scaleDelayTime: 0
-    shouldRotate: 1
-    useLocalRotate: 1
-    startLocalRotate: {x: 88.74758, y: 138.42503, z: 156.85132}
-    finalLocalRotate: {x: 88.748, y: 157.6, z: 156.851}
+    finalLocalRotate: {x: 88.747734, y: 157.91104, z: 156.85217}
     startRotate: {x: 0, y: 0, z: 0}
     finalRotate: {x: 0, y: 0, z: 0}
     rotateAnimationTime: 0.5
@@ -693,6 +511,37 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_debugRectTransform: {fileID: 0}
+--- !u!1 &1211978832137139394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2428038590913871363}
+  m_Layer: 0
+  m_Name: cut0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2428038590913871363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211978832137139394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.158, y: 0.054, z: 0.115}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4415130339638122956}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418483501521263409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,8 +910,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3082987280769686480}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.71417266, y: 0.0076121986, z: -0.0016310066, w: 0.69992626}
-  m_LocalPosition: {x: 0.123, y: -0.058, z: -0.042}
+  m_LocalRotation: {x: 0.71416724, y: 0.009505242, z: -0.0035616606, w: 0.6999015}
+  m_LocalPosition: {x: 0.0351, y: -0.057700034, z: -0.09342289}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1450,6 +1299,8 @@ Transform:
   - {fileID: 3961123978699022895}
   - {fileID: 2633575894587420774}
   - {fileID: 5307927398318991243}
+  - {fileID: 1947202319788817771}
+  - {fileID: 2428038590913871363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1883253253683044155
@@ -1470,6 +1321,8 @@ MonoBehaviour:
   m_processedMaterial: {fileID: 0}
   m_objectAnim: {fileID: 0}
   cuts: []
+  cut0: {fileID: 1947202319788817771}
+  cut1: {fileID: 2428038590913871363}
 --- !u!1 &6252885581599550822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,8 +1433,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6839157699173740710}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7036409, y: 0.005395725, z: -0.00070594245, w: 0.7105351}
-  m_LocalPosition: {x: -0.02, y: -0.06, z: -0.036}
+  m_LocalRotation: {x: -0.69600433, y: 0.047795527, z: -0.03966659, w: 0.71534616}
+  m_LocalPosition: {x: 0.0362, y: -0.060056802, z: 0.0723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1592,3 +1445,34 @@ Transform:
   - {fileID: 5815009676824969103}
   m_Father: {fileID: 4415130339638122956}
   m_LocalEulerAnglesHint: {x: -89.254, y: 41.7, z: -41.32}
+--- !u!1 &7300518222112340075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1947202319788817771}
+  m_Layer: 0
+  m_Name: cut0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1947202319788817771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300518222112340075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.158, y: 0.054, z: -0.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4415130339638122956}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

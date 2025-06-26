@@ -1,6 +1,7 @@
 using ProjetoIV.Util;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PutIngredientController : MinigameStep
 {
@@ -13,6 +14,7 @@ public class PutIngredientController : MinigameStep
     public ObjectAnimationBehaviour objectAnimBehavior;
     [Space]
     public GameObject sliderGO;
+    public Slider slider;
     [Space]
     public Ingredient debugIngreciente;
     [NaughtyAttributes.Button] public void DebugStart() => StartInteraction(debugIngreciente, () => Debug.Log("diva"));
@@ -22,7 +24,9 @@ public class PutIngredientController : MinigameStep
         OnEnd = p_OnEnd;
 
         sliderGO.SetActive(true);
+        slider.value = 0f;
         behaviour = Instantiate(knifeAndTablePrefab, knifeAndTableParent).GetComponent<PutIngredientBehavior>();
+        behaviour.OnEnd += END;
         behaviour.StartInteraction(p_ingredient);
         objectAnimBehavior = behaviour.GetComponent<ObjectAnimationBehaviour>();
     }
@@ -32,12 +36,12 @@ public class PutIngredientController : MinigameStep
         m_currentSliderValue = p_float;
 
         UpdatePut();
+    }
 
-        if (Mathf.Approximately(m_currentSliderValue, 1f))
-        {
-            sliderGO.SetActive(false);
-            Invoke(nameof(WaitAndEnd), 0.3f);
-        }
+    void END()
+    {
+        sliderGO.SetActive(false);
+        Invoke(nameof(WaitAndEnd), 0.3f);
     }
 
     void WaitAndEnd()

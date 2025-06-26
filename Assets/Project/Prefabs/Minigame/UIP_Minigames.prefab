@@ -51,19 +51,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foldObjects:
   - Recipe: {fileID: 11400000, guid: 8e64030a7a335bf4e9a1ea7e31182006, type: 2}
+    pastaPrefab: {fileID: 0}
+    parent: {fileID: 0}
     CutPoints:
     - {fileID: 0}
     - {fileID: 0}
+    CutPoints2: []
     FocuseCamera: {fileID: 0}
   - Recipe: {fileID: 11400000, guid: a38ca9e854510764b955af9001e40b4a, type: 2}
+    pastaPrefab: {fileID: 0}
+    parent: {fileID: 0}
     CutPoints:
     - {fileID: 0}
     - {fileID: 0}
+    CutPoints2: []
     FocuseCamera: {fileID: 0}
   m_holdButtonGroup: {fileID: 3159793982856044162}
   m_currentCutClass:
     Recipe: {fileID: 0}
+    pastaPrefab: {fileID: 0}
+    parent: {fileID: 0}
     CutPoints: []
+    CutPoints2: []
     FocuseCamera: {fileID: 0}
 --- !u!1 &1446184119831304690
 GameObject:
@@ -293,23 +302,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutObjects:
   - Recipe: {fileID: 11400000, guid: 8e64030a7a335bf4e9a1ea7e31182006, type: 2}
+    pastaPrefab: {fileID: 0}
+    parent: {fileID: 0}
     CutPoints:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    CutPoints2: []
     FocuseCamera: {fileID: 0}
   - Recipe: {fileID: 11400000, guid: a38ca9e854510764b955af9001e40b4a, type: 2}
+    pastaPrefab: {fileID: 0}
+    parent: {fileID: 0}
     CutPoints:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    CutPoints2: []
     FocuseCamera: {fileID: 0}
   m_holdButtonGroup: {fileID: 5721751996397222242}
   m_currentCutClass:
     Recipe: {fileID: 0}
+    pastaPrefab: {fileID: 0}
+    parent: {fileID: 0}
     CutPoints: []
+    CutPoints2: []
     FocuseCamera: {fileID: 0}
 --- !u!1 &2287240155737648788
 GameObject:
@@ -437,7 +455,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ingredients:
   - {fileID: 11400000, guid: cd5f8de3672e4d4488cea3e94c6af621, type: 2}
-  - {fileID: 11400000, guid: 42cba14bd2beb3d4cb17c3cd3c173606, type: 2}
   parent: {fileID: 0}
   dispenserTransform: {fileID: 0}
   streamController: {fileID: 0}
@@ -1444,12 +1461,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bcbe9b445353f5408031155da2f86c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ingredients: []
+  m_ingredients:
+  - {fileID: 11400000, guid: 683166b60c137c44dacc6eda9db17e60, type: 2}
+  - {fileID: 11400000, guid: fec7cdf1ae944ad458dad5ef4842085e, type: 2}
   behaviour: {fileID: 0}
   knifeAndTablePrefab: {fileID: 5677186993172630721, guid: 6518c7ca5f710da469d54a3799bccc6c, type: 3}
   knifeAndTableParent: {fileID: 0}
   objectAnimBehavior: {fileID: 0}
   sliderGO: {fileID: 1715293731267670373}
+  slider: {fileID: 8208643300782379030}
   debugIngreciente: {fileID: 11400000, guid: caf668ca5cd252e47bbc1fd62cf953eb, type: 2}
 --- !u!1001 &413754150726592279
 PrefabInstance:

@@ -10,21 +10,27 @@ public class IngredientBehavior : MonoBehaviour
     [SerializeField] private ObjectAnimationBehaviour m_objectAnim;
     [Space]
     [SerializeField] private Transform[] cuts;
+    public Transform cut0;
+    public Transform cut1;
 
     public void SetProcessed(bool p_set)
     {
-        m_objectAnim.PlayEnteryAnimations();
-        if (!p_set) return;
-
-        for (int i = 0; i < cuts.Length; i++)
-        {
-            SetCutPosition(i);
-        }
+       
     }
 
     public void AnimCut(int p_index)
     {
         SetCutPosition(p_index);
+    }
+
+    public void SetKnifeBehavior()
+    {
+
+    }
+
+    public Vector3 GetKnifePosition(float p_lerp)
+    {
+        return Vector3.Lerp(cut0.position, cut1.position, p_lerp);
     }
 
     void SetCutPosition(int p_index)

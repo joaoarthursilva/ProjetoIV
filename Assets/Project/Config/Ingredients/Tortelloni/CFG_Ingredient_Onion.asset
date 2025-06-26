@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197acf0562b5467458faa341198149ca, type: 3}
   m_Name: CFG_Ingredient_Onion
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5515744742321589213, guid: 9951facea88feb54aa658c31b2359563, type: 3}
+  prefab: {fileID: 5839087734482617217, guid: ef893d71bf6f1694f8e1ab55c341ecc3, type: 3}
   title: Onion
   sprite: {fileID: 21300000, guid: eda0a66071e4b004ca896a74f1abaf5b, type: 3}

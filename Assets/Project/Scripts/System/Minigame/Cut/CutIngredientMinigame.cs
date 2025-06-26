@@ -1,5 +1,6 @@
 using ProjetoIV.RatInput;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -28,9 +29,16 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
     private Ingredient m_initialIngredient;
     [SerializeField] private Transform m_ingredientParent;
     [SerializeField] private IngredientBehavior m_currentIngredient;
+    [SerializeField] private KnifeMinigameBehavior m_currentKnife;
     [SerializeField] private ProccessMinigame m_currentMinigame;
     [SerializeField] private int m_interactionsCounter;
     private System.Action m_onEndAction;
+    private KnifeOnSceneTag m_onSceneKnife;
+    [SerializeField] private KnifeMinigameBehavior knifeprefab;
+    private void Start()
+    {
+        m_onSceneKnife = FindFirstObjectByType<KnifeOnSceneTag>();
+    }
 
     public bool EmbraceMinigame(Ingredient p_minigame, out Minigame o_minigame)
     {
@@ -62,15 +70,25 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
         if (Instantiate(m_initialIngredient.prefab, m_ingredientParent).TryGetComponent(out m_currentIngredient))
         {
             m_currentIngredient.SetProcessed(false);
+            if (Instantiate(knifeprefab, m_ingredientParent).TryGetComponent(out m_currentKnife))
+            {
+                m_canInteract = true;
+                m_onSceneKnife.gameObject.SetActive(false);
+            }
         }
+
+
     }
 
     public void IOnEndInteraction()
     {
         RatInput.Instance.ShowUIElement(InputID.NONE);
 
+        Destroy(m_currentKnife.gameObject);
         Invoke(nameof(DestroyIngredient), 1f);
         m_onEndAction?.Invoke();
+        m_onSceneKnife.gameObject.SetActive(true);
+
     }
     void DestroyIngredient()
     {
@@ -96,18 +114,44 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 
     public void IOnMouseUp() { }
 
+    bool m_canInteract = false;
     public void IOnCut()
     {
+        if (!m_canInteract) return;
 
+        StartCoroutine(CutAnim());
     }
 
+    IEnumerator CutAnim()
+    {
+        m_canInteract = false;
+        yield return m_currentKnife.Cut();
+        m_canInteract = true;
+        if (waitingUp) IOnEndedCut();
+    }
+
+
+    bool waitingUp = false;
     public void IOnEndedCut()
     {
-        m_currentIngredient.AnimCut(m_interactionsCounter);
-        m_interactionsCounter++;
-        ICheckEndInteraction();
+        if (!m_canInteract)
+        {
+            waitingUp = true;
+            return;
+        }else waitingUp = false;
+            //m_currentIngredient.AnimCut(m_interactionsCounter);
+            m_interactionsCounter++;
+        //ICheckEndInteraction();
+        StartCoroutine(EndCutAnim());
     }
-
+    IEnumerator EndCutAnim()
+    {
+        m_canInteract = false;
+        yield return m_currentKnife.EndCut();
+        yield return m_currentKnife.MoveKnife(m_currentIngredient.GetKnifePosition((float)m_interactionsCounter / (float)m_currentMinigame.quantityOfInteractions));
+        ICheckEndInteraction();
+        m_canInteract = true;
+    }
     public void IOnPressExit()
     {
 

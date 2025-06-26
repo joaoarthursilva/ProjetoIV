@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PutIngredientBehavior : MonoBehaviour
@@ -23,6 +24,13 @@ public class PutIngredientBehavior : MonoBehaviour
     private void FixedUpdate()
     {
         knifeTransform.localPosition = Vector3.Lerp(knifeTransform.localPosition, targetPosition, followLerpValue);
-        
+        if (Mathf.Abs(knifeTransform.localPosition.x - knife1Position.x) < 0.001f  
+            && Mathf.Abs(knifeTransform.localPosition.y - knife1Position.y) < 0.001f)
+        {
+            OnEnd?.Invoke();
+            OnEnd = null;
+        }
     }
+    public Action OnEnd;
+
 }
