@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class GameMenuManager : MonoBehaviour
 {
+    [SerializeField] private GameObject m_gameMain;
+    [SerializeField] private GameObject m_gameCredits;
+    [SerializeField] private GameObject m_gameOptions;
+
     [SerializeField] private GameObject m_gamePause;
 
     [SerializeField] private TMP_Dropdown m_languageDropdown;
@@ -27,9 +31,38 @@ public class GameMenuManager : MonoBehaviour
         m_gamePause.SetActive(false);
     }
 
+    public void ButtonCredits()
+    {
+        m_gameMain.SetActive(false);
+        m_gameCredits.SetActive(true);
+    }
+
+    public void ButtonOptions()
+    {
+        m_gameMain.SetActive(false);
+        m_gameOptions.SetActive(true);
+    }
+
+    public void ButtonMain()
+    {
+        m_gameCredits.SetActive(false);
+        m_gameOptions.SetActive(false);
+        m_gameMain.SetActive(true);
+    }
+
     public void ButtonMenu()
     {
         SceneLoader.Instance.Load(SceneLoader.Scene.SCN_Menu);
+    }
+
+    public void ButtonPlay()
+    {
+        SceneLoader.Instance.Load(SceneLoader.Scene.SCN_Game);
+    }
+
+    public void ButtonQuit()
+    {
+        Application.Quit();
     }
 
     public void SetVolume(System.Single p_volume)

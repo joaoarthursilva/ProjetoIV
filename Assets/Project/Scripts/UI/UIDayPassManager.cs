@@ -7,6 +7,8 @@ public class UIDayPassManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI m_dayPassText;
     [SerializeField] private GameObject m_dayPassGameObject;
+    [SerializeField] private AnimationCurve m_animationCurve;
+    [SerializeField] private float m_timeToFade;
 
     void Awake()
     {
@@ -18,16 +20,21 @@ public class UIDayPassManager : MonoBehaviour
         m_dayPassGameObject.SetActive(true);
         m_dayPassText.text = "Starting day " + day.day;
         m_dayPassGameObject.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+        m_dayPassText.color = new Color(1, 1, 1, 1);
         StartCoroutine(OnStartingNextDay());
     }
 
     IEnumerator OnStartingNextDay()
     {
-        float l_alpha = m_dayPassGameObject.GetComponent<Image>().color.a;
+        float l_currentTime = 0;
+        float l_alpha;
 
-        for (float t = 0.0f; t < 1.5f; t += Time.deltaTime / 1.5f)
+        while (l_currentTime <= m_timeToFade)
         {
-            m_dayPassGameObject.GetComponent<Image>().color = new Color(0, 0, 0, Mathf.Lerp(l_alpha, 0f, t));
+            l_alpha = m_animationCurve.Evaluate(l_currentTime / m_timeToFade);
+            m_dayPassText.color = new Color(1, 1, 1, l_alpha);
+            m_dayPassGameObject.GetComponent<Image>().color = new Color(0, 0, 0, l_alpha);
+            l_currentTime += Time.deltaTime;
             yield return null;
         }
 

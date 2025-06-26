@@ -49,7 +49,7 @@ public class TimeManager : Singleton<TimeManager>
 
     IEnumerator OnStartNextDay()
     {
-        yield return new WaitForSeconds(m_days[m_today - 1].delayBeforeNextDay);
+        yield return new WaitForSeconds(m_today == 0 ? 0 : m_days[m_today - 1].delayBeforeNextDay);
         m_now = m_days[m_today].start;
         OnStartDay?.Invoke(m_days[m_today]);
         OnPassTime?.Invoke(m_now);
