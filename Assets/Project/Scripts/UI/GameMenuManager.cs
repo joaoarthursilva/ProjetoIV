@@ -15,6 +15,21 @@ public class GameMenuManager : MonoBehaviour
     [SerializeField] private TMP_Dropdown m_languageDropdown;
     [SerializeField] private List<string> m_availableLanguages = new();
 
+    [Space]
+    public ProjetoIV.RatInput.Input pause;
+    public ProjetoIV.RatInput.Input unpause;
+
+    private void Start()
+    {
+        pause = ProjetoIV.RatInput.RatInput.Instance.GetInput(ProjetoIV.RatInput.InputID.KITCHEN_PAUSE);
+        pause.OnInputCanceled += ButtonPause;
+    }
+
+    private void OnDestroy()
+    {
+        pause.OnInputCanceled -= ButtonPause;
+    }
+
     private float m_volume;
     private float m_soundEffects;
 
