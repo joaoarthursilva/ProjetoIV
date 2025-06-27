@@ -925,6 +925,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 128885976}
     m_Modifications:
+    - target: {fileID: 3769807447788102729, guid: 6faeaa7d556d2aa4d97a02f810317fd4, type: 3}
+      propertyPath: m_days.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3964689492856293750, guid: 6faeaa7d556d2aa4d97a02f810317fd4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -23,4 +23,7 @@ MonoBehaviour:
   - Name: Dialog
     Id: 1093145918
     TextAsset: {fileID: 4900000, guid: 693188634d01d1347b78a6a39b10ee4d, type: 3}
+  - Name: Dates
+    Id: 1803060187
+    TextAsset: {fileID: 4900000, guid: 37229949eb2fa9c48983a84af403d665, type: 3}
   SaveFolder: {fileID: 102900000, guid: c392831e85f928548b8494fefd912562, type: 3}
