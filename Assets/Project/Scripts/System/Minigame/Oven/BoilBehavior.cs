@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BoilBehavior : MonoBehaviour
 {
+    [SerializeField] private bool debug;
     [SerializeField] private GameObject[] m_pastaObject;
     private Transform m_futureParent;
     public void SetFutureParent(Transform p_parent)
@@ -12,8 +13,8 @@ public class BoilBehavior : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(0.6f);
-
+        yield return new WaitForSeconds(0.8f);
+        if(debug) yield break;
         for (int i = 0; i < m_pastaObject.Length; i++)
         {
             m_pastaObject[i].transform.SetParent(m_futureParent);

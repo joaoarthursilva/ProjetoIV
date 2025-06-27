@@ -26,7 +26,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
     [SerializeField] SeasoningBehavior[] m_servingInteractions;
     [SerializeField] private Transform m_plateParent;
     ServingMinigame m_minigame;
-
+    GameObject m_plateGO;
     [Space] public float waitAfterDone;
     public bool EmbraceMinigame(Minigame p_minigame)
     {
@@ -81,6 +81,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
 
     public void IOnEndInteraction()
     {
+        Destroy(m_plateGO);
         m_onEnd?.Invoke();
     }
 

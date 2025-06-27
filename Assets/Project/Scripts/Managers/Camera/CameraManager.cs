@@ -41,7 +41,7 @@ public class CameraManager : MonoBehaviour
 
     public void SetOverrideCamera(CinemachineCamera p_camera, System.Action p_onEndTransition)
     {
-        if(overrideCamera == p_camera)
+        if (overrideCamera == p_camera)
         {
             p_onEndTransition?.Invoke();
             return;

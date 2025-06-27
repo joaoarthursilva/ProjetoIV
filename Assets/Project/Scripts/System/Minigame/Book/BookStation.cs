@@ -80,13 +80,14 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
 
     public void IOnPressExit()
     {
-        ProjetoIV.RatInput.RatInput.ShowInputUIElement(ProjetoIV.RatInput.InputID.MINIGAME_ENDINTERACTION);
+        RatInput.ShowInputUIElement(InputID.MINIGAME_ENDINTERACTION);
         m_onEndAction?.Invoke();
     }
 
     public void IOnStartInteraction(Minigame p_minigame, Action p_actionOnEnd)
     {
-        ProjetoIV.RatInput.RatInput.ShowInputUIElement(ProjetoIV.RatInput.InputID.NONE);
+        MinigamesManager.SetCursorVisible(true);
+        RatInput.ShowInputUIElement(InputID.NONE);
 
         m_onEndAction = p_actionOnEnd;
 
@@ -96,6 +97,7 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
 
     public void SelectRecipe(Ingredient p_ingredient)
     {
+        MinigamesManager.SetCursorVisible(false);
         RecipeManager.Instance.SetRecipe(p_ingredient);
         m_onEndAction?.Invoke();
     }

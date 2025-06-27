@@ -66,7 +66,7 @@ public class OvenStationPasta : MonoBehaviour, IMinigameInteraction
         l_prefabAnimBehavior = Instantiate(m_currentPasta.prefab, m_currentPasta.instantiateParent);
         l_prefabAnimBehavior.SetFutureParent(m_currentPasta.instantiateParent);
         m_onEndAction = p_actionOnEnd;
-        Invoke(nameof(IOnEndInteraction), .8f);
+        Invoke(nameof(IOnEndInteraction), 1f);
     }
 
 
