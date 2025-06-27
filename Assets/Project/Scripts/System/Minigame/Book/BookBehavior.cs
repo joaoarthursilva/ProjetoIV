@@ -14,6 +14,7 @@ public class BookBehavior : MonoBehaviour
 
     public void OpenBook()
     {
+        if (ArrowIndicator.Instance != null) ArrowIndicator.Instance.HideArrow();
         m_behavior.PlayEnteryAnimations();
         for (int i = 0; i < m_buttonsImages.Length; i++) m_buttonsImages[i].raycastTarget = true;
         for (int i = 0; i < m_flipButtonGameObject.Length; i++) m_flipButtonGameObject[i].SetActive(true);

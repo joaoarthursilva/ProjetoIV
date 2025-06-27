@@ -69,6 +69,9 @@ namespace ProjetoIV.RatInput
                 case "Menu":
                     CurrentMap = Map.MENU;
                     break;
+                case "Dialog":
+                    CurrentMap = Map.DIALOG;
+                    break;
                 default:
                     CurrentMap = Map.KITCHEN;
                     break;
@@ -107,6 +110,8 @@ namespace ProjetoIV.RatInput
                     return "Book";
                 case Map.MENU:
                     return "Menu";
+                case Map.DIALOG:
+                    return "Dialog";
             }
 
             return "";

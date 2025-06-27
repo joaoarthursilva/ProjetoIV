@@ -31,7 +31,7 @@ public class RaycastManager : Singleton<RaycastManager>
 
     public void SetCurrentRaycastableObjectHover(RaycastableObject p_raycastObj)
     {
-        if (m_raycastableObjects == null) return;
+        if (m_raycastableObjects == null || RatInput.Instance.CurrentMap == Map.DIALOG) return;
 
         for (int i = 0; i < m_raycastableObjects.Length; i++)
         {

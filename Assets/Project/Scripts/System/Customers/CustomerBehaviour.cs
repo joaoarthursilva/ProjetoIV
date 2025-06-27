@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ProjetoIV.RatInput;
+using ProjetoIV.Util;
 using RatSpeak;
 using UnityEngine;
 
@@ -54,6 +56,8 @@ public class CustomerBehaviour : MonoBehaviour
     {
         Debug.Log("aaa");
         Debug.Log(m_isNewCustomer);
+        RatInput.Instance.SetMap(Map.DIALOG);
+        RatInput.Instance.ShowUIElement(InputID.NONE);
         if (m_isNewCustomer)
         {
             if (m_customer.dialogs.Count > 1)
@@ -101,7 +105,9 @@ public class CustomerBehaviour : MonoBehaviour
 
     private void OnDialogEnd()
     {
+        RatInput.Instance.SetMap(Map.KITCHEN);
         if (m_currentDialogId == DialogID.ENTREGA) CheckOrder(PlayerInventory.Instance.CurrentIngredient);
+        else if (m_currentDialogId == DialogID.PEDIDO) ArrowIndicator.Instance.Show(new Vector3(1.329f, 1.5f, -9.885f));
         else if (m_currentDialogId == DialogID.RESULTADO_BOM || m_currentDialogId == DialogID.UNICO)
         {
             Debug.Log("fim cabo vai embora");
