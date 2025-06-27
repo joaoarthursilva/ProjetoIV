@@ -7,7 +7,7 @@ namespace ProjetoIV.RatInput
 {
     public class RatInput : Singleton<RatInput>
     {
-        public Map CurrentMap;
+        public Map CurrentMap { get; private set; }
         [SerializeField] private PlayerInput m_playerInput;
         [SerializeField] private InputActionAsset m_actionAsset;
         [SerializeField] private List<RatInputAction> m_inputs;
