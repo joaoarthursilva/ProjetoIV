@@ -22,16 +22,22 @@ public class GameMenuManager : MonoBehaviour
 
     private void Start()
     {
-        pause = RatInput.Instance.GetInput(InputID.KITCHEN_PAUSE);
-        unpause = RatInput.Instance.GetInput(InputID.MENU_UNPAUSE);
-        pause.OnInputCanceled += ButtonPause;
-        unpause.OnInputCanceled += ButtonBack;
+        if (RatInput.Instance != null)
+        {
+            pause = RatInput.Instance.GetInput(InputID.KITCHEN_PAUSE);
+            unpause = RatInput.Instance.GetInput(InputID.MENU_UNPAUSE);
+            pause.OnInputCanceled += ButtonPause;
+            unpause.OnInputCanceled += ButtonBack;
+        }
     }
 
     private void OnDestroy()
     {
-        pause.OnInputCanceled -= ButtonPause;
-        unpause.OnInputCanceled -= ButtonBack;
+        if (RatInput.Instance != null)
+        {
+            pause.OnInputCanceled -= ButtonPause;
+            unpause.OnInputCanceled -= ButtonBack;
+        }
     }
 
     private float m_volume;
