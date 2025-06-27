@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CFG_Customer_Crazy_0
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: ca1bb85651429cc4cb794c75e41675b0, type: 2}
-  ingredient: {fileID: 11400000, guid: 38bc9278815a9c6499ac301ca67cf715, type: 2}
+  timeToAppear: 0
+  ingredient: {fileID: 11400000, guid: b909458e6e529dc4f964147daab2c2f0, type: 2}
   dialogs:
   - key: D1.Char2.Dialog5.NPC.Line1
     id: 6
