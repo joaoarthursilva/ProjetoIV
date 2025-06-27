@@ -222,7 +222,7 @@
                 {
                     "name": "",
                     "id": "1d910849-1ae7-4bdb-9737-faa710479b40",
-                    "path": "<Keyboard>/i",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -920,7 +920,7 @@
                     "id": "c95b2375-e6d9-4b88-9c4c-c5e76515df4b",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "initialStateCheck": false
                 },
                 {
@@ -992,7 +992,7 @@
                     "id": "07308bfd-2983-41fb-90d8-33b5498d58f2",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "initialStateCheck": false
                 }
             ],

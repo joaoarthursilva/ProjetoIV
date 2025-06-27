@@ -139,5 +139,6 @@ namespace ProjetoIV.RatInput
         MINIGAME_CUT,
         MINIGAME_ENDINTERACTION,
         KITCHEN_PAUSE,
+        MENU_UNPAUSE,
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Assets.Plugins.RatLocalization.Scripts;
+using ProjetoIV.RatInput;
 using ProjetoIV.Util;
 using TMPro;
 using UnityEngine;
@@ -21,13 +22,16 @@ public class GameMenuManager : MonoBehaviour
 
     private void Start()
     {
-        pause = ProjetoIV.RatInput.RatInput.Instance.GetInput(ProjetoIV.RatInput.InputID.KITCHEN_PAUSE);
+        pause = RatInput.Instance.GetInput(InputID.KITCHEN_PAUSE);
+        unpause = RatInput.Instance.GetInput(InputID.MENU_UNPAUSE);
         pause.OnInputCanceled += ButtonPause;
+        unpause.OnInputCanceled += ButtonBack;
     }
 
     private void OnDestroy()
     {
         pause.OnInputCanceled -= ButtonPause;
+        unpause.OnInputCanceled -= ButtonBack;
     }
 
     private float m_volume;
@@ -35,6 +39,7 @@ public class GameMenuManager : MonoBehaviour
 
     public void ButtonPause()
     {
+        RatInput.Instance.CurrentMap = Map.MENU;
         Time.timeScale = 0f;
         m_gamePause.SetActive(true);
         m_languageDropdown.value = IdentifyLenguage();
@@ -42,6 +47,7 @@ public class GameMenuManager : MonoBehaviour
 
     public void ButtonBack()
     {
+        RatInput.Instance.CurrentMap = Map.KITCHEN;
         Time.timeScale = 1f;
         m_gamePause.SetActive(false);
     }
