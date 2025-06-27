@@ -190,13 +190,11 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
     {
         if (p_state)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            CursorBehavior.Set(true, CursorLockMode.None);
         }
         else
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            CursorBehavior.Set(false, CursorLockMode.Locked);
         }
     }
 

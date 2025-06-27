@@ -17,13 +17,13 @@ public class PlayerMovement : Singleton<PlayerMovement>
         // SubscribeToActions(true);
         StartCoroutine(UpdateCoroutine());
         StartCoroutine(FixedUpdateCoroutine());
-        //CursorBehavior.Set(false, CursorLockMode.Locked);
+        CursorBehavior.Set(false, CursorLockMode.Locked);
     }
 
     private void OnDisable()
     {
         StopAllCoroutines();
-        //CursorBehavior.Set(true, CursorLockMode.None);
+        CursorBehavior.Set(true, CursorLockMode.None);
     }
 
     private WaitForFixedUpdate m_waitForFixedUpdate = new();
