@@ -732,6 +732,14 @@ MonoBehaviour:
   - English
   - Italian
   - Portuguese
+  pause:
+    Pressed: 0
+    PressedThisFrame: 0
+    ReleasedThisFrame: 0
+  unpause:
+    Pressed: 0
+    PressedThisFrame: 0
+    ReleasedThisFrame: 0
 --- !u!1 &210278243
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +873,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1985658073}
   - {fileID: 1518895835}
   - {fileID: 2081188825}
   - {fileID: 755717773}
@@ -1446,7 +1455,6 @@ RectTransform:
   - {fileID: 1297518116}
   - {fileID: 1639194370}
   - {fileID: 1485794331}
-  - {fileID: 1985658073}
   m_Father: {fileID: 2081188825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2777,7 +2785,7 @@ MonoBehaviour:
   m_Sprite: {fileID: -389712559, guid: dd96065610af6df4bb580ec2ecdce045, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
-  m_FillCenter: 1
+  m_FillCenter: 0
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
@@ -5263,11 +5271,11 @@ Transform:
   m_GameObject: {fileID: 1985658070}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960, y: -290, z: 0}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 529510586}
+  m_Father: {fileID: 259098358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022021144
 GameObject:
