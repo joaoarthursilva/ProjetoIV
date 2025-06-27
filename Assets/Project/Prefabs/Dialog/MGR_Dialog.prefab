@@ -349,11 +349,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -43.08399, y: -820.5667}
+  scrollPos: {x: -260.83664, y: -586.4}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 270
-  zoom: 0.82000023
+  blockViewHeight: 445
+  zoom: 0.8499999
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -361,9 +361,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 4230748712792660555}
-  selectedCommands:
-  - {fileID: 2418304167435336811}
+  - {fileID: 5571243554227901919}
+  selectedCommands: []
   variables:
   - {fileID: 982191531085042410}
   - {fileID: 8814412542733881673}
@@ -393,8 +392,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 348.80212
-    y: 146.7151
+    x: 306.7577
+    y: 149.06804
     width: 204.21
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3097,7 +3096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 106
   indentLevel: 0
-  localizationKey: D1.Char2.Dialog1.Player.Line2.Choice1.Preview
+  localizationKey: D1.Char2.Dialog1.Player.Line2.Choice3.Preview
   description: 
   targetBlock: {fileID: 5571243554227901919}
   hideIfVisited: 0
@@ -3122,7 +3121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 107
   indentLevel: 0
-  localizationKey: D1.Char2.Dialog1.Player.Line2.Choice1.Preview
+  localizationKey: D1.Char2.Dialog1.Player.Line2.Choice2.Preview
   description: 
   targetBlock: {fileID: 4835026007806584208}
   hideIfVisited: 0
@@ -3922,7 +3921,7 @@ MonoBehaviour:
   flowchart: {fileID: 9035497260707535957}
   m_fungusCharacter: {fileID: 9070910033105511767}
   m_debug: 1
-  m_debugShowDialogText: D1.Char1.Dialog1.NPC.Line1
+  m_debugShowDialogText: Fala
   m_debugShowDialog: {fileID: 11400000, guid: 42f7bd700b2960a43938677b78f72b48, type: 2}
 --- !u!1 &5098669665308164628
 GameObject:
