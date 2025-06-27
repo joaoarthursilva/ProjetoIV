@@ -75,10 +75,11 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 
     public void IOnEndInteraction()
     {
+        FadeController.Instance.CallFadeAnimation(false);
         RatInput.Instance.ShowUIElement(InputID.NONE);
 
         Destroy(m_currentKnife.gameObject);
-        Invoke(nameof(DestroyIngredient), 1f);
+        DestroyIngredient();
         m_onEndAction?.Invoke();
         m_onSceneKnife.gameObject.SetActive(true);
 
@@ -140,6 +141,8 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
     }
     IEnumerator EndCutAnim()
     {
+        if (m_currentMinigame.quantityOfInteractions <= m_interactionsCounter)
+            FadeController.Instance.CallFadeAnimation(true, null, .75f);
         m_canInteract = false;
         yield return m_currentKnife.EndCut();
         yield return m_currentKnife.MoveKnife(m_currentIngredient.GetKnifePosition((float)m_interactionsCounter / (float)m_currentMinigame.quantityOfInteractions));

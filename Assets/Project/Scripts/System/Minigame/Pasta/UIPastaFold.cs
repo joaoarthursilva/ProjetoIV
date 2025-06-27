@@ -16,13 +16,15 @@ public class UIPastaFold : MonoBehaviour, IFocusedMinigameStep
         set { m_onFocusCamera = value; }
     }
     public Action OnCallNextStep;
+    bool m_last = false;
 
-    public void StartPastaFold(Ingredient p_recipe)
+    public void StartPastaFold(Ingredient p_recipe, bool p_last = false)
     {
         for (int i = 0; i < foldObjects.Length; i++)
         {
             if (foldObjects[i].Recipe == p_recipe)
             {
+                m_last = p_last;
                 SetCurrentFoldClass(new(foldObjects[i]));
                 break;
             }
@@ -37,7 +39,7 @@ public class UIPastaFold : MonoBehaviour, IFocusedMinigameStep
         m_currentCutClass = p_cutClass;
 
         l_instantiatedPasta = Instantiate(m_currentCutClass.pastaPrefab, m_currentCutClass.parent).GetComponent<FoldPastaBehaviour>();
-
+        l_instantiatedPasta.last = m_last;
 
         OnFocusOnCamera?.Invoke(Camera, () =>
         {
@@ -54,7 +56,6 @@ public class UIPastaFold : MonoBehaviour, IFocusedMinigameStep
             });
         });
     }
-
     void CallNextStep()
     {
         l_instantiatedPasta.PlayLeaveAnimation(() => OnCallNextStep?.Invoke());

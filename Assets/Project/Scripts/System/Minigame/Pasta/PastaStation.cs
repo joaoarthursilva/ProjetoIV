@@ -119,7 +119,16 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     }
 
     int m_foldCount = 0;
-    int m_maxFold = 1;
+    int m_maxFold
+    {
+        get
+        {
+#if UNITY_EDITOR
+            return 2;
+#endif
+            return 3;
+        }
+    }
     void NextFold()
     {
         m_foldCount++;
@@ -130,6 +139,6 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
             return;
         }
 
-        m_uiPastaFold.StartPastaFold(m_currentMinigame.FinalIngredient());
+        m_uiPastaFold.StartPastaFold(m_currentMinigame.FinalIngredient(), m_foldCount + 1 == m_maxFold);
     }
 }

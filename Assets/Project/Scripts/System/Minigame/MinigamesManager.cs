@@ -59,7 +59,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
     {
         for (int i = 0; i < minigamesInteraction.Count; i++)
         {
-            if (minigamesInteraction[i].RaycastableMinigame.Contains(p_object) 
+            if (minigamesInteraction[i].RaycastableMinigame.Contains(p_object)
                 && (minigamesInteraction[i].EmbraceMinigame(RecipeManager.Instance.Nextminigame())
                     || minigamesInteraction[i] is BookStation))
             {
@@ -104,14 +104,25 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
             m_currentMinigameInteraction = m_servingStation;
             m_currentMinigame = RecipeManager.Instance.Nextminigame();
 
-            RecipeManager.Instance.EnteredMinigame(m_currentMinigame);
-            OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
-                                        () => m_currentMinigameInteraction.IOnStartInteraction(m_currentMinigame,
-                                                                                    () => OnEndMinigame(m_currentMinigame.FinalIngredient())));
-            m_currentMinigameInteraction.OnFocusCamera = OnFocusCamera;
-
-            RatInput.Instance.SetMap(m_currentMinigameInteraction.Map);
+            float l_fadeTime = 1f;
+            FadeController.Instance.CallFadeAnimation(true, null, l_fadeTime);
+            Invoke(nameof(SetServeCamera), l_fadeTime -.5f);
         }
+    }
+
+    void SetServeCamera()
+    {
+        RecipeManager.Instance.EnteredMinigame(m_currentMinigame);
+        OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
+                                    () =>
+                                    {
+                                        FadeController.Instance.CallFadeAnimation(false);
+                                        m_currentMinigameInteraction.IOnStartInteraction(m_currentMinigame,
+                                                                               () => OnEndMinigame(m_currentMinigame.FinalIngredient()));
+                                    });
+        m_currentMinigameInteraction.OnFocusCamera = OnFocusCamera;
+
+        RatInput.Instance.SetMap(m_currentMinigameInteraction.Map);
     }
 
     private void OnFocusCamera(CinemachineCamera p_camera, System.Action p_action)
