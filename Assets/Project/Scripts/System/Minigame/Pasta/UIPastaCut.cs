@@ -9,12 +9,21 @@ public struct LineRendererGroup
 {
     public LineRenderer[] lines;
     public Transform[] endPoint;
+    public Material material;
+
+    public void SetMaterial()
+    {
+        for (int i = 0; i < lines.Length; i++)
+            if (material != null) lines[i].material = material;
+    }
 
     public void SetLine(float p_lerp)
     {
         for (int i = 0; i < lines.Length; i++)
         {
-            lines[i].SetPosition(i, Vector3.Lerp(lines[i].GetPosition(0), endPoint[i].position, p_lerp));
+            lines[i].positionCount = 2;
+            lines[i].SetPosition(0, lines[i].transform.position);
+            lines[i].SetPosition(1, Vector3.Lerp(lines[i].GetPosition(0), endPoint[i].position, p_lerp));
         }
     }
 }
@@ -26,7 +35,7 @@ public struct InteractionPointClass
     public GameObject pastaPrefab;
     public Transform parent;
     public Transform[] CutPoints;
-    public LineRendererGroup lines;
+    public LineRendererGroup[] lines;
     public Transform[] CutPoints2;
     public CinemachineCamera FocuseCamera;
     public InteractionPointClass(InteractionPointClass p_base)
@@ -64,13 +73,30 @@ public class UIPastaCut : MonoBehaviour
     {
         m_currentCutClass = p_cutClass;
 
-        m_holdButtonGroup.StartGroup(m_currentCutClass.CutPoints);
+        for (int i = 0; i < m_currentCutClass.lines.Length; i++)
+            m_currentCutClass.lines[i].SetMaterial();
+
+        m_holdButtonGroup.StartGroup(m_currentCutClass.CutPoints, (id, lerp) => UpdateLine(id, lerp));
         m_holdButtonGroup.CallNextStep = CallNextStep;
+    }
+
+    void UpdateLine(int p_lineID, float p_lerp)
+    {
+        m_currentCutClass.lines[p_lineID].SetLine(p_lerp);
     }
 
     public Action OnCallNextStep;
     void CallNextStep()
     {
         OnCallNextStep?.Invoke();
+    }
+
+    public void ResetAllLines()
+    {
+        for (int i = 0; i < m_currentCutClass.lines.Length; i++)
+        {
+            m_currentCutClass.lines[i].SetLine(0);
+        }
+
     }
 }

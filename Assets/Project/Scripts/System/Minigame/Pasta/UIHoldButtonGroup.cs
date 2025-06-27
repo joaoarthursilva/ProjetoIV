@@ -12,21 +12,23 @@ public class UIHoldButtonGroup : MonoBehaviour
     [NaughtyAttributes.Button]
     public void DebugPositon()
     {
-        StartGroup(tempTrnaforms);
+        //StartGroup(tempTrnaforms);
     }
 
-
+    Action<int, float> updateLine;
     List<bool> checks;
-    public void StartGroup(Transform[] p_cutPoints)
+    public void StartGroup(Transform[] p_cutPoints, Action<int, float> p_updateLine)
     {
         if (checks == null) checks = new();
         else checks.Clear();
-
+        updateLine = p_updateLine;
         for (int i = 0; i < p_cutPoints.Length; i++)
         {
             checks.Add(false);
 
             m_holdButtons[i].gameObject.SetActive(true);
+            int id = i;
+            m_holdButtons[i].SetUpdate((lerp) => p_updateLine.Invoke(id, lerp));
             m_holdButtons[i].SetPosition(p_cutPoints[i], m_canvasRect);
         }
 

@@ -56,6 +56,7 @@ MonoBehaviour:
     CutPoints:
     - {fileID: 0}
     - {fileID: 0}
+    lines: []
     CutPoints2: []
     FocuseCamera: {fileID: 0}
   - Recipe: {fileID: 11400000, guid: a38ca9e854510764b955af9001e40b4a, type: 2}
@@ -64,6 +65,7 @@ MonoBehaviour:
     CutPoints:
     - {fileID: 0}
     - {fileID: 0}
+    lines: []
     CutPoints2: []
     FocuseCamera: {fileID: 0}
   m_holdButtonGroup: {fileID: 3159793982856044162}
@@ -72,6 +74,7 @@ MonoBehaviour:
     pastaPrefab: {fileID: 0}
     parent: {fileID: 0}
     CutPoints: []
+    lines: []
     CutPoints2: []
     FocuseCamera: {fileID: 0}
 --- !u!1 &1446184119831304690
@@ -308,6 +311,22 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    lines:
+    - lines:
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      material: {fileID: 0}
+    - lines:
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      material: {fileID: 0}
+    - lines:
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      material: {fileID: 0}
     CutPoints2: []
     FocuseCamera: {fileID: 0}
   - Recipe: {fileID: 11400000, guid: a38ca9e854510764b955af9001e40b4a, type: 2}
@@ -317,6 +336,73 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    lines:
+    - lines:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      material: {fileID: 0}
+    - lines:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      material: {fileID: 0}
+    - lines:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      material: {fileID: 0}
+    CutPoints2: []
+    FocuseCamera: {fileID: 0}
+  - Recipe: {fileID: 11400000, guid: 8e64030a7a335bf4e9a1ea7e31182006, type: 2}
+    pastaPrefab: {fileID: 0}
+    parent: {fileID: 0}
+    CutPoints:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    lines:
+    - lines:
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      material: {fileID: 2100000, guid: e541e524a1b86504e80e96a38709c102, type: 2}
+    - lines:
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      material: {fileID: 2100000, guid: e541e524a1b86504e80e96a38709c102, type: 2}
+    - lines:
+      - {fileID: 0}
+      endPoint:
+      - {fileID: 0}
+      material: {fileID: 2100000, guid: e541e524a1b86504e80e96a38709c102, type: 2}
     CutPoints2: []
     FocuseCamera: {fileID: 0}
   m_holdButtonGroup: {fileID: 5721751996397222242}
@@ -325,6 +411,7 @@ MonoBehaviour:
     pastaPrefab: {fileID: 0}
     parent: {fileID: 0}
     CutPoints: []
+    lines: []
     CutPoints2: []
     FocuseCamera: {fileID: 0}
 --- !u!1 &2287240155737648788

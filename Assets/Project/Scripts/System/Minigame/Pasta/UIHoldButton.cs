@@ -45,6 +45,7 @@ public class UIHoldButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         while (m_holding && m_holdFloat < m_holdTime)
         {
             m_holdFloat += Time.deltaTime;
+            action?.Invoke(m_holdFloat / m_holdTime);
             UpdateInnerCircle();
             yield return null;
         }
@@ -78,6 +79,12 @@ public class UIHoldButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerExit(PointerEventData eventData)
     {
 
+    }
+
+    System.Action<float> action;
+    public void SetUpdate(System.Action<float> p_action)
+    {
+        action = p_action;
     }
 
     RectTransform m_canvasRect;

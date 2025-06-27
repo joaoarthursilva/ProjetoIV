@@ -24,6 +24,6 @@ public class SaltPepperStep : MinigameStep
         yield return objectAnimBehavior.PlayAnimations(UIAnimationType.LEAVE);
 
         OnEnd.Invoke();
-        Destroy(gameObject);
+        Destroy(objectAnimBehavior.gameObject);
     }
 }

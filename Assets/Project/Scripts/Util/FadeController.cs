@@ -5,7 +5,7 @@ public class FadeController : Singleton<FadeController>
 {
     public UIAnimationBehaviour fadeAnimations;
 
-    public void CallFadeAnimation(bool p_fadeState, System.Action p_afterAction = null, float p_time = .3f)
+    public void CallFadeAnimation(bool p_fadeState, System.Action p_afterAction = null, float p_time = .5f)
     {
         if (p_fadeState)
         {

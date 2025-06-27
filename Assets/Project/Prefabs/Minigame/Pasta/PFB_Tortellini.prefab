@@ -385,7 +385,7 @@ MonoBehaviour:
     shouldMove: 1
     useLocalPosition: 1
     setInitialPosition: 0
-    startLocalPosition: {x: -0.0326, y: 0.0432, z: -0.143}
+    startLocalPosition: {x: -0.0326, y: 0.0432, z: 0.143}
     finalLocalPosition: {x: -0.0326, y: 0.0432, z: 0.0015}
     startPosition: {x: 0, y: 0, z: 0}
     finalPosition: {x: 0, y: 0, z: 0}
@@ -460,7 +460,7 @@ MonoBehaviour:
     useLocalPosition: 1
     setInitialPosition: 0
     startLocalPosition: {x: -0.0326, y: 0.0432, z: 0.0015}
-    finalLocalPosition: {x: -0.0326, y: 0.0432, z: 0.143}
+    finalLocalPosition: {x: -0.0326, y: 0.0432, z: -0.143}
     startPosition: {x: 0, y: 0, z: 0}
     finalPosition: {x: 0, y: 0, z: 0}
     moveAnimationTime: 0.5

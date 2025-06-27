@@ -59,6 +59,8 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
 
     public void IOnEndInteraction()
     {
+        SetCutPlane(m_currentMinigame.FinalIngredient(), false);
+        m_uiPastaCut.ResetAllLines();
         m_onEndAction?.Invoke();
         MinigamesManager.SetCursorVisible(false);
     }
@@ -133,9 +135,7 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
 
     IEnumerator CutToFoldTransition()
     {
-        SetCutPlane(m_currentMinigame.FinalIngredient(), false);
         yield return new WaitForSeconds(0.25f);
-        SetFoldPlane(m_currentMinigame.FinalIngredient(), true);
 
         m_uiPastaFold.OnFocusOnCamera += OnFocusCamera;
         m_uiPastaFold.OnCallNextStep += NextFold;
