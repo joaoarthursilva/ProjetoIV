@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 {
+    [SerializeField] private bool fadeBefore = false;
+    public bool FadeBefore { get; }
+
     [SerializeField] private Map m_inputMap;
     public Map Map => m_inputMap;
 
@@ -75,7 +78,7 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
 
     public void IOnEndInteraction()
     {
-        FadeController.Instance.CallFadeAnimation(false);
+        FadeController.Instance.CallFadeAnimation(false, null, .3f);
         RatInput.Instance.ShowUIElement(InputID.NONE);
 
         Destroy(m_currentKnife.gameObject);

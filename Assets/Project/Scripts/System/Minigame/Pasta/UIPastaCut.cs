@@ -1,7 +1,23 @@
 using ProjetoIV.Util;
 using System;
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
+
+[Serializable]
+public struct LineRendererGroup
+{
+    public LineRenderer[] lines;
+    public Transform[] endPoint;
+
+    public void SetLine(float p_lerp)
+    {
+        for (int i = 0; i < lines.Length; i++)
+        {
+            lines[i].SetPosition(i, Vector3.Lerp(lines[i].GetPosition(0), endPoint[i].position, p_lerp));
+        }
+    }
+}
 
 [Serializable]
 public struct InteractionPointClass
@@ -10,9 +26,9 @@ public struct InteractionPointClass
     public GameObject pastaPrefab;
     public Transform parent;
     public Transform[] CutPoints;
+    public LineRendererGroup lines;
     public Transform[] CutPoints2;
     public CinemachineCamera FocuseCamera;
-
     public InteractionPointClass(InteractionPointClass p_base)
     {
         Recipe = p_base.Recipe;
@@ -21,6 +37,7 @@ public struct InteractionPointClass
         CutPoints = p_base.CutPoints;
         CutPoints2 = p_base.CutPoints2;
         FocuseCamera = p_base.FocuseCamera;
+        lines = p_base.lines;
     }
 }
 

@@ -67,6 +67,11 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
                 m_currentMinigame = minigamesInteraction[i] is BookStation bookStation ? bookStation.m_minigame : RecipeManager.Instance.Nextminigame();
 
                 RecipeManager.Instance.EnteredMinigame(m_currentMinigame);
+                if (m_currentMinigameInteraction.FadeBefore)
+                {
+                    FadeController.Instance.CallFadeAnimation(true);
+                    Debug.Log("fafe");
+                }
                 OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
                                             () => m_currentMinigameInteraction.IOnStartInteraction(m_currentMinigame,
                                                                                         () => OnEndMinigame(m_currentMinigame.FinalIngredient())));
@@ -116,7 +121,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
         OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
                                     () =>
                                     {
-                                        FadeController.Instance.CallFadeAnimation(false);
+                                        FadeController.Instance.CallFadeAnimation(false, null, .3f);
                                         m_currentMinigameInteraction.IOnStartInteraction(m_currentMinigame,
                                                                                () => OnEndMinigame(m_currentMinigame.FinalIngredient()));
                                     });

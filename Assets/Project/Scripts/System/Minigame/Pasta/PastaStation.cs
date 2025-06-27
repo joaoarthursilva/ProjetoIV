@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class PastaStation : MonoBehaviour, IMinigameInteraction
 {
+    [SerializeField] private bool fadeBefore = true;
+    public bool FadeBefore => fadeBefore;
     [SerializeField] private Map m_inputMap;
     public Map Map => m_inputMap;
     [SerializeField] InputID[] m_inputsToShow;
@@ -23,9 +25,14 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
 
     [SerializeField] private UIPastaCut m_uiPastaCut;
     [SerializeField] private UIPastaFold m_uiPastaFold;
-
-    [SerializeField] private GameObject cutPlane;
-    [SerializeField] private GameObject foldPlane;
+    [SerializeField] private CutFoldObject[] cutFoldObjects;
+    [System.Serializable]
+    public struct CutFoldObject
+    {
+        public Ingredient ingredient;
+        public GameObject cutPlane;
+        public GameObject foldPlane;
+    }
 
     public bool EmbraceMinigame(Minigame o_minigame)
     {
@@ -92,13 +99,30 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     {
         m_currentMinigame = p_minigame;
         m_foldCount = 0;
-        cutPlane.SetActive(true);
-        foldPlane.SetActive(false);
+        SetCutPlane(p_minigame.FinalIngredient(), true);
+        SetFoldPlane(p_minigame.FinalIngredient(), false);
         RatInput.Instance.ShowUIElement(InputID.NONE);
         m_onEndAction = p_actionOnEnd;
         MinigamesManager.SetCursorVisible(true);
         m_uiPastaCut.StartPastaCut(p_minigame.FinalIngredient());
         m_uiPastaCut.OnCallNextStep = EndCut;
+        FadeController.Instance.CallFadeAnimation(false);
+    }
+
+    public void SetCutPlane(Ingredient p_ingredient, bool p_set)
+    {
+        for (int i = 0; i < cutFoldObjects.Length; i++)
+        {
+            if (cutFoldObjects[i].ingredient == p_ingredient) cutFoldObjects[i].cutPlane.SetActive(p_set);
+        }
+    }
+    public void SetFoldPlane(Ingredient p_ingredient, bool p_set)
+    {
+        for (int i = 0; i < cutFoldObjects.Length; i++)
+        {
+            if (cutFoldObjects[i].ingredient == p_ingredient && cutFoldObjects[i].foldPlane != null)
+                cutFoldObjects[i].foldPlane.SetActive(p_set);
+        }
     }
     private void EndCut()
     {
@@ -109,9 +133,9 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
 
     IEnumerator CutToFoldTransition()
     {
-        cutPlane.SetActive(false);
+        SetCutPlane(m_currentMinigame.FinalIngredient(), false);
         yield return new WaitForSeconds(0.25f);
-        foldPlane.SetActive(true);
+        SetFoldPlane(m_currentMinigame.FinalIngredient(), true);
 
         m_uiPastaFold.OnFocusOnCamera += OnFocusCamera;
         m_uiPastaFold.OnCallNextStep += NextFold;

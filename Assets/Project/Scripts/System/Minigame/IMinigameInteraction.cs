@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IMinigameInteraction : IMinigameInputs, ICameraStation
 {
+    public bool FadeBefore { get; }
     public Map Map { get; }
     public InputID[] InputsToShow { get; }
     public List<RaycastableMinigame> RaycastableMinigame { get; }

@@ -6,6 +6,7 @@ public class FoldPastaBehaviour : MonoBehaviour
     [SerializeField] private Animator m_instancedAnimator;
     [SerializeField] private ObjectAnimationBehaviour m_instancedAnimationBehaviour;
     [SerializeField] private ObjectAnimationBehaviour m_rotateAnimationBehaviour;
+    public GameObject filoi;
     public bool last;
     System.Action m_onEndRotate;
     public void SetFoldAnimationEvents(System.Action p_onEndRotate)
@@ -25,17 +26,19 @@ public class FoldPastaBehaviour : MonoBehaviour
 
     public void OnEndFold0()
     {
+        filoi.SetActive(false);
         m_rotateAnimationBehaviour.PlayAnimations(UIAnimationType.ENTRY, () =>
         {
             m_onEndRotate?.Invoke();
         });
     }
 
-    public void OnEndFold1() {
+    public void OnEndFold1()
+    {
         if (last)
             FadeController.Instance.CallFadeAnimation(true, () =>
             {
-                FadeController.Instance.CallFadeAnimation(false);
+                FadeController.Instance.CallFadeAnimation(false, null, .3f);
             }, .75f);
     }
 

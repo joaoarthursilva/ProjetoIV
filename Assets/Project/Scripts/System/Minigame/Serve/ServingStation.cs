@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class ServingStation : MonoBehaviour, IMinigameInteraction
 {
+    [SerializeField] private bool fadeBefore = false;
+    public bool FadeBefore { get; }
+
     [SerializeField] private Map m_inputMap;
     public Map Map => m_inputMap;
     [SerializeField] InputID[] m_inputsToShow;

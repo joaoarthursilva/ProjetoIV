@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class OvenStationSauce : MonoBehaviour, IMinigameInteraction
 {
+    [SerializeField] private bool fadeBefore = false;
+    public bool FadeBefore { get; }
+
     [SerializeField] private Map m_map;
     public Map Map => m_map;
     [SerializeField] private InputID[] m_inputsToShow;

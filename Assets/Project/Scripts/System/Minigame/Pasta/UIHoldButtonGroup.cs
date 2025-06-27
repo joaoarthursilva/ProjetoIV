@@ -15,6 +15,7 @@ public class UIHoldButtonGroup : MonoBehaviour
         StartGroup(tempTrnaforms);
     }
 
+
     List<bool> checks;
     public void StartGroup(Transform[] p_cutPoints)
     {
@@ -24,6 +25,7 @@ public class UIHoldButtonGroup : MonoBehaviour
         for (int i = 0; i < p_cutPoints.Length; i++)
         {
             checks.Add(false);
+
             m_holdButtons[i].gameObject.SetActive(true);
             m_holdButtons[i].SetPosition(p_cutPoints[i], m_canvasRect);
         }
