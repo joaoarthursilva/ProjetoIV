@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: D1.Date
   start: 0
-  end: 2
+  end: 3
   delayBeforeNextDay: 0
   customers:
   - {fileID: 11400000, guid: eb1a5f9731600724bb70d543ee888c31, type: 2}
   - {fileID: 11400000, guid: ba1075ef571f1c24d9eb23eea0674e8c, type: 2}
+  - {fileID: 11400000, guid: 4153832fca9a23d4e8f6bb7ab4e685f6, type: 2}
