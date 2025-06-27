@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: db59b4dd7aa954d42a9493d004629f67, type: 2}
+    - target: {fileID: -8912189966947192040, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8912189966947192040, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8901260981937149913, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -234,7 +242,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0e0f9859b2032d248b25908da4b9e11b, type: 2}
     - target: {fileID: 919132149155446097, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
       propertyPath: m_Name
-      value: Ambience
+      value: PFB_Ambience
       objectReference: {fileID: 0}
     - target: {fileID: 974584544777506935, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -244,6 +252,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: db59b4dd7aa954d42a9493d004629f67, type: 2}
+    - target: {fileID: 1365132098506396400, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1442450553484104045, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -312,6 +324,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a6b455728be0ec54ca9c477084f1b236, type: 2}
+    - target: {fileID: 3735102090226358198, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4008791811287642139, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
