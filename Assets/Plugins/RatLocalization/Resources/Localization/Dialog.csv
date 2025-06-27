@@ -9,13 +9,13 @@ D1.Char1.Dialog1.NPC.Line1.Choice1.Line2,Pardon my excitement - I was so delight
 D1.Char1.Dialog1.NPC.Line1.Choice1.Line3,My name is Caterina De Luca. I was your grandmother’s dearest friend. May she rest in peace.,,
 D1.Char1.Dialog1.Player.Line1.Choice2.Preview,What do you mean? You don’t look old at all.,,
 D1.Char1.Dialog1.Player.Line1.Choice2.Line1,What do you mean? You don’t look old at all.,,
-D1.Char1.Dialog1.NPC.Line1.Choice2.Line2,"You really think so? Well, thank you — you've managed to make this old lady’s heart beat a little faster.",,
+D1.Char1.Dialog1.NPC.Line1.Choice2.Line2,"You really think so? Well, thank you! You've managed to make this old lady’s heart beat a little faster.",,
 D1.Char1.Dialog1.NPC.Line1.Choice2.Line3,But let me tell you something: this pot doesn’t cook for inexperienced chefs.,,
 D1.Char1.Dialog1.Player.Line1.Choice3.Preview,Not in a good mood.. Can we talk later?,,
 D1.Char1.Dialog1.Player.Line1.Choice3.Line1,Not in a good mood.. Can we talk later?,,
-D1.Char1.Dialog1.NPC.Line1.Choice3.Line2,"Let me see if I got this straight — you expect me, a woman this beautiful and busy, to wait until the little boy feels ready to talk?",,
+D1.Char1.Dialog1.NPC.Line1.Choice3.Line2,"Let me see if I got this straight: you expect me, a woman this beautiful and busy, to wait until the little boy feels ready to talk?",,
 D1.Char1.Dialog1.NPC.Line1.Choice3.Line3,"Boy, if I still needed permission to speak, I’d be betraying everything I’ve fought for. Get yourself together.",,
-D1.Char1.Dialog1.NPC.Line2,"Now tell me, young one — what is your name?",,
+D1.Char1.Dialog1.NPC.Line2,"Now tell me, young one. What is your name?",,
 D1.Char1.Dialog1.Player.Line2.Choice1.Preview,Max Malvezzi.,,
 D1.Char1.Dialog1.Player.Line2.Choice1.Line1,My name is Max Malvezzi.,,
 D1.Char1.Dialog1.Player.Line2.Choice2.Preview,Alessandro Malvezzi.,,
@@ -24,11 +24,11 @@ D1.Char1.Dialog1.Player.Line2.Choice3.Preview,Livia Malvezzi.,,
 D1.Char1.Dialog1.Player.Line2.Choice3.Line1,My name is Livia Malvezzi.,,
 D1.Char1.Dialog1.NPC.Line3,"Ah, {$PlayerName}! What a beautiful name you own, my dear.",,
 D1.Char1.Dialog1.NPC.Line4,"Let's see if you got your grandmother's blood. Prepare me a passion meal, i'm feeling <color=#{$PositiveColor}>romantic</color>.",,
-D1.Char1.Dialog2.NPC.Line1,ESPERANDO,,
-D1.Char1.Dialog3.Player.Line1,Toma tua comida,,
-D1.Char1.Dialog3.NPC.Line2,vamo ver se isso presta...,,
-D1.Char1.Dialog4.NPC.Line1,MUITO RUIM PQP,,
-D1.Char1.Dialog5.NPC.Line1,MUITO BOM AI Q DELICIA,,
+D1.Char1.Dialog2.NPC.Line1,"My dear, I already told you what I want. Do you need a tutorial or just better ears?",,
+D1.Char1.Dialog3.Player.Line1,,,
+D1.Char1.Dialog3.NPC.Line2,,,
+D1.Char1.Dialog4.NPC.Line1,"I wanted passion on a plate, and you brought me… polite confusion. Try again. Seduction takes practice.",,
+D1.Char1.Dialog5.NPC.Line1,"Is it getting hot in here, or is it just your cooking? My stars, I haven’t blushed like this since 1957.",,
 D1.Char2.Dialog1.Player.Line1,"Hey, sir. How are you doing today?",,
 D1.Char2.Dialog1.NPC.Line2,Hmph. That’s the kind of question young people ask when they don’t really care about the answer. {wi}You wouldn’t understand anyway.,,
 D1.Char2.Dialog1.Player.Line2.Choice1.Preview,Try me. I’ve seen my share of tough days.,,
@@ -39,7 +39,7 @@ D1.Char2.Dialog1.NPC.Line2.Choice1.Line4,"Took the dog, too. Turns out even that
 D1.Char2.Dialog1.Player.Line2.Choice1.Line5,I'm sorry to hear that. Do you want to talk about it?,,
 D1.Char2.Dialog1.NPC.Line2.Choice1.Line6,…Tch. You know what’s funny? We were married for 28 years. ,,
 D1.Char2.Dialog1.NPC.Line2.Choice1.Line7,"That’s more than half my damn life. Then one day she says, ""I need space."" Space? What does that even mean at our age?",,
-D1.Char2.Dialog1.NPC.Line2.Choice1.Line8,We used to share everything — now I don’t even know where she lives. I feel <color=#{$AngryColor}>betrayed</color>.,,
+D1.Char2.Dialog1.NPC.Line2.Choice1.Line8,We used to share everything... Now I don’t even know where she lives. I feel <color=#{$AngryColor}>betrayed</color>.,,
 D1.Char2.Dialog1.Player.Line2.Choice2.Preview,I was just trying to be polite…,,
 D1.Char2.Dialog1.Player.Line2.Choice2.Line1,I was just trying to be polite…,,
 D1.Char2.Dialog1.NPC.Line2.Choice2.Line2,"Polite, huh? That’s rich. You kids think saying ""hi"" means you're saints.",,
@@ -48,7 +48,7 @@ D1.Char2.Dialog1.NPC.Line2.Choice2.Line4,"Carlito. That’s my name. Used to mea
 Now I’m just the guy whose wife walked out on him.",,
 D1.Char2.Dialog1.Player.Line2.Choice2.Line5,"So… what happened, if you don’t mind me asking?",,
 D1.Char2.Dialog1.NPC.Line2.Choice2.Line6,"What happened?  Well, apparently I’m “emotionally unavailable” and “stuck in the past.” Imagine that.",,
-D1.Char2.Dialog1.NPC.Line2.Choice2.Line7,"A man who paid bills, fixed everything, stayed faithful — and somehow I’m the problem. She wanted to grow, she said. I didn’t know that meant growing away. I feel <color=#{$AngryColor}>betrayed</color>.",,
+D1.Char2.Dialog1.NPC.Line2.Choice2.Line7,"A man who paid bills, fixed everything, stayed faithful, and somehow I’m the problem. She wanted to grow, she said. I didn’t know that meant growing away. I feel <color=#{$AngryColor}>betrayed</color>.",,
 D1.Char2.Dialog1.Player.Line2.Choice3.Preview,"Fine. If you don’t wanna talk, that’s your problem.",,
 D1.Char2.Dialog1.Player.Line2.Choice3.Line1,"Fine. If you don’t wanna talk, that’s your problem.",,
 D1.Char2.Dialog1.NPC.Line2.Choice3.Line2,"Typical. No patience, no spine. This generation runs from discomfort like it's fire.",,
@@ -59,8 +59,22 @@ D1.Char2.Dialog1.NPC.Line2.Choice3.Line7,"…Yeah, I am.  And I hate it.  I 
 D1.Char2.Dialog1.NPC.Line2.Choice3.Line8,"Sometimes I even talk to it. Pathetic, right? Turns out, the silence is the loudest part of losing someone. I don't know... I feel <color=#{$AngryColor}>betrayed</color>.",,
 D1.Char2.Dialog1.Player.Line3,"I’ll cook something for you, Carlito. We can’t solve anything on an empty stomach.",,
 D1.Char2.Dialog1.Player.Line4,I’m sure everything will seem clearer once you’ve eaten.,,
-D1.Char2.Dialog2.NPC.Line1,TO ESPERANDO MINHA CUMIDA NESSA POHA,,
+D1.Char2.Dialog2.NPC.Line1,Left at the table again… starting to feel like a habit.,,
 D1.Char2.Dialog3.Player.Line1,Toma aqui essa poha seu veio fudido,,
 D1.Char2.Dialog3.NPC.Line2,vamo qualequieras...,,
 D1.Char2.Dialog4.NPC.Line1,MUITO RUIM PQP seu bosta,,
-D1.Char2.Dialog5.NPC.Line1,aham bahhh é os guri néam,,
+D1.Char2.Dialog5.NPC.Line1,Tastes decent. Don’t let it go to your head — I’ve had better. But… thanks.,,
+D1.Char3.Dialog1.Player.Line1,"Good morning, ma’am. Is everything alright?",,
+D1.Char3.Dialog1.NPC.Line2,"Morning... I suppose that depends on what you mean by ""alright"".{wc}Some days, silence feels like peace. Today, it feels more like punishment.",,
+D1.Char3.Dialog1.Player.Line2.Choice1.Preview,Would you like some company?,,
+D1.Char3.Dialog1.Player.Line2.Choice1.Line1,Would you like some company?,,
+D1.Char3.Dialog1.NPC.Line2.Choice1.Line2,That’s… kind of you. I don’t usually accept offers from strangers. {w=0.2}But today... I’ll make an exception.,,
+D1.Char3.Dialog1.NPC.Line2.Choice1.Line3,My name is Giuseppina. I made a decision not long ago. One I thought would set me free. But freedom can be a cold place when there’s no one waiting on the other side.,,
+D1.Char3.Dialog1.Player.Line2.Choice2.Preview,"Sorry, I didn’t mean to intrude.",,
+D1.Char3.Dialog1.Player.Line2.Choice2.Line1,"Sorry, I didn’t mean to intrude.",,
+D1.Char3.Dialog1.NPC.Line2.Choice2.Line2,"You didn’t intrude. Sometimes, words from someone who doesn’t know the whole story are exactly what we need.",,
+D1.Char3.Dialog1.NPC.Line2.Choice2.Line3,"I’m Giuseppina. I left someone I shared my life with for decades. At the time, it felt like self-preservation.
+Now... i'm not so sure what it was.",,
+D1.Char3.Dialog1.Player.Line2.Choice3.Preview,I can relate.,,
+D1.Char3.Dialog1.Player.Line2.Choice3.Line1,I get that. Loneliness has sharp teeth.,,
+D1.Char3.Dialog1.NPC.Line2.Choice3.Line2,"Heh… Sharp teeth. That’s a good way to put it. Yes, I’ve been bitten a few times lately... Mostly by my own thoughts.{wc}I’m Giuseppina. I walked away from a man I once thought I’d grow old with. Turns out, growing apart hurts just as much.",,

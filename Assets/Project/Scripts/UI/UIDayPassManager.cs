@@ -1,4 +1,5 @@
 using System.Collections;
+using Assets.Plugins.RatLocalization.Scripts;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +19,7 @@ public class UIDayPassManager : MonoBehaviour
     private void OnStartDay(Day day)
     {
         m_dayPassGameObject.SetActive(true);
-        m_dayPassText.text = "Starting day " + day.day;
+        m_dayPassText.text = LocalizationManager.Localize(day.day);
         m_dayPassGameObject.GetComponent<Image>().color = new Color(0, 0, 0, 1);
         m_dayPassText.color = new Color(1, 1, 1, 1);
         StartCoroutine(OnStartingNextDay());
