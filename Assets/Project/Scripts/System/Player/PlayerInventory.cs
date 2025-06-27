@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInventory : Singleton<PlayerInventory>
 {
     public Action<Ingredient> OnChangeInventory;
-    [SerializeField, NaughtyAttributes.ReadOnly] private Ingredient m_currentIngredient;
+    [SerializeField] private Ingredient m_currentIngredient;
     public Ingredient CurrentIngredient => m_currentIngredient;
     [SerializeField] private OnHandIngredient[] m_onHandIngredients;
     [System.Serializable]
