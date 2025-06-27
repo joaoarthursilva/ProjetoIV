@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CFG_Customer_Dorotea_0
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: fdfa60c69cb6c604c9fb760615c1786e, type: 2}
-  ingredient: {fileID: 11400000, guid: 38bc9278815a9c6499ac301ca67cf715, type: 2}
+  timeToAppear: 0
+  ingredient: {fileID: 11400000, guid: a073aaad4c457cf408656ad1e60b0f07, type: 2}
   dialogs:
   - key: D1.Char1.Dialog1.NPC.Line1
     id: 1
