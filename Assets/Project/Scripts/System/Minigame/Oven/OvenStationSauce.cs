@@ -25,17 +25,10 @@ public class OvenStationSauce : MonoBehaviour, IMinigameInteraction
 
     [SerializeField] MinigameStep[] m_minigameInteractions;
     private Action m_onEndAction;
-    public bool EmbraceMinigame(Ingredient p_minigame, out Minigame o_minigame)
+    public bool EmbraceMinigame(Minigame p_minigame)
     {
-        o_minigame = null;
         for (int i = 0; i < m_minigames.Length; i++)
-        {
-            if (m_minigames[i].InitialIngredient() == p_minigame)
-            {
-                o_minigame = m_minigames[i];
-                return true;
-            }
-        }
+            if (m_minigames[i] == p_minigame) return true;
 
         return false;
     }

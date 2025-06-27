@@ -40,18 +40,11 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
         m_onSceneKnife = FindFirstObjectByType<KnifeOnSceneTag>();
     }
 
-    public bool EmbraceMinigame(Ingredient p_minigame, out Minigame o_minigame)
+    public bool EmbraceMinigame(Minigame p_minigame)
     {
         for (int i = 0; i < m_minigames.Length; i++)
-        {
-            if (m_minigames[i].InitialIngredient() == p_minigame)
-            {
-                o_minigame = m_minigames[i];
-                return true;
-            }
-        }
+            if (m_minigames[i] == p_minigame) return true;
 
-        o_minigame = null;
         return false;
     }
 
@@ -138,9 +131,10 @@ public class CutIngredientMinigame : MonoBehaviour, IMinigameInteraction
         {
             waitingUp = true;
             return;
-        }else waitingUp = false;
-            //m_currentIngredient.AnimCut(m_interactionsCounter);
-            m_interactionsCounter++;
+        }
+        else waitingUp = false;
+        //m_currentIngredient.AnimCut(m_interactionsCounter);
+        m_interactionsCounter++;
         //ICheckEndInteraction();
         StartCoroutine(EndCutAnim());
     }

@@ -19,5 +19,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 683166b60c137c44dacc6eda9db17e60, type: 2}
   - {fileID: 11400000, guid: fec7cdf1ae944ad458dad5ef4842085e, type: 2}
   - {fileID: 11400000, guid: 36958828ebc4d1b4597dbc2a69594109, type: 2}
-  firstIngredient: {fileID: 11400000, guid: 8e64030a7a335bf4e9a1ea7e31182006, type: 2}
+  firstIngredient: {fileID: 11400000, guid: 683166b60c137c44dacc6eda9db17e60, type: 2}
   result: {fileID: 11400000, guid: 4526568ba1f7c8541bb29564c82131cf, type: 2}

@@ -25,7 +25,7 @@ public class RecipeManager : Singleton<RecipeManager>
             {
                 Debug.Log("final ingre " + possibleSequences[i].FinalIngredient);
                 currentSteps = new();
-                for (int j = 0; j < possibleSequences.Count; j++) currentSteps.Add(false);
+                for (int j = 0; j < possibleSequences[i].sequence.Count; j++) currentSteps.Add(false);
 
                 currentSequence = possibleSequences[i];
                 SetNextMinigame?.Invoke(currentSequence.sequence[0]);
@@ -44,6 +44,18 @@ public class RecipeManager : Singleton<RecipeManager>
         }
 
         return false;
+    }
+
+    public Minigame Nextminigame()
+    {
+        for (int i = 0; i < currentSteps.Count; i++)
+        {
+            if (currentSteps[i]) continue;
+
+            return currentSequence.sequence[i];
+        }
+
+        return null;
     }
 
     public void EnteredMinigame(Minigame p_minigame)

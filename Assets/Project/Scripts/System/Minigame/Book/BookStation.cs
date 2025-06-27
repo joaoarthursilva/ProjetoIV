@@ -12,7 +12,7 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
     [SerializeField] private InputID[] m_inputsToShow;
     public InputID[] InputsToShow => m_inputsToShow;
 
-    [SerializeField] private Minigame m_minigame;
+    public Minigame m_minigame;
     [SerializeField] private CinemachineCamera m_camera;
     public CinemachineCamera Camera => m_camera;
 
@@ -25,16 +25,9 @@ public class BookStation : MonoBehaviour, IMinigameInteraction
     public BookBehavior bookBehavior;
 
     System.Action m_onEndAction;
-    public bool EmbraceMinigame(Ingredient p_ingredient, out Minigame o_minigame)
+    public bool EmbraceMinigame(Minigame p_minigame)
     {
-        if (p_ingredient == null)
-        {
-            o_minigame = m_minigame;
-            return true;
-        }
-
-        o_minigame = null;
-        return false;
+        return true;
     }
 
     public void ICheckEndInteraction()

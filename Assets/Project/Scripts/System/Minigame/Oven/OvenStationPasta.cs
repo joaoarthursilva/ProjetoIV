@@ -34,22 +34,20 @@ public class OvenStationPasta : MonoBehaviour, IMinigameInteraction
 
     [SerializeField] private PastaServingClass[] pastaPrefabs;
     [SerializeField] private Vector3 instantiatePos;
-    public bool EmbraceMinigame(Ingredient p_minigame, out Minigame o_minigame)
+    public bool EmbraceMinigame(Minigame p_minigame)
     {
-        o_minigame = null;
         for (int i = 0; i < m_minigames.Length; i++)
         {
-            if (m_minigames[i].InitialIngredient() == p_minigame)
+            if (m_minigames[i] == p_minigame)
             {
                 for (int j = 0; j < pastaPrefabs.Length; j++)
                 {
-                    if (pastaPrefabs[j].pasta == m_minigames[i].InitialIngredient())
+                    if (pastaPrefabs[j].pasta == p_minigame.FinalIngredient())
                     {
                         m_currentPasta = pastaPrefabs[j];
                         break;
                     }
                 }
-                o_minigame = m_minigames[i];
                 return true;
             }
         }

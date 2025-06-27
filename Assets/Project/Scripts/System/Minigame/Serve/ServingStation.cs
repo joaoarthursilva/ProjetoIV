@@ -25,20 +25,18 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
     ServingMinigame m_minigame;
 
     [Space] public float waitAfterDone;
-    public bool EmbraceMinigame(Ingredient p_minigame, out Minigame o_minigame)
+    public bool EmbraceMinigame(Minigame p_minigame)
     {
         for (int i = 0; i < m_minigames.Length; i++)
         {
-            if (m_minigames[i].InitialIngredient() == p_minigame)
+            if (m_minigames[i] == p_minigame)
             {
-                o_minigame = m_minigames[i];
                 m_minigame = m_minigames[i] as ServingMinigame;
                 return true;
             }
         }
 
         m_minigame = null;
-        o_minigame = null;
         return false;
     }
 

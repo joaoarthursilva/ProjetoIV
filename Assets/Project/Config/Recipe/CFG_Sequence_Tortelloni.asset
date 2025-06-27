@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CFG_Sequence_Tortelloni
   m_EditorClassIdentifier: 
   sequence:
-  - {fileID: 11400000, guid: deee4da682ba15a42a2cece20c40fa64, type: 2}
   - {fileID: 11400000, guid: e05b62a1b9861d6438ed456989689705, type: 2}
+  - {fileID: 11400000, guid: deee4da682ba15a42a2cece20c40fa64, type: 2}
   - {fileID: 11400000, guid: 21af7c2a2af19a44f9c999a137d44595, type: 2}
   - {fileID: 11400000, guid: b1bac24494b27e149bc267237cbdbd80, type: 2}
   - {fileID: 11400000, guid: 956be9a5203e2fa48ab875b7b2b5247f, type: 2}

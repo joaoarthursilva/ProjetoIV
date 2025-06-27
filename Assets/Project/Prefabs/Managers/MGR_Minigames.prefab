@@ -105,14 +105,17 @@ MonoBehaviour:
   m_inputsToShow: 
   m_minigames:
   - {fileID: 11400000, guid: f2ea99b4cb7ea3043b4570701d41f35e, type: 2}
+  - {fileID: 11400000, guid: deee4da682ba15a42a2cece20c40fa64, type: 2}
   CurrentMinigame: {fileID: 0}
   m_camera: {fileID: 0}
   m_raycastable:
   - {fileID: 0}
   m_ingredientParent: {fileID: 0}
   m_currentIngredient: {fileID: 0}
+  m_currentKnife: {fileID: 0}
   m_currentMinigame: {fileID: 0}
   m_interactionsCounter: 0
+  knifeprefab: {fileID: 0}
 --- !u!1 &5531510928802264666
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,16 +169,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e564ec4acae09a74892ce1849892f130, type: 2}
   - {fileID: 11400000, guid: b1bac24494b27e149bc267237cbdbd80, type: 2}
   pastaPrefabs:
-  - pasta: {fileID: 11400000, guid: ded3b67cbda31534498a156e422a6874, type: 2}
-    prefab: {fileID: 0}
+  - pasta: {fileID: 11400000, guid: 250daaacf4dc3de47b9612cd7b7584fa, type: 2}
+    prefab: {fileID: 7713391877497560746, guid: 65bcef01915b7bf4cabfdeb63affd2ff, type: 3}
     camera: {fileID: 0}
     instantiateParent: {fileID: 0}
-  - pasta: {fileID: 11400000, guid: 8e64030a7a335bf4e9a1ea7e31182006, type: 2}
-    prefab: {fileID: 0}
+  - pasta: {fileID: 11400000, guid: 1b29d58d26df72b4bb8323e202ee9e61, type: 2}
+    prefab: {fileID: 8298337576098083407, guid: 43c5f55d3798bf744961300550dd9dd3, type: 3}
     camera: {fileID: 0}
     instantiateParent: {fileID: 0}
-  - pasta: {fileID: 11400000, guid: a38ca9e854510764b955af9001e40b4a, type: 2}
-    prefab: {fileID: 0}
+  - pasta: {fileID: 11400000, guid: 6dd33fd1585642c49a168f27f0fca276, type: 2}
+    prefab: {fileID: 1481894617193738153, guid: e65b5dffb740c294c8d6e3a9cba6f4fe, type: 3}
     camera: {fileID: 0}
     instantiateParent: {fileID: 0}
   instantiatePos: {x: 0, y: 0, z: 0}
@@ -229,6 +232,7 @@ MonoBehaviour:
   m_camera: {fileID: 0}
   m_raycastable:
   - {fileID: 0}
+  bookBehavior: {fileID: 0}
 --- !u!1 &8527816705911518613
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +287,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 956be9a5203e2fa48ab875b7b2b5247f, type: 2}
   m_servingInteractions: []
   m_plateParent: {fileID: 0}
+  waitAfterDone: 0
 --- !u!1 &8645841831659779244
 GameObject:
   m_ObjectHideFlags: 0

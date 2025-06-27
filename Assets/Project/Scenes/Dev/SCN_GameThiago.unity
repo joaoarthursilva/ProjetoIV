@@ -3633,25 +3633,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1639310249}
     - target: {fileID: 4867910597665649960, guid: d11023df524847447a004755e1e823a9, type: 3}
-      propertyPath: pastaPrefabs.Array.data[0].prefab
-      value: 
-      objectReference: {fileID: 7713391877497560746, guid: 65bcef01915b7bf4cabfdeb63affd2ff, type: 3}
-    - target: {fileID: 4867910597665649960, guid: d11023df524847447a004755e1e823a9, type: 3}
       propertyPath: pastaPrefabs.Array.data[1].camera
       value: 
       objectReference: {fileID: 1639310249}
     - target: {fileID: 4867910597665649960, guid: d11023df524847447a004755e1e823a9, type: 3}
-      propertyPath: pastaPrefabs.Array.data[1].prefab
-      value: 
-      objectReference: {fileID: 8298337576098083407, guid: 43c5f55d3798bf744961300550dd9dd3, type: 3}
-    - target: {fileID: 4867910597665649960, guid: d11023df524847447a004755e1e823a9, type: 3}
       propertyPath: pastaPrefabs.Array.data[2].camera
       value: 
       objectReference: {fileID: 1109515566}
-    - target: {fileID: 4867910597665649960, guid: d11023df524847447a004755e1e823a9, type: 3}
-      propertyPath: pastaPrefabs.Array.data[2].prefab
-      value: 
-      objectReference: {fileID: 1481894617193738153, guid: e65b5dffb740c294c8d6e3a9cba6f4fe, type: 3}
     - target: {fileID: 4867910597665649960, guid: d11023df524847447a004755e1e823a9, type: 3}
       propertyPath: 'm_raycastableMinigame.Array.data[0]'
       value: 
@@ -3685,17 +3673,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1948684566}
     - target: {fileID: 5994197665343910043, guid: d11023df524847447a004755e1e823a9, type: 3}
-      propertyPath: m_minigames.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5994197665343910043, guid: d11023df524847447a004755e1e823a9, type: 3}
       propertyPath: m_inputsToShow.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5994197665343910043, guid: d11023df524847447a004755e1e823a9, type: 3}
-      propertyPath: 'm_minigames.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: deee4da682ba15a42a2cece20c40fa64, type: 2}
     - target: {fileID: 5994197665343910043, guid: d11023df524847447a004755e1e823a9, type: 3}
       propertyPath: 'm_raycastable.Array.data[0]'
       value: 
@@ -4441,6 +4421,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: cd5f8de3672e4d4488cea3e94c6af621, type: 2}
     - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: foldObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
       propertyPath: foldObjects.Array.data[0].parent
       value: 
       objectReference: {fileID: 1238622050}
@@ -4448,6 +4432,14 @@ PrefabInstance:
       propertyPath: foldObjects.Array.data[1].parent
       value: 
       objectReference: {fileID: 457452361}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: foldObjects.Array.data[2].Recipe
+      value: 
+      objectReference: {fileID: 11400000, guid: ded3b67cbda31534498a156e422a6874, type: 2}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: foldObjects.Array.data[2].parent
+      value: 
+      objectReference: {fileID: 1238622050}
     - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
       propertyPath: foldObjects.Array.data[0].pastaPrefab
       value: 
@@ -4457,6 +4449,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4936289804938719560, guid: 0f48b335941c0374faea2324b6bf877b, type: 3}
     - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: foldObjects.Array.data[2].pastaPrefab
+      value: 
+      objectReference: {fileID: 7682906056082182609, guid: b8e5136c7a04ea049a5ec5de97c56cee, type: 3}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
       propertyPath: foldObjects.Array.data[0].FocuseCamera
       value: 
       objectReference: {fileID: 435215864}
@@ -4465,11 +4461,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1295289125}
     - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: foldObjects.Array.data[2].FocuseCamera
+      value: 
+      objectReference: {fileID: 435215864}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: foldObjects.Array.data[2].CutPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
       propertyPath: foldObjects.Array.data[0].CutPoints2.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
       propertyPath: foldObjects.Array.data[1].CutPoints2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: foldObjects.Array.data[2].CutPoints2.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
@@ -4489,6 +4497,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1370074064}
     - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: 'foldObjects.Array.data[2].CutPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8148743816148496256}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: 'foldObjects.Array.data[2].CutPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8148743816148496255}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
       propertyPath: 'foldObjects.Array.data[0].CutPoints2.Array.data[0]'
       value: 
       objectReference: {fileID: 8148743816148496260}
@@ -4504,6 +4520,14 @@ PrefabInstance:
       propertyPath: 'foldObjects.Array.data[1].CutPoints2.Array.data[1]'
       value: 
       objectReference: {fileID: 8148743816148496257}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: 'foldObjects.Array.data[2].CutPoints2.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8148743816148496260}
+    - target: {fileID: 451572583526648929, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: 'foldObjects.Array.data[2].CutPoints2.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8148743816148496259}
     - target: {fileID: 2721236349558757450, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
       propertyPath: parent
       value: 
@@ -4529,7 +4553,15 @@ PrefabInstance:
       value: UIP_Minigames
       objectReference: {fileID: 0}
     - target: {fileID: 7493896454971349791, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
-      propertyPath: cutObjects.Array.data[1].CutPoints.Array.size
+      propertyPath: cutObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7493896454971349791, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: cutObjects.Array.data[2].Recipe
+      value: 
+      objectReference: {fileID: 11400000, guid: ded3b67cbda31534498a156e422a6874, type: 2}
+    - target: {fileID: 7493896454971349791, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: cutObjects.Array.data[2].CutPoints.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7493896454971349791, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
@@ -4564,6 +4596,18 @@ PrefabInstance:
       propertyPath: 'cutObjects.Array.data[1].CutPoints.Array.data[4]'
       value: 
       objectReference: {fileID: 1242011722}
+    - target: {fileID: 7493896454971349791, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: 'cutObjects.Array.data[2].CutPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 30313711}
+    - target: {fileID: 7493896454971349791, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: 'cutObjects.Array.data[2].CutPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2066165265}
+    - target: {fileID: 7493896454971349791, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
+      propertyPath: 'cutObjects.Array.data[2].CutPoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1087376086}
     - target: {fileID: 8487661428716045305, guid: 9802d64d1dfa4bc498f5bf06118e91b8, type: 3}
       propertyPath: knifeAndTableParent
       value: 

@@ -59,18 +59,17 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
     {
         for (int i = 0; i < minigamesInteraction.Count; i++)
         {
-            if (minigamesInteraction[i].RaycastableMinigame.Contains(p_object)
-                && minigamesInteraction[i].EmbraceMinigame(m_playerInventory.CurrentIngredient, out Minigame l_minigame)
-                && (RecipeManager.Instance.CanOpenMinigame(l_minigame)
-                || minigamesInteraction[i] is BookStation && m_playerInventory.CurrentIngredient == null))
+            if (minigamesInteraction[i].RaycastableMinigame.Contains(p_object) 
+                && (minigamesInteraction[i].EmbraceMinigame(RecipeManager.Instance.Nextminigame())
+                    || minigamesInteraction[i] is BookStation))
             {
                 m_currentMinigameInteraction = minigamesInteraction[i];
-                m_currentMinigame = l_minigame;
+                m_currentMinigame = minigamesInteraction[i] is BookStation bookStation ? bookStation.m_minigame : RecipeManager.Instance.Nextminigame();
 
                 RecipeManager.Instance.EnteredMinigame(m_currentMinigame);
                 OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
-                                            () => m_currentMinigameInteraction.IOnStartInteraction(l_minigame,
-                                                                                        () => OnEndMinigame(l_minigame.FinalIngredient())));
+                                            () => m_currentMinigameInteraction.IOnStartInteraction(m_currentMinigame,
+                                                                                        () => OnEndMinigame(m_currentMinigame.FinalIngredient())));
                 m_currentMinigameInteraction.OnFocusCamera = OnFocusCamera;
 
                 RatInput.Instance.SetMap(m_currentMinigameInteraction.Map);
@@ -88,7 +87,7 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
         if (l_forceCallPlate)
         {
-            CallServePlate(m_currentMinigame.FinalIngredient());
+            CallServePlate();
             return;
         }
 
@@ -98,18 +97,17 @@ public class MinigamesManager : MonoBehaviour, IMinigameInputs
 
     }
 
-    public void CallServePlate(Ingredient p_initialIngredient)
+    public void CallServePlate()
     {
-        if (m_servingStation.EmbraceMinigame(p_initialIngredient, out Minigame l_minigame)
-               && RecipeManager.Instance.CanOpenMinigame(l_minigame))
+        if (m_servingStation.EmbraceMinigame(RecipeManager.Instance.Nextminigame()))
         {
             m_currentMinigameInteraction = m_servingStation;
-            m_currentMinigame = l_minigame;
+            m_currentMinigame = RecipeManager.Instance.Nextminigame();
 
             RecipeManager.Instance.EnteredMinigame(m_currentMinigame);
             OnSetMinigamecamera?.Invoke(m_currentMinigameInteraction.Camera,
-                                        () => m_currentMinigameInteraction.IOnStartInteraction(l_minigame,
-                                                                                    () => OnEndMinigame(l_minigame.FinalIngredient())));
+                                        () => m_currentMinigameInteraction.IOnStartInteraction(m_currentMinigame,
+                                                                                    () => OnEndMinigame(m_currentMinigame.FinalIngredient())));
             m_currentMinigameInteraction.OnFocusCamera = OnFocusCamera;
 
             RatInput.Instance.SetMap(m_currentMinigameInteraction.Map);

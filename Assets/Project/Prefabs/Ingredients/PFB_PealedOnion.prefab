@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f5db6a7b901e241bed2b4d13ba6df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableAnimationsOnStart: 0
+  enableAnimationsOnStart: 1
   entryAnimationsOnEnable: 0
   entryUiAnimationsList:
   - element: {fileID: 6839157699173740710}

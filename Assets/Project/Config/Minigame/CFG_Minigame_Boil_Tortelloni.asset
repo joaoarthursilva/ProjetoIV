@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Instruction: "Ferva a massa no fog\xE3o"
   callServePlate: 1
-  m_initialIngredient: {fileID: 11400000, guid: 8e64030a7a335bf4e9a1ea7e31182006, type: 2}
+  m_initialIngredient: {fileID: 11400000, guid: 4526568ba1f7c8541bb29564c82131cf, type: 2}
   m_finalIngredient: {fileID: 11400000, guid: 1b29d58d26df72b4bb8323e202ee9e61, type: 2}
   quantityOfInteractions: 1
