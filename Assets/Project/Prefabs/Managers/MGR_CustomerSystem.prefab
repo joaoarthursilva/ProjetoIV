@@ -47,6 +47,10 @@ MonoBehaviour:
   _persistent: 0
   m_days:
   - {fileID: 11400000, guid: d569fb539ff35fc4bb4995df2616c2b8, type: 2}
+  - {fileID: 11400000, guid: 8ca5735f3c2d81845bb315226e6dc075, type: 2}
+  - {fileID: 11400000, guid: 5628d8aa4713e6e40986dab7e2d49736, type: 2}
+  m_today: 0
+  m_now: 0
 --- !u!1 &3043103153041154014
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
-  m_customerGameObject: {fileID: 1819260887847689619, guid: 134d52eaa5de6444bbfde0a2f4c2d399, type: 3}
 --- !u!1 &7212546514509832491
 GameObject:
   m_ObjectHideFlags: 0

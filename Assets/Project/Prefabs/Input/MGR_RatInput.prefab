@@ -31,6 +31,7 @@ Transform:
   m_Children:
   - {fileID: 9157427711821788302}
   - {fileID: 2173924923069191499}
+  - {fileID: 5530796331593166008}
   - {fileID: 5266190735291911688}
   m_Father: {fileID: 6202906271110701514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,6 +85,56 @@ MonoBehaviour:
     Pressed: 0
     PressedThisFrame: 0
     ReleasedThisFrame: 0
+--- !u!1 &2213780056187720067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5530796331593166008}
+  - component: {fileID: 1489584278011690973}
+  m_Layer: 0
+  m_Name: ACT_Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5530796331593166008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213780056187720067}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5128020451025304656}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489584278011690973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213780056187720067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ee3358a4f478e46aec7731f7149813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_actionRef: {fileID: 6111990738311072462, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  <InputID>k__BackingField: 6
+  <Input>k__BackingField:
+    Pressed: 0
+    PressedThisFrame: 0
+    ReleasedThisFrame: 0
 --- !u!1 &2817079713862476216
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &359765827462472414
 Transform:
   m_ObjectHideFlags: 0
@@ -113,6 +164,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2776315645639783292}
   - {fileID: 8099673500282608120}
   m_Father: {fileID: 6202906271110701514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -403,14 +455,6 @@ MonoBehaviour:
     m_ActionId: 0489e84a-4833-4c40-bfae-cea84b696689
     m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 24908448-c609-4bc3-a128-ea258674378a
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1687391262869439989}
         m_TargetAssemblyTypeName: ProjetoIV.RatInput.RatInputAction, ProjetoIV.RatInput
@@ -490,6 +534,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0393c581-c25c-4ab2-809c-382e8fae376c
     m_ActionName: 'Minigame/StopInteraction[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1489584278011690973}
+        m_TargetAssemblyTypeName: ProjetoIV.RatInput.RatInputAction, ProjetoIV.RatInput
+        m_MethodName: OnInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8a8b92e8-e48f-42cc-a0ad-76432b80f408
+    m_ActionName: 'Kitchen/Pause[/Keyboard/i,/DualSenseGamepadHID/select]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8249380126127578241}
+        m_TargetAssemblyTypeName: ProjetoIV.RatInput.RatInputAction, ProjetoIV.RatInput
+        m_MethodName: OnInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 07308bfd-2983-41fb-90d8-33b5498d58f2
+    m_ActionName: 'Menu/Unpause[/Keyboard/escape,/DualSenseGamepadHID/select]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Kitchen
@@ -508,6 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
+  CurrentMap: 0
   m_playerInput: {fileID: 627780984522525298}
   m_actionAsset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_inputs:
@@ -515,8 +592,60 @@ MonoBehaviour:
   - {fileID: 1687391262869439989}
   - {fileID: 795240208480733232}
   - {fileID: 2896971140014423636}
-  <Movement>k__BackingField: {x: 0, y: 0}
-  <LookInput>k__BackingField: {x: 0, y: 0}
+  - {fileID: 1489584278011690973}
+  - {fileID: 8249380126127578241}
+  Movement: {x: 0, y: 0}
+  LookInput: {x: 0, y: 0}
+--- !u!1 &5817533712685305773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2776315645639783292}
+  - component: {fileID: 8249380126127578241}
+  m_Layer: 0
+  m_Name: ACT_Unpause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2776315645639783292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5817533712685305773}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 359765827462472414}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8249380126127578241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5817533712685305773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ee3358a4f478e46aec7731f7149813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_actionRef: {fileID: 8670754660535132329, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  <InputID>k__BackingField: 7
+  <Input>k__BackingField:
+    Pressed: 0
+    PressedThisFrame: 0
+    ReleasedThisFrame: 0
 --- !u!1 &6763374186154627072
 GameObject:
   m_ObjectHideFlags: 0

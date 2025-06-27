@@ -39,7 +39,7 @@ public class GameMenuManager : MonoBehaviour
 
     public void ButtonPause()
     {
-        RatInput.Instance.CurrentMap = Map.MENU;
+        RatInput.Instance.SetMap(Map.MENU);
         Time.timeScale = 0f;
         m_gamePause.SetActive(true);
         m_languageDropdown.value = IdentifyLenguage();
@@ -47,7 +47,7 @@ public class GameMenuManager : MonoBehaviour
 
     public void ButtonBack()
     {
-        RatInput.Instance.CurrentMap = Map.KITCHEN;
+        RatInput.Instance.SetMap(Map.KITCHEN);
         Time.timeScale = 1f;
         m_gamePause.SetActive(false);
     }
