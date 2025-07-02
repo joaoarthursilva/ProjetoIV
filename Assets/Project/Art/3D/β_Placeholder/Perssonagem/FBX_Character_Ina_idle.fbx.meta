@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 204873b969406dd4f8a3dd434a1d07f8
+guid: df83abccfbd3b824c8edd49521e1f5ef
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,12 +7,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Rostos
+      name: Cabelos.005
+    second: {fileID: 2100000, guid: 031cf97a46886994b9377100d2f8a0f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rostos.005
     second: {fileID: 2100000, guid: fdfd36499452a6d4d908fd17b8200453, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Roupas
+      name: Roupas.005
     second: {fileID: 2100000, guid: 2f91e3f078c57c045811a7ec6d357ef3, type: 2}
   materials:
     materialImportMode: 2
@@ -39,7 +44,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature.003|Armature.003|Armature|ArmatureAction
+      takeName: Armature.003|Armature.003|Armature|ArmatureAction
+      internalID: 8923155012535752697
+      firstFrame: 0
+      lastFrame: 68
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []

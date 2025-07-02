@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: b195a5478c3f349439c43f559de7196c
+guid: bf73ac3002306ce458c254089d38b0dd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rostos.008
+    second: {fileID: 2100000, guid: fdfd36499452a6d4d908fd17b8200453, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roupas.008
+    second: {fileID: 2100000, guid: 2f91e3f078c57c045811a7ec6d357ef3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -31,11 +41,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature.001|Armature.001|Armature|ArmatureAction
-      takeName: Armature.001|Armature.001|Armature|ArmatureAction
-      internalID: 4542889520066078953
+      name: Armature|Armature|Armature|ArmatureAction
+      takeName: Armature|Armature|Armature|ArmatureAction
+      internalID: 6065333994261340666
       firstFrame: 0
-      lastFrame: 249
+      lastFrame: 70
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
