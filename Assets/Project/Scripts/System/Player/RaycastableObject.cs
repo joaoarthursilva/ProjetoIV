@@ -10,12 +10,12 @@ public class RaycastableObject : MonoBehaviour
     public Collider Collider { get => m_collider; }
     public UnityEvent<RaycastableObject> OnInteract;
 
-    private void Start()
+    protected virtual void Start()
     {
         m_collider = GetComponent<Collider>();
     }
 
-    public void SetHoverBehavior(bool p_hoverOn)
+    public virtual void SetHoverBehavior(bool p_hoverOn)
     {
 
     }

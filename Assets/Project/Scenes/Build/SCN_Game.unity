@@ -4920,6 +4920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PFB_Pot_G_Broth
       objectReference: {fileID: 0}
+    - target: {fileID: 648574363986120427, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
+      propertyPath: m_Name
+      value: Table
+      objectReference: {fileID: 0}
     - target: {fileID: 964845316768574935, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4955,6 +4959,10 @@ PrefabInstance:
     - target: {fileID: 4544338651776865016, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6001911408174344272, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
+      propertyPath: m_Name
+      value: Cilindro
       objectReference: {fileID: 0}
     - target: {fileID: 6478392092459408620, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -5060,6 +5068,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000c6c91fc9007a42826dcb64b78809f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1583472429842814687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2267358323254306900, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
+  m_PrefabInstance: {fileID: 1583472429842814682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1583472429842814688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 434307312625784207, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
+  m_PrefabInstance: {fileID: 1583472429842814682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1583472429842814689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 632125933821631001, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
+  m_PrefabInstance: {fileID: 1583472429842814682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1583472429842814690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6001911408174344272, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
+  m_PrefabInstance: {fileID: 1583472429842814682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1583472429842814691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 648574363986120427, guid: d52dbe577486bcb49b4b41f1c7ef7c78, type: 3}
+  m_PrefabInstance: {fileID: 1583472429842814682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2256744164798185832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6828,6 +6861,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 1270855837}
     m_Modifications:
     - target: {fileID: 3941603883679205050, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: objectList.list.Array.data[0].outlinedGO
+      value: 
+      objectReference: {fileID: 1583472429842814689}
+    - target: {fileID: 3941603883679205050, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: objectList.list.Array.data[1].outlinedGO
+      value: 
+      objectReference: {fileID: 1583472429842814688}
+    - target: {fileID: 3941603883679205050, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: objectList.list.Array.data[2].outlinedGO
+      value: 
+      objectReference: {fileID: 1583472429842814688}
+    - target: {fileID: 3941603883679205050, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: objectList.list.Array.data[3].outlinedGO
+      value: 
+      objectReference: {fileID: 1583472429842814687}
+    - target: {fileID: 3941603883679205050, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: OnInteractMinigame.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2125472823}
@@ -6835,6 +6884,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4471422928754899646, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: objectList.list.Array.data[0].outlinedGO
+      value: 
+      objectReference: {fileID: 1583472429842814691}
     - target: {fileID: 4471422928754899646, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: OnInteractMinigame.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6891,6 +6944,18 @@ PrefabInstance:
       propertyPath: OnInteractMinigame.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2125472823}
+    - target: {fileID: 8946720982493679524, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: objectList.list.Array.data[0].outlinedGO
+      value: 
+      objectReference: {fileID: 1583472429842814690}
+    - target: {fileID: 8946720982493679524, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: objectList.list.Array.data[1].outlinedGO
+      value: 
+      objectReference: {fileID: 1583472429842814690}
+    - target: {fileID: 8946720982493679524, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: objectList.list.Array.data[2].outlinedGO
+      value: 
+      objectReference: {fileID: 1583472429842814690}
     - target: {fileID: 8946720982493679524, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: OnInteractMinigame.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -230,8 +230,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.62402695, y: 0.08582857, z: 0.3264103}
-  m_Center: {x: 0, y: 0, z: 0.29411793}
+  m_Size: {x: 0.07434118, y: 0.2144432, z: 0.44135952}
+  m_Center: {x: 0.17203325, y: 0.15702236, z: 0.35518503}
 --- !u!114 &8946720982493679524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +262,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  minigames:
+  - {fileID: 11400000, guid: d2e277b34a5a67f41bb9cc19f7d8ee9f, type: 2}
+  - {fileID: 11400000, guid: c0b968cf8c08b9840bf55a05c65660f5, type: 2}
+  - {fileID: 11400000, guid: e05b62a1b9861d6438ed456989689705, type: 2}
+  objectList:
+    list:
+    - outlinedGO: {fileID: 0}
+      minigame: {fileID: 11400000, guid: d2e277b34a5a67f41bb9cc19f7d8ee9f, type: 2}
+      initialLayer: 0
+    - outlinedGO: {fileID: 0}
+      minigame: {fileID: 11400000, guid: c0b968cf8c08b9840bf55a05c65660f5, type: 2}
+      initialLayer: 0
+    - outlinedGO: {fileID: 0}
+      minigame: {fileID: 11400000, guid: e05b62a1b9861d6438ed456989689705, type: 2}
+      initialLayer: 0
 --- !u!1 &113806570898511014
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,6 +4556,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  minigames:
+  - {fileID: 11400000, guid: deee4da682ba15a42a2cece20c40fa64, type: 2}
+  objectList:
+    list:
+    - outlinedGO: {fileID: 0}
+      minigame: {fileID: 11400000, guid: deee4da682ba15a42a2cece20c40fa64, type: 2}
+      initialLayer: 0
 --- !u!1 &2604033388989251576
 GameObject:
   m_ObjectHideFlags: 0
@@ -6698,6 +6720,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  minigames: []
+  objectList:
+    list: []
 --- !u!114 &4507816420376396391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7942,6 +7967,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  minigames:
+  - {fileID: 11400000, guid: 643a517af71743847adae865d0f84473, type: 2}
+  - {fileID: 11400000, guid: e564ec4acae09a74892ce1849892f130, type: 2}
+  - {fileID: 11400000, guid: b1bac24494b27e149bc267237cbdbd80, type: 2}
+  - {fileID: 11400000, guid: 21af7c2a2af19a44f9c999a137d44595, type: 2}
+  objectList:
+    list:
+    - outlinedGO: {fileID: 0}
+      minigame: {fileID: 11400000, guid: e564ec4acae09a74892ce1849892f130, type: 2}
+      initialLayer: 0
+    - outlinedGO: {fileID: 0}
+      minigame: {fileID: 11400000, guid: b1bac24494b27e149bc267237cbdbd80, type: 2}
+      initialLayer: 0
+    - outlinedGO: {fileID: 0}
+      minigame: {fileID: 11400000, guid: 643a517af71743847adae865d0f84473, type: 2}
+      initialLayer: 0
+    - outlinedGO: {fileID: 0}
+      minigame: {fileID: 11400000, guid: 21af7c2a2af19a44f9c999a137d44595, type: 2}
+      initialLayer: 0
 --- !u!1 &4536679408949258940
 GameObject:
   m_ObjectHideFlags: 0
