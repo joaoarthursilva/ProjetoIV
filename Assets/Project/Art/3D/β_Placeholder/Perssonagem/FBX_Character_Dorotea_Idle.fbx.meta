@@ -46,11 +46,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature.001|Armature.001|Armature|Armature.001|Armature|ArmatureAction.002
+      name: Idle
       takeName: Armature.001|Armature.001|Armature|Armature.001|Armature|ArmatureAction.002
       internalID: 7783741948742815300
       firstFrame: 0
-      lastFrame: 60
+      lastFrame: 41
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

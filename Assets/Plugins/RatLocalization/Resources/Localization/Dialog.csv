@@ -78,3 +78,5 @@ Now... i'm not so sure what it was.",,
 D1.Char3.Dialog1.Player.Line2.Choice3.Preview,I can relate.,,
 D1.Char3.Dialog1.Player.Line2.Choice3.Line1,I get that. Loneliness has sharp teeth.,,
 D1.Char3.Dialog1.NPC.Line2.Choice3.Line2,"Heh… Sharp teeth. That’s a good way to put it. Yes, I’ve been bitten a few times lately... Mostly by my own thoughts.{wc}I’m Giuseppina. I walked away from a man I once thought I’d grow old with. Turns out, growing apart hurts just as much.",,
+D1.Char0.Dialog1.NPC.Line1,"Oh, he knows me too well. I swear I left with time to spare, but— {c}Nevermind... Better late than never, right?",,
+D1.Char0.Dialog1.NPC.Line2,"Well, anyway, it's my first time here, so please, {i}<color=#{$AnyColor}>surprise me</color>{/i}!",,
