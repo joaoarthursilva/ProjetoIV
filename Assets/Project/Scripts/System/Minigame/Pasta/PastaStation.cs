@@ -137,8 +137,8 @@ public class PastaStation : MonoBehaviour, IMinigameInteraction
     {
         yield return new WaitForSeconds(0.25f);
 
-        m_uiPastaFold.OnFocusOnCamera += OnFocusCamera;
-        m_uiPastaFold.OnCallNextStep += NextFold;
+        m_uiPastaFold.OnFocusOnCamera = OnFocusCamera;
+        m_uiPastaFold.OnCallNextStep = NextFold;
         m_uiPastaFold.StartPastaFold(m_currentMinigame.FinalIngredient());
     }
 

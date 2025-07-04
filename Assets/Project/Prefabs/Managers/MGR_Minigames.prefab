@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b71fde5a1266294e8aecd2d49879d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeBefore: 1
   m_inputMap: 0
   m_inputsToShow: 
   m_raycastableMinigames:
@@ -55,8 +56,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d2e277b34a5a67f41bb9cc19f7d8ee9f, type: 2}
   m_uiPastaCut: {fileID: 0}
   m_uiPastaFold: {fileID: 0}
-  cutPlane: {fileID: 0}
-  foldPlane: {fileID: 0}
+  cutFoldObjects: []
 --- !u!1 &4345416634618774855
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64004cb3a9e3c74abb2d581851986e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeBefore: 0
   m_inputMap: 0
   m_inputsToShow: 
   m_minigames:
@@ -160,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77270165a82bf224f967189665fa8618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeBefore: 0
   m_map: 1
   m_inputsToShow: 
   m_raycastableMinigame:
@@ -226,7 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf057f559396db46ab00cc307ec0153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_inputMap: 0
+  fadeBefore: 0
+  m_inputMap: 3
   m_inputsToShow: 
   m_minigame: {fileID: 11400000, guid: 94a3b2692084e8f4286af6811f908567, type: 2}
   m_camera: {fileID: 0}
@@ -277,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29db288364d3b3145a699f521a887d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeBefore: 0
   m_inputMap: 0
   m_inputsToShow: 00000000
   m_raycastableMinigames: []
@@ -332,6 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb03e41db460f940b6988d0e2968a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeBefore: 0
   m_map: 0
   m_inputsToShow: 
   m_raycastableMinigame: []
