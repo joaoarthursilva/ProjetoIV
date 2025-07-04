@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a0a9229a30d134792caa42e4ce3a54, type: 3}
   m_Name: CFG_Day_4
   m_EditorClassIdentifier: 
-  day: D3.Date
+  day: D4.Date
   start: 0
   end: 3
   delayBeforeNextDay: 0
