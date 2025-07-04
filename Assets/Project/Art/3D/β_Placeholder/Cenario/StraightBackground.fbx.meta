@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 5a0ea17a4f3aa394cb6959535b0227cf
+guid: 1877d0a51ba330f41a94eabfec07f64a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: fundo
-    second: {fileID: 2100000, guid: c074d1b0a29659546ab04036958c78a2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pilar
-    second: {fileID: 2100000, guid: 86d31b77851a8c54f965fa82f83ce6b8, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: fundo
-    second: {fileID: 2800000, guid: 34ef1552651929640b48b7d9e11bdfd3, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -48,7 +33,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -103,7 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.001
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
