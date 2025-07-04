@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/Dev/SCN_GameJooj.unity
     guid: a436ecad5ab917049bf5663d5936f1d7
   - enabled: 1
@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 1779727ffbb36544baece8edadecdd00
   - enabled: 1
     path: Assets/Project/Scenes/Build/SCN_Game.unity
-    guid: 4ca4dcaec6bf66d4f91bbe44ef82ab73
+    guid: 8c152efaec5ddd4439471df5f72387e8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 1dfc1a37f6a3fab47b5ff56b08310fc1, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

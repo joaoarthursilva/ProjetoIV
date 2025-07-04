@@ -1,9 +1,9 @@
-namespace Assets.Plugins.RatLocalization.Scripts.Editor
-{
-    public enum ActionType
-    {
-        Edit,
-        Add,
-        Delete
-    }
-}
+// namespace Assets.Plugins.RatLocalization.Scripts.Editor
+// {
+//     public enum ActionType
+//     {
+//         Edit,
+//         Add,
+//         Delete
+//     }
+// }

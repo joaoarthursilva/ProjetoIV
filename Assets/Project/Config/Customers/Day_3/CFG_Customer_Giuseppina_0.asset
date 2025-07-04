@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3bbeb1ed6e418e44abd297201d70f36, type: 3}
-  m_Name: CFG_Customer_Dorotea_0
+  m_Name: CFG_Customer_Giuseppina_0
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: fdfa60c69cb6c604c9fb760615c1786e, type: 2}
   timeToAppear: 0

@@ -49,6 +49,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d569fb539ff35fc4bb4995df2616c2b8, type: 2}
   - {fileID: 11400000, guid: 8ca5735f3c2d81845bb315226e6dc075, type: 2}
   - {fileID: 11400000, guid: 5628d8aa4713e6e40986dab7e2d49736, type: 2}
+  - {fileID: 11400000, guid: 9d041b1b5f4e7534fa918648b04d44a7, type: 2}
+  - {fileID: 11400000, guid: ef21100512659094585e93fd4b1b7881, type: 2}
   m_today: 0
   m_now: 0
 --- !u!1 &3043103153041154014

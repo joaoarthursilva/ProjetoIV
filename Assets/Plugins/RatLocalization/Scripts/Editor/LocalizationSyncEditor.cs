@@ -1,24 +1,24 @@
-using UnityEditor;
-using UnityEngine;
+// using UnityEditor;
+// using UnityEngine;
 
-namespace Assets.Plugins.RatLocalization.Scripts.Editor
-{
-    /// <summary>
-    /// Adds "Sync" button to LocalizationSync script.
-    /// </summary>
-    [CustomEditor(typeof(LocalizationSync))]
-    public class LocalizationSyncEditor : UnityEditor.Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            DrawDefaultInspector();
+// namespace Assets.Plugins.RatLocalization.Scripts.Editor
+// {
+//     /// <summary>
+//     /// Adds "Sync" button to LocalizationSync script.
+//     /// </summary>
+//     [CustomEditor(typeof(LocalizationSync))]
+//     public class LocalizationSyncEditor : UnityEditor.Editor
+//     {
+//         public override void OnInspectorGUI()
+//         {
+//             DrawDefaultInspector();
 
-            var component = (LocalizationSync)target;
+//             var component = (LocalizationSync)target;
 
-            if (GUILayout.Button("Sync"))
-            {
-                component.Sync();
-            }
-        }
-    }
-}
+//             if (GUILayout.Button("Sync"))
+//             {
+//                 component.Sync();
+//             }
+//         }
+//     }
+// }
