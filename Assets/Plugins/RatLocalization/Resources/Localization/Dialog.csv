@@ -169,7 +169,7 @@ D1.Char0.Dialog1.NPC.Line9.Choice2.Line2,"Oh, just the usual. I was walking, lis
 D1.Char0.Dialog1.Player.Line9.Choice2.Line3,That sounds… strange. Did she say what was inside them?,,
 D1.Char0.Dialog1.NPC.Line9.Choice2.Line4,"No, but she started talking about some very weird things and I got distracted...",,
 D1.Char0.Dialog1.NPC.Line10,"Anyway, I'm starving and I'm supposed to go to an event soon",,
-D1.Char0.Dialog1.NPC.Line11,"It's my first time here, so please, {AnyColor}surprise me!",,
+D1.Char0.Dialog1.NPC.Line11,"It's my first time here, so please, <color=#{$AnyColor}>surprise me</color>!",,
 D1.Char0.Dialog2.NPC.Line1,Hey! Is it ready yet?,,
 D1.Char0.Dialog2.Player.Line2,Almost!,,
 D1.Char0.Dialog3.Player.Line1,"Here it is! I hope you like it, it was made with love",,

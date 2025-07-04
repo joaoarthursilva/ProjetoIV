@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 #if UNITY_EDITOR
-
+using NaughtyAttributes;
 using UnityEditor;
 using Unity.EditorCoroutines.Editor;
 
@@ -84,6 +84,7 @@ namespace Assets.Plugins.RatLocalization.Scripts
             }
         }
 
+        [Button]
         public void DownloadGoogleSheets(Action callback = null)
         {
             EditorCoroutineUtility.StartCoroutineOwnerless(DownloadGoogleSheetsCoroutine(callback));
@@ -179,6 +180,7 @@ namespace Assets.Plugins.RatLocalization.Scripts
             }
         }
 
+        [Button]
         public void OpenGoogleSheets()
         {
             if (string.IsNullOrEmpty(TableId))
@@ -197,7 +199,8 @@ namespace Assets.Plugins.RatLocalization.Scripts
             Sheets = Constants.ExampleSheets.Select(i => new Sheet { Name = i.Key, Id = i.Value }).ToList();
             SaveFolder = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(@"Assets\SimpleLocalization\Resources\Localization");
         }
-
+        
+        [Button]
         public void ResolveGoogleSheets()
         {
             EditorCoroutineUtility.StartCoroutineOwnerless(ResolveGoogleSheetsCoroutine());
