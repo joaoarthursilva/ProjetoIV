@@ -7,6 +7,8 @@ public class GrinderSeasoningBehavior : SeasoningBehavior
     [SerializeField] private float waitToEnter;
     public override Coroutine PlayAnim()
     {
+        particles = Instantiate(particlesPrefab, particleParent).GetComponent<ParticleSystem>();
+
         gameObject.SetActive(true);
         return StartCoroutine(IPlayAnim());
     }

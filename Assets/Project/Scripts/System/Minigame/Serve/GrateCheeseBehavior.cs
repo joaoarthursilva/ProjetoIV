@@ -10,6 +10,8 @@ public class GrateCheeseBehavior : SeasoningBehavior
     [NaughtyAttributes.Button("Grate")]
     public override Coroutine PlayAnim()
     {
+        particles = Instantiate(particlesPrefab, particleParent).GetComponent<ParticleSystem>();
+
         gameObject.SetActive(true);
         return StartCoroutine(Grate());
     }
@@ -18,6 +20,7 @@ public class GrateCheeseBehavior : SeasoningBehavior
     {
         yield return entryLeaveAnim.PlayAnimations(UIAnimationType.ENTRY);
 
+        particles.Clear();
         for (int i = 0; i < 3; i++)
         {
             yield return GrateCheese();
@@ -31,10 +34,9 @@ public class GrateCheeseBehavior : SeasoningBehavior
         bool l_grating = true;
         grateAnim.PlayAnimations(UIAnimationType.ENTRY, () => { l_grating = false; });
 
-        particles.Clear();
         if (!particles.isPlaying) particles.Play();
         while (l_grating) yield return null;
-        if (particles.isPlaying) particles.Stop();
+        //if (particles.isPlaying) particles.pau();
 
         yield return grateAnim.PlayAnimations(UIAnimationType.LEAVE);
     }

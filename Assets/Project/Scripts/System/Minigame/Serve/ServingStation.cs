@@ -25,6 +25,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
     [SerializeField] Minigame[] m_minigames;
     [SerializeField] SeasoningBehavior[] m_servingInteractions;
     [SerializeField] private Transform m_plateParent;
+    [SerializeField] private Vector3 m_platePosition;
     ServingMinigame m_minigame;
     GameObject m_plateGO;
     [Space] public float waitAfterDone;
@@ -52,7 +53,8 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
     public void IOnStartInteraction(Minigame p_minigame, Action p_actionOnEnd)
     {
         m_onEnd = p_actionOnEnd;
-        Instantiate(m_minigame.initialPlatePrefab, m_plateParent).transform.localPosition = Vector3.zero;
+        m_plateGO = Instantiate(m_minigame.initialPlatePrefab, m_plateParent);
+        m_plateGO.transform.localPosition = m_platePosition;
 
         StartCoroutine(Nextstep());
     }
@@ -68,6 +70,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
                 {
                     Debug.Log("play anim " + m_servingInteractions[j].gameObject.name);
                     yield return m_servingInteractions[j].PlayAnim();
+                    m_servingInteractions[j].SetParticlesParent(m_plateGO.transform);
                     m_servingInteractions[j].gameObject.SetActive(false);
                 }
             }
@@ -81,7 +84,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
 
     public void IOnEndInteraction()
     {
-        Destroy(m_plateGO);
+        PlayerInventory.Instance.SetInventoryObject(m_plateGO, m_minigame.FinalIngredient());
         m_onEnd?.Invoke();
     }
 

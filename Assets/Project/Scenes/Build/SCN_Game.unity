@@ -1152,7 +1152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6914661591496443609, guid: 8232b43f92653c54691b9457f22a0f66, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5795,7 +5795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
-  currentRecipe: {fileID: 0}
+  currentRecipe: {fileID: 11400000, guid: a073aaad4c457cf408656ad1e60b0f07, type: 2}
   possibleSequences:
   - {fileID: 11400000, guid: 1576548efd338d24dab0714b39f70bf8, type: 2}
   - {fileID: 11400000, guid: 1d55e62a670a2004588af2298e27e5c1, type: 2}

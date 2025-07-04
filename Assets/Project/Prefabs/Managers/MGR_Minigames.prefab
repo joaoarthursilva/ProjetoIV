@@ -289,8 +289,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bdca0b15ce56bf1409a5ff51f5b00daa, type: 2}
   - {fileID: 11400000, guid: a30ef448628e6a24593233068f5bb014, type: 2}
   - {fileID: 11400000, guid: 956be9a5203e2fa48ab875b7b2b5247f, type: 2}
-  m_servingInteractions: []
+  m_servingInteractions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_plateParent: {fileID: 0}
+  m_platePosition: {x: -0.045, y: 0, z: 0}
   waitAfterDone: 0
 --- !u!1 &8645841831659779244
 GameObject:
