@@ -107,7 +107,13 @@ public class CustomerBehaviour : MonoBehaviour
     {
         RatInput.Instance.SetMap(Map.KITCHEN);
         if (m_currentDialogId == DialogID.ENTREGA) CheckOrder(PlayerInventory.Instance.CurrentIngredient);
-        else if (m_currentDialogId == DialogID.PEDIDO) ArrowIndicator.Instance.Show(new Vector3(1.329f, 1.5f, -9.885f));
+        else if (m_currentDialogId == DialogID.PEDIDO)
+        {
+            if (ArrowIndicator.Instance != null)
+                ArrowIndicator.Instance.Show(new Vector3(1.329f, 1.5f, -9.885f));
+
+            RecipeManager.Instance.SetInstructionToBook();
+        }
         else if (m_currentDialogId == DialogID.RESULTADO_BOM || m_currentDialogId == DialogID.UNICO)
         {
             Debug.Log("fim cabo vai embora");

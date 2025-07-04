@@ -14,6 +14,7 @@ public class RaycastableMinigame : RaycastableObject
 
         public void SetOutline(bool p_on)
         {
+            if (p_on) Debug.Log("BAAA");
             outlinedGO.layer = p_on ? outlineLayer : initialLayer;
         }
 

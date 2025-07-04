@@ -27,9 +27,6 @@ public class RaycastManager : Singleton<RaycastManager>
         m_raycastableObjectsDictionary = new();
         for (int i = 0; i < m_raycastableObjects.Length; i++)
         {
-            Debug.Log(m_raycastableObjects[i].gameObject.name);
-            Debug.Log(m_raycastableObjects[i].Collider == null);
-
             m_raycastableObjectsDictionary.Add(m_raycastableObjects[i].Collider.GetInstanceID(), m_raycastableObjects[i]);
         }
     }

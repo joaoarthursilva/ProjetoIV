@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97b92f2951884649a74098042f6a821, type: 3}
   m_Name: CFG_Minigame_Sauce_Tortelloni
   m_EditorClassIdentifier: 
-  Instruction: "Prepare o Molho Cremoso de Tomate no fog\xE3o"
+  Instruction: Prepare the Creamy Tomato Sauce on the stove
   callServePlate: 0
   Ingredients:
   - {fileID: 11400000, guid: cd5f8de3672e4d4488cea3e94c6af621, type: 2}

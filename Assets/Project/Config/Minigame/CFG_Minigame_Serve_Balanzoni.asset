@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9aad1decd651543a8e336b0735f37c, type: 3}
   m_Name: CFG_Minigame_Serve_Balanzoni
   m_EditorClassIdentifier: 
-  Instruction: Entregue o prato para o cliente
+  Instruction: Serve the dish to the customer
   callServePlate: 0
   initialPlatePrefab: {fileID: 8597722941570984201, guid: d3868dc28ad408243a22628e6546d7d5, type: 3}
   initialIngredient: {fileID: 11400000, guid: 250daaacf4dc3de47b9612cd7b7584fa, type: 2}

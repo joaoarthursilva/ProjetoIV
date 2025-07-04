@@ -9,6 +9,7 @@ public class RecipeManager : Singleton<RecipeManager>
     public List<bool> currentSteps;
     public MinigameSequence currentSequence;
     public System.Action<Minigame> SetNextMinigame;
+    public System.Action UseRecipeBook;
 #if UNITY_EDITOR
     private void Start()
     {
@@ -84,7 +85,14 @@ public class RecipeManager : Singleton<RecipeManager>
 
     public void EndedSequence()
     {
-        SetNextMinigame?.Invoke(null);
+        SetNextMinigame?.Invoke(currentSequence.sequence[^1]);
         Debug.Log("baita jogador");
+    }
+
+    [SerializeField] private Minigame bookminigame;
+    public void SetInstructionToBook()
+    {
+        UseRecipeBook?.Invoke();
+        SetNextMinigame?.Invoke(bookminigame);
     }
 }

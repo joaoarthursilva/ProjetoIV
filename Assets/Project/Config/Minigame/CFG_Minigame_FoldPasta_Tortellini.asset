@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4c22e680c0fad4e831af80982ced77, type: 3}
   m_Name: CFG_Minigame_FoldPasta_Tortellini
   m_EditorClassIdentifier: 
-  Instruction: Prepare o Tortellini no Cilindro
+  Instruction: Prepare the Tortellini in the Roller
   callServePlate: 0
   m_recipes:
   - {fileID: 11400000, guid: a073aaad4c457cf408656ad1e60b0f07, type: 2}
