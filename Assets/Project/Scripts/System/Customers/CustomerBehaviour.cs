@@ -57,7 +57,7 @@ public class CustomerBehaviour : MonoBehaviour
         Debug.Log("aaa");
         Debug.Log(m_isNewCustomer);
         RatInput.Instance.SetMap(Map.DIALOG);
-        RatInput.Instance.ShowUIElement(InputID.NONE);
+        RatInput.ShowInputUIElement(InputID.NONE);
         if (m_isNewCustomer)
         {
             if (m_customer.dialogs.Count > 1)
