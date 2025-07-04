@@ -50,7 +50,7 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     private void HandleMovement()
     {
-        if (DialogManager.Instance != null &&  DialogManager.Instance.InDialog) return;
+        if (DialogManager.Instance != null && DialogManager.Instance.InDialog) return;
         l_tempMovement.Set(RatInput.Instance.Movement.x, 0, RatInput.Instance.Movement.y);
         l_tempMovement.Normalize();
         l_tempMovement *= m_moveSpeed * 50 * Time.fixedDeltaTime;
@@ -67,9 +67,28 @@ public class PlayerMovement : Singleton<PlayerMovement>
     private void HandleLook()
     {
         if (DialogManager.Instance != null && DialogManager.Instance.InDialog) return;
-        transform.Rotate(0, RatInput.Instance.LookInput.x * m_horizontalLookSensitivity * Time.deltaTime, 0);
-        l_verticalRotation -= RatInput.Instance.LookInput.y * m_verticalLookSensitivity * Time.deltaTime;
+        transform.Rotate(0, (RatInput.Instance.LookInput.x + currentInaEffect) * m_horizontalLookSensitivity * Time.deltaTime, 0);
+        l_verticalRotation -= (RatInput.Instance.LookInput.y + currentInaEffect) * m_verticalLookSensitivity * Time.deltaTime;
         l_verticalRotation = Mathf.Clamp(l_verticalRotation, m_angleLimitDown, m_angleLimitUp);
         m_firstPersonCamera.localRotation = Quaternion.Euler(l_verticalRotation, 0f, 0f);
+    }
+
+    [Header("Inas effect")]
+    [SerializeField] private float maxInaEffect;
+    [SerializeField] private AnimationCurve inaEffectAnimCurve;
+    [SerializeField] private float inaTimeEffect;
+    [SerializeField, NaughtyAttributes.ReadOnly] private float currentInaEffect;
+
+    private IEnumerator InaEffect()
+    {
+        float l_time = 0f;
+
+        while (l_time < inaTimeEffect)
+        {
+            currentInaEffect = Random.Range(0f, 1f);
+            currentInaEffect *= inaEffectAnimCurve.Evaluate(l_time / inaTimeEffect);
+            l_time += Time.deltaTime;
+            yield return null;
+        }
     }
 }

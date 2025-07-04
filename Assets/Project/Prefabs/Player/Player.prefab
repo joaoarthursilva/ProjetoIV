@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677c4da00cef9f844b2a2e687fe29888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 5
+  maxDistance: 1
   currentRaycastableObject: {fileID: 0}
   interact:
     Pressed: 0
