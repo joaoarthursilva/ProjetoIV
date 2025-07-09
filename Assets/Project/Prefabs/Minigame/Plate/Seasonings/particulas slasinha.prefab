@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6235675378169962874}
   - component: {fileID: 4235979289273622622}
   - component: {fileID: 8615034668084108376}
+  - component: {fileID: 2428380494140986030}
   m_Layer: 0
   m_Name: particulas slasinha
   m_TagString: Untagged
@@ -183,7 +184,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 2
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -3696,7 +3697,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -3866,7 +3867,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minKillSpeed: 0
     maxKillSpeed: 1e+9
-    radiusScale: 0.25
+    radiusScale: 0.1
     collidesWith:
       serializedVersion: 2
       m_Bits: 8
@@ -4833,3 +4834,17 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &2428380494140986030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696441167978766830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3a6ce8776822942b3dce17d2ba48ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_objectTransform: {fileID: 0}
+  m_positionOffset: {x: 0, y: 0, z: 0}

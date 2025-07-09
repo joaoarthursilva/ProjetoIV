@@ -69,6 +69,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
                 if (m_minigame.ingredientsToServe[i] == m_servingInteractions[j].ingredient)
                 {
                     Debug.Log("play anim " + m_servingInteractions[j].gameObject.name);
+                    m_servingInteractions[j].SetTransformSimulationSpace(m_plateGO.transform);
                     yield return m_servingInteractions[j].PlayAnim();
                     m_servingInteractions[j].SetParticlesParent(m_plateGO.transform);
                     m_servingInteractions[j].gameObject.SetActive(false);

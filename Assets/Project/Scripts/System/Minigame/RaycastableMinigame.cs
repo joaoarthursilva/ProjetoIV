@@ -56,12 +56,14 @@ public class RaycastableMinigame : RaycastableObject
     {
         base.Start();
         objectList.SetInitial();
-        RecipeManager.Instance.SetNextMinigame += OnSetNextMinigame;
+        if (RecipeManager.Instance != null)
+            RecipeManager.Instance.SetNextMinigame += OnSetNextMinigame;
     }
 
     private void OnDestroy()
     {
-        RecipeManager.Instance.SetNextMinigame -= OnSetNextMinigame;
+        if (RecipeManager.Instance != null)
+            RecipeManager.Instance.SetNextMinigame -= OnSetNextMinigame;
     }
 
     public override void Interact()

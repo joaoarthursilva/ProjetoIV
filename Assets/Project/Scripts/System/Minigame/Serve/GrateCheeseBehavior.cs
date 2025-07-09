@@ -11,6 +11,9 @@ public class GrateCheeseBehavior : SeasoningBehavior
     public override Coroutine PlayAnim()
     {
         particles = Instantiate(particlesPrefab, particleParent).GetComponent<ParticleSystem>();
+        var main = particles.main;
+        main.simulationSpace = ParticleSystemSimulationSpace.Custom;
+        main.customSimulationSpace = m_tranformToAttachParticles;
 
         gameObject.SetActive(true);
         return StartCoroutine(Grate());

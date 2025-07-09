@@ -19,7 +19,12 @@ public class UIQuickTimeButton : MonoBehaviour, IPointerClickHandler
     Coroutine m_coroutine;
     public void OnPointerClick(PointerEventData eventData)
     {
-        l_waitingClick = false; 
+        l_waitingClick = false;
+    }
+
+    public void Click()
+    {
+        l_waitingClick = false;
     }
 
     public void ResetClick()
@@ -47,6 +52,9 @@ public class UIQuickTimeButton : MonoBehaviour, IPointerClickHandler
             while (l_waitingClick)
             {
                 m_time -= Time.deltaTime;
+                if (m_time / m_variantCircleTimeCycle > m_timeRangeToSuccess.x
+                    && m_time / m_variantCircleTimeCycle < m_timeRangeToSuccess.y) m_variantCircleImage.color = Color.green;
+                else m_variantCircleImage.color = Color.white;
 
                 m_variantCircleRect.sizeDelta = Vector2.Lerp(m_variantCircleMinSize, m_variantCircleMaxSize, m_time / m_variantCircleTimeCycle);
 
