@@ -1,4 +1,6 @@
 using ProjetoIV.Util;
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class SeasoningBehavior : MonoBehaviour
@@ -9,18 +11,14 @@ public class SeasoningBehavior : MonoBehaviour
     [SerializeField] protected GameObject particlesPrefab;
     [SerializeField, NaughtyAttributes.ReadOnly] protected ParticleSystem particles;
 
-    public void SetTransformSimulationSpace(Transform p_transform)
-    {
-        m_tranformToAttachParticles = p_transform;
-    }
-
+    public Action<Ingredient> AddParticle;
+    public float waitBetweenParticles;
+    protected Coroutine AddParticlesCoroutine;
     public virtual Coroutine PlayAnim()
     {
         particles = Instantiate(particlesPrefab, particleParent).GetComponent<ParticleSystem>();
-        var main = particles.main;
-        main.simulationSpace = ParticleSystemSimulationSpace.Custom;
-        main.customSimulationSpace = m_tranformToAttachParticles;
         gameObject.SetActive(true);
+        AddParticlesCoroutine = StartCoroutine(AddParticles());
         particles.Clear();
         if (particles.isPlaying) particles.Stop();
         if (!particles.isPlaying) particles.Play();
@@ -28,22 +26,26 @@ public class SeasoningBehavior : MonoBehaviour
         return m_anim.PlayAnimations(UIAnimationType.ENTRY);
     }
 
-   protected Transform m_tranformToAttachParticles;
+    protected IEnumerator AddParticles()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitBetweenParticles);
+            AddParticle?.Invoke(ingredient);
+        }
+    }
+
     public void SetParticlesParent(Transform p_transform)
     {
-        m_tranformToAttachParticles = p_transform;
-        float particlesScaleFactor = particles.transform.lossyScale.x / particles.transform.localScale.x;
-        particles.transform.SetParent(null);
-        particles.transform.localScale /= particlesScaleFactor;
-        Invoke(nameof(StopParticles), 0.5f);
+        particles.transform.parent = p_transform;
+        particles.Stop();
+        Invoke(nameof(StopParticles), 0.2f);
+        StopCoroutine(AddParticlesCoroutine);
+        //particles.set = ParticleSystemSimulationSpace.Local;
     }
 
     void StopParticles()
     {
-        var main = particles.main;
-        main.gravityModifier = 0f;
-        main.emitterVelocity = Vector3.zero;
-        particles.Stop();
-        particles.gameObject.GetComponent<AttachObject>().StartFollow(m_tranformToAttachParticles);
+        particles.Pause();
     }
 }

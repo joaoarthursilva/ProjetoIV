@@ -27,7 +27,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
     [SerializeField] private Transform m_plateParent;
     [SerializeField] private Vector3 m_platePosition;
     ServingMinigame m_minigame;
-    GameObject m_plateGO;
+    PlateBehavior m_plateGO;
     [Space] public float waitAfterDone;
     public bool EmbraceMinigame(Minigame p_minigame)
     {
@@ -53,7 +53,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
     public void IOnStartInteraction(Minigame p_minigame, Action p_actionOnEnd)
     {
         m_onEnd = p_actionOnEnd;
-        m_plateGO = Instantiate(m_minigame.initialPlatePrefab, m_plateParent);
+        m_plateGO = Instantiate(m_minigame.initialPlatePrefab, m_plateParent).GetComponent<PlateBehavior>();
         m_plateGO.transform.localPosition = m_platePosition;
 
         StartCoroutine(Nextstep());
@@ -69,7 +69,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
                 if (m_minigame.ingredientsToServe[i] == m_servingInteractions[j].ingredient)
                 {
                     Debug.Log("play anim " + m_servingInteractions[j].gameObject.name);
-                    m_servingInteractions[j].SetTransformSimulationSpace(m_plateGO.transform);
+                    m_servingInteractions[j].AddParticle = m_plateGO.ActiveObject;
                     yield return m_servingInteractions[j].PlayAnim();
                     m_servingInteractions[j].SetParticlesParent(m_plateGO.transform);
                     m_servingInteractions[j].gameObject.SetActive(false);
@@ -85,7 +85,7 @@ public class ServingStation : MonoBehaviour, IMinigameInteraction
 
     public void IOnEndInteraction()
     {
-        PlayerInventory.Instance.SetInventoryObject(m_plateGO, m_minigame.FinalIngredient());
+        PlayerInventory.Instance.SetInventoryObject(m_plateGO.gameObject, m_minigame.FinalIngredient());
         m_onEnd?.Invoke();
     }
 

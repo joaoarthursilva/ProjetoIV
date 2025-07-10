@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: "Decora\xE7oes2"
-    second: {fileID: 9163028295677312034, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
+    second: {fileID: 2100000, guid: a6b455728be0ec54ca9c477084f1b236, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: comidas
-    second: {fileID: 5422330382190034821, guid: fa71a08411355e54d836f6d4812972d2, type: 3}
+    second: {fileID: 2100000, guid: db59b4dd7aa954d42a9493d004629f67, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

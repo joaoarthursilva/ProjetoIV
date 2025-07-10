@@ -8,11 +8,9 @@ public class GrinderSeasoningBehavior : SeasoningBehavior
     public override Coroutine PlayAnim()
     {
         particles = Instantiate(particlesPrefab, particleParent).GetComponent<ParticleSystem>();
-        var main = particles.main;
-        main.simulationSpace = ParticleSystemSimulationSpace.Custom;
-        main.customSimulationSpace = m_tranformToAttachParticles;
-
         gameObject.SetActive(true);
+
+        AddParticlesCoroutine = StartCoroutine(AddParticles());
         return StartCoroutine(IPlayAnim());
     }
 
@@ -26,7 +24,7 @@ public class GrinderSeasoningBehavior : SeasoningBehavior
         particles.Clear();
         particles.Play();
 
-        while(l_wait) yield return null;
+        while (l_wait) yield return null;
 
         yield return m_anim.PlayAnimations(UIAnimationType.LEAVE);
     }
