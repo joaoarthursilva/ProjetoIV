@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000027939675, y: 9.3132246e-10, z: 0.00000006861227, w: 1}
   m_LocalPosition: {x: -0.00061000016, y: 0.00038000196, z: -0.000030009807}
-  m_LocalScale: {x: 0.10000002, y: 0.09999999, z: 0.10000002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -170,7 +170,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -288,7 +288,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -446,7 +446,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -499,7 +499,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -671,9 +671,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: -0.6038954, y: -0.40919676, z: 0.06099329}
-    m_Rotation: {x: 70.13857, y: 276.9311, z: 7.7014585}
-    m_Scale: {x: 1.000039, y: 0.6905639, z: 0.0000000012048855}
+    m_Position: {x: -0.07177105, y: -0.048279203, z: -0.0013324507}
+    m_Rotation: {x: 302.31238, y: 92.84539, z: 267.01044}
+    m_Scale: {x: 0.076521665, y: 0.098501675, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -871,7 +871,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 25
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -981,7 +981,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 25
+        scalar: 15
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -4883,7 +4883,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: -7058726671115324673, guid: a1dde9844fb5bae4b813aa01dcf93d0c, type: 3}
+  m_Mesh: {fileID: -7676871557796408204, guid: f7238a1c5b73b314bab68f56449009ba, type: 3}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
