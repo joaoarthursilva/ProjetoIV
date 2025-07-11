@@ -1,5 +1,6 @@
 using ProjetoIV.Util;
 using System.Collections;
+using ProjetoIV.Audio;
 using UnityEngine;
 
 public class GrateCheeseBehavior : SeasoningBehavior
@@ -34,7 +35,7 @@ public class GrateCheeseBehavior : SeasoningBehavior
     {
         bool l_grating = true;
         grateAnim.PlayAnimations(UIAnimationType.ENTRY, () => { l_grating = false; });
-
+        AudioManager.Instance.Play(AudioID.GRATE_CHEESE, particles.transform.position);
         if (!particles.isPlaying) particles.Play();
         while (l_grating) yield return null;
         //if (particles.isPlaying) particles.pau();

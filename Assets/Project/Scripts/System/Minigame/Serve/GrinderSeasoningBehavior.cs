@@ -1,5 +1,6 @@
 using ProjetoIV.Util;
 using System.Collections;
+using ProjetoIV.Audio;
 using UnityEngine;
 
 public class GrinderSeasoningBehavior : SeasoningBehavior
@@ -21,6 +22,8 @@ public class GrinderSeasoningBehavior : SeasoningBehavior
 
         yield return new WaitForSeconds(waitToEnter);
 
+        AudioManager.Instance.Play(AudioID.GRIND_PEPPER, transform.position);
+        
         particles.Clear();
         particles.Play();
 

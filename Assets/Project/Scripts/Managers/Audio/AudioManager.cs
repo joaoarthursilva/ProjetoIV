@@ -18,6 +18,9 @@ namespace ProjetoIV.Audio
         MOVE_PASTA,
         CUSTOMER_ARRIVED,
         OIL,
+        DROP_IN_WATER,
+        GRATE_CHEESE,
+        GRIND_PEPPER,
     }
 
     [Serializable]

@@ -139,6 +139,30 @@ MonoBehaviour:
         Data3: 1810527158
         Data4: 417757802
       Path: event:/Cooking/Receitas/Actions -/Oil Drop -/Sfx
+  - id: 10
+    eventReference:
+      Guid:
+        Data1: 187590822
+        Data2: 1324887488
+        Data3: 184819348
+        Data4: -1668384485
+      Path: event:/Cooking/Receitas/Actions -/Pasta in the pan -/Drop in water sfx
+  - id: 11
+    eventReference:
+      Guid:
+        Data1: 164727185
+        Data2: 1201134940
+        Data3: 1476319637
+        Data4: -1827408577
+      Path: event:/Cooking/Receitas/Actions -/Grate cheese -/Grate cheese sfx
+  - id: 12
+    eventReference:
+      Guid:
+        Data1: -1207880362
+        Data2: 1293257250
+        Data3: -1714232430
+        Data4: -310408782
+      Path: event:/Cooking/Receitas/Actions -/Grind pepper -/Grind sfx
   m_debug: 0
 --- !u!1 &4038293604238844928
 GameObject:
