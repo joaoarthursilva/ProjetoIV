@@ -14,7 +14,6 @@ public class RaycastableMinigame : RaycastableObject
 
         public void SetOutline(bool p_on)
         {
-            if (p_on) Debug.Log("BAAA");
             outlinedGO.layer = p_on ? outlineLayer : initialLayer;
         }
 
@@ -28,8 +27,9 @@ public class RaycastableMinigame : RaycastableObject
     {
         private GameObject outlinedOBJ;
         public MinigameObject[] list;
-        public void SetObjectOutline(Minigame p_minigame)
+        public bool SetObjectOutline(Minigame p_minigame)
         {
+            bool l_return = false;
             outlinedOBJ = null;
             for (int i = 0; i < list.Length; i++)
             {
@@ -38,7 +38,11 @@ public class RaycastableMinigame : RaycastableObject
 
                 list[i].SetOutline(l_outline);
                 if (l_outline) outlinedOBJ = list[i].outlinedGO;
+
+                if(!l_return && l_outline) l_return = true;
             }
+
+            return l_return;
         }
         public void SetInitial()
         {
@@ -73,8 +77,14 @@ public class RaycastableMinigame : RaycastableObject
         OnInteractMinigame?.Invoke(this);
     }
 
+    bool m_canInteract = false;
     public void OnSetNextMinigame(Minigame p_minigame)
     {
-        objectList.SetObjectOutline(p_minigame);
+        m_canInteract = objectList.SetObjectOutline(p_minigame);
+    }
+
+    public override bool CanInteract()
+    {
+        return m_canInteract;
     }
 }

@@ -29,6 +29,7 @@ public class PlayerCameraBehavior : MonoBehaviour
 
         l_hits = Physics.RaycastAll(transform.position, transform.forward, maxDistance);
 
+        l_tempRaycastable = null;
         for (int i = 0; i < l_hits.Length; i++)
         {
             l_tempRaycastable = RaycastManager.Instance.GetRaycastableObject(l_hits[i].collider.GetInstanceID());

@@ -15,11 +15,11 @@ public class RaycastManager : Singleton<RaycastManager>
         yield return null;
 
         StartCoroutine(iStart());
-       
+
 
     }
 
-    IEnumerator iStart() 
+    IEnumerator iStart()
     {
         yield return new WaitForSeconds(.5f);
         m_raycastableObjects = FindObjectsByType<RaycastableObject>(FindObjectsSortMode.None);
@@ -48,7 +48,7 @@ public class RaycastManager : Singleton<RaycastManager>
             m_raycastableObjects[i].SetHoverBehavior(p_raycastObj == m_raycastableObjects[i]);
         }
 
-        if (p_raycastObj == null) RatInput.Instance.ShowUIElement(InputID.NONE);
+        if (p_raycastObj == null || !p_raycastObj.CanInteract()) RatInput.Instance.ShowUIElement(InputID.NONE);
         else RatInput.Instance.ShowUIElement(InputID.KITCHEN_INTERACT);
     }
 

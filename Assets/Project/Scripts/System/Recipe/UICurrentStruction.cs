@@ -14,15 +14,18 @@ public class UICurrentStruction : MonoBehaviour
     {
         if(p_minigame == null)
         {
+        Debug.Log("bbbb");
             text.text = string.Empty;
             return;
         }
 
+        Debug.Log("ccc");
         text.text = p_minigame.Instruction;
     }
 
     public void UpdateInstructionToBook()
     {
+        Debug.Log("aasd");
         text.text = selectRecipeText;
     }
 }

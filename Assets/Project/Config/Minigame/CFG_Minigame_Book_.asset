@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ad237b4d33d134396b25d638fff56b, type: 3}
   m_Name: CFG_Minigame_Book_
   m_EditorClassIdentifier: 
+  Instruction: Select the proper recipe with the book.
+  callServePlate: 0

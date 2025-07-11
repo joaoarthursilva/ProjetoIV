@@ -25,4 +25,9 @@ public class RaycastableObject : MonoBehaviour
         OnInteract?.Invoke(this);
 
     }
+
+    public virtual bool CanInteract()
+    {
+        return true;
+    }
 }
