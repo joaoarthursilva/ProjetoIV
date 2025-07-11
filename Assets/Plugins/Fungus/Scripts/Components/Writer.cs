@@ -9,6 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Globalization;
+using ProjetoIV.Audio;
 
 namespace Fungus
 {

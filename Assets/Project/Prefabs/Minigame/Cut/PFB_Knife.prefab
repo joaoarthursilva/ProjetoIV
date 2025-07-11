@@ -365,3 +365,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  knifeSFX:
+    Guid:
+      Data1: -711285189
+      Data2: 1143599264
+      Data3: -64813909
+      Data4: 2004775868
+    Path: event:/Cooking/Receitas/Picando coisa/clickSAction
+  knife: {fileID: 1267809768628768556}

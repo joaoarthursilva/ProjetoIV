@@ -1,5 +1,7 @@
 using ProjetoIV.Util;
 using System.Collections;
+using FMODUnity;
+using ProjetoIV.Audio;
 using UnityEngine;
 
 public class KnifeMinigameBehavior : MonoBehaviour
@@ -7,9 +9,12 @@ public class KnifeMinigameBehavior : MonoBehaviour
     public ObjectAnimationBehaviour cutAnimBehavior;
     public float moveAnimTime;
     public AnimationCurve moveAnimCurve;
-
+    [SerializeField] private EventReference knifeSFX;
+    [SerializeField] private GameObject knife;
+    
     public Coroutine Cut()
     {
+        AudioManager.Instance.Play(knifeSFX, knife);
         return cutAnimBehavior.PlayAnimations(UIAnimationType.ENTRY);
     }
 

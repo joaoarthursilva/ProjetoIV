@@ -6338,6 +6338,13 @@ MonoBehaviour:
         m_CallState: 2
   StartFlippingPaper: 1
   EndFlippingPaper: 3
+  pageSFX:
+    Guid:
+      Data1: 950404639
+      Data2: 1278816202
+      Data3: -22487130
+      Data4: 319529244
+    Path: "event:/Cooking/Receitas/Livro de receitas -/Virando p\xE1gina"
 --- !u!114 &5542817077001803100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6757,6 +6764,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a073aaad4c457cf408656ad1e60b0f07, type: 2}
   - {fileID: 11400000, guid: 9789551328247534ea4b65f0a49b0267, type: 2}
   - {fileID: 11400000, guid: b909458e6e529dc4f964147daab2c2f0, type: 2}
+  pageSFX:
+    Guid:
+      Data1: 950404639
+      Data2: 1278816202
+      Data3: -22487130
+      Data4: 319529244
+    Path: "event:/Cooking/Receitas/Livro de receitas -/Virando p\xE1gina"
 --- !u!1 &3754335128758513276
 GameObject:
   m_ObjectHideFlags: 0

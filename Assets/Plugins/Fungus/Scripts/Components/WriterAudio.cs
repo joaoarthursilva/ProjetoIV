@@ -3,6 +3,7 @@
 
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using ProjetoIV.Audio;
 
 namespace Fungus
 {
@@ -268,35 +269,16 @@ namespace Fungus
                 Stop();
             }
         }
+        
+        private float m_nextBeepTime;
 
         public virtual void OnGlyph()
         {
-            if (playingVoiceover)
+            if (m_nextBeepTime < Time.realtimeSinceStartup)
             {
-                return;
-            }
-
-            if (playBeeps && beepSounds.Count > 0)
-            {
-                lastUsedAudioSource = EffectAudioSource;
-
-                if (!lastUsedAudioSource.isPlaying)
-                {
-                    if (nextBeepTime < Time.realtimeSinceStartup)
-                    {
-                        lastUsedAudioSource.clip = beepSounds[Random.Range(0, beepSounds.Count)];
-
-                        if (lastUsedAudioSource.clip != null)
-                        {
-                            lastUsedAudioSource.loop = false;
-                            targetVolume = volume;
-                            lastUsedAudioSource.Play();
-
-                            float extend = lastUsedAudioSource.clip.length;
-                            nextBeepTime = Time.realtimeSinceStartup + extend;
-                        }
-                    }
-                }
+                if (AudioManager.Instance != null) AudioManager.Instance.PlayAudio(AudioID.SFX_DIALOG);
+                float extend = .1f;
+                m_nextBeepTime = Time.realtimeSinceStartup + extend;
             }
         }
 

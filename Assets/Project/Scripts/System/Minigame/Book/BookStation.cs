@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using FMODUnity;
 using Unity.Cinemachine;
 using UnityEngine;
 using ProjetoIV.RatInput;

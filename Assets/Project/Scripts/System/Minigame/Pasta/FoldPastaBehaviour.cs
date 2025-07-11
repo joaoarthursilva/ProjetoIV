@@ -1,3 +1,4 @@
+using ProjetoIV.Audio;
 using ProjetoIV.Util;
 using UnityEngine;
 
@@ -17,15 +18,18 @@ public class FoldPastaBehaviour : MonoBehaviour
     public void StartStep1()
     {
         m_instancedAnimator.SetInteger("Fold", 1);
+        AudioManager.Instance.Play(AudioID.PASTA_FOLD_SOUND);
     }
 
     public void EndFoldInteractionFirst()
     {
         m_instancedAnimator.SetInteger("Fold", 0);
+        AudioManager.Instance.Play(AudioID.PASTA_FOLD_SOUND);
     }
 
     public void OnEndFold0()
     {
+        AudioManager.Instance.Play(AudioID.MOVE_PASTA);
         filoi.SetActive(false);
         m_rotateAnimationBehaviour.PlayAnimations(UIAnimationType.ENTRY, () =>
         {
@@ -50,7 +54,9 @@ public class FoldPastaBehaviour : MonoBehaviour
     {
         p_delegate += () => Destroy(gameObject);
         m_instancedAnimator.SetInteger("Fold", 1);
-
+        Invoke(nameof(AAAAA), 2.25f);
         m_instancedAnimationBehaviour.PlayAnimations(UIAnimationType.LEAVE, p_delegate);
     }
+    
+    public void AAAAA() => AudioManager.Instance.Play(AudioID.MOVE_PASTA);
 }

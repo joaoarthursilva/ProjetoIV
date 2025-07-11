@@ -1,4 +1,5 @@
 using System.Collections;
+using ProjetoIV.Audio;
 using UnityEngine;
 
 public class PourStream : MonoBehaviour
@@ -29,6 +30,7 @@ public class PourStream : MonoBehaviour
 
     public IEnumerator StartPourAnim()
     {
+        AudioManager.Instance.PlayAudio(AudioID.OIL);
         lineRenderer.positionCount = 2;
         float l_streamLenght = 0f;
         float l_time = 0f;
@@ -69,6 +71,7 @@ public class PourStream : MonoBehaviour
             l_time += Time.deltaTime;
             yield return null;
         }
+        AudioManager.Instance.StopAudio(AudioID.OIL);
 
         lineRenderer.positionCount = 0;
     }

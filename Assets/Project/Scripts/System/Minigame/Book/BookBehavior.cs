@@ -1,3 +1,5 @@
+using FMODUnity;
+using ProjetoIV.Audio;
 using ProjetoIV.Util;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,17 +13,20 @@ public class BookBehavior : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI[] m_texts;
     [SerializeField] private Ingredient[] ingredients;
     public System.Action<Ingredient> OnSelectRecipe;
+    [SerializeField] private EventReference pageSFX;
 
     public void OpenBook()
     {
         if (ArrowIndicator.Instance != null) ArrowIndicator.Instance.HideArrow();
         m_behavior.PlayEnteryAnimations();
+        AudioManager.Instance.Play(pageSFX);
         for (int i = 0; i < m_buttonsImages.Length; i++) m_buttonsImages[i].raycastTarget = true;
         for (int i = 0; i < m_flipButtonGameObject.Length; i++) m_flipButtonGameObject[i].SetActive(true);
     }
 
     public void CloseBook()
     {
+        AudioManager.Instance.Play(pageSFX);
         for (int i = 0; i < m_buttonsImages.Length; i++) m_buttonsImages[i].raycastTarget = false;
         for (int i = 0; i < m_flipButtonGameObject.Length; i++) m_flipButtonGameObject[i].SetActive(false);
         m_behavior.PlayLeaveAnimations();

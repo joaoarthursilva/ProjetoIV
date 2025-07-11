@@ -1,4 +1,6 @@
 using System.Collections;
+using FMODUnity;
+using ProjetoIV.Audio;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
@@ -38,10 +40,12 @@ public class UIHoldButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerUp(PointerEventData eventData)
     {
         m_holding = false;
+        AudioManager.Instance.StopAudio(AudioID.PASTA_CUT);
     }
 
     IEnumerator HandleHolding()
     {
+        AudioManager.Instance.PlayAudio(AudioID.PASTA_CUT);
         while (m_holding && m_holdFloat < m_holdTime)
         {
             m_holdFloat += Time.deltaTime;
@@ -61,8 +65,9 @@ public class UIHoldButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             Debug.Log("foi!");
             m_onComplete?.Invoke(this);
+            AudioManager.Instance.StopAudio(AudioID.PASTA_CUT);
         }
-
+        
         m_holdingCorutine = null;
     }
 

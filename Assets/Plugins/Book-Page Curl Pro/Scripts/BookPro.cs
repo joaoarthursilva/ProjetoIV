@@ -3,6 +3,9 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using FMODUnity;
+using ProjetoIV.Audio;
+
 namespace BookCurlPro
 {
     public enum FlipMode
@@ -291,6 +294,7 @@ namespace BookCurlPro
         public void DragRightPageToPoint(Vector3 point)
         {
             if (currentPaper > EndFlippingPaper) return;
+            AudioManager.Instance.Play(pageSFX);
             pageDragging = true;
             mode = FlipMode.RightToLeft;
             f = point;
@@ -328,6 +332,7 @@ namespace BookCurlPro
         public void DragLeftPageToPoint(Vector3 point)
         {
             if (currentPaper <= StartFlippingPaper) return;
+            AudioManager.Instance.Play(pageSFX);
             pageDragging = true;
             mode = FlipMode.LeftToRight;
             f = point;
@@ -392,6 +397,7 @@ namespace BookCurlPro
                 UpdateBookLTRToPoint(f);
         }
 
+        [SerializeField] private EventReference pageSFX;
         /// <summary>
         /// This function called when the page dragging point reached its distenation after releasing the mouse
         /// This function will call the OnFlip invocation list

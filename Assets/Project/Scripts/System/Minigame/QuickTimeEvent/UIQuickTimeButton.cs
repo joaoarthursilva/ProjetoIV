@@ -1,4 +1,5 @@
 using System.Collections;
+using ProjetoIV.Audio;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -64,9 +65,14 @@ public class UIQuickTimeButton : MonoBehaviour, IPointerClickHandler
             }
 
             if (m_time / m_variantCircleTimeCycle > m_timeRangeToSuccess.x
-                && m_time / m_variantCircleTimeCycle < m_timeRangeToSuccess.y) Done = true;
+                && m_time / m_variantCircleTimeCycle < m_timeRangeToSuccess.y)
+            {
+                Done = true;
+                AudioManager.Instance.Play(AudioID.PASTA_FOLD_RIGHT);
+            }
             else
             {
+                AudioManager.Instance.Play(AudioID.PASTA_FOLD_WRONG);
                 m_variantCircleImage.color = Color.red;
                 yield return new WaitForSeconds(PUNISHMENT);
                 m_variantCircleImage.color = Color.white;

@@ -1,3 +1,4 @@
+using ProjetoIV.Audio;
 using UnityEngine;
 
 public class CustomerAnimation : MonoBehaviour
@@ -16,7 +17,7 @@ public class CustomerAnimation : MonoBehaviour
     {
         Debug.Log("OnEndEntryAnim");
         m_customerBehaviour.Collider.enabled = true;
-
+        AudioManager.Instance.Play(AudioID.CUSTOMER_ARRIVED, m_customerBehaviour.gameObject.transform.position);
         if (m_doroteaIdle == null)
         {
             odeioOpedro = transform.localPosition;
