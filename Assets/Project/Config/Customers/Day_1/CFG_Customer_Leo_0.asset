@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 8215370240b33644a80d7023fd3ee026, type: 2}
   timeToAppear: 0
-  ingredient: {fileID: 11400000, guid: 38bc9278815a9c6499ac301ca67cf715, type: 2}
+  ingredient: {fileID: 11400000, guid: a073aaad4c457cf408656ad1e60b0f07, type: 2}
   dialogs:
   - key: D1.Char4.Dialog1.NPC.Line1
     id: 1
