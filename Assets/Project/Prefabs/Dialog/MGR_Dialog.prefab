@@ -464,19 +464,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 275.8611, y: -1894.9104}
+  scrollPos: {x: -124.7001, y: 72.185135}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 451
-  zoom: 0.75999975
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 0
     height: 0
-  selectedBlocks:
-  - {fileID: 3324170282184915031}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 982191531085042410}
@@ -508,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 350.54224
+    x: 477.34592
     y: 149.06802
     width: 204.21
     height: 40
@@ -5360,7 +5359,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 198
+  itemId: 228
   blockName: D1.Char4.Dialog1.Player.Line2.Choice2
   description: 
   eventHandler: {fileID: 0}
@@ -5825,7 +5824,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 212
+  itemId: 229
   blockName: D1.Char4.Dialog3.Player.Line1
   description: 
   eventHandler: {fileID: 0}
@@ -5923,7 +5922,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 212
+  itemId: 230
   blockName: D1.Char4.Dialog4.NPC.Line1
   description: 
   eventHandler: {fileID: 0}
@@ -6021,7 +6020,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 212
+  itemId: 231
   blockName: D1.Char4.Dialog5.NPC.Line1
   description: 
   eventHandler: {fileID: 0}
@@ -6143,7 +6142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: "In\xE1"
+  nameText: "Thain\xE1"
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
