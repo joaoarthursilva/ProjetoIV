@@ -9,27 +9,27 @@ public class BookBehavior : MonoBehaviour
     [SerializeField] private ObjectAnimationBehaviour m_behavior;
     [SerializeField] private GameObject[] m_recipeGameObject;
     [SerializeField] private GameObject[] m_flipButtonGameObject;
-    [SerializeField] private Image[] m_buttonsImages;
     [SerializeField] private TMPro.TextMeshProUGUI[] m_texts;
     [SerializeField] private Ingredient[] ingredients;
     public System.Action<Ingredient> OnSelectRecipe;
     [SerializeField] private EventReference pageSFX;
-
+    [SerializeField] private Button m_selectButton;
+    [SerializeField] private UIAnimationBehaviour m_selectButtonAnimBehavior;
     public void OpenBook()
     {
         if (ArrowIndicator.Instance != null) ArrowIndicator.Instance.HideArrow();
         m_behavior.PlayEnteryAnimations();
         AudioManager.Instance.Play(pageSFX);
-        for (int i = 0; i < m_buttonsImages.Length; i++) m_buttonsImages[i].raycastTarget = true;
         for (int i = 0; i < m_flipButtonGameObject.Length; i++) m_flipButtonGameObject[i].SetActive(true);
+        m_selectButtonAnimBehavior.PlayEntryAnimations();
     }
 
     public void CloseBook()
     {
         AudioManager.Instance.Play(pageSFX);
-        for (int i = 0; i < m_buttonsImages.Length; i++) m_buttonsImages[i].raycastTarget = false;
         for (int i = 0; i < m_flipButtonGameObject.Length; i++) m_flipButtonGameObject[i].SetActive(false);
         m_behavior.PlayLeaveAnimations();
+        m_selectButtonAnimBehavior.PlayLeaveAnimations();
     }
 
     public void SelectRecipe(int p_recipe)
@@ -57,5 +57,11 @@ public class BookBehavior : MonoBehaviour
             m_recipeGameObject[l_currentRecipe + 1].SetActive(true);
             l_currentRecipe++;
         }
+    }
+
+    public void SelectCurrentRecipe()
+    {
+        CloseBook();
+        OnSelectRecipe.Invoke(ingredients[l_currentRecipe]);
     }
 }
