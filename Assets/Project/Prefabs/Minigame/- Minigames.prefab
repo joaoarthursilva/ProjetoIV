@@ -2117,7 +2117,7 @@ Transform:
   m_GameObject: {fileID: 1228563514855792812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0412, y: 0, z: 0.401}
+  m_LocalPosition: {x: 0.0412, y: -0.0027, z: 0.401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2365,6 +2365,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: 
         m_MethodName: set_interactable
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4507816420376396391}
+        m_TargetAssemblyTypeName: BookBehavior, ProjetoIV.Minigame
+        m_MethodName: ButtonBack
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3633,7 +3645,7 @@ Transform:
   m_GameObject: {fileID: 2208811734819362555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.294, y: 0, z: 0.3209}
+  m_LocalPosition: {x: -0.294, y: -0.0027, z: 0.3209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3787,7 +3799,7 @@ Transform:
   m_GameObject: {fileID: 2293208094694382877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1227, y: 0, z: 0.401}
+  m_LocalPosition: {x: -0.1227, y: -0.0027, z: 0.401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4455,7 +4467,7 @@ Transform:
   m_GameObject: {fileID: 2604033388989251576}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.294, y: 0, z: 0.2782}
+  m_LocalPosition: {x: -0.294, y: -0.0027, z: 0.2782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5540,7 +5552,7 @@ Transform:
   m_GameObject: {fileID: 3428074394716800339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0432, y: 0, z: 0.401}
+  m_LocalPosition: {x: -0.0432, y: -0.0027, z: 0.401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6683,7 +6695,7 @@ Transform:
   m_GameObject: {fileID: 3777576994929191234}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.207, y: 0, z: 0.403}
+  m_LocalPosition: {x: -0.207, y: -0.0027, z: 0.403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8157,7 +8169,7 @@ Transform:
   m_GameObject: {fileID: 4924551924048847950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.081, y: 0, z: 0.401}
+  m_LocalPosition: {x: -0.081, y: -0.0027, z: 0.401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14377,7 +14389,7 @@ Transform:
   m_GameObject: {fileID: 9137300806460214930}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.294, y: 0, z: 0.2356}
+  m_LocalPosition: {x: -0.294, y: -0.0027, z: 0.2356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14522,6 +14534,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: 
         m_MethodName: set_interactable
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4507816420376396391}
+        m_TargetAssemblyTypeName: BookBehavior, ProjetoIV.Minigame
+        m_MethodName: ButtonForward
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

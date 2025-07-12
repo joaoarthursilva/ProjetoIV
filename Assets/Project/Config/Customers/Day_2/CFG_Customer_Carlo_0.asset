@@ -15,6 +15,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e677be33cb8b11b4d8b418fe25a6ef52, type: 2}
   timeToAppear: 5
   ingredient: {fileID: 11400000, guid: b909458e6e529dc4f964147daab2c2f0, type: 2}
+  feelingKey: D1.Char2.PopUp
   dialogs:
   - key: D1.Char2.Dialog1.Player.Line1
     id: 1

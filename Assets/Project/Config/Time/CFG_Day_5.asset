@@ -17,6 +17,4 @@ MonoBehaviour:
   end: 3
   delayBeforeNextDay: 0
   customers:
-  - {fileID: 11400000, guid: 3b4b0fd9d337cd346be32662a5e0d069, type: 2}
   - {fileID: 11400000, guid: a7e051dc7c6c395499b19b0c9840dede, type: 2}
-  - {fileID: 11400000, guid: 4307f6152c880274c8523f3a4822fbc3, type: 2}

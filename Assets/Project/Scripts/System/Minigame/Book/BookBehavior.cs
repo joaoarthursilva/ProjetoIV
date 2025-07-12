@@ -43,8 +43,8 @@ public class BookBehavior : MonoBehaviour
     {
         if (l_currentRecipe - 1 >= 0)
         {
-            m_recipeGameObject[l_currentRecipe].SetActive(false);
-            m_recipeGameObject[l_currentRecipe - 1].SetActive(true);
+            //m_recipeGameObject[l_currentRecipe].SetActive(false);
+            //m_recipeGameObject[l_currentRecipe - 1].SetActive(true);
             l_currentRecipe--;
         }
     }
@@ -53,15 +53,15 @@ public class BookBehavior : MonoBehaviour
     {
         if (l_currentRecipe + 1 < m_recipeGameObject.Length)
         {
-            m_recipeGameObject[l_currentRecipe].SetActive(false);
-            m_recipeGameObject[l_currentRecipe + 1].SetActive(true);
+            //m_recipeGameObject[l_currentRecipe].SetActive(false);
+            //m_recipeGameObject[l_currentRecipe + 1].SetActive(true);
             l_currentRecipe++;
         }
     }
 
     public void SelectCurrentRecipe()
     {
-        CloseBook();
         OnSelectRecipe.Invoke(ingredients[l_currentRecipe]);
+        CloseBook();
     }
 }

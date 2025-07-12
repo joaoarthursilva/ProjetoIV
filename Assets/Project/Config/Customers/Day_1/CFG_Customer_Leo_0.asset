@@ -15,7 +15,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 8215370240b33644a80d7023fd3ee026, type: 2}
   timeToAppear: 0
   ingredient: {fileID: 11400000, guid: a073aaad4c457cf408656ad1e60b0f07, type: 2}
-  feelingKey: 
+  feelingKey: D1.Char4.PopUp
   dialogs:
   - key: D1.Char4.Dialog1.NPC.Line1
     id: 1
