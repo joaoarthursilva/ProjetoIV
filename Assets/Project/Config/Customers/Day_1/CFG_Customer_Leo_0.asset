@@ -23,6 +23,6 @@ MonoBehaviour:
   - key: D1.Char4.Dialog3.Player.Line1
     id: 3
   - key: D1.Char4.Dialog4.NPC.Line1
-    id: 5
-  - key: D1.Char4.Dialog5.NPC.Line1
     id: 4
+  - key: D1.Char4.Dialog5.NPC.Line1
+    id: 5
