@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CFG_Minigame_Serve_Tortellini
   m_EditorClassIdentifier: 
   Instruction: Serve the dish to the customer
+  callInstructionAuto: 0
   callServePlate: 0
   initialPlatePrefab: {fileID: 2022332950765140622, guid: f774f7c18de7f4b4e96fc5f43b9f80df, type: 3}
   initialIngredient: {fileID: 11400000, guid: 6dd33fd1585642c49a168f27f0fca276, type: 2}

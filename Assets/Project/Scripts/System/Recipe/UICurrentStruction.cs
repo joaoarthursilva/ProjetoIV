@@ -13,9 +13,8 @@ public class UICurrentStruction : MonoBehaviour
 
     private void UpdateInstruction(Minigame p_minigame)
     {
-        if (p_minigame == null)
+        if (p_minigame == null || !p_minigame.callInstructionAuto)
         {
-            Debug.Log("bbbb");
             text.text = string.Empty;
             return;
         }
