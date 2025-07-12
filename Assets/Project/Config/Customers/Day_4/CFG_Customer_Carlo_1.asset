@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: e677be33cb8b11b4d8b418fe25a6ef52, type: 2}
   timeToAppear: 5
-  ingredient: {fileID: 11400000, guid: b909458e6e529dc4f964147daab2c2f0, type: 2}
+  ingredient: {fileID: 11400000, guid: 9789551328247534ea4b65f0a49b0267, type: 2}
+  feelingKey: 
   dialogs:
-  - key: D1.Char2.Dialog1.Player.Line1
+  - key: D2.Char2.Dialog1.NPC.Line1
     id: 1
-  - key: D1.Char2.Dialog2.NPC.Line1
+  - key: D2.Char2.Dialog2.NPC.Line1
     id: 2
-  - key: D1.Char2.Dialog3.Player.Line1
+  - key: D2.Char2.Dialog3.Player.Line1
     id: 3
-  - key: D1.Char2.Dialog4.NPC.Line1
-    id: 4
-  - key: D1.Char2.Dialog5.NPC.Line1
+  - key: D2.Char2.Dialog4.NPC.Line1
     id: 5
+  - key: D2.Char2.Dialog5.NPC.Line1
+    id: 4

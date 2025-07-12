@@ -15,14 +15,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: fdfa60c69cb6c604c9fb760615c1786e, type: 2}
   timeToAppear: 0
   ingredient: {fileID: 11400000, guid: a073aaad4c457cf408656ad1e60b0f07, type: 2}
+  feelingKey: 
   dialogs:
-  - key: D1.Char1.Dialog1.NPC.Line1
-    id: 1
-  - key: D1.Char1.Dialog2.NPC.Line1
-    id: 2
-  - key: D1.Char1.Dialog3.Player.Line1
-    id: 3
-  - key: D1.Char1.Dialog4.NPC.Line1
-    id: 4
-  - key: D1.Char1.Dialog5.NPC.Line1
-    id: 5
+  - key: D3.Char1.Dialog1.NPC.Line1
+    id: 6
