@@ -15,8 +15,6 @@ public class PlayerMovement : Singleton<PlayerMovement>
     {
         // m_moveInput = RatInput.Instance.GetInput(InputID.KITCHEN_MOVE);
         // SubscribeToActions(true);
-        StartCoroutine(UpdateCoroutine());
-        StartCoroutine(FixedUpdateCoroutine());
         CursorBehavior.Set(false, CursorLockMode.Locked);
     }
 
@@ -30,24 +28,15 @@ public class PlayerMovement : Singleton<PlayerMovement>
 
     Vector3 l_tempMovement = new();
 
-    private IEnumerator FixedUpdateCoroutine()
+    private void FixedUpdate()
     {
-        while (true)
-        {
-            HandleMovement();
-            yield return m_waitForFixedUpdate;
-        }
+        HandleMovement();
     }
 
-    private IEnumerator UpdateCoroutine()
+    private void Update()
     {
-        while (true)
-        {
-            HandleLook();
-            yield return null;
-        }
+        HandleLook();
     }
-
     private void HandleMovement()
     {
         if (DialogManager.Instance != null && DialogManager.Instance.InDialog) return;
