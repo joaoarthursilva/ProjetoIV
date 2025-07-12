@@ -9,7 +9,7 @@ public class RecipeManager : Singleton<RecipeManager>
     public List<bool> currentSteps;
     public MinigameSequence currentSequence;
     public System.Action<Minigame> SetNextMinigame;
-    public System.Action UseRecipeBook;
+    public System.Action<Customer> UseRecipeBook;
 #if UNITY_EDITOR
     private void Start()
     {
@@ -90,9 +90,9 @@ public class RecipeManager : Singleton<RecipeManager>
     }
 
     [SerializeField] private Minigame bookminigame;
-    public void SetInstructionToBook()
+    public void SetInstructionToBook(Customer p_customer)
     {
-        UseRecipeBook?.Invoke();
+        UseRecipeBook?.Invoke(p_customer);
         SetNextMinigame?.Invoke(bookminigame);
     }
 }

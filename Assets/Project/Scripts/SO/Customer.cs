@@ -9,6 +9,7 @@ public class Customer : ScriptableObject
     public Character character;
     public float timeToAppear;
     public Ingredient ingredient;
+    public string feelingKey;
     public List<DialogKey> dialogs;
 }
 

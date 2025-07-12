@@ -1,3 +1,4 @@
+using Assets.Plugins.RatLocalization.Scripts;
 using UnityEngine;
 
 public class UICurrentStruction : MonoBehaviour
@@ -12,20 +13,27 @@ public class UICurrentStruction : MonoBehaviour
 
     private void UpdateInstruction(Minigame p_minigame)
     {
-        if(p_minigame == null)
+        if (p_minigame == null)
         {
-        Debug.Log("bbbb");
+            Debug.Log("bbbb");
             text.text = string.Empty;
             return;
         }
 
         Debug.Log("ccc");
+        if (!string.IsNullOrEmpty(m_feelingKey))
+        {
+            text.text = LocalizationManager.Localize(m_feelingKey) + " " + p_minigame.Instruction;
+            m_feelingKey = string.Empty;
+            return;
+        }
+
         text.text = p_minigame.Instruction;
     }
 
-    public void UpdateInstructionToBook()
+    string m_feelingKey;
+    public void UpdateInstructionToBook(Customer p_custumer)
     {
-        Debug.Log("aasd");
-        text.text = selectRecipeText;
+        m_feelingKey = p_custumer.feelingKey;
     }
 }
