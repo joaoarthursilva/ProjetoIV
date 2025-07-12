@@ -8486,13 +8486,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1270855837}
     m_Modifications:
+    - target: {fileID: 287516335452746362, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.275
+      objectReference: {fileID: 0}
+    - target: {fileID: 287516335452746362, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.425
+      objectReference: {fileID: 0}
     - target: {fileID: 822309167254497635, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 457167040}
-    - target: {fileID: 3148012156309023651, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+    - target: {fileID: 1331643553840592232, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028533630933424230, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_Alpha
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028533630933424230, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886131439837563459, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993990553615330096, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993990553615330096, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590223745700891866, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3647386897421951582, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3647386897421951582, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874733606585484203, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3941603883679205050, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: objectList.list.Array.data[0].outlinedGO
@@ -8518,18 +8562,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4462252859312283072, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1.0507
-      objectReference: {fileID: 0}
-    - target: {fileID: 4462252859312283072, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1.0507
-      objectReference: {fileID: 0}
-    - target: {fileID: 4462252859312283072, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 4471422928754899646, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: objectList.list.Array.data[0].outlinedGO
       value: 
@@ -8542,6 +8574,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 457167040}
+    - target: {fileID: 5359199306972515139, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_text
+      value: 'Tortelloni w/ creamy tomato sauce
+
+        <size=80%> Ideal for comforting
+        a sorrowful heart'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843050471996237104, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884740335733766496, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: df8c364ff07fcb84c85439c43da9f05b, type: 2}
     - target: {fileID: 5934411399936068691, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8586,6 +8633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '- Minigames'
       objectReference: {fileID: 0}
+    - target: {fileID: 6576836077091611800, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6733245493923014156, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: minigames.Array.size
       value: 1
@@ -8610,6 +8661,28 @@ PrefabInstance:
       propertyPath: OnInteractMinigame.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2125472823}
+    - target: {fileID: 7427453514952314272, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654118425301091808, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: currentPaper
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941022107663273406, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391367928825397618, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_lineSpacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780189618993050550, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_text
+      value: 'Balanzoni
+
+        <size=80%>Crafted to calm the storms within'
+      objectReference: {fileID: 0}
     - target: {fileID: 8946720982493679524, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
       propertyPath: objectList.list.Array.data[0].outlinedGO
       value: 
@@ -8626,6 +8699,10 @@ PrefabInstance:
       propertyPath: OnInteractMinigame.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2125472823}
+    - target: {fileID: 9176236290306769440, guid: 49ac3baec05cc644ba2c21ecb171f013, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
