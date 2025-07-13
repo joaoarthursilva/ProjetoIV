@@ -7,6 +7,7 @@ namespace ProjetoIV.Util
         private static Scene m_targetScene;
         public enum Scene
         {
+            SCN_Intro,
             SCN_Menu,
             SCN_Game,
         }
